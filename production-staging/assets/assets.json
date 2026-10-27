@@ -279,69 +279,6 @@
     "bytes": 30812
   },
   {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-front.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-26.png",
-    "category": "renders/symphony-macro-system",
-    "description": "CAD render of the slim tower speaker in walnut veneer with a honeycomb grille top and one round driver, on a mauve-grey background.",
-    "width": 1116,
-    "height": 807,
-    "bytes": 150244
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-front.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-41.png",
-    "category": "renders/symphony-macro-system",
-    "description": "CAD render of the same tower with a brushed copper front panel.",
-    "width": 1116,
-    "height": 807,
-    "bytes": 164590
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-front.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-54.png",
-    "category": "renders/symphony-macro-system",
-    "description": "CAD render of the same tower in dark green with brass edge trim and a brass driver ring.",
-    "width": 1116,
-    "height": 807,
-    "bytes": 157584
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-driver-closeup.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-36.png",
-    "category": "renders/symphony-macro-system",
-    "description": "Close-up CAD render of the walnut tower's driver on a black bezel.",
-    "width": 1116,
-    "height": 825,
-    "bytes": 413009
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-driver-closeup.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-16.png",
-    "category": "renders/symphony-macro-system",
-    "description": "Close-up CAD render of the copper tower's driver on a black bezel.",
-    "width": 1116,
-    "height": 825,
-    "bytes": 358673
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-driver-closeup.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-29.png",
-    "category": "renders/symphony-macro-system",
-    "description": "Close-up CAD render of the green tower's driver with a brass ring.",
-    "width": 1116,
-    "height": 825,
-    "bytes": 382885
-  },
-  {
-    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-driver-closeup.png",
-    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-24-33.png",
-    "category": "renders/symphony-macro-system",
-    "description": "Close-up CAD render of a black tower's driver with a brass ring.",
-    "width": 994,
-    "height": 845,
-    "bytes": 418248
-  },
-  {
     "path": "production-staging/assets/section-backgrounds/venue-background.webp",
     "original_path": "site/assets/sections/venue/venue-background.webp",
     "category": "section-backgrounds",

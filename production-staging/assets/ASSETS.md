@@ -1,8 +1,12 @@
 # AGF image assets
 
-Catalogued from `site/assets/screenshots/`, `site/assets/sections/` and the four root images (AGF.png, AGF1.png, pic.jpeg, pic1.jpeg). All files were moved with `git mv` (history preserved); nothing was copied or deleted. Machine-readable version: `assets.json`.
+Catalogued from `site/assets/screenshots/`, `site/assets/sections/` and the four root images (AGF.png, AGF1.png, pic.jpeg, pic1.jpeg). All files were moved with `git mv` (history preserved); nothing was copied. Eight byte-identical duplicates were deleted in a later reorganisation (see Removed duplicates). Machine-readable version: `assets.json`.
 
-Notes: "AI" means generated imagery (text on it is often garbled); "CAD" means a rendered 3D model. Dimensions are width x height in pixels. Several section-background files are byte-identical to screenshot-derived files (see the Duplicates section).
+Note: every "Original path" value below is provenance only. It records where the file lived before the reorganisation (`site/assets/screenshots/`, `site/assets/sections/` and the repo root) and those folders no longer exist; the "New path" column is the only path that resolves on disk.
+
+This file catalogues 32 images: everything under `assets/` outside `renders/`. Every image under `renders/` (43, including the seven `symphony-tower-*.png` screenshots in `renders/symphony-macro-system/`) is catalogued in `renders/RENDERS.md` and `renders/renders.json`, as are the 60 images in `prior-work/mass-fidelity/` (46) and `concepts/material-moods/` (14); none of those are listed here.
+
+Notes: "AI" means generated imagery (text on it is often garbled); "CAD" means a rendered 3D model. Dimensions are width x height in pixels. The old section-background duplicates of screenshot-derived files have been removed (see the Removed duplicates section).
 
 ## Brand boards (4)
 
@@ -29,7 +33,7 @@ Folder: `production-staging/assets/concept-boards/`
 
 ## Prior work (founder earlier products) (11)
 
-Folder: `production-staging/assets/prior-work/`
+Folder: `production-staging/assets/prior-work/` (the `mass-fidelity/` subfolder, 46 files, is catalogued in `renders/RENDERS.md`, not here)
 
 | New path | Original path | Shows | Size (px) |
 |---|---|---|---|
@@ -47,7 +51,7 @@ Folder: `production-staging/assets/prior-work/`
 
 ## Concepts (not AGF database products) (11)
 
-Folder: `production-staging/assets/concepts/`
+Folder: `production-staging/assets/concepts/` (the `material-moods/` subfolder, 14 files, is catalogued in `renders/RENDERS.md`, not here)
 
 | New path | Original path | Shows | Size (px) |
 |---|---|---|---|
@@ -63,27 +67,13 @@ Folder: `production-staging/assets/concepts/`
 | `production-staging/assets/concepts/over-ear-headphones-tan-pad-silver-shell-concept.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-23-49.png` | Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Byte-identical to section-backgrounds/prelude-square-1.png. | 480x651 |
 | `production-staging/assets/concepts/waveform-sculpture-copper-wire-teal-patina.png` | `site/assets/screenshots/agf_v3_1_nanobananapro.png` | AI-generated 1024x1024 image of a sculpture on a dark grey gradient: flowing copper/brass wire ribbons wrapped around a teal verdigris audio waveform. | 1024x1024 |
 
-## Section backgrounds (old site) (9)
+## Section backgrounds (old site) (1)
 
 Folder: `production-staging/assets/section-backgrounds/`
 
 | New path | Original path | Shows | Size (px) |
 |---|---|---|---|
 | `production-staging/assets/section-backgrounds/venue-background.webp` | `site/assets/sections/venue/venue-background.webp` | AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp. | 1152x864 |
-
-## Renders: symphony-macro-system (7)
-
-Folder: `production-staging/assets/renders/symphony-macro-system/`
-
-| New path | Original path | Shows | Size (px) |
-|---|---|---|---|
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-driver-closeup.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-24-33.png` | Close-up CAD render of a black tower's driver with a brass ring. | 994x845 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-driver-closeup.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-39-16.png` | Close-up CAD render of the copper tower's driver on a black bezel. | 1116x825 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-front.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-38-41.png` | CAD render of the same tower with a brushed copper front panel. | 1116x807 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-driver-closeup.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-39-29.png` | Close-up CAD render of the green tower's driver with a brass ring. | 1116x825 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-front.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-38-54.png` | CAD render of the same tower in dark green with brass edge trim and a brass driver ring. | 1116x807 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-driver-closeup.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-39-36.png` | Close-up CAD render of the walnut tower's driver on a black bezel. | 1116x825 |
-| `production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-front.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-38-26.png` | CAD render of the slim tower speaker in walnut veneer with a honeycomb grille top and one round driver, on a mauve-grey background. | 1116x807 |
 
 ## Copy on the boards
 
@@ -176,21 +166,25 @@ Verbatim as read from the images. AI-generated text is often garbled; garbles ar
 - concepts/analog-*: labels "ANALOG 144" (OLED) and "ANALOG". concepts/mv2-bundle-plus-white-headphones-stand.png: caption "MV2 Bundle+". concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp: TV logo "SOTA"; box label "USB Audio".
 - massFidelity images carry "massFIDELITY" and "USB Audio"; REMORA images carry "REMORA".
 
-## Duplicates (byte-identical, md5)
+## Removed duplicates
 
-Left in place as separate files because the brief said not to delete or copy. The lead may want to dedupe.
+Eight files in `section-backgrounds/` were byte-identical (md5) to files kept elsewhere and have been deleted. Each description above that still says "Byte-identical to" or "Identical to" a section-background file refers to one of these.
 
-- `section-backgrounds/prelude-hero.png` = `concepts/mv2-bundle-plus-white-headphones-stand.png`
-- `section-backgrounds/prelude-hero.webp` = `concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp`
-- `section-backgrounds/prelude-square-1.png` = `concepts/over-ear-headphones-tan-pad-silver-shell-concept.png`
-- `section-backgrounds/concept-explainer-background.png` = `section-backgrounds/prelude-square.png` = `prior-work/remora-driver-layout-cutaway-render.png`
-- `section-backgrounds/cut-sheet-hero.png` = `section-backgrounds/overview-background.png` = `prior-work/remora-exploded-mount-diagram.png`
-- `section-backgrounds/venue-background.webp` = `section-backgrounds/venue-figure.webp`
+| Removed file | Matched surviving file |
+|---|---|
+| `section-backgrounds/prelude-hero.png` | `concepts/mv2-bundle-plus-white-headphones-stand.png` |
+| `section-backgrounds/prelude-hero.webp` | `concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp` |
+| `section-backgrounds/prelude-square-1.png` | `concepts/over-ear-headphones-tan-pad-silver-shell-concept.png` |
+| `section-backgrounds/concept-explainer-background.png` | `prior-work/remora-driver-layout-cutaway-render.png` |
+| `section-backgrounds/prelude-square.png` | `prior-work/remora-driver-layout-cutaway-render.png` |
+| `section-backgrounds/cut-sheet-hero.png` | `prior-work/remora-exploded-mount-diagram.png` |
+| `section-backgrounds/overview-background.png` | `prior-work/remora-exploded-mount-diagram.png` |
+| `section-backgrounds/venue-figure.webp` | `section-backgrounds/venue-background.webp` |
 
 ## Not found / ambiguous
 
-- No image of headphones on a head form, so nothing was placed in `renders/over-ear-home-centric/`.
+- Headphones on a head form: none among the images catalogued here, but `renders/over-ear-home-centric/` now holds four such renders (black and copper over-ear headphones on a mannequin head), catalogued in `renders/RENDERS.md`.
 - No finished render of the earbud case with brass knob as an AGF render; the Wasted Real-Estate case appears only on the board (`concept-boards/wasted-real-estate-earbud-case-board.webp`), so nothing was placed in `renders/wasted-real-estate/`.
-- No copper knob on marble image and no standalone keyboard-format AGF control surface (only the unbranded grey CAD keyboard, filed in concepts).
-- The four tower close-ups (including the black body with brass ring) were placed in `renders/symphony-macro-system/` as details of the same tower; move them if only full-product renders belong there.
+- No finished, branded AGF render of a copper knob on marble (the closest are the mood images in `concepts/material-moods/`) and no finished keyboard-format AGF control surface: the unbranded grey CAD keyboard is filed in concepts, and three greybox control-surface renders are in `renders/control-surface/` (see `renders/RENDERS.md`).
+- The four Symphony tower close-ups from the old site screenshots (including the black body with brass ring) were placed in `renders/symphony-macro-system/` as details of the same tower and are catalogued in `renders/RENDERS.md`; move them if only full-product renders belong there.
 
