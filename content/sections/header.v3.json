@@ -1,0 +1,15 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "48492576-337f-43f4-9a5b-8811bc1f6cc0",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": 1.5,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": false
+  },
+  "brand_name": "",
+  "nav_links": [],
+  "cta_text": "",
+  "cta_link": ""
+}

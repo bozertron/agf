@@ -1,0 +1,61 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "c669b573-6d02-4a98-89e5-203d10ecbb98",
+    "schema_id": "tenet",
+    "title": "03 · The Six Tenets",
+    "display_order": 5,
+    "updated_at": "2026-07-14 14:58:56",
+    "is_newest": true
+  },
+  "section_title": "The Gospel of not having your ass handed to you.",
+  "section_number": "03",
+  "section_label": "The Six Tenets",
+  "tenets": [
+    {
+      "number": 1,
+      "title": "Thou shalt not compete with existing high-volume audio segments — directly.",
+      "anchor_phrase": "Reframe the problem. Deliver a solution that stands alone.",
+      "body": "I ran a skunkworks program on behalf of Dolby, only a few people internally knew what I was working on, and my only report kept the BoD in the loop. The goal was to drive top-line growth because bottom line @90%-ish had nowhere to go. The caveat: Products can't interfere with the sacred cows [licensing revenues]. \n\nThe mandate: build products no one could get mad at — \"If the licensees aren't making something similar, what are they going to complain about?\".  Apple got very mad and threatened to pull their business entirely. Bad for me - the program was shut down. Good for Dolby - the IP we created was licensed into their headphone program and still drives revenue a nearly a decade later.   \n\nThe lesson stands. Don't line up toe-to-toe with the heavies: Find and exploit the seams - there are many. ",
+      "key_insight": "When gathering channel support, the giants can not be perceived as competition. This is moreso a shield for independent specialized distribution channels. If you're going to directly interfere with their bankrolling PE/Conglomerate's product definintions, they risk getting strong armed or cut off. If you're presenting something with no logical replacement, they're safe, and you're driving industry chatter and excitement, something there's not a lot of these days."
+    },
+    {
+      "number": 2,
+      "title": "Thou shalt not compete on price with existing premium → luxury brands — directly.",
+      "anchor_phrase": "I have a pricing exercise that's based on genuine value - which includes intangibles. We don't price on multiples of anything. We price based on the value we deliver. ",
+      "body": "When a sales associate in a premium sales channel identifies a real customer, they are not negotiating price. They are negotiating a budgeted total experience. I had a niche product that I thought would die both times I was forced to increase it's price. Both times the sales increased. ",
+      "key_insight": "Premium buyers do not want a discount. They want a reason; even better if there's a story attached."
+    },
+    {
+      "number": 3,
+      "title": "Thou shalt measure additional features through a lens of exponential value gains — exclusively.",
+      "anchor_phrase": "If a feature doesn't compound product value, it dilutes product value.",
+      "body": "The Mass Fidelity Core launched with a kitchen-sink feature set — gesture, IoT, phone-charger. The pre-launch survey was decisive: 80%+ of customers cared about one thing — one speaker sounding like two with the sweet spot eliminated (wave-field synthesis). Multi-room 15% - a channel check-box at the time. Portability 4% - we should have removed the battery, it ended up being the product's only weak point. Everything else was completely irrelevant.",
+      "key_insight": "Kill features that do not compound a product's value — even when defended internally."
+    },
+    {
+      "number": 4,
+      "title": "Thou shalt 'check the boxes' on behalf of corporate buyers — exclusively.",
+      "anchor_phrase": "Parse their checklists like a contract attorney.",
+      "body": "Corporate buyers are rule-bound.  A seasoned executive team is required to parse which boxes must be checked — and which can be quietly dropped. Add based on commitments. Subtract based on commitments. Never compromise the end result - that's your contract with the end user.  ",
+      "key_insight": "Channels can influence product definintion; they can't influence a commitment to quality. "
+    },
+    {
+      "number": 5,
+      "title": "Thou shalt always deliver a product-line. Not a single product.",
+      "anchor_phrase": "A single product is a single point of failure.",
+      "body": "Earl Qua, circa 2012/13: \"CE is all about churn.\" Segment-defining product-wins that trigger a migration to 'the new way' come almost exclusively from innovative product positions that previously did not exist. While it's nice to pretend, no one can predict the recipe for a  segment-defining product.  Stand-alone Product-lines with breadth and depth is what attracts  large distribution partners to acquire your brand. The catch: Products must independently and as a whole plausibly bridge to a position where AGF looks like the future they don't want to miss out on; they already sell the present and the past. ",
+      "example_body": "No matter how good a single product is, no rational actor of merit will accept a single product brand. If it happens by accident that one of the product's in the line defines a segment, that's the problem we want to have.",
+      "key_insight": "Depth, breadth, with plausible inevitability; be the future that's threatening to pass them by if they don't take action to support you."
+    },
+    {
+      "number": 6,
+      "title": "Thou shalt lead. Otherwise, by definition, thou art following.",
+      "anchor_phrase": "Execution path is open for discussion. Vision is not.",
+      "body": "The most strongly held belief, with the most flexible application. Followers die slow deaths — almost without exception. The brands that survive relentless CE churn dominate in multiple disciplines *and/or* hold brand IP and patent moats the market still values *and/or* own the leadership position through business practices that on the front lines reads like violence-via-innovation; Bang & Olufsen, Apple, and Bose in their respective heydays are good examples of this, albeit for different reasons - we aim to achieve all of these characteristics.",
+      "key_insight": "Choose violence."
+    }
+  ],
+  "appendix": "",
+  "intro_text": "Twenty-five years of lessons, compounding, and distilled. Each tenet is a constraint that creates leverage — and a load-bearing rule that protects the others."
+}

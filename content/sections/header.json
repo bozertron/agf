@@ -1,0 +1,14 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "08ca9631-e00a-4fbd-82cc-a25b7b205459",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": -2,
+    "updated_at": "2026-07-06 22:30:58",
+    "is_newest": true
+  },
+  "brand_name": "AGF",
+  "nav_links": [],
+  "tagline": "Even Rails → Smooth Tracks"
+}

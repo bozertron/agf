@@ -1,0 +1,31 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "c55e9579-bd4d-4f14-a348-6da9789f4f81",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.96875,
+    "updated_at": "2026-07-14 16:41:22",
+    "is_newest": true
+  },
+  "section_label": "",
+  "section_number": "",
+  "section_title": "Prelude",
+  "intro_text": "",
+  "squares": [
+    {
+      "text": "But not so different that partners and customers can't easily spot the value proposition.",
+      "image": ""
+    },
+    {
+      "text": "",
+      "image": "assets/sections/prelude/prelude-hero.png"
+    },
+    {
+      "text": "",
+      "image": ""
+    }
+  ],
+  "summary": "",
+  "appendix": ""
+}

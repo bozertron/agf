@@ -1,0 +1,65 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "8a217e00-d375-486f-aba2-6856f5bf8edf",
+    "schema_id": "comparison-config",
+    "title": "Comparison Config (hidden)",
+    "display_order": 99,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": true
+  },
+  "comparison_fields": [
+    {
+      "path": "audio.frequency_response",
+      "label": "Frequency Response",
+      "format": "range_hz",
+      "higher_wins": true
+    },
+    {
+      "path": "audio.sensitivity_db_spl",
+      "label": "Sensitivity",
+      "format": "db",
+      "higher_wins": true
+    },
+    {
+      "path": "audio.thd_percent",
+      "label": "THD",
+      "format": "percent",
+      "higher_wins": false
+    },
+    {
+      "path": "audio.snr_db",
+      "label": "SNR",
+      "format": "db",
+      "higher_wins": true
+    },
+    {
+      "path": "audio.max_spl_db",
+      "label": "Max SPL",
+      "format": "db",
+      "higher_wins": true
+    },
+    {
+      "path": "business.asp_usd",
+      "label": "Price",
+      "format": "currency_range",
+      "higher_wins": false
+    },
+    {
+      "path": "agf_technologies",
+      "label": "Technologies",
+      "format": "array_count",
+      "higher_wins": true
+    },
+    {
+      "path": "connectivity.wireless",
+      "label": "Wireless",
+      "format": "array_count",
+      "higher_wins": true
+    }
+  ],
+  "max_compare": 3,
+  "highlight_winner": true,
+  "overlay_freq_curves": true,
+  "show_price_bar": true
+}

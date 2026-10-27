@@ -1,0 +1,97 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "5d6d18be-d207-48da-9890-952eba7654e7",
+    "schema_id": "distribution",
+    "title": "09 · Distribution",
+    "display_order": 11,
+    "updated_at": "2026-07-06 15:08:29",
+    "is_newest": true
+  },
+  "section_title": "Distribution — the future bank-roller.",
+  "section_number": "09",
+  "philosophy": "Channel partners are owner-operators, often 20+ years in. They built the reputations of Polk, Definitive Tech, McIntosh, et al. Now they are treated like disposable assets because they do not hit spreadsheet numbers — but they cannot be fired either, because the bank *needs* a global distribution spine. AGF positions itself as the **future bank-roller, critically better than the devil they know**: lower price categories filled with curated third-party partner product, our line moving upward, the flagship landing just above Focal's consumer offering (~$5K USD).",
+  "partner_criteria": [
+    {
+      "criterion": "Owner-operator continuity",
+      "description": "20+ years in the segment; founder still actively involved.",
+      "weight": 0.3
+    },
+    {
+      "criterion": "Independent ownership",
+      "description": "Not currently captured by a PE roll-up or conglomerate parent.",
+      "weight": 0.25
+    },
+    {
+      "criterion": "Brand-build credibility",
+      "description": "Built the regional reputation of at least one premium brand (Polk, Definitive, McIntosh, etc.).",
+      "weight": 0.2
+    },
+    {
+      "criterion": "Integration capability",
+      "description": "Custom install or appointment-based retail with technical staff.",
+      "weight": 0.15
+    },
+    {
+      "criterion": "Performing-arts proximity",
+      "description": "Existing relationships with local venues, artists, or production communities.",
+      "weight": 0.1
+    }
+  ],
+  "revenue_model": "**Curated third-party fills the price floor; AGF owns the price ceiling.** Lower categories backed by partner product (presented honestly, with brand-humility). AGF flagship lands just above Focal consumer (~$5K). The package — not the unit — is the negotiation. The Burmester €5,999 lesson applied across the whole channel.",
+  "territories": [
+    {
+      "region": "North America (US/CA)",
+      "strategy": "Stranded Polk/Definitive/McIntosh independents. Custom install + appointment-only retail.",
+      "priority": 1
+    },
+    {
+      "region": "Western Europe",
+      "strategy": "Munich High-End channel relationships. UK boutique engineering brands as third-party fill.",
+      "priority": 1
+    },
+    {
+      "region": "Japan",
+      "strategy": "Boutique audiophile retailers. Tone-meister culture alignment.",
+      "priority": 2
+    },
+    {
+      "region": "East Asia (CN/HK/TW/KR)",
+      "strategy": "Selective premium retail; avoid PE-captured channels.",
+      "priority": 3
+    },
+    {
+      "region": "Australia / NZ",
+      "strategy": "Owner-operator specialty retail.",
+      "priority": 3
+    }
+  ],
+  "channel_types": [
+    {
+      "type": "Specialty Hi-Fi (independent)",
+      "description": "Owner-operated stores, 20+ years in, often previously aligned with Polk/Definitive/McIntosh.",
+      "approach": "AGF as future bank-roller — line of credit, marketing co-op, AGF flagship as halo, third-party fill as the floor."
+    },
+    {
+      "type": "Custom Install",
+      "description": "Integrators serving the residential and commercial AV market.",
+      "approach": "BT'N-Tech home/facility regeneration as a high-margin install line. l'espacI/O performance capture for project-based architectural integrations."
+    },
+    {
+      "type": "AGF Flagship Venues",
+      "description": "One per financially qualifying market; FoH/Balcony/Green Room blueprint.",
+      "approach": "Direct retail through appointment. Performance arts as the brand surface."
+    },
+    {
+      "type": "Performing-Arts Franchises (Wave 2)",
+      "description": "Community-franchise venues replicating the blueprint globally.",
+      "approach": "l'Art Production line installed in Balcony; consumer retail in Green Room; revenue share to local venues."
+    },
+    {
+      "type": "D2C / Owners Portal",
+      "description": "Owners get permanent virtual all-access pass to live content.",
+      "approach": "Hardware sells through partners; content access ships through AGF directly."
+    }
+  ],
+  "section_label": "Distribution"
+}

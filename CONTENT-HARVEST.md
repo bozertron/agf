@@ -1,5 +1,13 @@
 # AGF content harvest
 
+> **Update, same day:** the old site's database (`agf.db`, pushed to `main`) has been recovered and exported. Everything section 7 below listed as missing is now in `content/`:
+>
+> - `content/sections/<schema>.json` is the newest version of each section, with editor-only keys (style overrides, nudges, background settings) stripped. Where the database held more than one distinct version, the older ones are `<schema>.v2.json`, `.v3.json` and so on; the two tenet versions and the two technology versions differ in substance and both are kept.
+> - `content/products/<slug>.json` is each of the six products.
+> - `content/raw/` is the untouched export (every row, editor keys included) for reference.
+>
+> Sections 1 to 6 below still describe what the repo held before the database arrived and remain accurate as an inventory of images and fixed names.
+
 What survived from the old site, what was lost, and what the new standalone pages can draw on. Compiled 2026-10-27 from `site/`, `product-renders/`, the root images and the design system in `agf-design-system/`.
 
 ## 1. What the old site actually was

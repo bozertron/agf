@@ -1,0 +1,65 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "02820881-6b80-459b-bfab-87f17c3e32f2",
+    "schema_id": "overview",
+    "title": "At a Glance",
+    "display_order": 8,
+    "updated_at": "2026-07-14 16:23:49",
+    "is_newest": true
+  },
+  "section_label": "Overview",
+  "section_number": "",
+  "section_title": "At a Glance",
+  "headline": "A strategic move into global audio & consumer technology markets.",
+  "summary": "AGF positions at the intersection of premium audio, proprietary codec technology, and artist-first content distribution. The opportunity is defined by three converging factors: **wave of audio-industry M&A consolidation** that has stranded premium brands under corporate umbrellas, **unaddressed consumer demand** for genuine community-oriented physical retail, and a **patented acoustic rendering stack** (l'Art) that eliminates the sweet spot — a problem the entire industry has accepted as unsolvable.\n\nThe thesis: consolidate the fragments, build the platform, and serve the artists.",
+  "intro_text": "",
+  "mode": "text",
+  "image": "",
+  "image_position": "right",
+  "metrics": [
+    {
+      "value": "$4.2B",
+      "label": "TAM (Premium Audio)",
+      "context": "Global addressable market for premium home and personal audio"
+    },
+    {
+      "value": "12+",
+      "label": "Brand Acquisitions",
+      "context": "Key consolidation events mapped across B&O, Harman, Sonos, Bose, and others"
+    },
+    {
+      "value": "6",
+      "label": "Proprietary Technologies",
+      "context": "l'Art, stereOS, BT'N-Tech, l'espacI/O, FRC41, No-Nails"
+    },
+    {
+      "value": "50/50",
+      "label": "Artist Revenue Split",
+      "context": "In perpetuity on every broadcast-mixed performance"
+    }
+  ],
+  "highlights": [
+    {
+      "icon": "🧪",
+      "title": "Patent Moat",
+      "description": "l'Art sweet-spot elimination codec — patented and production-ready."
+    },
+    {
+      "icon": "🏛️",
+      "title": "Industry Consolidation",
+      "description": "Decades of M&A have stranded premium brands under corporate umbrellas, creating opportunity."
+    },
+    {
+      "icon": "🎙️",
+      "title": "Artist-First",
+      "description": "Most favorable contract terms in the industry — artists own their stereo masters."
+    },
+    {
+      "icon": "🏟️",
+      "title": "Flagship Venue Concept",
+      "description": "Physical retail reimagined as a performing arts locale, not a sales floor."
+    }
+  ],
+  "appendix": ""
+}

@@ -1,0 +1,67 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "4f022f7f-3248-4061-a566-dde1c17a63e0",
+    "schema_id": "concept-explainer",
+    "title": "How It Works",
+    "display_order": 6,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": false
+  },
+  "section_label": "The Concept",
+  "section_number": "",
+  "section_title": "Why This Matters",
+  "intro_text": "AGF is built on a premise that runs counter to the dominant industry narrative: **stereo is not dead — it has never been properly implemented.** Every major audio innovation of the past 20 years (Dolby Atmos, multi-channel upmixing, object-based audio) has treated stereo as a constraint to escape. AGF treats stereo as the destination, refined to its highest form.",
+  "layout": "alternating",
+  "modules": [
+    {
+      "id": "sweet-spot-problem",
+      "type": "overview_block",
+      "display_order": 0,
+      "headline": "The Sweet Spot Problem",
+      "body": "Stereo inherently creates a narrow optimal listening position — the \"sweet spot.\" The entire home-theatre / multi-channel industry has responded by adding more speakers, more upmixing, and more processing to mask the limitation. This is brute force.\n\nAGF's l'Art codec takes the opposite approach: **eliminate the sweet spot from the rendering equation** rather than drowning it in channels. The result is a stable, immersive stereo soundfield that persists anywhere in the room, with no additional speakers, no extra processing overhead, and no compromise to the artist's intended mix.",
+      "items": [
+        {
+          "icon": "🎯"
+        }
+      ]
+    },
+    {
+      "id": "consolidation-thesis",
+      "type": "overview_block",
+      "display_order": 1,
+      "headline": "The Consolidation Opportunity",
+      "body": "Between 2000 and 2024, the audio industry underwent a wave of M&A that concentrated brands under corporate ownership — Samsung/Harman, B&O's restructuring, Bose's retreat, Sonos's locked-in ecosystem. These acquisitions **stranded premium brands inside corporate R&D silos** where the parent's incentives (scale, cross-sell, walled gardens) diverge from the enthusiast buyer's desires (openness, sound quality, build longevity).\n\nAGF's thesis: assemble the fragments that the consolidators left behind. Not by acquisition — by building a platform that independent brands, artists, and venues can adopt.",
+      "items": [
+        {
+          "icon": "🏛️"
+        }
+      ]
+    },
+    {
+      "id": "artist-platform",
+      "type": "overview_block",
+      "display_order": 2,
+      "headline": "Artist-First Economics",
+      "body": "The streaming era normalized a revenue split of fractions of a cent per play, controlled by labels and platforms. AGF's model inverts this: **artists own their stereo masters**, set their own virtual-ticket pricing, and retain a 50/50 split in perpetuity on broadcast-mixed performances — with the right to block any broadcast without cause.\n\nThe green room is not a metaphor: AGF's physical venues are designed so the consumer product is *discovered* through the artist and the venue, not pushed through a sales funnel.",
+      "items": [
+        {
+          "icon": "🎙️"
+        }
+      ]
+    },
+    {
+      "id": "retail-reimagined",
+      "type": "overview_block",
+      "display_order": 3,
+      "headline": "Retail as Community",
+      "body": "Apple's sterile boutiques defined the premium retail playbook for 20 years. AGF's alternative: **a venue that is first a performing-arts space**, second a flagship for the brand. The Front of House (bar + stage) generates foot traffic via live performances. The Balcony serves pros. The Green Room — hidden, appointment-only — is where the consumer product lives.\n\nThis inverts the standard retail funnel: discover the community first, discover the product second. The hard part. The whole point.",
+      "items": [
+        {
+          "icon": "🏟️"
+        }
+      ]
+    }
+  ],
+  "footnote": "Each of these concepts is expanded in its dedicated section of the deck."
+}

@@ -1,0 +1,174 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "bddfddb5-bb7d-42cc-9b2b-1a20afcd7581",
+    "schema_id": "founder",
+    "title": "08 · The Founder",
+    "display_order": 10,
+    "updated_at": "2026-07-06 15:08:29",
+    "is_newest": false
+  },
+  "section_title": "Benjamin Webster.",
+  "section_number": "08",
+  "section_label": "The Founder",
+  "name": "Benjamin Webster",
+  "title": "Founder & CEO",
+  "domain_depth_years": 25,
+  "milestones": [
+    {
+      "year": "<10",
+      "event": "Obsessed with finding speakers",
+      "description": "Garage sales, friends' houses. The acoustic-rendering concept sparked by his grandfather — \"the first guy in Winnipeg to own stereo sound.\"",
+      "significance": "Origin of the 25-year domain depth."
+    },
+    {
+      "year": "11–12",
+      "event": "Inherited two massive Hi-Fi magazine collections",
+      "description": "Bought & sold equipment to fund rent in teens."
+    },
+    {
+      "year": "Teens",
+      "event": "Pawn-shop trading",
+      "description": "Bought/sold professionally via pawn shops — brands and products pressure-tested in secondary markets. The first place the hallmarks of 'classics' become visible.",
+      "significance": "Learned to read the market the way an analyst reads a P&L."
+    },
+    {
+      "year": "Late teens",
+      "event": "Professional recording in Toronto",
+      "description": "Music, ADR, foley, sound-effects editing. First wave of chip-amp designers. SOTA software (WaveFrame, Pyramix 32-bit/384kHz). Hollywood mixing theaters alongside Roland TV stereo monitors.",
+      "significance": "Direct exposure to both the high-art and the everyday-mass tiers in the same week."
+    },
+    {
+      "year": "90s",
+      "event": "First audio-tech startup",
+      "company": "Independent",
+      "description": "Father-in-law David Jaeger (world-famous cost-no-object live music recordings for public broadcasters) + David \"Stretch\" Quinney (THE mixing/mastering engineer) on Bryston-powered monitors in CBC Studio One. 13 Amps per stereo channel. BBC, Radio France, Radio Scotland rented the room for the Davids."
+    },
+    {
+      "year": "Mid-late 90s",
+      "event": "Mogulus — first live broadcast",
+      "company": "Mogulus (later context: Justin.tv → Twitch via Justin Kan)",
+      "description": "Inspired the work with Justin Kan. Only platform with codec support for CD-quality live streaming of classical music — the first target, for a variety of reasons."
+    },
+    {
+      "year": "Early 00s",
+      "event": "First tech-founder mentor",
+      "company": "V3 Semiconductor (Alan Simmons)",
+      "description": "Alan Simmons, founder/CEO of V3 Semiconductor (Canada's first successful semi co., sold to National). Fostered product-definition talent, set loose on supply chain."
+    },
+    {
+      "year": "00s",
+      "event": "NMI Devices",
+      "company": "NMI Devices (Network Media Interface)",
+      "description": "What Sonos became, architecturally. One of the first teams in the world to test-drive D2-Audio's DSP-driven amplification (Chip Taylor, famous pro-gear engineer). IP still an opportunity in 2026 — the foundation of Mark Levinson's \"custom chip\" marketing angle for his new brand.",
+      "outcome": "Shuttered after rejection by big Japanese brands (\"digital amp will never sound good, who'd network their music anyway\")."
+    },
+    {
+      "year": "10s",
+      "event": "Mass Fidelity · Core · Relay",
+      "company": "Mass Fidelity",
+      "description": "The first commercially successful deployment of Wave Field Synthesis. The Relay PR tour (291% over plan). Munich High-End. The Burmester conversation. The \"you seem to have figured out some details we haven't\" moment.",
+      "significance": "The proof of every tenet in real-world operation."
+    },
+    {
+      "year": "Mid 10s",
+      "event": "Dolby skunkworks",
+      "company": "Dolby",
+      "description": "The \"make things no one can get mad at us for\" charter. Remora — the soundbar that lived behind the TV. The architecture that made it acoustically advantaged. The product Apple shut down via the licensing threat."
+    },
+    {
+      "year": "2024–26",
+      "event": "Watches the consolidation happen",
+      "description": "Krell closes (Jun 2024). Samsung/Harman closes Sound United (Sep 2025). Barco closes VerVent (Apr 2026). Marshall now 78% HSG. The market-rhyme thesis inverts from prediction to observation."
+    },
+    {
+      "year": "2024",
+      "event": "AGF founded",
+      "company": "AGF — All Grounds Floating",
+      "description": "The gospel, distilled. The plan, on the page.",
+      "significance": "AGF is the next move."
+    }
+  ],
+  "mentors_heading": "The mentors, in shorthand",
+  "mentors": [
+    {
+      "name": "Grandfather (Winnipeg)",
+      "contribution": "\"The first guy in Winnipeg to own stereo sound.\" Sparked the concept of acoustic rendering pre-teen.",
+      "relationship": "Origin"
+    },
+    {
+      "name": "\"Old hands\" (teenage years)",
+      "contribution": "Esoteric custom tube gear; what to listen for.",
+      "relationship": "Teenage mentors"
+    },
+    {
+      "name": "First wave of chip-amp designers",
+      "contribution": "Hard-line, latest-tech-driven opinions.",
+      "relationship": "Peer/teacher"
+    },
+    {
+      "name": "Hollywood sound-effects editors (Toronto)",
+      "contribution": "48-track blow-ups; subtleties in recordings; the SOTA software era.",
+      "relationship": "Professional mentors"
+    },
+    {
+      "name": "David Jaeger",
+      "contribution": "Cost-no-object live music recordings; remote studios; scale.",
+      "relationship": "Father-in-law"
+    },
+    {
+      "name": "David \"Stretch\" Quinney",
+      "contribution": "Riding the rails of multi-million-dollar SOTA-equipped Bryston monitors in CBC Studio One.",
+      "relationship": "Master craftsman / mentor"
+    },
+    {
+      "name": "Alan Simmons",
+      "contribution": "V3 Semiconductor. Fostered product-definition, unleashed on supply chain.",
+      "relationship": "First tech-founder mentor"
+    },
+    {
+      "name": "Chip Taylor",
+      "contribution": "D2-Audio. DSP-driven amplification. The pro-gear lineage.",
+      "relationship": "Technology partner"
+    },
+    {
+      "name": "Justin Kan",
+      "contribution": "The e-sports-properly-Twitch fluke accident. The CD-quality live stream that almost was.",
+      "relationship": "Founder peer"
+    },
+    {
+      "name": "Dan D'Agostino",
+      "contribution": "The most credible case study in surviving a PE rug-pull and rebuilding at the top of the aspirational tier.",
+      "relationship": "Peer (today)"
+    }
+  ],
+  "key_companies_heading": "Key companies",
+  "key_companies": [
+    {
+      "name": "NMI Devices",
+      "role": "Co-founder / Product Definition",
+      "years": "00s",
+      "outcome": "Shuttered (too early). Architecture later validated by Sonos."
+    },
+    {
+      "name": "Mass Fidelity",
+      "role": "Founder / CEO",
+      "years": "2010s",
+      "outcome": "Core + Relay. First commercial Wave Field Synthesis deployment. Munich High-End validation."
+    },
+    {
+      "name": "Dolby (skunkworks)",
+      "role": "Skunkworks lead",
+      "years": "Mid 2010s",
+      "outcome": "Remora invented; Apple licensing threat killed program."
+    },
+    {
+      "name": "AGF — All Grounds Floating",
+      "role": "Founder & CEO",
+      "years": "2024–present",
+      "outcome": "In flight."
+    }
+  ],
+  "cta_heading": "The plan is on the page. *Now what?*",
+  "cta_body": "Channel introductions. Distribution relationships. Capital partner conversations. The first flagship venue. The first six Tenet-aligned hires. The first l'Art-recorded performance."
+}

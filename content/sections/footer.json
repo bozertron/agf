@@ -1,0 +1,15 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "1210f1d1-a640-47b1-b6a6-f040517a7e58",
+    "schema_id": "footer",
+    "title": "Footer",
+    "display_order": -1,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": true
+  },
+  "brand_name": "AGF",
+  "tagline": "— All Grounds Floating",
+  "meta_text": "Foundational Brand Development Document · 2026 · Internal & Investor Distribution",
+  "source_text": "Sources: Bang & Olufsen A/S annual reports (2000/01–2023/24) · Samsung/Harman · Bose · Barco · Gentex · Masimo · HSG · Cosonic · Sony Interactive Entertainment · US BLS CPI · The Absolute Sound · Stereophile · What Hi-Fi? · ecoustics.com"
+}

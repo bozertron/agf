@@ -1,0 +1,151 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "64f3a8cb-9476-4ce0-82fa-7348ac383eee"
+  },
+  "name": "The Symphony Macro-System",
+  "slug": "symphony-macro-system",
+  "category": "macro-system",
+  "status": "concept",
+  "tagline": "A historical rhyme on the mini-system fad of the 80s and 90s. Tall (150cm), under 20cm deep, 36cm wide. True full-range high-efficiency. Three application variants: In-Room, On-Wall (sconce-inspired), In-Wall (pre-primed paper).",
+  "description": "Sub-bass that dedicated premium subwoofers can't reach, at low volume. The first product where the No-Nails engineering process is fully visible: a single 8\" woofer transmission-line tuned to reach below 30Hz, beryllium-alloy HF mounted in dustcap position, every domain contributing modestly.",
+  "form_factor": {
+    "dimensions": {
+      "height_mm": 1500,
+      "width_mm": 360,
+      "depth_mm": 200
+    },
+    "finish": "Variant-dependent (cabinet, sconce-mount, in-wall paper)",
+    "materials": [
+      "transmission-line cabinet",
+      "beryllium-alloy HF",
+      "8\" woofer cone"
+    ],
+    "variants": [
+      {
+        "name": "In-Room",
+        "differentiator": "Free-standing 150cm tower"
+      },
+      {
+        "name": "On-Wall",
+        "differentiator": "Sconce-inspired wall mount"
+      },
+      {
+        "name": "In-Wall",
+        "differentiator": "Pre-primed paper surface, ready for the enviro-design team's finish coat"
+      }
+    ]
+  },
+  "audio": {
+    "frequency_response": {
+      "low_hz": 28,
+      "high_hz": 22000
+    },
+    "drivers": [
+      {
+        "type": "woofer",
+        "size_mm": 203,
+        "quantity": 1
+      },
+      {
+        "type": "tweeter",
+        "material": "beryllium-alloy",
+        "quantity": 1
+      }
+    ],
+    "enclosure": {
+      "type": "transmission-line"
+    },
+    "amplification": {
+      "class": "D"
+    }
+  },
+  "agf_technologies": [
+    "BT'N-Tech",
+    "l'espacI/O",
+    "No-Nails"
+  ],
+  "business": {
+    "ttm_months": {
+      "min": 8,
+      "max": 12
+    },
+    "cogs_usd": {
+      "min": 100,
+      "max": 200
+    },
+    "asp_usd": {
+      "min": 2990,
+      "max": 2990
+    },
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "cert_cost_estimate_usd": 30000
+  },
+  "roadmap_notes": "CoGS ~$200 at low-1000s; refactors to <$100. **PR stunt: Symphony submitted for review at $29,990 first, corrected post-submission to $2,990 retail** — anchor the price ceiling, then drop the ladder. NAD 3020 anchor: $89 in 1978 ≈ $432 in 2026 — the bargain that minted a global brand. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU.",
+  "competitive_reference": {
+    "comparable_products": [
+      "NAD 3020 era references",
+      "Wharfedale Linton",
+      "JBL L100 Classic"
+    ],
+    "price_positioning": "$2,990 retail with $29,990 review-press anchor",
+    "key_differentiators": [
+      "Transmission-line single-woofer down to <30Hz at low SPL",
+      "No-Nails engineering process — every discipline contributes modestly",
+      "Three variants (In-Room, On-Wall sconce, In-Wall paper) on shared platform",
+      "PR stunt: $29,990 review tier, corrected to $2,990 retail"
+    ]
+  },
+  "system_config": {
+    "system_role": "amplifier",
+    "companions": [
+      "over-ear-home-centric",
+      "core-all-in-one-soundbar",
+      "the-instrument",
+      "wasted-real-estate"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "over-ear-home-centric",
+        "connection": "RF"
+      },
+      {
+        "target_slug": "core-all-in-one-soundbar",
+        "connection": "WiFi"
+      },
+      {
+        "target_slug": "wasted-real-estate",
+        "connection": "analog"
+      }
+    ]
+  },
+  "_viz_config": {
+    "show_freq_response": true,
+    "show_driver_diagram": true,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "arc",
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "ce4088c1-58fe-41b2-8a5c-13aec8336ca5",
+    "schema_id": "hero",
+    "title": "Hero",
+    "display_order": -1.5,
+    "updated_at": "2026-07-14 14:56:53",
+    "is_newest": true
+  },
+  "mark": "",
+  "headline": "All Grounds Floating",
+  "strapline": "",
+  "subheadline": "When you listen to music, you're hearing your power supply. \n\nTubes as a category sound better because they force low-noise power supplies. \n\nDigital systems are just as sensitive, they just fail more gracefully. \n\nWe plant our flag here because it's strategically advantageous; it's also the truth.  ",
+  "metrics": [],
+  "background_type": "orbits",
+  "scroll_indicator": false,
+  "pcb_motif": false,
+  "appendix": ""
+}

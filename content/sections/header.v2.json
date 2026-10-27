@@ -1,0 +1,15 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "5d676382-4854-42b1-ac42-157ccebdebc8",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": -2,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": false
+  },
+  "brand_name": "AGF",
+  "nav_links": [],
+  "cta_text": "Request the Deck",
+  "cta_link": "#founder"
+}

@@ -1,0 +1,99 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "f4bd5a91-092c-442d-a950-bd251f3dac09",
+    "schema_id": "timeline",
+    "title": "01 · The Opportunity / History Rhymes",
+    "display_order": 3,
+    "updated_at": "2026-07-14 18:38:59",
+    "is_newest": true
+  },
+  "section_title": "Hundreds of Brands, Decades Apart, One Safe Harbor",
+  "intro_text": "",
+  "section_number": "",
+  "section_label": "The Outlier - Strategic Inspiration",
+  "flip_interval_seconds": 12,
+  "eras": [
+    {
+      "year_range": "1978–1991",
+      "label": "Then",
+      "events": [
+        {
+          "year": "1978–1991",
+          "title": "Japanese conglomerates dominate global Hi-Fi",
+          "description": "Sony · Matsushita (Technics) · Pioneer · Yamaha · Kenwood · JVC · Sansui · Onkyo · Aiwa held 55%+ of global Hi-Fi share by 1982, from entry-level to premium big-box tiers."
+        },
+        {
+          "year": "1978–1991",
+          "title": "Specialty retail differentiates with esoteric brands",
+          "description": "Tweeter, Magnolia Hi-Fi, Crutchfield, and regional independents used Bose as entry and built reputations on Polk, Boston Acoustics, Snell, Advent, EPI, JBL, Infinity, ADS — often PE/KE owned even then."
+        },
+        {
+          "year": "1978–1991",
+          "title": "Aspirational tier: the \"eff you money\" customer",
+          "description": "Krell, Wilson Audio, Quad, Magnepan, McIntosh, Mark Levinson, conrad-johnson, Audio Research, Threshold, Bryston — $1M+ systems were not a stretch."
+        },
+        {
+          "year": "2007/08",
+          "title": "Bang & Olufsen stood alone — peak ~$853M USD",
+          "description": "Equivalent to ≈ $1.25B in 2026 dollars. You had to put in the work to acquire B&O — the audio equivalent of the Birkin bag."
+        }
+      ]
+    },
+    {
+      "year_range": "2014–2026",
+      "label": "Now",
+      "events": [
+        {
+          "year": "2014–2026",
+          "title": "Chinese vendors + global PE roll-ups dominate",
+          "description": "GoerTek/Dynaudio · IAG (Mission, Quad, Audiolab, Wharfedale) · Marshall family + HSG (Jan 2025) · Cosonic/Beyerdynamic. Same shape as the Japanese wave, different flag."
+        },
+        {
+          "year": "2007–2008",
+          "title": "US specialty chain collapse",
+          "description": "Tweeter, et al. — bankrupt 2007, closed Dec 2 2008. Big-box channel replaced by Amazon, JD, Taobao, Media Markt, Elkjøp."
+        },
+        {
+          "year": "2014–2026",
+          "title": "Survivors",
+          "description": "Crutchfield (1974) still private — $230M revenue, 50 years in. Magnolia absorbed inside Best Buy. Regional independents survive via custom install."
+        },
+        {
+          "year": "Jun 2024",
+          "title": "Krell closes",
+          "description": "Following the death of owner/CEO Rondi D'Agostino. Service resumes Mar 2025; son Kristofer awarded 70%+ Feb 2025. Dan D'Agostino — rebuilt under his own name — is selling $250K monoblocks into Dolby Atmos maximalists."
+        },
+        {
+          "year": "2024",
+          "title": "B&O publicly traded, struggling",
+          "description": "FY2023/24 revenue $402M — down from the 2007/08 peak."
+        }
+      ]
+    }
+  ],
+  "comparison_points": [
+    {
+      "category": "Mass Market Channels",
+      "era_1_value": "Japanese conglomerates (Sony, Matsushita, Pioneer, Yamaha, Kenwood, JVC, Sansui, Onkyo, Aiwa)",
+      "era_2_value": "Chinese Vendors + Global PE roll-ups",
+      "insight": "Different Flags, Identical Structural Pressure.",
+      "appendix": ""
+    },
+    {
+      "category": "Specialty retail",
+      "era_1_value": "Tweeter · Magnolia Hi-Fi · Crutchfield · Regional Chains",
+      "era_2_value": "Magnolia absorbed into Best Buy · Buying Groups· Custom Install Survivors",
+      "insight": "Incumbents now dominate, access is non-trivial. ",
+      "appendix": ""
+    },
+    {
+      "category": "The Outlier",
+      "era_1_value": "Bang & Olufsen — peak ~$853M USD (≈ $1.25B in 2026 $)",
+      "era_2_value": "B&O — $402M USD: Rebuilding after abandoning Safe Harbor.",
+      "insight": "New management didn't recognize their beachhead and almost destroyed the brand.",
+      "appendix": ""
+    }
+  ],
+  "appendix": ""
+}

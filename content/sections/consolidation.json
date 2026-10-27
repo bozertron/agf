@@ -1,0 +1,89 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "1702d023-64db-4548-b623-ca3631001de6",
+    "schema_id": "consolidation",
+    "title": "02 · The Consolidation",
+    "display_order": 2,
+    "updated_at": "2026-07-06 23:36:50",
+    "is_newest": true
+  },
+  "section_title": "The Homogenization of the Premium Audio Market",
+  "section_number": "",
+  "section_label": "The Opportunity",
+  "intro_text": "Greatest Hits Product Strategies are rampant, Channel Distribution Partners are managed as Commercial Banking Clients ",
+  "acquisitions": [
+    {
+      "acquirer": "Samsung Electronics",
+      "target": "JBL, Harman Kardon, AKG, Mark Levinson, Revel, Lexicon, Infinity, Arcam, B&O Automotive, B&W, Denon, Marantz, Polk, Definitive, Classé, HEOS, Boston Acoustics",
+      "value_usd": 8350000000,
+      "date": "",
+      "type": "acquisition",
+      "source_url": "https://news.samsung.com/global/samsung-electronics-completes-acquisition-of-harman",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Sony Interactive Entertainment",
+      "target": "Audeze Headphones",
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Bose Corp.",
+      "target": "McIntosh, Sonus Faber, Audio Research, Wadia, Sumiko",
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Gentex Corp.",
+      "target": "Klipsch, Onkyo,  Integra",
+      "value_usd": 196000000,
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "HSG (Hillhouse)",
+      "target": "Marshall",
+      "value_usd": 1100000000,
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Cosonic Intelligent Tech",
+      "target": "Beyerdynamic",
+      "value_usd": 122000000,
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Barco (Belgium)",
+      "target": "Focal,  Naim Electronics",
+      "value_usd": 135000000,
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    },
+    {
+      "acquirer": "Loewe",
+      "target": "Cabasse Speakers",
+      "date": "",
+      "type": "acquisition",
+      "source_url": "",
+      "appendix": ""
+    }
+  ],
+  "independent_heading": "",
+  "independent_intro": "",
+  "appendix": ""
+}

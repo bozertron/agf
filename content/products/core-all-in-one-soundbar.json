@@ -1,0 +1,148 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "e3c305db-e900-49bd-9b2f-9305f00f964d"
+  },
+  "name": "Core-like All-in-One (Soundbar)",
+  "slug": "core-all-in-one-soundbar",
+  "category": "soundbar",
+  "status": "concept",
+  "tagline": "Primary soundbar in 50–100m² rooms. Higher power than the small variant. Same 8-transducer driver config (4 custom coaxial + 4 LF assist).",
+  "description": "Shared tooling and platform with the small Core-like variant. Mid-sandwich pricing slot in the runway, fed by the same l'Art + l'espacI/O stack.",
+  "form_factor": {
+    "finish": "Matte copper plated mass-loaded alloy",
+    "materials": [
+      "mass-loaded alloy",
+      "matte copper plating",
+      "obsidian block (UI)"
+    ]
+  },
+  "audio": {
+    "drivers": [
+      {
+        "type": "coaxial",
+        "material": "custom",
+        "quantity": 4
+      },
+      {
+        "type": "woofer",
+        "material": "LF assist",
+        "quantity": 4
+      }
+    ],
+    "amplification": {
+      "class": "D",
+      "channels": 8
+    }
+  },
+  "connectivity": {
+    "wireless": [
+      {
+        "protocol": "WiFi",
+        "codecs": [
+          "l'Art"
+        ]
+      },
+      {
+        "protocol": "Bluetooth",
+        "version": "5.3",
+        "codecs": [
+          "SBC",
+          "AAC",
+          "aptX",
+          "aptX HD",
+          "LDAC"
+        ]
+      }
+    ],
+    "wired": [
+      {
+        "connector": "HDMI eARC",
+        "format": "PCM/Atmos passthrough"
+      }
+    ],
+    "multi_room": true
+  },
+  "agf_technologies": [
+    "l'Art",
+    "stereOS",
+    "BT'N-Tech",
+    "l'espacI/O",
+    "No-Nails"
+  ],
+  "business": {
+    "ttm_months": {
+      "min": 8,
+      "max": 12
+    },
+    "cogs_usd": {
+      "min": 100,
+      "max": 150
+    },
+    "asp_usd": {
+      "min": 1199,
+      "max": 1499
+    },
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "cert_cost_estimate_usd": 30000
+  },
+  "roadmap_notes": "Shared tooling with small variant. Mid-sandwich price position in the runway. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU.",
+  "competitive_reference": {
+    "comparable_products": [
+      "Sonos Arc",
+      "Sennheiser AMBEO",
+      "B&O Beosound Theatre"
+    ],
+    "price_positioning": "Above Sonos Arc, below B&O Beosound Theatre",
+    "key_differentiators": [
+      "l'Art sweet-spot elimination across the full TV-room range",
+      "Shared platform with the small variant — line economics"
+    ]
+  },
+  "system_config": {
+    "system_role": "output",
+    "companions": [
+      "symphony-macro-system",
+      "the-instrument"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "symphony-macro-system",
+        "connection": "WiFi"
+      },
+      {
+        "target_slug": "the-instrument",
+        "connection": "BT"
+      }
+    ]
+  },
+  "_viz_config": {
+    "show_freq_response": false,
+    "show_driver_diagram": true,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "bar",
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  }
+}

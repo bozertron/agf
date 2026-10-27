@@ -1,0 +1,31 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "640e5072-efb3-4084-96a1-fa89af7154b9",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.875,
+    "updated_at": "2026-07-14 16:36:37",
+    "is_newest": false
+  },
+  "section_label": "",
+  "section_number": "",
+  "section_title": "Prelude",
+  "intro_text": "",
+  "squares": [
+    {
+      "text": "The Consumer Audio market is one of the oldest consumer tech markets.  \n\nEvery existing Technology and Product Segment is a quagmire; veterans have 'seen it all'.  \n\nOur products have to be compelling alternatives to what's available.  ",
+      "image": ""
+    },
+    {
+      "text": "",
+      "image": "assets/sections/prelude/prelude-hero.png"
+    },
+    {
+      "text": "",
+      "image": "assets/sections/prelude/prelude-square-2.png"
+    }
+  ],
+  "summary": "",
+  "appendix": ""
+}

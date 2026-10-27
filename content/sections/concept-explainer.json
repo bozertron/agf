@@ -1,0 +1,18 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "d30a3470-20d5-470a-8b53-eab105c8f642",
+    "schema_id": "concept-explainer",
+    "title": "Concept Explainer",
+    "display_order": 8.5,
+    "updated_at": "2026-07-14 16:23:21",
+    "is_newest": true
+  },
+  "section_label": "",
+  "section_number": "",
+  "section_title": "How It Works",
+  "intro_text": "",
+  "layout": "grid",
+  "modules": [],
+  "footnote": ""
+}

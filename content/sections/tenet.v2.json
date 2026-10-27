@@ -1,0 +1,70 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "79c32b93-0b01-4bbd-83bf-1c3c46b00a9c",
+    "schema_id": "tenet",
+    "title": "Tenets",
+    "display_order": 17,
+    "updated_at": "2026-07-06 15:08:29",
+    "is_newest": false
+  },
+  "section_title": "The operating gospel.",
+  "section_number": "03",
+  "section_label": "The Six Tenets",
+  "tenets": [
+    {
+      "number": 1,
+      "title": "Thou shalt not compete with existing high-volume audio segments — directly.",
+      "anchor_phrase": "Don't fight the river. Reframe the problem.",
+      "body": "At Dolby, a skunkworks program was chartered to drive top-line growth without interfering with the licensing river of gold. The mandate: build products no one could get mad at — not Apple, not the licensees, not the BoD. The discipline transfers to AGF: never line up shoulder-to-shoulder with a $5B incumbent. Find the seam.",
+      "example_title": "Remora — the soundbar that lived behind the TV",
+      "example_body": "Remora exemplified the principle: invisible from a design-channel perspective, acoustically advantaged by its position behind the TV, room for 16–48 mid/high drivers and 2–6 dedicated subs facing back at the wall for boundary reinforcement. A reframe, not a fight.",
+      "key_insight": "Reframe the problem so the giants are not even the competition."
+    },
+    {
+      "number": 2,
+      "title": "Thou shalt not compete on price with existing premium → luxury brands — directly.",
+      "anchor_phrase": "Don't discount. Package. Convenience is a luxury product.",
+      "body": "Once a sales team has a customer, you are not negotiating price. You are negotiating a budgeted total package. The Mass Fidelity Relay went from $199 → $249 → $299 with sales increasing at every step. A nationally championed high-end retailer's managing director delivered the lesson; a Burmester executive at Munich High-End confirmed it.",
+      "example_title": "Relay $199 → $299 + Burmester €5,999 packaging",
+      "example_body": "Burmester quote at Munich High-End: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999.\" Premium buyers do not want a discount. They want a reason.",
+      "key_insight": "Premium buyers do not want a discount. They want a reason."
+    },
+    {
+      "number": 3,
+      "title": "Thou shalt measure additional features through a lens of exponential value gains — exclusively.",
+      "anchor_phrase": "If a feature doesn't compound, it dilutes.",
+      "body": "The Mass Fidelity Core launched with a kitchen-sink feature set — gesture, IoT, phone-charger. The pre-launch survey was decisive: 80%+ of customers cared about one thing — one speaker sounding like two with the sweet spot eliminated (wave-field synthesis). Multi-room 15%. Portability 4%. Everything else, irrelevant.",
+      "example_title": "Mass Fidelity Core pre-launch survey",
+      "example_body": "80%+ wanted wave-field synthesis. 15% multi-room. 4% portability. The lesson: know what is core, kill what is not, no matter how loudly internal stakeholders defend it.",
+      "key_insight": "Kill features that do not compound — even when defended internally."
+    },
+    {
+      "number": 4,
+      "title": "Thou shalt 'check the boxes' on behalf of corporate buyers — exclusively.",
+      "anchor_phrase": "Parse the checklist like a contract attorney.",
+      "body": "Corporate buyers are rule-bound. They need multi-room, multiple codecs, the Relay Bluetooth tech, and a wired or wireless sub option (wireless preferred, not a deal-breaker). One distributor was lost over IoT. The rest of the checklist was nearly identical. A seasoned executive team is required to parse which boxes must be checked — and which can be quietly dropped.",
+      "example_title": "Mass Fidelity distributor checklists",
+      "example_body": "Multi-room, multi-codec, Relay BT, sub option (wireless preferred). Lost one distributor on IoT. Everything else matched.",
+      "key_insight": "The corporate checklist is a contract. Parse accordingly."
+    },
+    {
+      "number": 5,
+      "title": "Thou shalt always deliver a product-line. Not a single product.",
+      "anchor_phrase": "A single product is a single point of failure.",
+      "body": "Earl Qua, circa 2012/13: \"CE is all about churn.\" Every win in the savage global markets came from innovative product positions that previously did not exist. Product-line depth is what enables an entrenched, bank-rolled distribution partner to acquire your brand without political interference from their big brands. The catch: products must plausibly bridge to a position where AGF looks like a future bank-roller, critically better than the devil they know.",
+      "example_title": "Earl Qua — \"CE is all about churn\"",
+      "example_body": "A Coca-Cola model product line — depth, breadth, inevitability, presence. No rational actor accepts it. If it happens by accident, that's the problem you want to have.",
+      "key_insight": "Depth, breadth, inevitability, presence — the Coca-Cola gospel."
+    },
+    {
+      "number": 6,
+      "title": "Thou shalt lead. Otherwise, by definition, thou art following.",
+      "anchor_phrase": "Execution path is open for discussion. Vision is not.",
+      "body": "The most strongly held belief, with the most flexible application. Followers die slow deaths — almost without exception. The brands that survive relentless CE churn dominate in multiple disciplines OR hold brand IP and patent moats the market values OR own the leadership position in a near-animalistic business practice.",
+      "example_title": "D'Agostino · Bose · Polk",
+      "example_body": "Dan D'Agostino after his PE rug-pull as founder of Krell — rebuilt under his own name, $250K monoblocks moving into Dolby Atmos maximalists. Amar Bose understanding 'the masses wanted impressive, not accurate.' Matthew Polk owning the 'keeper of the truth' #2 position. Different paths, same lesson.",
+      "key_insight": "Know where to push, and how to present it to a global market that eats new entrants for breakfast."
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "43328e5f-739e-491f-a22e-1042cfe4cdbc",
+    "schema_id": "pdf-config",
+    "title": "PDF Export Config (hidden)",
+    "display_order": 98,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": true
+  },
+  "template_sections": [
+    {
+      "key": "header",
+      "enabled": true,
+      "show_logo": true,
+      "background_color": "#1F4A2D"
+    },
+    {
+      "key": "hero_image",
+      "enabled": true
+    },
+    {
+      "key": "overview",
+      "enabled": true
+    },
+    {
+      "key": "audio_specs",
+      "enabled": true,
+      "columns": 2
+    },
+    {
+      "key": "connectivity",
+      "enabled": true
+    },
+    {
+      "key": "technologies",
+      "enabled": true,
+      "format": "badges"
+    },
+    {
+      "key": "form_factor",
+      "enabled": true
+    },
+    {
+      "key": "business_metrics",
+      "enabled": true,
+      "audience": "investor"
+    },
+    {
+      "key": "footer",
+      "enabled": true,
+      "confidentiality_notice": true
+    }
+  ],
+  "page_format": "A4",
+  "margins": {
+    "top": "0.5in",
+    "bottom": "0.5in",
+    "left": "0.75in",
+    "right": "0.75in"
+  },
+  "brand_colors": {
+    "primary": "#1F4A2D",
+    "accent": "#B8860B",
+    "text": "#1A1A1A"
+  },
+  "font_family": "Commissioner",
+  "footer_text": "AGF — All Grounds Floating | Foundational Brand Development | 2026",
+  "brand_mark": "AGF",
+  "brand_tag": "All Grounds Floating"
+}

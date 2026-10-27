@@ -1,0 +1,123 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "6cc3cc82-bd80-4cca-a9df-eaede886a060",
+    "schema_id": "competitive-positioning",
+    "title": "11 · Competitive Positioning",
+    "display_order": 13,
+    "updated_at": "2026-07-06 15:08:29",
+    "is_newest": true
+  },
+  "section_title": "Competitive Positioning — where AGF lands.",
+  "section_number": "11",
+  "section_label": "Competitive Positioning",
+  "intro_text": "Every direct competitor below either opens a seam (consolidated, struggling, or closed) or defines the ceiling AGF is happy to sit just below. The aspirational tier survived; the ownership consolidated. The opening is the gap between the struggling incumbent and the $250K outlier.",
+  "competitors": [
+    {
+      "brand": "Bang & Olufsen",
+      "category": "Luxury electronics — the comparable spiritual archetype",
+      "status": "struggling",
+      "prestige_score": 92,
+      "price_usd_avg": 45000,
+      "key_data_points": [
+        "FY2007/08 peak revenue **~$853M USD** (≈ $1.25B in 2026 dollars)",
+        "FY2023/24 revenue **$402M** — less than half the peak",
+        "Public, Copenhagen-listed, decades into a slow decline"
+      ],
+      "agf_positioning": "**Spiritual successor** to the era when B&O stood alone. Same archetype: appointment-driven, design-led, premium-only. AGF inherits the customer-acquisition discipline and the *no shoulder-to-shoulder fight* posture — the original B&O playbook, executed with 2026 technology.",
+      "opening": "B&O's struggle vacates the 'lone luxury electronics archetype' chair. AGF takes the seat, with a venue model B&O never built."
+    },
+    {
+      "brand": "Krell",
+      "category": "Aspirational halo — high-current reference",
+      "status": "reopening",
+      "prestige_score": 88,
+      "price_usd_avg": 85000,
+      "key_data_points": [
+        "Closed **June 18, 2024** following the death of owner/CEO Rondi D'Agostino",
+        "Service resumed **March 2025**; son Kristofer awarded **70%+ ownership Feb 2025**",
+        "Reopening through 2025 — re-establishing distribution, dealer trust still soft"
+      ],
+      "agf_positioning": "**The Instrument fills this vacuum.** With Krell offline through 2024–2025 and the rebuild taking time to re-earn dealer/reviewer trust, the high-current aspirational chair is open. Boutique semis + GaN mono-block + FPGA give AGF a credible halo claim during the gap.",
+      "opening": "12–24 month window where the aspirational halo seat has no obvious occupant. The Instrument lands inside the window."
+    },
+    {
+      "brand": "Focal",
+      "category": "Consumer flagship reference (~$5K USD)",
+      "status": "premium-fill",
+      "prestige_score": 75,
+      "price_usd_avg": 5000,
+      "key_data_points": [
+        "**Consumer flagship ~$5K USD** — the established price ceiling for serious consumer audio",
+        "Now under Barco / VerVent (April 2026 acquisition, $135M) — distribution stable",
+        "Sells **~1,000 pcs/month** of flagship reference with a focused rep firm"
+      ],
+      "agf_positioning": "**AGF positions just above Focal's consumer flagship.** The Instrument sits at $5K+ as a deliberate ceiling-tap, leveraging the reference Focal already established without competing for it shoulder-to-shoulder.",
+      "opening": "Focal validated that the consumer market can absorb $5K halo product at meaningful volume. AGF inherits the price discovery and adds the venue + content moat."
+    },
+    {
+      "brand": "Burmester",
+      "category": "Premium electronics — packaging-led pricing",
+      "status": "premium-fill",
+      "prestige_score": 85,
+      "price_usd_avg": 35000,
+      "key_data_points": [
+        "**€5,999** packaging for what AGF identified at Munich High-End as a **$200-class device** with above-average performance",
+        "Burmester executive: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999\""
+      ],
+      "agf_positioning": "**Genuine value at premium pricing.** Burmester proves the pricing model works (premium buyers want a reason, not a discount). AGF takes the same packaging logic and applies it to genuinely better technology — the moat is the delta between what AGF delivers and what is repackaged.",
+      "opening": "The market accepts €5,999 packaging on $200 hardware. AGF can charge premium prices for premium technology and still look like the value play."
+    },
+    {
+      "brand": "Dan D'Agostino",
+      "category": "Aspirational ceiling — $250K monoblocks",
+      "status": "ceiling",
+      "prestige_score": 95,
+      "price_usd_avg": 150000,
+      "key_data_points": [
+        "**$250K monoblocks** moving into Dolby Atmos maximalists",
+        "Rebuilt under his own name after the Krell PE rug-pull — proves a founder can survive consolidation and reach the ceiling on the rebound"
+      ],
+      "agf_positioning": "**Defines the ceiling.** AGF is not chasing $250K monoblocks. The fact that the ceiling exists at that height — and customers exist who pay it — proves the prestige-audio market still has room above Focal and below the outlier. AGF lives in that gap.",
+      "opening": "Confirms a meaningful ceiling exists for prestige audio. AGF needs only to occupy the territory just above Focal, with the option to climb later."
+    },
+    {
+      "brand": "AGF",
+      "category": "Where AGF lands — just above Focal, well below the ceiling",
+      "status": "premium-fill",
+      "prestige_score": 90,
+      "price_usd_avg": 3000,
+      "key_data_points": [
+        "Inaugural lineup spans Over-Ear → Symphony → Instrument",
+        "Symphony lands at $2,990 retail with a $29,990 review-tier anchor",
+        "Venue + content moat that no incumbent has built"
+      ],
+      "agf_positioning": "**The seam between Focal and the ceiling.** AGF inherits B&O's archetype, fills Krell's vacuum, leverages Burmester's pricing logic, and lives just above Focal — with a venue model none of them have.",
+      "opening": "AGF is the position itself: spiritual successor to a vacated archetype, halo without the $250K ask, value at premium pricing."
+    }
+  ],
+  "summary": "B&O struggles. Krell reopens. Focal sets the consumer ceiling. Burmester proves the pricing model. D'Agostino proves the ceiling exists. **AGF lands just above Focal, with B&O's archetype, Krell's vacuum, Burmester's pricing logic, and a venue model none of them have.**",
+  "_viz_config": {
+    "chart_type": "perceptual-map",
+    "x_axis": {
+      "field": "price_usd_avg",
+      "label": "Price (USD)",
+      "min": 500,
+      "max": 250000,
+      "scale": "log"
+    },
+    "y_axis": {
+      "field": "prestige_score",
+      "label": "Prestige",
+      "min": 0,
+      "max": 100,
+      "scale": "linear"
+    },
+    "highlight_color": "#B8860B",
+    "competitor_color": "#A89880",
+    "dot_radius": 28,
+    "enable_animation": true,
+    "show_grid": true,
+    "show_labels": true
+  }
+}

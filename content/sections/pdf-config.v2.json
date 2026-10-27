@@ -1,0 +1,69 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "c1ceed03-0e3c-4be4-9e5b-f487cc04df82",
+    "schema_id": "pdf-config",
+    "title": "PDF Export Config (hidden)",
+    "display_order": 99,
+    "updated_at": "2026-07-06 08:21:02",
+    "is_newest": false
+  },
+  "template_sections": [
+    {
+      "key": "header",
+      "enabled": true,
+      "show_logo": true,
+      "background_color": "#1F4A2D"
+    },
+    {
+      "key": "hero_image",
+      "enabled": true
+    },
+    {
+      "key": "overview",
+      "enabled": true
+    },
+    {
+      "key": "audio_specs",
+      "enabled": true,
+      "columns": 2
+    },
+    {
+      "key": "connectivity",
+      "enabled": true
+    },
+    {
+      "key": "technologies",
+      "enabled": true,
+      "format": "badges"
+    },
+    {
+      "key": "form_factor",
+      "enabled": true
+    },
+    {
+      "key": "business_metrics",
+      "enabled": true,
+      "audience": "investor"
+    },
+    {
+      "key": "footer",
+      "enabled": true,
+      "confidentiality_notice": true
+    }
+  ],
+  "page_format": "A4",
+  "margins": {
+    "top": "0.5in",
+    "bottom": "0.5in",
+    "left": "0.75in",
+    "right": "0.75in"
+  },
+  "brand_colors": {
+    "primary": "#1F4A2D",
+    "accent": "#B8860B",
+    "text": "#1A1A1A"
+  },
+  "font_family": "Commissioner",
+  "footer_text": "AGF — All Grounds Floating | Foundational Brand Development | 2026"
+}

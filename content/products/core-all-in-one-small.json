@@ -1,0 +1,138 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "1acf4833-132b-4882-a8cd-d2956e8edd24"
+  },
+  "name": "Core-like All-in-One (Small)",
+  "slug": "core-all-in-one-small",
+  "category": "speaker",
+  "status": "concept",
+  "tagline": "Physically unobtrusive room-filling speaker. Slightly smaller than the original Core, bigger sound. Matte copper plated mass-loaded alloy + obsidian block emergent feedback UI.",
+  "description": "A spiritual sequel to the Mass Fidelity Core. Wave-field-synthesis lineage, now with the full l'Art stack and l'espacI/O room mapping. 8 transducer outputs (4 custom coaxial + 4 LF assist).",
+  "form_factor": {
+    "finish": "Matte copper plated mass-loaded alloy",
+    "materials": [
+      "mass-loaded alloy",
+      "matte copper plating",
+      "obsidian block (UI)"
+    ]
+  },
+  "audio": {
+    "drivers": [
+      {
+        "type": "coaxial",
+        "material": "custom",
+        "quantity": 4
+      },
+      {
+        "type": "woofer",
+        "material": "LF assist",
+        "quantity": 4
+      }
+    ],
+    "amplification": {
+      "class": "D",
+      "channels": 8
+    }
+  },
+  "connectivity": {
+    "wireless": [
+      {
+        "protocol": "WiFi",
+        "codecs": [
+          "l'Art"
+        ]
+      },
+      {
+        "protocol": "Bluetooth",
+        "version": "5.3",
+        "codecs": [
+          "SBC",
+          "AAC",
+          "aptX",
+          "aptX HD",
+          "LDAC"
+        ]
+      }
+    ],
+    "multi_room": true
+  },
+  "agf_technologies": [
+    "l'Art",
+    "stereOS",
+    "BT'N-Tech",
+    "l'espacI/O",
+    "No-Nails"
+  ],
+  "business": {
+    "ttm_months": {
+      "min": 8,
+      "max": 12
+    },
+    "cogs_usd": {
+      "min": 100,
+      "max": 150
+    },
+    "asp_usd": {
+      "min": 799,
+      "max": 799
+    },
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "cert_cost_estimate_usd": 30000
+  },
+  "roadmap_notes": "Electronics 80% (power supply + l'Art module selection). Mechanical 0%+ (ID fine-tune, tooling, CFM). Physical UI 90%. Software 70%+. ETL pre-approved PS path. Certifications budgeted at **~$30K combined (ETL/FCC/CE)**.",
+  "competitive_reference": {
+    "comparable_products": [
+      "Naim Mu-so",
+      "B&O Beosound",
+      "Sonos Era 300"
+    ],
+    "price_positioning": "Premium all-in-one — below Naim Mu-so",
+    "key_differentiators": [
+      "Wave-field synthesis with sweet-spot elimination",
+      "Copper + obsidian emergent UI",
+      "8-transducer config (4 coaxial + 4 LF assist)"
+    ]
+  },
+  "system_config": {
+    "system_role": "output",
+    "companions": [
+      "the-instrument"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "the-instrument",
+        "connection": "BT"
+      }
+    ]
+  },
+  "_viz_config": {
+    "show_freq_response": false,
+    "show_driver_diagram": true,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "bar",
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "d0b9ddca-dbf6-44b2-b01d-f3805e3b624c"
+  },
+  "name": "The Instrument — Flagship Reference",
+  "slug": "the-instrument",
+  "category": "flagship",
+  "status": "concept",
+  "tagline": "A pre-amp that presents as an acoustic measurement instrument, an aspirational audiophile reference, AND a mixing/mastering reference. Same platform, different connectors and housing.",
+  "description": "Boutique semiconductors with a Burr-Brown-like signature. A high-margin halo product spec'd to permit the ongoing development and refinement of the l'Art codecs. Pro-tier UI empowers live-mixing techs to submit innovations (royalty-paid). Adjacency: just above Focal's consumer flagship (~$5K USD).",
+  "form_factor": {
+    "finish": "Instrument-grade machined housing",
+    "materials": [
+      "boutique semiconductors",
+      "Burr-Brown-class DAC silicon",
+      "machined alloy chassis"
+    ],
+    "variants": [
+      {
+        "name": "Audiophile Reference",
+        "differentiator": "Consumer-flagship connector set + finish"
+      },
+      {
+        "name": "Pro Reference",
+        "differentiator": "Mixing/mastering connector set + UI"
+      },
+      {
+        "name": "Measurement Instrument",
+        "differentiator": "Lab/test connector set + calibrated reference"
+      }
+    ]
+  },
+  "audio": {
+    "amplification": {
+      "class": "GaN",
+      "watts_per_channel": 2000,
+      "topology": "GaN mono-block (companion)"
+    },
+    "dac": {
+      "architecture": "FPGA"
+    }
+  },
+  "connectivity": {
+    "wireless": [
+      {
+        "protocol": "WiFi",
+        "codecs": [
+          "l'Art"
+        ]
+      }
+    ],
+    "wired": [
+      {
+        "connector": "XLR balanced",
+        "format": "analog"
+      },
+      {
+        "connector": "AES/EBU",
+        "format": "digital"
+      },
+      {
+        "connector": "USB",
+        "format": "high-res"
+      }
+    ],
+    "multi_room": true
+  },
+  "agf_technologies": [
+    "l'Art",
+    "stereOS",
+    "BT'N-Tech",
+    "l'espacI/O",
+    "FRC41",
+    "No-Nails"
+  ],
+  "business": {
+    "ttm_months": {
+      "min": 8,
+      "max": 12
+    },
+    "asp_usd": {
+      "min": 5000,
+      "max": 6500
+    },
+    "gross_margin_target": 0.6,
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "cert_cost_estimate_usd": 30000
+  },
+  "roadmap_notes": "Companions: 2000W GaN mono-block, Gowin FPGA processor, transmission-line sub. Pro tier UI empowers live-mixing techs to submit innovations (royalty-paid). Krell — the original high-current halo competitor — closed Jun 2024 (Rondi D'Agostino's passing) and is reopening through 2025. The vacuum is real.",
+  "competitive_reference": {
+    "comparable_products": [
+      "Focal consumer flagship (~$5K)",
+      "D'Agostino monoblocks",
+      "Krell halo references"
+    ],
+    "price_positioning": "Just above Focal consumer flagship (~$5K USD)",
+    "key_differentiators": [
+      "Three-mode platform: audiophile / pro / measurement",
+      "Boutique-semiconductor Burr-Brown-class signature",
+      "Companion GaN mono-block + FPGA + transmission-line sub",
+      "Royalty-paid pro-tier innovation UI"
+    ]
+  },
+  "system_config": {
+    "system_role": "source",
+    "companions": [
+      "over-ear-home-centric",
+      "core-all-in-one-small",
+      "core-all-in-one-soundbar",
+      "symphony-macro-system"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "over-ear-home-centric",
+        "connection": "BT"
+      },
+      {
+        "target_slug": "core-all-in-one-small",
+        "connection": "BT"
+      },
+      {
+        "target_slug": "core-all-in-one-soundbar",
+        "connection": "BT"
+      },
+      {
+        "target_slug": "symphony-macro-system",
+        "connection": "USB-C"
+      }
+    ]
+  },
+  "_viz_config": {
+    "show_freq_response": false,
+    "show_driver_diagram": false,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "meter",
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "486d8545-e7d2-4d9a-9fcf-d39ee06a5c67",
+    "schema_id": "business-model",
+    "title": "07 · The Business",
+    "display_order": 9,
+    "updated_at": "2026-07-06 15:08:29",
+    "is_newest": true
+  },
+  "channel_approach": {
+    "partner_types": [
+      "Owner-operated specialty Hi-Fi (20+ years in)",
+      "Custom install integrators",
+      "Performing-arts venues (AGF-aligned franchises)",
+      "Curated third-party brands filling lower price tiers"
+    ],
+    "philosophy": "Lower price categories filled with curated third-party partner product. Presented honestly, humbly, recognizing product gaps. This approach must be backed by numbers — but the net positive is real: increased revenue, increased brand loyalty, educational feedback into our own product teams. **A Bose-like approach.**"
+  },
+  "section_title": "Numbers, runway, and the way the money actually works.",
+  "section_number": "07",
+  "pricing_strategy": {
+    "philosophy": "Once a sales team has a customer, price is not the negotiation. The Relay at $199. The Relay at $249. The Relay at $299. Sales went up each time. Burmester at €5,999 packaging a $200-class device for convenience. The lesson is uncomfortable but true: **premium buyers do not want a discount. They want a reason.**",
+    "model_name": "The Budgeted Total Package",
+    "description": "Price the package, not the unit. Convenience, integration, and context are the luxury product. The unit is a participant."
+  },
+  "runway_table": [
+    {
+      "product": "Over-Ear Home",
+      "ttm": "4–6 mo",
+      "cogs_range": "$100–$150",
+      "asp_range": "$599–$799",
+      "notes": "V2 refactor in 8–12 mo"
+    },
+    {
+      "product": "Core-like (small)",
+      "ttm": "8–12 mo",
+      "cogs_range": "$100–$150",
+      "asp_range": "$799",
+      "notes": "ETL pre-approved PS"
+    },
+    {
+      "product": "Core-like (soundbar)",
+      "ttm": "8–12 mo",
+      "cogs_range": "$100–$150",
+      "asp_range": "$1,199–$1,499",
+      "notes": "Shared tooling, mid-sandwich"
+    },
+    {
+      "product": "Symphony Macro",
+      "ttm": "8–12 mo",
+      "cogs_range": "~$200 (refactor <$100)",
+      "asp_range": "$2,990",
+      "notes": "Reviewed at $29,990 first as PR stunt"
+    },
+    {
+      "product": "The Instrument",
+      "ttm": "8–12 mo",
+      "cogs_range": "halo",
+      "asp_range": "just >$5K",
+      "notes": "Above Focal consumer flagship"
+    },
+    {
+      "product": "Wasted Real-Estate",
+      "ttm": "TBD",
+      "cogs_range": "TBD",
+      "asp_range": "TBD",
+      "notes": "Y1 1,000pcs/mo target globally"
+    }
+  ],
+  "revenue_model": "**Hardware-led with codec/OS halo.** Direct hardware margin from Green Room sales (premium, appointment-driven). l'Art codec licensing is *not* the river — third parties adopt **stereOS** (application-specific implementation), not the codec itself. Performance content revenue is **50/50 split** with artists in perpetuity on broadcast-mixed l'Art versions; standard stereo is artist-owned. Owners receive permanent virtual all-access pass to live content.",
+  "scaling_timeline": "**Phase 1 (Year 1):** Inaugural product line ships from existing IP base. Single flagship venue (PoC). Channel introductions to stranded independents.\n\n**Phase 2 (Years 2–3):** Second-wave AGF community franchises — venues replicating the FoH/Balcony/Green Room blueprint globally. l'Art codec adoption seeded through Balcony installations.\n\n**Phase 3 (Years 3–5):** stereOS third-party adoption. Acquisition / hostile-service / integration decision for ten-ton gorillas. AGF as future bank-roller for stranded distribution channels.",
+  "appendix": "",
+  "section_label": "The Business"
+}

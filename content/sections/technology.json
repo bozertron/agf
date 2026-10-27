@@ -1,0 +1,170 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "3af48ba7-83e6-4831-8fbf-df5d6e98b08d",
+    "schema_id": "technology",
+    "title": "05 · The Stack",
+    "display_order": 5.75,
+    "updated_at": "2026-07-14 16:17:58",
+    "is_newest": true
+  },
+  "section_title": "A Technology stack that opens all the doors.",
+  "section_number": "",
+  "technologies": [
+    {
+      "key_capabilities": [
+        "Part of patent moat on Acoustic teleportation codec",
+        "Sweet-spot elimination (wave-field synthesis lineage)",
+        "Broadcast-optimized capture pipeline",
+        "Artist-owned stereo · AGF-owned l'Art · 50/50 broadcast mixed",
+        "5-layer active filtering pipeline (proven on the Core)",
+        "Apple bought 1",
+        "000pc Relay runs at full wholesale multiple times — reason unknown / unconfirmed (the units never sold through)",
+        "A Fraunhofer research scientist was the only outside party who ever grokked the broader concept; sold a rudimentary version to Sennheiser"
+      ],
+      "id": "lart",
+      "name": "l'Art",
+      "full_name": "l'Art — Acoustic Teleportation",
+      "tagline": "Acoustic teleportation, not surround-sound.",
+      "description": "Floating a stable stable soundfield in a room devoid of any sweet spot is what the entire industry has missed.\n\nStereo is *already* 3D when implemented properly.\n\nThe l'Art stack does not enhance stereo by addition —  It does the opposite: generates a more realistic stereo performance while completely eliminating stereo's only real downside: the sweet spot.",
+      "patent_status": "trade_secret",
+      "codec_pipeline": [
+        {
+          "stage": "Capture",
+          "description": "Stereo + room tone + broadcast mixed"
+        },
+        {
+          "stage": "Codec",
+          "description": "l'Art patented acoustic rendering"
+        },
+        {
+          "stage": "Decode",
+          "description": "On-device; eliminates sweet spot"
+        },
+        {
+          "stage": "Render",
+          "description": "Stereo 3D, no sweet spot, no extra speakers"
+        },
+        {
+          "stage": "Experience",
+          "description": "Acoustic Immersion."
+        }
+      ],
+      "competitive_advantage": "The Core's wave-field synthesis tuning appealed to premium-to-high-end dealers globally — not because it threw sound around, but because it presented a stable stereo soundfield indistinguishable from a pair of premium bookshelves + sub. "
+    },
+    {
+      "key_capabilities": [
+        "Locked kernel + locked IP enclaves",
+        "Open application space (no restriction)",
+        "Walled-garden content positioning (Jobs-style)",
+        "Acquisition / hostile-service / integration — the only three options for ten-ton gorillas",
+        "Bootlegs are inevitable but positioned as a **social faux-pas**",
+        "not a piracy panic — community membership is the deterrent",
+        "Device-level lockout: capturing patented content for illicit distribution permanently bans the user from the AGF hardware ecosystem",
+        "Legal remedies pursued by AGF on behalf of the artist to recover proceeds from illicit marketing"
+      ],
+      "id": "stereos",
+      "name": "stereOS",
+      "full_name": "stereOS — Global OS for Performing Arts",
+      "tagline": "The global operating system for performing arts.",
+      "description": "Third parties don't license codecs. They adopt AGF's application-specific implementation of stereOS. Kernel and key IP enclaves locked. Application-space open without restriction. Bootlegs inevitable, social faux-pas, addressable. The walled garden, the way Steve Jobs learned to build one: safe, stable, requirements not daunting, content positioned as premium.",
+      "patent_status": "trade_secret",
+      "competitive_advantage": "The lessons from Sony's L-Cassette, DSD, MiniDisc, DAT, digital watermarking — all attempts to lock down media in service of global domination, all failed. AGF takes the iOS-after-macOS lesson instead."
+    },
+    {
+      "key_capabilities": [
+        "Modular finished product line (passive smoothing → full regeneration)",
+        "Native in-circuit smoothing on every AGF component",
+        "Algorithmic noise shaping where target semis demand",
+        "Comprehensive home/facility power regeneration (flagship)",
+        "**Well-known at industrial scale (Schneider Electric); virtually absent in consumer audio** — the entire seam"
+      ],
+      "id": "btn-tech",
+      "name": "BTN-Tech",
+      "full_name": "BTN-Tech — Bring Tha' Noise Technologies",
+      "tagline": "Bring Tha' Noise Technologies.",
+      "description": "A class of technologies, liberally applied. From analog-based toroidal chokes to multi-stage waveform regeneration. The flagship is comprehensive home/facility power regeneration — well known at the industrial scale (Schneider), virtually absent in consumer/commercial audio. R&D on the high-power regeneration strategy is non-trivial but well-scoped; the hidden benefit propagates throughout every product and the entire strategy.",
+      "patent_status": "pending",
+      "competitive_advantage": "Schneider does this at industrial scale; nobody owns the position for Consumer -> Pro at scale.\n \nEvery extra dB of S/N ratio compounds across the entire system making the other acoustic technologies more powerful."
+    },
+    {
+      "key_capabilities": [
+        "Performance-capture spatial mapping (pro line)",
+        "Consumer-side spatial impression + reinforcement",
+        "Algorithmic compression of the illusion",
+        "Compounds with BT'N-Tech S/N gains",
+        "**Maps the acoustic space first** — from a performance-capture perspective on the pro line — **then impresses that character** onto the consumer device",
+        "**Two-phase sensory loop**: initial transport experience (\"being there\") + persistent sensory reinforcement that keeps the illusion stable across long-form listening"
+      ],
+      "id": "lespacio",
+      "name": "l'espacI/O",
+      "full_name": "l'espacI/O — Spatial I/O",
+      "tagline": "Room tone, weaponized.",
+      "description": "Combines observed importance of music recording with virtual acoustic scene creation. Maps the acoustic space from a performance-capture perspective (pro line), then impresses the character of that space on the consumer side — the initial sensory experience of 'being transported,' then persistent reinforcement of the illusion. The illusion is compressed by the algorithm; compute overhead is minimized; every extra dB of spatial capture is fought for via BT'N-Tech.",
+      "patent_status": "trade_secret",
+      "competitive_advantage": "Owning the signal path from Capture -> In-Home render is what unlocks a convincing Acoustic Teleportation: *That's affordable to implement*"
+    },
+    {
+      "key_capabilities": [
+        "Minimal processing footprint",
+        "Near-zero latency penalty",
+        "Psycho-acoustic sound-field externalization",
+        "Cascading benefit from prior AGF technologies"
+      ],
+      "id": "frc41",
+      "name": "FRC41",
+      "full_name": "FRC41 — Front Row Center For One",
+      "tagline": "Front Row Center For One.",
+      "description": "Abstractly related to HRTF optimization — commercially attempted many times, always failed through overthinking. The solution takes a page from Amar Bose's greatest strength: Understanding the fine art of good enough. Tiny processing expense, near-zero latency penalty. The psycho-acoustic sound-field generated *inside your head* instantly morphs into a 3D sound experience.",
+      "patent_status": "pending",
+      "competitive_advantage": "Prior attempts have over-thought the implementation. The fine art of good enough wins commercially every time."
+    },
+    {
+      "key_capabilities": [
+        "Mechanical: transmission-line tuning over inert-cabinet brute force",
+        "Materials: combinations of acoustic materials relieved purely digital interventions",
+        "Analog Electronics: transformer arrays and ultra-low-noise resistors + polypropylene caps eliminated or shaped noise",
+        "Multi-Stage DSP: Allow complex filters without flagship parts"
+      ],
+      "id": "no-nails",
+      "name": "No-Nails",
+      "full_name": "No-Nails Engineering Process & Mercy Catch-All",
+      "tagline": "To a hammer, every problem looks like a nail; No engineering domain-hammers allowed.",
+      "description": "Conceptualized to eliminate brute-forcing problems. No layer of the product is taken for granted. The \"Mercy Catch-All\" = The amount of details that in combination could likely be patented is vast. One of the speaker designs produces a visceral bass output reaching below 30Hz via transmission-line, audibly balanced at low volumes. This is unheard of in  anything but cost-no-object designs, these will cost a couple hundred bucks to build in low-hundreds volume.  \n\nEach engineering layer enhances modestly. No one element carries the load. No over-processed sound. No sucked-out life. The sum of the design in a league of its own. \n\nWhen this process is applied diligently, application specific patents are unavoidable; we'll be tripping over them during every development. ",
+      "patent_status": "trade_secret",
+      "competitive_advantage": "Every discipline contributes meaningfully. No one element overloaded. The result sounds delightfully natural. When the hammer is applied, you're guaranteed a bland life-less sound. "
+    }
+  ],
+  "codec_diagram": {
+    "stages": [
+      {
+        "name": "l'Art Capture",
+        "description": "Identical Stereo Workflow for Live Sound Engineers"
+      },
+      {
+        "name": "l'Art Stack Encode",
+        "description": "Audio & Video Support + Enhanced Data"
+      },
+      {
+        "name": "l'Art Stack Decode",
+        "description": "Contextual Decode: SOTA from Standard Parts"
+      },
+      {
+        "name": "l'Art Render",
+        "description": "Acoustic Immersion from Conventional Set-up. "
+      },
+      {
+        "name": "l'Art Experience",
+        "description": "You are at the venue."
+      }
+    ]
+  },
+  "section_label": "The Stack",
+  "intro_text": "Defensible Product Differentiation.\n\nExciting and Newsworthy. \n\nA tangible new experience that can serve as a Global focal point for an entire industry.",
+  "appendix": "",
+  "lart_stack": {
+    "eyebrow": "The l'Art stack, in one breath",
+    "headline": "Flawless implementation of stereo. Everything else is gravy.",
+    "body": "Quadrophonic failed. Surround-sound failed. Dolby Atmos is financially dominant in cinemas but a niche at home. Mono, mixed mono, and stereo have dominated from inception to current day. The opportunity has 'the fine art of good enough' written all over it."
+  }
+}

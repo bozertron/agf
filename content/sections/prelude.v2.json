@@ -1,0 +1,31 @@
+{
+  "_source": {
+    "table": "sections",
+    "id": "3aca3eab-a3b0-4e8a-a271-521db6818a80",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.9375,
+    "updated_at": "2026-07-14 16:37:20",
+    "is_newest": false
+  },
+  "section_label": "",
+  "section_number": "",
+  "section_title": "Prelude",
+  "intro_text": "",
+  "squares": [
+    {
+      "text": "But different enough to stand out.",
+      "image": ""
+    },
+    {
+      "text": "",
+      "image": "assets/sections/prelude/prelude-square-1.png"
+    },
+    {
+      "text": "",
+      "image": "assets/sections/prelude/prelude-hero.webp"
+    }
+  ],
+  "summary": "",
+  "appendix": ""
+}

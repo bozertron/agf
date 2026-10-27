@@ -1,0 +1,154 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "35a9af2f-4220-48a5-a925-a7e16649a83e"
+  },
+  "name": "Over-Ear — Home Centric",
+  "slug": "over-ear-home-centric",
+  "category": "headphone",
+  "status": "development",
+  "form_factor": {
+    "materials": [
+      "aluminum alloy",
+      "memory-foam ear cushions",
+      "leather"
+    ],
+    "color_options": [],
+    "finish": "Matte alloy with leather-wrapped headband"
+  },
+  "connectivity": {
+    "wireless": [
+      {
+        "codecs": [
+          "l'Art"
+        ],
+        "protocol": "RF",
+        "version": "AGF-dock",
+        "range_m": 30
+      },
+      {
+        "codecs": [
+          "SBC",
+          "AAC",
+          "aptX",
+          "aptX HD",
+          "LDAC"
+        ],
+        "protocol": "Bluetooth",
+        "version": "5.3"
+      }
+    ],
+    "streaming_protocols": [],
+    "wired": [
+      {
+        "connector": "USB-C",
+        "format": "A2D high-res"
+      },
+      {
+        "connector": "3.5mm",
+        "format": "analog"
+      }
+    ],
+    "multi_room": false,
+    "max_paired_devices": 6
+  },
+  "business": {
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "ttm_months": {
+      "min": 4,
+      "max": 6
+    },
+    "cogs_usd": {
+      "min": 100,
+      "max": 150
+    },
+    "asp_usd": {
+      "min": 599,
+      "max": 799
+    },
+    "tooling_cost_usd": 50000,
+    "cert_cost_estimate_usd": 30000,
+    "v2_refactor_months": 12
+  },
+  "competitive_reference": {
+    "comparable_products": [
+      "AirPods Max",
+      "Sony WH-1000XM5",
+      "B&O Beoplay HX"
+    ],
+    "key_differentiators": [
+      "6-pair shared dock — household-first model",
+      "RF-default with BT fallback (latency + reliability)",
+      "Native USB-C high-res + native 3.5mm analog"
+    ],
+    "price_positioning": "Below Apple flagship; above mass-market premium"
+  },
+  "system_config": {
+    "companions": [
+      "symphony-macro-system",
+      "the-instrument"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "the-instrument",
+        "connection": "BT"
+      },
+      {
+        "target_slug": "symphony-macro-system",
+        "connection": "RF"
+      }
+    ],
+    "system_role": "output"
+  },
+  "_viz_config": {
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "show_freq_response": false,
+    "show_driver_diagram": true,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "arc",
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  },
+  "agf_technologies": [
+    "stereOS",
+    "BT'N-Tech",
+    "FRC41"
+  ],
+  "tagline": "A charging dock supporting 6 pairs of headphones concurrently with an RF connection defaulting to the dock. Single-action clean BT pairing. Remembers 6 devices.",
+  "description": "Hardware ~80% complete (refactor for aesthetic + control mods + 6-end-point charge QA). Software ~70% (l'Art algos + 6-end-point concurrent stream). Native USB-C high-res A2D, native 3.5mm analog. The home-centric headphone for households that need shared, frictionless premium listening.",
+  "audio": {
+    "drivers": [
+      {
+        "type": "dynamic",
+        "size_mm": 40,
+        "material": "beryllium-coated",
+        "quantity": 2
+      }
+    ]
+  },
+  "power": {
+    "battery_life_hours": 30,
+    "charging_type": "Dock RF + USB-C"
+  },
+  "roadmap_notes": "V1: 6-pair dock with RF default to dock, single-action BT clean pairing, remembers 6 paired devices, native USB-C high-res A2D + native 3.5mm analog. **V2 refactor in 8–12 months** ($120K tooling). Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU."
+}

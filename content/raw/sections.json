@@ -1,0 +1,3344 @@
+[
+  {
+    "id": "5d676382-4854-42b1-ac42-157ccebdebc8",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": -2,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "brand_name": "AGF",
+      "nav_links": [],
+      "cta_text": "Request the Deck",
+      "cta_link": "#founder",
+      "_nudges": {
+        "headline": {
+          "marginLeft": -100
+        }
+      },
+      "_style_overrides": {
+        "div:nth-of-type(1).nav-left > a:nth-of-type(2).nav-tagline": {
+          "font-size": "32px",
+          "font-weight": "100",
+          "letter-spacing": "0.08em",
+          "line-height": "1.05",
+          "color": "rgb(168, 152, 128)"
+        }
+      }
+    }
+  },
+  {
+    "id": "670cf286-0a38-4947-a776-09191bd2d42c",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": -2,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "brand_name": "AGF",
+      "nav_links": [],
+      "tagline": "Even Rails → Smooth Tracks",
+      "_nudges": {
+        "headline": {
+          "marginLeft": -100
+        }
+      }
+    }
+  },
+  {
+    "id": "08ca9631-e00a-4fbd-82cc-a25b7b205459",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": -2,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 22:30:58",
+    "data": {
+      "brand_name": "AGF",
+      "nav_links": [],
+      "tagline": "Even Rails → Smooth Tracks",
+      "_nudges": {
+        "headline": {
+          "marginLeft": -100
+        }
+      }
+    }
+  },
+  {
+    "id": "ce4088c1-58fe-41b2-8a5c-13aec8336ca5",
+    "schema_id": "hero",
+    "title": "Hero",
+    "display_order": -1.5,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 14:56:53",
+    "data": {
+      "mark": "",
+      "headline": "All Grounds Floating",
+      "strapline": "",
+      "subheadline": "When you listen to music, you're hearing your power supply. \n\nTubes as a category sound better because they force low-noise power supplies. \n\nDigital systems are just as sensitive, they just fail more gracefully. \n\nWe plant our flag here because it's strategically advantageous; it's also the truth.  ",
+      "metrics": [],
+      "background_type": "orbits",
+      "scroll_indicator": false,
+      "pcb_motif": false,
+      "appendix": "",
+      "_style_overrides": {
+        "subheadline": {
+          "font-size": "32px",
+          "font-weight": "400",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.45",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1.71em",
+          "margin-left": "0px",
+          "margin-right": "0px",
+          "max-width": "none",
+          "width": "100%"
+        },
+        "mark": {
+          "font-size": "240px",
+          "font-weight": "100",
+          "letter-spacing": "0em",
+          "line-height": "1.05",
+          "color": "rgb(162, 158, 128)"
+        }
+      },
+      "_nudges": {
+        "headline": {
+          "marginLeft": -1024
+        },
+        "subheadline": {
+          "marginLeft": 156
+        }
+      }
+    }
+  },
+  {
+    "id": "1210f1d1-a640-47b1-b6a6-f040517a7e58",
+    "schema_id": "footer",
+    "title": "Footer",
+    "display_order": -1,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "brand_name": "AGF",
+      "tagline": "— All Grounds Floating",
+      "meta_text": "Foundational Brand Development Document · 2026 · Internal & Investor Distribution",
+      "source_text": "Sources: Bang & Olufsen A/S annual reports (2000/01–2023/24) · Samsung/Harman · Bose · Barco · Gentex · Masimo · HSG · Cosonic · Sony Interactive Entertainment · US BLS CPI · The Absolute Sound · Stereophile · What Hi-Fi? · ecoustics.com"
+    }
+  },
+  {
+    "id": "a47637c3-7e46-4cea-9586-5a52f4684b0c",
+    "schema_id": "footer",
+    "title": "Footer",
+    "display_order": -1,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "brand_name": "AGF",
+      "tagline": "— All Grounds Floating",
+      "meta_text": "Foundational Brand Development Document · 2026 · Internal & Investor Distribution",
+      "source_text": "Sources: Bang & Olufsen A/S annual reports (2000/01–2023/24) · Samsung/Harman · Bose · Barco · Gentex · Masimo · HSG · Cosonic · Sony Interactive Entertainment · US BLS CPI · The Absolute Sound · Stereophile · What Hi-Fi? · ecoustics.com"
+    }
+  },
+  {
+    "id": "48492576-337f-43f4-9a5b-8811bc1f6cc0",
+    "schema_id": "header",
+    "title": "Header / Navigation",
+    "display_order": 1.5,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "brand_name": "",
+      "nav_links": [],
+      "cta_text": "",
+      "cta_link": ""
+    }
+  },
+  {
+    "id": "1702d023-64db-4548-b623-ca3631001de6",
+    "schema_id": "consolidation",
+    "title": "02 · The Consolidation",
+    "display_order": 2,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 23:36:50",
+    "data": {
+      "section_title": "The Homogenization of the Premium Audio Market",
+      "section_number": "",
+      "section_label": "The Opportunity",
+      "intro_text": "Greatest Hits Product Strategies are rampant, Channel Distribution Partners are managed as Commercial Banking Clients ",
+      "acquisitions": [
+        {
+          "acquirer": "Samsung Electronics",
+          "target": "JBL, Harman Kardon, AKG, Mark Levinson, Revel, Lexicon, Infinity, Arcam, B&O Automotive, B&W, Denon, Marantz, Polk, Definitive, Classé, HEOS, Boston Acoustics",
+          "value_usd": 8350000000,
+          "date": "",
+          "type": "acquisition",
+          "source_url": "https://news.samsung.com/global/samsung-electronics-completes-acquisition-of-harman",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Sony Interactive Entertainment",
+          "target": "Audeze Headphones",
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Bose Corp.",
+          "target": "McIntosh, Sonus Faber, Audio Research, Wadia, Sumiko",
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Gentex Corp.",
+          "target": "Klipsch, Onkyo,  Integra",
+          "value_usd": 196000000,
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "HSG (Hillhouse)",
+          "target": "Marshall",
+          "value_usd": 1100000000,
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Cosonic Intelligent Tech",
+          "target": "Beyerdynamic",
+          "value_usd": 122000000,
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Barco (Belgium)",
+          "target": "Focal,  Naim Electronics",
+          "value_usd": 135000000,
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        },
+        {
+          "acquirer": "Loewe",
+          "target": "Cabasse Speakers",
+          "date": "",
+          "type": "acquisition",
+          "source_url": "",
+          "appendix": ""
+        }
+      ],
+      "independent_heading": "",
+      "independent_intro": "",
+      "appendix": ""
+    }
+  },
+  {
+    "id": "f4bd5a91-092c-442d-a950-bd251f3dac09",
+    "schema_id": "timeline",
+    "title": "01 · The Opportunity / History Rhymes",
+    "display_order": 3,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 18:38:59",
+    "data": {
+      "section_title": "Hundreds of Brands, Decades Apart, One Safe Harbor",
+      "intro_text": "",
+      "section_number": "",
+      "section_label": "The Outlier - Strategic Inspiration",
+      "flip_interval_seconds": 12,
+      "eras": [
+        {
+          "year_range": "1978–1991",
+          "label": "Then",
+          "events": [
+            {
+              "year": "1978–1991",
+              "title": "Japanese conglomerates dominate global Hi-Fi",
+              "description": "Sony · Matsushita (Technics) · Pioneer · Yamaha · Kenwood · JVC · Sansui · Onkyo · Aiwa held 55%+ of global Hi-Fi share by 1982, from entry-level to premium big-box tiers."
+            },
+            {
+              "year": "1978–1991",
+              "title": "Specialty retail differentiates with esoteric brands",
+              "description": "Tweeter, Magnolia Hi-Fi, Crutchfield, and regional independents used Bose as entry and built reputations on Polk, Boston Acoustics, Snell, Advent, EPI, JBL, Infinity, ADS — often PE/KE owned even then."
+            },
+            {
+              "year": "1978–1991",
+              "title": "Aspirational tier: the \"eff you money\" customer",
+              "description": "Krell, Wilson Audio, Quad, Magnepan, McIntosh, Mark Levinson, conrad-johnson, Audio Research, Threshold, Bryston — $1M+ systems were not a stretch."
+            },
+            {
+              "year": "2007/08",
+              "title": "Bang & Olufsen stood alone — peak ~$853M USD",
+              "description": "Equivalent to ≈ $1.25B in 2026 dollars. You had to put in the work to acquire B&O — the audio equivalent of the Birkin bag."
+            }
+          ]
+        },
+        {
+          "year_range": "2014–2026",
+          "label": "Now",
+          "events": [
+            {
+              "year": "2014–2026",
+              "title": "Chinese vendors + global PE roll-ups dominate",
+              "description": "GoerTek/Dynaudio · IAG (Mission, Quad, Audiolab, Wharfedale) · Marshall family + HSG (Jan 2025) · Cosonic/Beyerdynamic. Same shape as the Japanese wave, different flag."
+            },
+            {
+              "year": "2007–2008",
+              "title": "US specialty chain collapse",
+              "description": "Tweeter, et al. — bankrupt 2007, closed Dec 2 2008. Big-box channel replaced by Amazon, JD, Taobao, Media Markt, Elkjøp."
+            },
+            {
+              "year": "2014–2026",
+              "title": "Survivors",
+              "description": "Crutchfield (1974) still private — $230M revenue, 50 years in. Magnolia absorbed inside Best Buy. Regional independents survive via custom install."
+            },
+            {
+              "year": "Jun 2024",
+              "title": "Krell closes",
+              "description": "Following the death of owner/CEO Rondi D'Agostino. Service resumes Mar 2025; son Kristofer awarded 70%+ Feb 2025. Dan D'Agostino — rebuilt under his own name — is selling $250K monoblocks into Dolby Atmos maximalists."
+            },
+            {
+              "year": "2024",
+              "title": "B&O publicly traded, struggling",
+              "description": "FY2023/24 revenue $402M — down from the 2007/08 peak."
+            }
+          ]
+        }
+      ],
+      "comparison_points": [
+        {
+          "category": "Mass Market Channels",
+          "era_1_value": "Japanese conglomerates (Sony, Matsushita, Pioneer, Yamaha, Kenwood, JVC, Sansui, Onkyo, Aiwa)",
+          "era_2_value": "Chinese Vendors + Global PE roll-ups",
+          "insight": "Different Flags, Identical Structural Pressure.",
+          "appendix": ""
+        },
+        {
+          "category": "Specialty retail",
+          "era_1_value": "Tweeter · Magnolia Hi-Fi · Crutchfield · Regional Chains",
+          "era_2_value": "Magnolia absorbed into Best Buy · Buying Groups· Custom Install Survivors",
+          "insight": "Incumbents now dominate, access is non-trivial. ",
+          "appendix": ""
+        },
+        {
+          "category": "The Outlier",
+          "era_1_value": "Bang & Olufsen — peak ~$853M USD (≈ $1.25B in 2026 $)",
+          "era_2_value": "B&O — $402M USD: Rebuilding after abandoning Safe Harbor.",
+          "insight": "New management didn't recognize their beachhead and almost destroyed the brand.",
+          "appendix": ""
+        }
+      ],
+      "appendix": "",
+      "_style_overrides": {
+        "section_title": {
+          "font-size": "76px",
+          "font-weight": "300",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.05",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "0.42em"
+        }
+      }
+    }
+  },
+  {
+    "id": "eea044c1-d49d-482c-847c-4551a6f769ad",
+    "schema_id": "team-note",
+    "title": "Team Note",
+    "display_order": 4,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-07 02:01:44",
+    "data": {
+      "section_label": "The Plan - Channel the B&O of the 70s - 90s: Lead",
+      "section_title": "Experience and Timing, meet Preparation and Opportunity",
+      "author": "",
+      "body": "Most aren't aware of the strategic and tactical depth of that B&O. When they spotted an inch, they took it. Bold Aesthetics, Appointment only Distribution, Pioneers in Class-D Amplification; they had gesture control working properly in the 80s! The yield was a beachhead so vast no one even bothered to challenge.\n\nHowever, this wasn't a rookie team. They knew what an inch looked like. The market sold listening rooms, they were first movers in multi-room. The market made fat wood boxes, they made skinny metal ones. The market made brightly lit imposing receivers, they made svelte buttons hidden by smoked glass.\n\nDifferent market, different time, different technologies, what remains important is the ability to take the inches when you see them.\n\nYou can track their meteoric rise to some specific engineering and product talent, but LOTS of companies had this during this time. This is still the era where the computer industry wasn't capturing all the Engineering talent.  \n\nDistilled, as an industry insider and life-long aficionado, my opinion is that the strategy can be expressed in much simpler terms: They had the courage to lead, in every regard. ",
+      "appendix": "",
+      "_style_overrides": {
+        "section_label": {
+          "font-size": "16px",
+          "font-weight": "600",
+          "text-transform": "uppercase",
+          "letter-spacing": "0.24em",
+          "line-height": "1.65",
+          "color": "rgb(184, 134, 11)",
+          "text-align": "left",
+          "display": "block"
+        },
+        "body": {
+          "font-size": "28px",
+          "font-weight": "300",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.65",
+          "color": "rgb(168, 152, 128)",
+          "text-align": "left",
+          "margin-bottom": "3.2em",
+          "max-width": "none",
+          "width": "100%"
+        },
+        "section_title": {
+          "font-size": "60px",
+          "font-weight": "400",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.05",
+          "color": "rgb(168, 152, 128)",
+          "text-align": "left",
+          "margin-bottom": "0.42em",
+          "max-width": "none"
+        }
+      },
+      "_nudges": {}
+    }
+  },
+  {
+    "id": "c669b573-6d02-4a98-89e5-203d10ecbb98",
+    "schema_id": "tenet",
+    "title": "03 · The Six Tenets",
+    "display_order": 5,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 14:58:56",
+    "data": {
+      "section_title": "The Gospel of not having your ass handed to you.",
+      "section_number": "03",
+      "section_label": "The Six Tenets",
+      "tenets": [
+        {
+          "number": 1,
+          "title": "Thou shalt not compete with existing high-volume audio segments — directly.",
+          "anchor_phrase": "Reframe the problem. Deliver a solution that stands alone.",
+          "body": "I ran a skunkworks program on behalf of Dolby, only a few people internally knew what I was working on, and my only report kept the BoD in the loop. The goal was to drive top-line growth because bottom line @90%-ish had nowhere to go. The caveat: Products can't interfere with the sacred cows [licensing revenues]. \n\nThe mandate: build products no one could get mad at — \"If the licensees aren't making something similar, what are they going to complain about?\".  Apple got very mad and threatened to pull their business entirely. Bad for me - the program was shut down. Good for Dolby - the IP we created was licensed into their headphone program and still drives revenue a nearly a decade later.   \n\nThe lesson stands. Don't line up toe-to-toe with the heavies: Find and exploit the seams - there are many. ",
+          "key_insight": "When gathering channel support, the giants can not be perceived as competition. This is moreso a shield for independent specialized distribution channels. If you're going to directly interfere with their bankrolling PE/Conglomerate's product definintions, they risk getting strong armed or cut off. If you're presenting something with no logical replacement, they're safe, and you're driving industry chatter and excitement, something there's not a lot of these days."
+        },
+        {
+          "number": 2,
+          "title": "Thou shalt not compete on price with existing premium → luxury brands — directly.",
+          "anchor_phrase": "I have a pricing exercise that's based on genuine value - which includes intangibles. We don't price on multiples of anything. We price based on the value we deliver. ",
+          "body": "When a sales associate in a premium sales channel identifies a real customer, they are not negotiating price. They are negotiating a budgeted total experience. I had a niche product that I thought would die both times I was forced to increase it's price. Both times the sales increased. ",
+          "key_insight": "Premium buyers do not want a discount. They want a reason; even better if there's a story attached."
+        },
+        {
+          "number": 3,
+          "title": "Thou shalt measure additional features through a lens of exponential value gains — exclusively.",
+          "anchor_phrase": "If a feature doesn't compound product value, it dilutes product value.",
+          "body": "The Mass Fidelity Core launched with a kitchen-sink feature set — gesture, IoT, phone-charger. The pre-launch survey was decisive: 80%+ of customers cared about one thing — one speaker sounding like two with the sweet spot eliminated (wave-field synthesis). Multi-room 15% - a channel check-box at the time. Portability 4% - we should have removed the battery, it ended up being the product's only weak point. Everything else was completely irrelevant.",
+          "key_insight": "Kill features that do not compound a product's value — even when defended internally."
+        },
+        {
+          "number": 4,
+          "title": "Thou shalt 'check the boxes' on behalf of corporate buyers — exclusively.",
+          "anchor_phrase": "Parse their checklists like a contract attorney.",
+          "body": "Corporate buyers are rule-bound.  A seasoned executive team is required to parse which boxes must be checked — and which can be quietly dropped. Add based on commitments. Subtract based on commitments. Never compromise the end result - that's your contract with the end user.  ",
+          "key_insight": "Channels can influence product definintion; they can't influence a commitment to quality. "
+        },
+        {
+          "number": 5,
+          "title": "Thou shalt always deliver a product-line. Not a single product.",
+          "anchor_phrase": "A single product is a single point of failure.",
+          "body": "Earl Qua, circa 2012/13: \"CE is all about churn.\" Segment-defining product-wins that trigger a migration to 'the new way' come almost exclusively from innovative product positions that previously did not exist. While it's nice to pretend, no one can predict the recipe for a  segment-defining product.  Stand-alone Product-lines with breadth and depth is what attracts  large distribution partners to acquire your brand. The catch: Products must independently and as a whole plausibly bridge to a position where AGF looks like the future they don't want to miss out on; they already sell the present and the past. ",
+          "example_body": "No matter how good a single product is, no rational actor of merit will accept a single product brand. If it happens by accident that one of the product's in the line defines a segment, that's the problem we want to have.",
+          "key_insight": "Depth, breadth, with plausible inevitability; be the future that's threatening to pass them by if they don't take action to support you."
+        },
+        {
+          "number": 6,
+          "title": "Thou shalt lead. Otherwise, by definition, thou art following.",
+          "anchor_phrase": "Execution path is open for discussion. Vision is not.",
+          "body": "The most strongly held belief, with the most flexible application. Followers die slow deaths — almost without exception. The brands that survive relentless CE churn dominate in multiple disciplines *and/or* hold brand IP and patent moats the market still values *and/or* own the leadership position through business practices that on the front lines reads like violence-via-innovation; Bang & Olufsen, Apple, and Bose in their respective heydays are good examples of this, albeit for different reasons - we aim to achieve all of these characteristics.",
+          "key_insight": "Choose violence."
+        }
+      ],
+      "appendix": "",
+      "_style_overrides": {
+        "intro_text": {
+          "font-size": "22px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.65",
+          "color": "rgb(168, 152, 128)",
+          "margin-left": "0px",
+          "margin-right": "0px",
+          "max-width": "none",
+          "width": "100%"
+        },
+        "tenets.0.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.1.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.2.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.3.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.4.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.4.example_body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "tenets.5.body": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        }
+      },
+      "intro_text": "Twenty-five years of lessons, compounding, and distilled. Each tenet is a constraint that creates leverage — and a load-bearing rule that protects the others."
+    }
+  },
+  {
+    "id": "9aa487f7-3f94-4760-90c0-be3fcc0fbbda",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.5,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 16:17:12",
+    "data": {
+      "section_label": "",
+      "section_number": "",
+      "section_title": "Foundations - Products and Technologies",
+      "intro_text": "",
+      "squares": [
+        {
+          "text": "Google/Meta/Amazon ad-spend can be a crippling The Consumer Audio market is one of the oldest consumer tech markets.\n\nEvery existing Technology and Product Segment is a quagmire; veterans have 'seen it all'.\n\nOur products have to be compelling alternatives to what's available.\n\nBut different enough to stand out.\n\nBut not so different that partners and customers can't easily spot the value proposition. for a start up brand.  AGF and it's products need to be exciting enough to generate buzz:  Channels: An exciting brand story and profitable to sell.  Media: Newsworthy so reviewers are eager to cover them.  Customers: Are drawn in by the promise of a new brand truly doing new things - that they can't get anywhere else. "
+        },
+        {
+          "image": "assets/sections/prelude/prelude-square.png",
+          "text": "",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 45,
+            "posY": 74,
+            "scale": 197,
+            "rotation": 0
+          }
+        }
+      ],
+      "summary": "",
+      "appendix": "",
+      "_style_overrides": {
+        "section_title": {
+          "font-size": "76px",
+          "font-weight": "300",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.05",
+          "color": "rgb(184, 134, 11)",
+          "margin-bottom": "0.42em",
+          "margin-left": "0px",
+          "margin-right": "auto"
+        }
+      }
+    }
+  },
+  {
+    "id": "5f9f8859-8f5a-45d5-b0ba-318f1b16c8f6",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.625,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 14:59:24",
+    "data": {
+      "section_title": "Prelude",
+      "intro_text": "I've been on every side of this fence; from a business perspective. Content Production, Retail Distribution, Technology Provider, Brands, Professional and Consumer. Threading the needle is not trivial. ",
+      "squares": [
+        {
+          "text": "The Consumer Audio market is one of the oldest consumer tech markets.\n\nEvery existing Technology and Product Segment is a quagmire; veterans have 'seen it all'. \n\nOur products have to be compelling alternatives to what's available. \n\nBut different enough to stand out. \n\nBut not so different that partners and customers can't easily spot the value proposition."
+        },
+        {
+          "text": "Google/Meta/Amazon ad-spend can be a crippling obligation for a start up brand. \n\nAGF and it's products need to be exciting enough to generate buzz:\n\nChannels: An exciting brand story and profitable to sell. \n\nMedia: Newsworthy so reviewers are eager to cover them. \n\n Customers: Are drawn in by the promise of a new brand truly doing new things - that they can't get anywhere else. "
+        },
+        {
+          "text": "AGF needs every element of it's strategy to be sticky, and defensible.  \n\nA savage and relentless campaign on every obvious place the industry is asleep at the wheel. \n\nA seductive and confident beacon of hope to taste makers in adjacent industries.\n\nA welcoming new community focal point for music loving technology enthusiasts, globally.   "
+        }
+      ],
+      "summary": "As scary as that list looks in aggregate, I assure you, this is not a 'boil the ocean' plan. The dots connected when trying to figure out how to contextualize B&O's old distribution model, how to provision physical space for operations, and R&D relationships for our primary technology differentiators. The costs will be lower than a traditional route, we just need to have the courage to lead; let's connect the dots.   ",
+      "appendix": "",
+      "_figures": [],
+      "_background_image": "assets/sections/prelude/prelude-background.webp",
+      "_style_overrides": {
+        "intro_text": {
+          "font-size": "22px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.65",
+          "color": "rgb(168, 152, 128)",
+          "margin-left": "0px",
+          "margin-right": "0px",
+          "max-width": "none",
+          "width": "100%"
+        },
+        "squares.0.text": {
+          "font-size": "20px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.5",
+          "color": "rgb(192, 176, 152)",
+          "text-align": "left",
+          "margin-bottom": "1em"
+        },
+        "squares.1.text": {
+          "font-size": "20px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.5",
+          "color": "rgb(192, 176, 152)",
+          "text-align": "left",
+          "margin-bottom": "1em"
+        },
+        "squares.2.text": {
+          "font-size": "20px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.5",
+          "color": "rgb(192, 176, 152)",
+          "text-align": "left",
+          "margin-bottom": "1em"
+        },
+        "summary": {
+          "font-size": "19px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.6",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        }
+      }
+    }
+  },
+  {
+    "id": "3af48ba7-83e6-4831-8fbf-df5d6e98b08d",
+    "schema_id": "technology",
+    "title": "05 · The Stack",
+    "display_order": 5.75,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 16:17:58",
+    "data": {
+      "section_title": "A Technology stack that opens all the doors.",
+      "section_number": "",
+      "technologies": [
+        {
+          "key_capabilities": [
+            "Part of patent moat on Acoustic teleportation codec",
+            "Sweet-spot elimination (wave-field synthesis lineage)",
+            "Broadcast-optimized capture pipeline",
+            "Artist-owned stereo · AGF-owned l'Art · 50/50 broadcast mixed",
+            "5-layer active filtering pipeline (proven on the Core)",
+            "Apple bought 1",
+            "000pc Relay runs at full wholesale multiple times — reason unknown / unconfirmed (the units never sold through)",
+            "A Fraunhofer research scientist was the only outside party who ever grokked the broader concept; sold a rudimentary version to Sennheiser"
+          ],
+          "id": "lart",
+          "name": "l'Art",
+          "full_name": "l'Art — Acoustic Teleportation",
+          "tagline": "Acoustic teleportation, not surround-sound.",
+          "description": "Floating a stable stable soundfield in a room devoid of any sweet spot is what the entire industry has missed.\n\nStereo is *already* 3D when implemented properly.\n\nThe l'Art stack does not enhance stereo by addition —  It does the opposite: generates a more realistic stereo performance while completely eliminating stereo's only real downside: the sweet spot.",
+          "patent_status": "trade_secret",
+          "codec_pipeline": [
+            {
+              "stage": "Capture",
+              "description": "Stereo + room tone + broadcast mixed"
+            },
+            {
+              "stage": "Codec",
+              "description": "l'Art patented acoustic rendering"
+            },
+            {
+              "stage": "Decode",
+              "description": "On-device; eliminates sweet spot"
+            },
+            {
+              "stage": "Render",
+              "description": "Stereo 3D, no sweet spot, no extra speakers"
+            },
+            {
+              "stage": "Experience",
+              "description": "Acoustic Immersion."
+            }
+          ],
+          "competitive_advantage": "The Core's wave-field synthesis tuning appealed to premium-to-high-end dealers globally — not because it threw sound around, but because it presented a stable stereo soundfield indistinguishable from a pair of premium bookshelves + sub. "
+        },
+        {
+          "key_capabilities": [
+            "Locked kernel + locked IP enclaves",
+            "Open application space (no restriction)",
+            "Walled-garden content positioning (Jobs-style)",
+            "Acquisition / hostile-service / integration — the only three options for ten-ton gorillas",
+            "Bootlegs are inevitable but positioned as a **social faux-pas**",
+            "not a piracy panic — community membership is the deterrent",
+            "Device-level lockout: capturing patented content for illicit distribution permanently bans the user from the AGF hardware ecosystem",
+            "Legal remedies pursued by AGF on behalf of the artist to recover proceeds from illicit marketing"
+          ],
+          "id": "stereos",
+          "name": "stereOS",
+          "full_name": "stereOS — Global OS for Performing Arts",
+          "tagline": "The global operating system for performing arts.",
+          "description": "Third parties don't license codecs. They adopt AGF's application-specific implementation of stereOS. Kernel and key IP enclaves locked. Application-space open without restriction. Bootlegs inevitable, social faux-pas, addressable. The walled garden, the way Steve Jobs learned to build one: safe, stable, requirements not daunting, content positioned as premium.",
+          "patent_status": "trade_secret",
+          "competitive_advantage": "The lessons from Sony's L-Cassette, DSD, MiniDisc, DAT, digital watermarking — all attempts to lock down media in service of global domination, all failed. AGF takes the iOS-after-macOS lesson instead."
+        },
+        {
+          "key_capabilities": [
+            "Modular finished product line (passive smoothing → full regeneration)",
+            "Native in-circuit smoothing on every AGF component",
+            "Algorithmic noise shaping where target semis demand",
+            "Comprehensive home/facility power regeneration (flagship)",
+            "**Well-known at industrial scale (Schneider Electric); virtually absent in consumer audio** — the entire seam"
+          ],
+          "id": "btn-tech",
+          "name": "BTN-Tech",
+          "full_name": "BTN-Tech — Bring Tha' Noise Technologies",
+          "tagline": "Bring Tha' Noise Technologies.",
+          "description": "A class of technologies, liberally applied. From analog-based toroidal chokes to multi-stage waveform regeneration. The flagship is comprehensive home/facility power regeneration — well known at the industrial scale (Schneider), virtually absent in consumer/commercial audio. R&D on the high-power regeneration strategy is non-trivial but well-scoped; the hidden benefit propagates throughout every product and the entire strategy.",
+          "patent_status": "pending",
+          "competitive_advantage": "Schneider does this at industrial scale; nobody owns the position for Consumer -> Pro at scale.\n \nEvery extra dB of S/N ratio compounds across the entire system making the other acoustic technologies more powerful."
+        },
+        {
+          "key_capabilities": [
+            "Performance-capture spatial mapping (pro line)",
+            "Consumer-side spatial impression + reinforcement",
+            "Algorithmic compression of the illusion",
+            "Compounds with BT'N-Tech S/N gains",
+            "**Maps the acoustic space first** — from a performance-capture perspective on the pro line — **then impresses that character** onto the consumer device",
+            "**Two-phase sensory loop**: initial transport experience (\"being there\") + persistent sensory reinforcement that keeps the illusion stable across long-form listening"
+          ],
+          "id": "lespacio",
+          "name": "l'espacI/O",
+          "full_name": "l'espacI/O — Spatial I/O",
+          "tagline": "Room tone, weaponized.",
+          "description": "Combines observed importance of music recording with virtual acoustic scene creation. Maps the acoustic space from a performance-capture perspective (pro line), then impresses the character of that space on the consumer side — the initial sensory experience of 'being transported,' then persistent reinforcement of the illusion. The illusion is compressed by the algorithm; compute overhead is minimized; every extra dB of spatial capture is fought for via BT'N-Tech.",
+          "patent_status": "trade_secret",
+          "competitive_advantage": "Owning the signal path from Capture -> In-Home render is what unlocks a convincing Acoustic Teleportation: *That's affordable to implement*"
+        },
+        {
+          "key_capabilities": [
+            "Minimal processing footprint",
+            "Near-zero latency penalty",
+            "Psycho-acoustic sound-field externalization",
+            "Cascading benefit from prior AGF technologies"
+          ],
+          "id": "frc41",
+          "name": "FRC41",
+          "full_name": "FRC41 — Front Row Center For One",
+          "tagline": "Front Row Center For One.",
+          "description": "Abstractly related to HRTF optimization — commercially attempted many times, always failed through overthinking. The solution takes a page from Amar Bose's greatest strength: Understanding the fine art of good enough. Tiny processing expense, near-zero latency penalty. The psycho-acoustic sound-field generated *inside your head* instantly morphs into a 3D sound experience.",
+          "patent_status": "pending",
+          "competitive_advantage": "Prior attempts have over-thought the implementation. The fine art of good enough wins commercially every time."
+        },
+        {
+          "key_capabilities": [
+            "Mechanical: transmission-line tuning over inert-cabinet brute force",
+            "Materials: combinations of acoustic materials relieved purely digital interventions",
+            "Analog Electronics: transformer arrays and ultra-low-noise resistors + polypropylene caps eliminated or shaped noise",
+            "Multi-Stage DSP: Allow complex filters without flagship parts"
+          ],
+          "id": "no-nails",
+          "name": "No-Nails",
+          "full_name": "No-Nails Engineering Process & Mercy Catch-All",
+          "tagline": "To a hammer, every problem looks like a nail; No engineering domain-hammers allowed.",
+          "description": "Conceptualized to eliminate brute-forcing problems. No layer of the product is taken for granted. The \"Mercy Catch-All\" = The amount of details that in combination could likely be patented is vast. One of the speaker designs produces a visceral bass output reaching below 30Hz via transmission-line, audibly balanced at low volumes. This is unheard of in  anything but cost-no-object designs, these will cost a couple hundred bucks to build in low-hundreds volume.  \n\nEach engineering layer enhances modestly. No one element carries the load. No over-processed sound. No sucked-out life. The sum of the design in a league of its own. \n\nWhen this process is applied diligently, application specific patents are unavoidable; we'll be tripping over them during every development. ",
+          "patent_status": "trade_secret",
+          "competitive_advantage": "Every discipline contributes meaningfully. No one element overloaded. The result sounds delightfully natural. When the hammer is applied, you're guaranteed a bland life-less sound. "
+        }
+      ],
+      "codec_diagram": {
+        "stages": [
+          {
+            "name": "l'Art Capture",
+            "description": "Identical Stereo Workflow for Live Sound Engineers"
+          },
+          {
+            "name": "l'Art Stack Encode",
+            "description": "Audio & Video Support + Enhanced Data"
+          },
+          {
+            "name": "l'Art Stack Decode",
+            "description": "Contextual Decode: SOTA from Standard Parts"
+          },
+          {
+            "name": "l'Art Render",
+            "description": "Acoustic Immersion from Conventional Set-up. "
+          },
+          {
+            "name": "l'Art Experience",
+            "description": "You are at the venue."
+          }
+        ]
+      },
+      "section_label": "The Stack",
+      "_nudges": {
+        "section_title": {
+          "marginTop": 16,
+          "marginLeft": 8
+        }
+      },
+      "_style_overrides": {
+        "section_title": {
+          "font-size": "71px",
+          "font-weight": "300",
+          "letter-spacing": "-0.02em",
+          "line-height": "1.05",
+          "color": "rgb(184, 134, 11)",
+          "margin-bottom": "0.42em"
+        },
+        "intro_text": {
+          "font-size": "20px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.65",
+          "color": "rgb(168, 152, 128)"
+        },
+        "technologies.0 > p:nth-of-type(3).tech-desc": {
+          "font-size": "20px",
+          "font-weight": "300",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)",
+          "margin-bottom": "1em"
+        },
+        "div:nth-of-type(3).codec-deep > div:nth-of-type(1).cd-copy > p:nth-of-type(2).tech-desc": {
+          "font-size": "19px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.75",
+          "color": "rgb(168, 152, 128)"
+        }
+      },
+      "intro_text": "Defensible Product Differentiation.\n\nExciting and Newsworthy. \n\nA tangible new experience that can serve as a Global focal point for an entire industry.",
+      "appendix": "",
+      "lart_stack": {
+        "eyebrow": "The l'Art stack, in one breath",
+        "headline": "Flawless implementation of stereo. Everything else is gravy.",
+        "body": "Quadrophonic failed. Surround-sound failed. Dolby Atmos is financially dominant in cinemas but a niche at home. Mono, mixed mono, and stereo have dominated from inception to current day. The opportunity has 'the fine art of good enough' written all over it."
+      }
+    }
+  },
+  {
+    "id": "640e5072-efb3-4084-96a1-fa89af7154b9",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.875,
+    "is_visible": true,
+    "created_at": "2026-07-14 16:25:46",
+    "updated_at": "2026-07-14 16:36:37",
+    "data": {
+      "section_label": "",
+      "section_number": "",
+      "section_title": "Prelude",
+      "intro_text": "",
+      "squares": [
+        {
+          "text": "The Consumer Audio market is one of the oldest consumer tech markets.  \n\nEvery existing Technology and Product Segment is a quagmire; veterans have 'seen it all'.  \n\nOur products have to be compelling alternatives to what's available.  ",
+          "image": "",
+          "image_settings": {
+            "fit": ""
+          }
+        },
+        {
+          "text": "",
+          "image": "assets/sections/prelude/prelude-hero.png",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        },
+        {
+          "text": "",
+          "image": "assets/sections/prelude/prelude-square-2.png",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        }
+      ],
+      "summary": "",
+      "appendix": "",
+      "_style_overrides": {
+        "squares.0.text": {
+          "font-size": "24px",
+          "font-weight": "400",
+          "letter-spacing": "0em",
+          "line-height": "1.5",
+          "color": "rgb(192, 176, 152)",
+          "margin-bottom": "1em"
+        }
+      }
+    }
+  },
+  {
+    "id": "3aca3eab-a3b0-4e8a-a271-521db6818a80",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.9375,
+    "is_visible": true,
+    "created_at": "2026-07-14 16:29:05",
+    "updated_at": "2026-07-14 16:37:20",
+    "data": {
+      "section_label": "",
+      "section_number": "",
+      "section_title": "Prelude",
+      "intro_text": "",
+      "squares": [
+        {
+          "text": "But different enough to stand out.",
+          "image": "",
+          "image_settings": {
+            "fit": ""
+          }
+        },
+        {
+          "text": "",
+          "image": "assets/sections/prelude/prelude-square-1.png",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        },
+        {
+          "text": "",
+          "image": "assets/sections/prelude/prelude-hero.webp",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        }
+      ],
+      "summary": "",
+      "appendix": ""
+    }
+  },
+  {
+    "id": "c55e9579-bd4d-4f14-a348-6da9789f4f81",
+    "schema_id": "prelude",
+    "title": "Prelude",
+    "display_order": 5.96875,
+    "is_visible": true,
+    "created_at": "2026-07-14 16:37:54",
+    "updated_at": "2026-07-14 16:41:22",
+    "data": {
+      "section_label": "",
+      "section_number": "",
+      "section_title": "Prelude",
+      "intro_text": "",
+      "squares": [
+        {
+          "text": "But not so different that partners and customers can't easily spot the value proposition.",
+          "image": "",
+          "image_settings": {
+            "fit": ""
+          }
+        },
+        {
+          "text": "",
+          "image": "assets/sections/prelude/prelude-hero.png",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        },
+        {
+          "text": "",
+          "image": "",
+          "image_settings": {
+            "fit": "cover",
+            "posX": 50,
+            "posY": 50,
+            "scale": 100,
+            "rotation": 0
+          }
+        }
+      ],
+      "summary": "",
+      "appendix": ""
+    }
+  },
+  {
+    "id": "4f022f7f-3248-4061-a566-dde1c17a63e0",
+    "schema_id": "concept-explainer",
+    "title": "How It Works",
+    "display_order": 6,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "section_label": "The Concept",
+      "section_number": "",
+      "section_title": "Why This Matters",
+      "intro_text": "AGF is built on a premise that runs counter to the dominant industry narrative: **stereo is not dead — it has never been properly implemented.** Every major audio innovation of the past 20 years (Dolby Atmos, multi-channel upmixing, object-based audio) has treated stereo as a constraint to escape. AGF treats stereo as the destination, refined to its highest form.",
+      "layout": "alternating",
+      "modules": [
+        {
+          "id": "sweet-spot-problem",
+          "type": "overview_block",
+          "display_order": 0,
+          "headline": "The Sweet Spot Problem",
+          "body": "Stereo inherently creates a narrow optimal listening position — the \"sweet spot.\" The entire home-theatre / multi-channel industry has responded by adding more speakers, more upmixing, and more processing to mask the limitation. This is brute force.\n\nAGF's l'Art codec takes the opposite approach: **eliminate the sweet spot from the rendering equation** rather than drowning it in channels. The result is a stable, immersive stereo soundfield that persists anywhere in the room, with no additional speakers, no extra processing overhead, and no compromise to the artist's intended mix.",
+          "items": [
+            {
+              "icon": "🎯"
+            }
+          ]
+        },
+        {
+          "id": "consolidation-thesis",
+          "type": "overview_block",
+          "display_order": 1,
+          "headline": "The Consolidation Opportunity",
+          "body": "Between 2000 and 2024, the audio industry underwent a wave of M&A that concentrated brands under corporate ownership — Samsung/Harman, B&O's restructuring, Bose's retreat, Sonos's locked-in ecosystem. These acquisitions **stranded premium brands inside corporate R&D silos** where the parent's incentives (scale, cross-sell, walled gardens) diverge from the enthusiast buyer's desires (openness, sound quality, build longevity).\n\nAGF's thesis: assemble the fragments that the consolidators left behind. Not by acquisition — by building a platform that independent brands, artists, and venues can adopt.",
+          "items": [
+            {
+              "icon": "🏛️"
+            }
+          ]
+        },
+        {
+          "id": "artist-platform",
+          "type": "overview_block",
+          "display_order": 2,
+          "headline": "Artist-First Economics",
+          "body": "The streaming era normalized a revenue split of fractions of a cent per play, controlled by labels and platforms. AGF's model inverts this: **artists own their stereo masters**, set their own virtual-ticket pricing, and retain a 50/50 split in perpetuity on broadcast-mixed performances — with the right to block any broadcast without cause.\n\nThe green room is not a metaphor: AGF's physical venues are designed so the consumer product is *discovered* through the artist and the venue, not pushed through a sales funnel.",
+          "items": [
+            {
+              "icon": "🎙️"
+            }
+          ]
+        },
+        {
+          "id": "retail-reimagined",
+          "type": "overview_block",
+          "display_order": 3,
+          "headline": "Retail as Community",
+          "body": "Apple's sterile boutiques defined the premium retail playbook for 20 years. AGF's alternative: **a venue that is first a performing-arts space**, second a flagship for the brand. The Front of House (bar + stage) generates foot traffic via live performances. The Balcony serves pros. The Green Room — hidden, appointment-only — is where the consumer product lives.\n\nThis inverts the standard retail funnel: discover the community first, discover the product second. The hard part. The whole point.",
+          "items": [
+            {
+              "icon": "🏟️"
+            }
+          ]
+        }
+      ],
+      "footnote": "Each of these concepts is expanded in its dedicated section of the deck."
+    }
+  },
+  {
+    "id": "1dc9fb21-dff0-4568-890d-bdd7aa33d4b1",
+    "schema_id": "venue",
+    "title": "04 · The Venue",
+    "display_order": 6,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "zones": [
+        {
+          "features": [
+            "Live performance stage",
+            "Beautiful bar of world-class-city quality",
+            "Local artist priority booking",
+            "Donation flow → 100% to local artists"
+          ],
+          "id": "front-of-house",
+          "name": "Front of House",
+          "tagline": "The Bar · The Stage",
+          "description": "Exclusively focused on promoting the performing arts. Priority to local-regional culture and talent. Preferential ticket allocations split equally between supporters of the space and customers of the Green Room & Balcony. Donations 100% allocated to payment of local artists. **No sales floor. No clipboards.**",
+          "atmosphere": "Vibe: a beautiful bar you'd find in any world-class city.",
+          "customer_journey_step": 1
+        },
+        {
+          "features": [
+            "l'Art Production line installations",
+            "SOTA capture & processing hardware",
+            "Submission-based integrations from live-mixing techs",
+            "Royalty-paid third-party tooling"
+          ],
+          "id": "balcony",
+          "name": "The Balcony",
+          "tagline": "Pro Hardware · Pro Software",
+          "description": "Built later or pre-existing — both acceptable. Focused on state-of-the-art production-capture and processing hardware and software. The inaugural home of AGF's l'Art Production line, plus submission-based integrations from live mixing techs (paid royalties). The seat from which the industry watches the next generation of pros become pros.",
+          "atmosphere": "Vibe: SOTA studio, with a drink in your hand and a band downstairs.",
+          "customer_journey_step": 2
+        },
+        {
+          "features": [
+            "Appointment-only access",
+            "Hidden behind the venue",
+            "Full AGF consumer line on display",
+            "Integrated with the surrounding live-performance context"
+          ],
+          "id": "green-room",
+          "name": "The Green Room",
+          "tagline": "Consumer Product · Hidden",
+          "description": "The consumer retail space, deliberately *hidden*. You arrive through the venue, not through a glass storefront. Appointment-only access. The privilege of integration with the cool kids driving forward an endless flow of live performance art, at premium pricing, is the product.",
+          "atmosphere": "Vibe: back-of-house, in the best possible way.",
+          "customer_journey_step": 4
+        }
+      ],
+      "financial_model": {
+        "revenue_streams": [
+          "Bar / Front-of-House hospitality",
+          "Ticketed live performance (donations 100% to local artists)",
+          "Virtual ticket sales (50/50 with artist)",
+          "Green Room appointment-driven retail (premium hardware)",
+          "Balcony l'Art Production line installations + royalty-paid third-party submissions",
+          "Permanent virtual all-access pass — a perk bundled with hardware ownership"
+        ],
+        "philosophy": "**Flagship only — one per financially qualifying market.** The throwback with a new rhyme: real physical retail, real appointments, allergy to high-pressure tactics. The venue funds itself through the bar and ticketed performances; the Green Room is a high-margin appointment-driven retail surface, not a sales floor.",
+        "qualification_rule": "**One per financially qualifying market** — measured by the existing density of arts-aware sophisticated audio buyers, the local performing-arts ecosystem, and the availability of an owner-operator partner willing to host an AGF flagship under the FoH/Balcony/Green Room blueprint."
+      },
+      "section_title": "The Focal Point",
+      "section_number": "05",
+      "section_label": "The Customer Journey",
+      "concept_description": "Appointment only Consumer Retail occurs in \"The Green Room\".\n\nAppointment only Professional Retail occurs in \"The Balcony\". \n\nEvery location is an R&D gold-mine; that we're in full control of.\n\n",
+      "customer_journey": [
+        {
+          "step": "1",
+          "description": "Arrives at the bar. No sales floor. No clipboards. Sees a beautiful space that supports local culture."
+        },
+        {
+          "step": "2",
+          "description": "Learns we're here. Through the act of being in a community, not through an ad."
+        },
+        {
+          "step": "3",
+          "description": "Books an appointment. Like the original B&O. Like the original Birkin. Real, qualified, human."
+        },
+        {
+          "step": "4",
+          "description": "Meets the Green Room. The consumer product, hidden, integrated, contextualized."
+        },
+        {
+          "step": "5",
+          "description": "Becomes an owner. Or a venue partner. Or both. The platform scales from there."
+        }
+      ],
+      "target_customer_profile": "**Apple-loyal-recoveries-in-waiting** — sophisticated users who appreciate design and technology, who've been questioning the endless scroll, and would click immediately with a community locale that reflects their strengths *without being perceived as Big Brother*. The hard part. The whole point.",
+      "royalty_structure": {
+        "broadcast_split": "**50/50 in perpetuity** on every broadcast-mixed performance recorded at an AGF venue. Both parties co-own the broadcast master.",
+        "stereo_ownership": "The standard stereo capture and the on-site recording belong to the artist — full stop. They can sell it, mix it, master it, distribute it through any channel. AGF takes nothing.",
+        "artist_blocking_rights": "Artist retains the right to **block any subsequent broadcast by the venue, without cause**, even on the 50/50 broadcast-mixed version.",
+        "notes": "Front-runs the inevitable open-source-advocate / big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry."
+      },
+      "virtual_ticket": {
+        "concept": "Per-performance virtual ticket sales delivered via the broadcast-mixed feed. The fan watches the show as it happens — l'Art-encoded, owners-portal-grade — without being in the room. Owners get permanent virtual all-access included.",
+        "pricing_model": "Artist-set baseline with venue floor pricing. Revenue split 50/50 with the artist in perpetuity. AGF either provides the venue free or forfeits its share to the venue + artists when an owner uses their all-access pass.",
+        "owner_perks": "AGF hardware owners receive a **permanent virtual all-access pass** to live content from every AGF venue, in perpetuity."
+      },
+      "cultural_positioning": {
+        "movement": "Aligned with the **\"movement to touch grass\"** — the cultural backlash against the sterile, endless-scroll, Big-Brother-flavored boutique experience that Apple has worn out.",
+        "anti_pattern": "Not a sterile glass-storefront boutique. Not a sales floor with clipboards. Not an algorithmically-personalized membrane. The venue resists every retail anti-pattern of the 2014–2026 era.",
+        "summary": "**Apple-loyal-recoveries-in-waiting** want a community locale that reflects their strengths — design literacy, technology fluency, cultural sophistication — *without* being surveilled. The Venue is that locale. Live performance is the brand surface; the consumer product is the secret you discover after you've decided you trust the room."
+      },
+      "appendix": "",
+      "_background_image": "assets/sections/venue/venue-background.webp",
+      "_background_settings": {
+        "size": "auto",
+        "position": "right top",
+        "opacity": 0.15
+      }
+    }
+  },
+  {
+    "id": "e7462d85-8d46-41ac-bdde-c220117a9321",
+    "schema_id": "technology",
+    "title": "05 · The Stack",
+    "display_order": 7,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Foundational technology, single-source.",
+      "section_number": "05",
+      "section_label": "The Stack",
+      "lart_stack": {
+        "eyebrow": "The l'Art stack, in one breath",
+        "headline": "Flawless implementation of stereo. Everything else is gravy.",
+        "body": "Quadrophonic failed. Surround-sound failed. Dolby Atmos is financially dominant in cinemas but a niche at home. Mono, mixed mono, and stereo have dominated from inception to current day. The opportunity has 'the fine art of good enough' written all over it."
+      },
+      "technologies": [
+        {
+          "id": "lart",
+          "name": "l'Art",
+          "full_name": "l'Art — Acoustic Teleportation",
+          "tagline": "Acoustic teleportation, not surround-sound.",
+          "description": "The l'Art stack does not enhance stereo by addition — no more speakers, more processors, MOAR TECH. It does the opposite: generates a more realistic stereo performance while completely eliminating stereo encoding's only real downside, the sweet spot. Stereo is already 3D when implemented properly. Floating a stable 3D soundfield in a room devoid of any sweet spot is the complete miss by the entire industry, including Dolby Atmos.",
+          "patent_status": "patented",
+          "key_capabilities": [
+            "Patent moat on acoustic rendering codec",
+            "Sweet-spot elimination (wave-field synthesis lineage)",
+            "Broadcast-optimized capture pipeline",
+            "Artist-owned stereo · AGF-owned l'Art · 50/50 broadcast mixed",
+            "5-layer active filtering pipeline (proven on the Core)",
+            "Apple bought 1,000pc Relay runs at full wholesale multiple times — reason unknown / unconfirmed (the units never sold through)",
+            "A Fraunhofer research scientist was the only outside party who ever grokked the broader concept; sold a rudimentary version to Sennheiser"
+          ],
+          "codec_pipeline": [
+            {
+              "stage": "Capture",
+              "description": "Stereo + room tone + broadcast mixed"
+            },
+            {
+              "stage": "Codec",
+              "description": "l'Art patented acoustic rendering"
+            },
+            {
+              "stage": "Decode",
+              "description": "On-device; eliminates sweet spot"
+            },
+            {
+              "stage": "Render",
+              "description": "Stereo 3D, no sweet spot, no extra speakers"
+            },
+            {
+              "stage": "Experience",
+              "description": "You are in the room."
+            }
+          ],
+          "competitive_advantage": "The Core's wave-field synthesis tuning fooled premium-to-high-end dealers globally — not because it threw sound around, but because it presented a stable stereo soundfield indistinguishable from a pair of premium bookshelves + sub. Sony America's California R&D team had similar tech and the 'marketing guys completely ruined it'. We will not ruin it."
+        },
+        {
+          "id": "stereos",
+          "name": "stereOS",
+          "full_name": "stereOS — Global OS for Performing Arts",
+          "tagline": "The global operating system for performing arts.",
+          "description": "Third parties don't license codecs. They adopt AGF's application-specific implementation of stereOS. Kernel and key IP enclaves locked. Application-space open without restriction. Bootlegs inevitable, social faux-pas, addressable. The walled garden, the way Steve Jobs learned to build one: safe, stable, requirements not daunting, content positioned as premium.",
+          "patent_status": "trade_secret",
+          "key_capabilities": [
+            "Locked kernel + locked IP enclaves",
+            "Open application space (no restriction)",
+            "Walled-garden content positioning (Jobs-style)",
+            "Acquisition / hostile-service / integration — the only three options for ten-ton gorillas",
+            "Bootlegs are inevitable but positioned as a **social faux-pas**, not a piracy panic — community membership is the deterrent",
+            "Device-level lockout: capturing patented content for illicit distribution permanently bans the user from the AGF hardware ecosystem",
+            "Legal remedies pursued by AGF on behalf of the artist to recover proceeds from illicit marketing"
+          ],
+          "competitive_advantage": "The lessons from Sony's L-Cassette, DSD, MiniDisc, DAT, digital watermarking — all attempts to lock down media in service of global domination, all failed. AGF takes the iOS-after-macOS lesson instead."
+        },
+        {
+          "id": "btn-tech",
+          "name": "BT'N-Tech",
+          "full_name": "BT'N-Tech — Bring Tha' Noise Technologies",
+          "tagline": "Bring Tha' Noise Technologies.",
+          "description": "A class of technologies, liberally applied. From analog-based toroidal chokes to multi-stage waveform regeneration. The flagship is comprehensive home/facility power regeneration — well known at the industrial scale (Schneider), virtually absent in consumer/commercial audio. R&D on the high-power regeneration strategy is non-trivial but well-scoped; the hidden benefit propagates throughout every product and the entire strategy.",
+          "patent_status": "pending",
+          "key_capabilities": [
+            "Modular finished product line (passive smoothing → full regeneration)",
+            "Native in-circuit smoothing on every AGF component",
+            "Algorithmic noise shaping where target semis demand",
+            "Comprehensive home/facility power regeneration (flagship)",
+            "**Well-known at industrial scale (Schneider Electric); virtually absent in consumer audio** — the entire seam"
+          ],
+          "competitive_advantage": "Schneider does this at industrial scale; nobody does it for audio. Every extra dB of S/N ratio compounds across the entire system and unlocks better l'espacI/O capture."
+        },
+        {
+          "id": "lespacio",
+          "name": "l'espacI/O",
+          "full_name": "l'espacI/O — Spatial I/O",
+          "tagline": "Room tone, weaponized.",
+          "description": "Combines observed importance of music recording with virtual acoustic scene creation. Maps the acoustic space from a performance-capture perspective (pro line), then impresses the character of that space on the consumer side — the initial sensory experience of 'being transported,' then persistent reinforcement of the illusion. The illusion is compressed by the algorithm; compute overhead is minimized; every extra dB of spatial capture is fought for via BT'N-Tech.",
+          "patent_status": "trade_secret",
+          "key_capabilities": [
+            "Performance-capture spatial mapping (pro line)",
+            "Consumer-side spatial impression + reinforcement",
+            "Algorithmic compression of the illusion",
+            "Compounds with BT'N-Tech S/N gains",
+            "**Maps the acoustic space first** — from a performance-capture perspective on the pro line — **then impresses that character** onto the consumer device",
+            "**Two-phase sensory loop**: initial transport experience (\"being there\") + persistent sensory reinforcement that keeps the illusion stable across long-form listening"
+          ],
+          "competitive_advantage": "Apple bought 1,000pc runs of the Relay three or four times at full wholesale and never sold them. Only one Fraunhofer scientist ever grokked the broader concept; he sold a rudimentary version to Sennheiser. The meat of the concept remains a moat-applicable item."
+        },
+        {
+          "id": "frc41",
+          "name": "FRC41",
+          "full_name": "FRC41 — Front Row Center For One",
+          "tagline": "Front Row Center For One.",
+          "description": "Abstractly related to HRTF optimization — commercially attempted many times, always failed through overthinking. The kernel takes a page from Amar Bose: the fine art of good enough. Tiny processing expense, near-zero latency penalty. The psycho-acoustic sound-field generated *inside your head* instantly moves to the experience of listening to a pair of high-end stereo speakers — when perfectly positioned in the sweet spot.",
+          "patent_status": "pending",
+          "key_capabilities": [
+            "Minimal processing footprint",
+            "Near-zero latency penalty",
+            "Psycho-acoustic sound-field externalization",
+            "Cascading benefit from prior AGF technologies"
+          ],
+          "competitive_advantage": "Every prior attempt over-thought it. The fine art of good enough wins commercially every time."
+        },
+        {
+          "id": "no-nails",
+          "name": "No-Nails",
+          "full_name": "No-Nails Engineering Process",
+          "tagline": "No engineering domain-hammers.",
+          "description": "Conceptualized to eliminate brute-forcing problems. No layer of the product is taken for granted. The Symphony Macro-System illustrates: a single woofer turned out of a \"hammered-into-an-inert-cabinet-nail\" becomes a delightfully tuned visceral bass output reaching below 30Hz via transmission-line, audibly balanced at low volumes. Each layer enhances modestly. No one element carries the load. No over-processed sound. No sucked-out life. The sum of the design in a league of its own.",
+          "patent_status": "trade_secret",
+          "key_capabilities": [
+            "Mechanical: transmission-line tuning over inert-cabinet brute force",
+            "Materials: combinations of acoustic materials over digital intervention",
+            "Analog electronics: ultra-low-noise resistors + polypropylene caps",
+            "Drivers: beryllium-alloy HF mounted in dustcap position",
+            "DSP: light final-stage time/phase alignment only",
+            "**Symphony proof point: a single 8\" woofer in a transmission-line cabinet reaches sub-30Hz at low volume** — without subwoofer assist, without DSP heroics, without a second driver"
+          ],
+          "competitive_advantage": "Every discipline contributes meaningfully. No one element overloaded. The result sounds delightfully natural — life not sucked out."
+        }
+      ],
+      "codec_diagram": {
+        "stages": [
+          {
+            "name": "Capture",
+            "description": "Stereo + room tone + broadcast mixed"
+          },
+          {
+            "name": "Codec",
+            "description": "l'Art patented acoustic rendering"
+          },
+          {
+            "name": "Decode",
+            "description": "On-device; eliminates sweet spot"
+          },
+          {
+            "name": "Render",
+            "description": "Stereo 3D, no sweet spot, no extra speakers"
+          },
+          {
+            "name": "Experience",
+            "description": "You are in the room."
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "02820881-6b80-459b-bfab-87f17c3e32f2",
+    "schema_id": "overview",
+    "title": "At a Glance",
+    "display_order": 8,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-14 16:23:49",
+    "data": {
+      "section_label": "Overview",
+      "section_number": "",
+      "section_title": "At a Glance",
+      "headline": "A strategic move into global audio & consumer technology markets.",
+      "summary": "AGF positions at the intersection of premium audio, proprietary codec technology, and artist-first content distribution. The opportunity is defined by three converging factors: **wave of audio-industry M&A consolidation** that has stranded premium brands under corporate umbrellas, **unaddressed consumer demand** for genuine community-oriented physical retail, and a **patented acoustic rendering stack** (l'Art) that eliminates the sweet spot — a problem the entire industry has accepted as unsolvable.\n\nThe thesis: consolidate the fragments, build the platform, and serve the artists.",
+      "intro_text": "",
+      "mode": "text",
+      "image": "",
+      "image_settings": {
+        "fit": ""
+      },
+      "image_position": "right",
+      "metrics": [
+        {
+          "value": "$4.2B",
+          "label": "TAM (Premium Audio)",
+          "context": "Global addressable market for premium home and personal audio"
+        },
+        {
+          "value": "12+",
+          "label": "Brand Acquisitions",
+          "context": "Key consolidation events mapped across B&O, Harman, Sonos, Bose, and others"
+        },
+        {
+          "value": "6",
+          "label": "Proprietary Technologies",
+          "context": "l'Art, stereOS, BT'N-Tech, l'espacI/O, FRC41, No-Nails"
+        },
+        {
+          "value": "50/50",
+          "label": "Artist Revenue Split",
+          "context": "In perpetuity on every broadcast-mixed performance"
+        }
+      ],
+      "highlights": [
+        {
+          "icon": "🧪",
+          "title": "Patent Moat",
+          "description": "l'Art sweet-spot elimination codec — patented and production-ready."
+        },
+        {
+          "icon": "🏛️",
+          "title": "Industry Consolidation",
+          "description": "Decades of M&A have stranded premium brands under corporate umbrellas, creating opportunity."
+        },
+        {
+          "icon": "🎙️",
+          "title": "Artist-First",
+          "description": "Most favorable contract terms in the industry — artists own their stereo masters."
+        },
+        {
+          "icon": "🏟️",
+          "title": "Flagship Venue Concept",
+          "description": "Physical retail reimagined as a performing arts locale, not a sales floor."
+        }
+      ],
+      "appendix": "",
+      "_background_image": "assets/sections/overview/overview-background.png",
+      "_background_settings": {
+        "size": "contain",
+        "position": "center",
+        "opacity": 0.15
+      }
+    }
+  },
+  {
+    "id": "d30a3470-20d5-470a-8b53-eab105c8f642",
+    "schema_id": "concept-explainer",
+    "title": "Concept Explainer",
+    "display_order": 8.5,
+    "is_visible": true,
+    "created_at": "2026-07-14 16:22:22",
+    "updated_at": "2026-07-14 16:23:21",
+    "data": {
+      "section_label": "",
+      "section_number": "",
+      "section_title": "How It Works",
+      "intro_text": "",
+      "layout": "grid",
+      "modules": [],
+      "footnote": "",
+      "_background_image": "assets/sections/concept-explainer/concept-explainer-background.png",
+      "_background_settings": {
+        "size": "contain",
+        "position": "center",
+        "opacity": 0.15
+      }
+    }
+  },
+  {
+    "id": "486d8545-e7d2-4d9a-9fcf-d39ee06a5c67",
+    "schema_id": "business-model",
+    "title": "07 · The Business",
+    "display_order": 9,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "channel_approach": {
+        "partner_types": [
+          "Owner-operated specialty Hi-Fi (20+ years in)",
+          "Custom install integrators",
+          "Performing-arts venues (AGF-aligned franchises)",
+          "Curated third-party brands filling lower price tiers"
+        ],
+        "philosophy": "Lower price categories filled with curated third-party partner product. Presented honestly, humbly, recognizing product gaps. This approach must be backed by numbers — but the net positive is real: increased revenue, increased brand loyalty, educational feedback into our own product teams. **A Bose-like approach.**"
+      },
+      "section_title": "Numbers, runway, and the way the money actually works.",
+      "section_number": "07",
+      "pricing_strategy": {
+        "philosophy": "Once a sales team has a customer, price is not the negotiation. The Relay at $199. The Relay at $249. The Relay at $299. Sales went up each time. Burmester at €5,999 packaging a $200-class device for convenience. The lesson is uncomfortable but true: **premium buyers do not want a discount. They want a reason.**",
+        "model_name": "The Budgeted Total Package",
+        "description": "Price the package, not the unit. Convenience, integration, and context are the luxury product. The unit is a participant."
+      },
+      "runway_table": [
+        {
+          "product": "Over-Ear Home",
+          "ttm": "4–6 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$599–$799",
+          "notes": "V2 refactor in 8–12 mo"
+        },
+        {
+          "product": "Core-like (small)",
+          "ttm": "8–12 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$799",
+          "notes": "ETL pre-approved PS"
+        },
+        {
+          "product": "Core-like (soundbar)",
+          "ttm": "8–12 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$1,199–$1,499",
+          "notes": "Shared tooling, mid-sandwich"
+        },
+        {
+          "product": "Symphony Macro",
+          "ttm": "8–12 mo",
+          "cogs_range": "~$200 (refactor <$100)",
+          "asp_range": "$2,990",
+          "notes": "Reviewed at $29,990 first as PR stunt"
+        },
+        {
+          "product": "The Instrument",
+          "ttm": "8–12 mo",
+          "cogs_range": "halo",
+          "asp_range": "just >$5K",
+          "notes": "Above Focal consumer flagship"
+        },
+        {
+          "product": "Wasted Real-Estate",
+          "ttm": "TBD",
+          "cogs_range": "TBD",
+          "asp_range": "TBD",
+          "notes": "Y1 1,000pcs/mo target globally"
+        }
+      ],
+      "revenue_model": "**Hardware-led with codec/OS halo.** Direct hardware margin from Green Room sales (premium, appointment-driven). l'Art codec licensing is *not* the river — third parties adopt **stereOS** (application-specific implementation), not the codec itself. Performance content revenue is **50/50 split** with artists in perpetuity on broadcast-mixed l'Art versions; standard stereo is artist-owned. Owners receive permanent virtual all-access pass to live content.",
+      "scaling_timeline": "**Phase 1 (Year 1):** Inaugural product line ships from existing IP base. Single flagship venue (PoC). Channel introductions to stranded independents.\n\n**Phase 2 (Years 2–3):** Second-wave AGF community franchises — venues replicating the FoH/Balcony/Green Room blueprint globally. l'Art codec adoption seeded through Balcony installations.\n\n**Phase 3 (Years 3–5):** stereOS third-party adoption. Acquisition / hostile-service / integration decision for ten-ton gorillas. AGF as future bank-roller for stranded distribution channels.",
+      "appendix": "",
+      "section_label": "The Business"
+    }
+  },
+  {
+    "id": "842a0826-d548-4ef0-a6a2-d8727e29c800",
+    "schema_id": "business-model",
+    "title": "07 · The Business",
+    "display_order": 9,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Numbers, runway, and the way the money actually works.",
+      "section_number": "07",
+      "section_label": "The Business",
+      "pricing_strategy": {
+        "model_name": "The Budgeted Total Package",
+        "philosophy": "Once a sales team has a customer, price is not the negotiation. The Relay at $199. The Relay at $249. The Relay at $299. Sales went up each time. Burmester at €5,999 packaging a $200-class device for convenience. The lesson is uncomfortable but true: **premium buyers do not want a discount. They want a reason.**",
+        "description": "Price the package, not the unit. Convenience, integration, and context are the luxury product. The unit is a participant."
+      },
+      "channel_approach": {
+        "model_name": "The Bose-Like Third-Party",
+        "philosophy": "Lower price categories filled with curated third-party partner product. Presented honestly, humbly, recognizing product gaps. This approach must be backed by numbers — but the net positive is real: increased revenue, increased brand loyalty, educational feedback into our own product teams. **A Bose-like approach.**",
+        "partner_types": [
+          "Owner-operated specialty Hi-Fi (20+ years in)",
+          "Custom install integrators",
+          "Performing-arts venues (AGF-aligned franchises)",
+          "Curated third-party brands filling lower price tiers"
+        ],
+        "target_partners": [
+          "Independent retailers stranded by Samsung/Harman, Bose/McIntosh, Barco/Vervent consolidation",
+          "Custom install firms previously aligned with Polk/Definitive/McIntosh",
+          "Performing-arts venues as franchise candidates for the second wave"
+        ]
+      },
+      "runway_heading": "The Runway, at a glance",
+      "runway_table": [
+        {
+          "product": "Over-Ear Home",
+          "ttm": "4–6 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$599–$799",
+          "notes": "V2 refactor in 8–12 mo"
+        },
+        {
+          "product": "Core-like (small)",
+          "ttm": "8–12 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$799",
+          "notes": "ETL pre-approved PS"
+        },
+        {
+          "product": "Core-like (soundbar)",
+          "ttm": "8–12 mo",
+          "cogs_range": "$100–$150",
+          "asp_range": "$1,199–$1,499",
+          "notes": "Shared tooling, mid-sandwich"
+        },
+        {
+          "product": "Symphony Macro",
+          "ttm": "8–12 mo",
+          "cogs_range": "~$200 (refactor <$100)",
+          "asp_range": "$2,990",
+          "notes": "Reviewed at $29,990 first as PR stunt"
+        },
+        {
+          "product": "The Instrument",
+          "ttm": "8–12 mo",
+          "cogs_range": "halo",
+          "asp_range": "just >$5K",
+          "notes": "Above Focal consumer flagship"
+        },
+        {
+          "product": "Wasted Real-Estate",
+          "ttm": "TBD",
+          "cogs_range": "TBD",
+          "asp_range": "TBD",
+          "notes": "Y1 1,000pcs/mo target globally"
+        }
+      ],
+      "revenue_model": "**Hardware-led with codec/OS halo.** Direct hardware margin from Green Room sales (premium, appointment-driven). l'Art codec licensing is *not* the river — third parties adopt **stereOS** (application-specific implementation), not the codec itself. Performance content revenue is **50/50 split** with artists in perpetuity on broadcast-mixed l'Art versions; standard stereo is artist-owned. Owners receive permanent virtual all-access pass to live content.",
+      "scaling_heading": "Phased rollout",
+      "scaling_timeline": "**Phase 1 (Year 1):** Inaugural product line ships from existing IP base. Single flagship venue (PoC). Channel introductions to stranded independents.\n\n**Phase 2 (Years 2–3):** Second-wave AGF community franchises — venues replicating the FoH/Balcony/Green Room blueprint globally. l'Art codec adoption seeded through Balcony installations.\n\n**Phase 3 (Years 3–5):** stereOS third-party adoption. Acquisition / hostile-service / integration decision for ten-ton gorillas. AGF as future bank-roller for stranded distribution channels."
+    }
+  },
+  {
+    "id": "8daf1186-404d-4c63-9bfe-36f3969914e3",
+    "schema_id": "founder",
+    "title": "08 · The Founder",
+    "display_order": 10,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Benjamin Webster.",
+      "section_number": "08",
+      "name": "Benjamin Webster",
+      "title": "Founder & CEO",
+      "domain_depth_years": 25,
+      "milestones": [
+        {
+          "year": "<10",
+          "event": "Obsessed with finding speakers",
+          "description": "Garage sales, friends' houses. The acoustic-rendering concept sparked by his grandfather — \"the first guy in Winnipeg to own stereo sound.\"",
+          "significance": "Origin of the 25-year domain depth."
+        },
+        {
+          "year": "11–12",
+          "event": "Inherited two massive Hi-Fi magazine collections",
+          "description": "Bought & sold equipment to fund rent in teens."
+        },
+        {
+          "year": "Teens",
+          "event": "Pawn-shop trading",
+          "description": "Bought/sold professionally via pawn shops — brands and products pressure-tested in secondary markets. The first place the hallmarks of 'classics' become visible.",
+          "significance": "Learned to read the market the way an analyst reads a P&L."
+        },
+        {
+          "year": "Late teens",
+          "event": "Professional recording in Toronto",
+          "description": "Music, ADR, foley, sound-effects editing. First wave of chip-amp designers. SOTA software (WaveFrame, Pyramix 32-bit/384kHz). Hollywood mixing theaters alongside Roland TV stereo monitors.",
+          "significance": "Direct exposure to both the high-art and the everyday-mass tiers in the same week."
+        },
+        {
+          "year": "90s",
+          "event": "First audio-tech startup",
+          "company": "Independent",
+          "description": "Father-in-law David Jaeger (world-famous cost-no-object live music recordings for public broadcasters) + David \"Stretch\" Quinney (THE mixing/mastering engineer) on Bryston-powered monitors in CBC Studio One. 13 Amps per stereo channel. BBC, Radio France, Radio Scotland rented the room for the Davids."
+        },
+        {
+          "year": "Mid-late 90s",
+          "event": "Mogulus — first live broadcast",
+          "company": "Mogulus (later context: Justin.tv → Twitch via Justin Kan)",
+          "description": "Inspired the work with Justin Kan. Only platform with codec support for CD-quality live streaming of classical music — the first target, for a variety of reasons."
+        },
+        {
+          "year": "Early 00s",
+          "event": "First tech-founder mentor",
+          "company": "V3 Semiconductor (Alan Simmons)",
+          "description": "Alan Simmons, founder/CEO of V3 Semiconductor (Canada's first successful semi co., sold to National). Fostered product-definition talent, set loose on supply chain."
+        },
+        {
+          "year": "00s",
+          "event": "NMI Devices",
+          "company": "NMI Devices (Network Media Interface)",
+          "description": "What Sonos became, architecturally. One of the first teams in the world to test-drive D2-Audio's DSP-driven amplification (Chip Taylor, famous pro-gear engineer). IP still an opportunity in 2026 — the foundation of Mark Levinson's \"custom chip\" marketing angle for his new brand.",
+          "outcome": "Shuttered after rejection by big Japanese brands (\"digital amp will never sound good, who'd network their music anyway\")."
+        },
+        {
+          "year": "10s",
+          "event": "Mass Fidelity · Core · Relay",
+          "company": "Mass Fidelity",
+          "description": "The first commercially successful deployment of Wave Field Synthesis. The Relay PR tour (291% over plan). Munich High-End. The Burmester conversation. The \"you seem to have figured out some details we haven't\" moment.",
+          "significance": "The proof of every tenet in real-world operation."
+        },
+        {
+          "year": "Mid 10s",
+          "event": "Dolby skunkworks",
+          "company": "Dolby",
+          "description": "The \"make things no one can get mad at us for\" charter. Remora — the soundbar that lived behind the TV. The architecture that made it acoustically advantaged. The product Apple shut down via the licensing threat."
+        },
+        {
+          "year": "2024–26",
+          "event": "Watches the consolidation happen",
+          "description": "Krell closes (Jun 2024). Samsung/Harman closes Sound United (Sep 2025). Barco closes VerVent (Apr 2026). Marshall now 78% HSG. The market-rhyme thesis inverts from prediction to observation."
+        },
+        {
+          "year": "2024",
+          "event": "AGF founded",
+          "company": "AGF — All Grounds Floating",
+          "description": "The gospel, distilled. The plan, on the page.",
+          "significance": "AGF is the next move."
+        }
+      ],
+      "mentors": [
+        {
+          "name": "Grandfather (Winnipeg)",
+          "contribution": "\"The first guy in Winnipeg to own stereo sound.\" Sparked the concept of acoustic rendering pre-teen.",
+          "relationship": "Origin"
+        },
+        {
+          "name": "\"Old hands\" (teenage years)",
+          "contribution": "Esoteric custom tube gear; what to listen for.",
+          "relationship": "Teenage mentors"
+        },
+        {
+          "name": "First wave of chip-amp designers",
+          "contribution": "Hard-line, latest-tech-driven opinions.",
+          "relationship": "Peer/teacher"
+        },
+        {
+          "name": "Hollywood sound-effects editors (Toronto)",
+          "contribution": "48-track blow-ups; subtleties in recordings; the SOTA software era.",
+          "relationship": "Professional mentors"
+        },
+        {
+          "name": "David Jaeger",
+          "contribution": "Cost-no-object live music recordings; remote studios; scale.",
+          "relationship": "Father-in-law"
+        },
+        {
+          "name": "David \"Stretch\" Quinney",
+          "contribution": "Riding the rails of multi-million-dollar SOTA-equipped Bryston monitors in CBC Studio One.",
+          "relationship": "Master craftsman / mentor"
+        },
+        {
+          "name": "Alan Simmons",
+          "contribution": "V3 Semiconductor. Fostered product-definition, unleashed on supply chain.",
+          "relationship": "First tech-founder mentor"
+        },
+        {
+          "name": "Chip Taylor",
+          "contribution": "D2-Audio. DSP-driven amplification. The pro-gear lineage.",
+          "relationship": "Technology partner"
+        },
+        {
+          "name": "Justin Kan",
+          "contribution": "The e-sports-properly-Twitch fluke accident. The CD-quality live stream that almost was.",
+          "relationship": "Founder peer"
+        },
+        {
+          "name": "Dan D'Agostino",
+          "contribution": "The most credible case study in surviving a PE rug-pull and rebuilding at the top of the aspirational tier.",
+          "relationship": "Peer (today)"
+        }
+      ],
+      "key_companies": [
+        {
+          "name": "NMI Devices",
+          "role": "Co-founder / Product Definition",
+          "years": "00s",
+          "outcome": "Shuttered (too early). Architecture later validated by Sonos."
+        },
+        {
+          "name": "Mass Fidelity",
+          "role": "Founder / CEO",
+          "years": "2010s",
+          "outcome": "Core + Relay. First commercial Wave Field Synthesis deployment. Munich High-End validation."
+        },
+        {
+          "name": "Dolby (skunkworks)",
+          "role": "Skunkworks lead",
+          "years": "Mid 2010s",
+          "outcome": "Remora invented; Apple licensing threat killed program."
+        },
+        {
+          "name": "AGF — All Grounds Floating",
+          "role": "Founder & CEO",
+          "years": "2024–present",
+          "outcome": "In flight."
+        }
+      ],
+      "section_label": "The Founder"
+    }
+  },
+  {
+    "id": "bddfddb5-bb7d-42cc-9b2b-1a20afcd7581",
+    "schema_id": "founder",
+    "title": "08 · The Founder",
+    "display_order": 10,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Benjamin Webster.",
+      "section_number": "08",
+      "section_label": "The Founder",
+      "name": "Benjamin Webster",
+      "title": "Founder & CEO",
+      "domain_depth_years": 25,
+      "milestones": [
+        {
+          "year": "<10",
+          "event": "Obsessed with finding speakers",
+          "description": "Garage sales, friends' houses. The acoustic-rendering concept sparked by his grandfather — \"the first guy in Winnipeg to own stereo sound.\"",
+          "significance": "Origin of the 25-year domain depth."
+        },
+        {
+          "year": "11–12",
+          "event": "Inherited two massive Hi-Fi magazine collections",
+          "description": "Bought & sold equipment to fund rent in teens."
+        },
+        {
+          "year": "Teens",
+          "event": "Pawn-shop trading",
+          "description": "Bought/sold professionally via pawn shops — brands and products pressure-tested in secondary markets. The first place the hallmarks of 'classics' become visible.",
+          "significance": "Learned to read the market the way an analyst reads a P&L."
+        },
+        {
+          "year": "Late teens",
+          "event": "Professional recording in Toronto",
+          "description": "Music, ADR, foley, sound-effects editing. First wave of chip-amp designers. SOTA software (WaveFrame, Pyramix 32-bit/384kHz). Hollywood mixing theaters alongside Roland TV stereo monitors.",
+          "significance": "Direct exposure to both the high-art and the everyday-mass tiers in the same week."
+        },
+        {
+          "year": "90s",
+          "event": "First audio-tech startup",
+          "company": "Independent",
+          "description": "Father-in-law David Jaeger (world-famous cost-no-object live music recordings for public broadcasters) + David \"Stretch\" Quinney (THE mixing/mastering engineer) on Bryston-powered monitors in CBC Studio One. 13 Amps per stereo channel. BBC, Radio France, Radio Scotland rented the room for the Davids."
+        },
+        {
+          "year": "Mid-late 90s",
+          "event": "Mogulus — first live broadcast",
+          "company": "Mogulus (later context: Justin.tv → Twitch via Justin Kan)",
+          "description": "Inspired the work with Justin Kan. Only platform with codec support for CD-quality live streaming of classical music — the first target, for a variety of reasons."
+        },
+        {
+          "year": "Early 00s",
+          "event": "First tech-founder mentor",
+          "company": "V3 Semiconductor (Alan Simmons)",
+          "description": "Alan Simmons, founder/CEO of V3 Semiconductor (Canada's first successful semi co., sold to National). Fostered product-definition talent, set loose on supply chain."
+        },
+        {
+          "year": "00s",
+          "event": "NMI Devices",
+          "company": "NMI Devices (Network Media Interface)",
+          "description": "What Sonos became, architecturally. One of the first teams in the world to test-drive D2-Audio's DSP-driven amplification (Chip Taylor, famous pro-gear engineer). IP still an opportunity in 2026 — the foundation of Mark Levinson's \"custom chip\" marketing angle for his new brand.",
+          "outcome": "Shuttered after rejection by big Japanese brands (\"digital amp will never sound good, who'd network their music anyway\")."
+        },
+        {
+          "year": "10s",
+          "event": "Mass Fidelity · Core · Relay",
+          "company": "Mass Fidelity",
+          "description": "The first commercially successful deployment of Wave Field Synthesis. The Relay PR tour (291% over plan). Munich High-End. The Burmester conversation. The \"you seem to have figured out some details we haven't\" moment.",
+          "significance": "The proof of every tenet in real-world operation."
+        },
+        {
+          "year": "Mid 10s",
+          "event": "Dolby skunkworks",
+          "company": "Dolby",
+          "description": "The \"make things no one can get mad at us for\" charter. Remora — the soundbar that lived behind the TV. The architecture that made it acoustically advantaged. The product Apple shut down via the licensing threat."
+        },
+        {
+          "year": "2024–26",
+          "event": "Watches the consolidation happen",
+          "description": "Krell closes (Jun 2024). Samsung/Harman closes Sound United (Sep 2025). Barco closes VerVent (Apr 2026). Marshall now 78% HSG. The market-rhyme thesis inverts from prediction to observation."
+        },
+        {
+          "year": "2024",
+          "event": "AGF founded",
+          "company": "AGF — All Grounds Floating",
+          "description": "The gospel, distilled. The plan, on the page.",
+          "significance": "AGF is the next move."
+        }
+      ],
+      "mentors_heading": "The mentors, in shorthand",
+      "mentors": [
+        {
+          "name": "Grandfather (Winnipeg)",
+          "contribution": "\"The first guy in Winnipeg to own stereo sound.\" Sparked the concept of acoustic rendering pre-teen.",
+          "relationship": "Origin"
+        },
+        {
+          "name": "\"Old hands\" (teenage years)",
+          "contribution": "Esoteric custom tube gear; what to listen for.",
+          "relationship": "Teenage mentors"
+        },
+        {
+          "name": "First wave of chip-amp designers",
+          "contribution": "Hard-line, latest-tech-driven opinions.",
+          "relationship": "Peer/teacher"
+        },
+        {
+          "name": "Hollywood sound-effects editors (Toronto)",
+          "contribution": "48-track blow-ups; subtleties in recordings; the SOTA software era.",
+          "relationship": "Professional mentors"
+        },
+        {
+          "name": "David Jaeger",
+          "contribution": "Cost-no-object live music recordings; remote studios; scale.",
+          "relationship": "Father-in-law"
+        },
+        {
+          "name": "David \"Stretch\" Quinney",
+          "contribution": "Riding the rails of multi-million-dollar SOTA-equipped Bryston monitors in CBC Studio One.",
+          "relationship": "Master craftsman / mentor"
+        },
+        {
+          "name": "Alan Simmons",
+          "contribution": "V3 Semiconductor. Fostered product-definition, unleashed on supply chain.",
+          "relationship": "First tech-founder mentor"
+        },
+        {
+          "name": "Chip Taylor",
+          "contribution": "D2-Audio. DSP-driven amplification. The pro-gear lineage.",
+          "relationship": "Technology partner"
+        },
+        {
+          "name": "Justin Kan",
+          "contribution": "The e-sports-properly-Twitch fluke accident. The CD-quality live stream that almost was.",
+          "relationship": "Founder peer"
+        },
+        {
+          "name": "Dan D'Agostino",
+          "contribution": "The most credible case study in surviving a PE rug-pull and rebuilding at the top of the aspirational tier.",
+          "relationship": "Peer (today)"
+        }
+      ],
+      "key_companies_heading": "Key companies",
+      "key_companies": [
+        {
+          "name": "NMI Devices",
+          "role": "Co-founder / Product Definition",
+          "years": "00s",
+          "outcome": "Shuttered (too early). Architecture later validated by Sonos."
+        },
+        {
+          "name": "Mass Fidelity",
+          "role": "Founder / CEO",
+          "years": "2010s",
+          "outcome": "Core + Relay. First commercial Wave Field Synthesis deployment. Munich High-End validation."
+        },
+        {
+          "name": "Dolby (skunkworks)",
+          "role": "Skunkworks lead",
+          "years": "Mid 2010s",
+          "outcome": "Remora invented; Apple licensing threat killed program."
+        },
+        {
+          "name": "AGF — All Grounds Floating",
+          "role": "Founder & CEO",
+          "years": "2024–present",
+          "outcome": "In flight."
+        }
+      ],
+      "cta_heading": "The plan is on the page. *Now what?*",
+      "cta_body": "Channel introductions. Distribution relationships. Capital partner conversations. The first flagship venue. The first six Tenet-aligned hires. The first l'Art-recorded performance."
+    }
+  },
+  {
+    "id": "5d6d18be-d207-48da-9890-952eba7654e7",
+    "schema_id": "distribution",
+    "title": "09 · Distribution",
+    "display_order": 11,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Distribution — the future bank-roller.",
+      "section_number": "09",
+      "philosophy": "Channel partners are owner-operators, often 20+ years in. They built the reputations of Polk, Definitive Tech, McIntosh, et al. Now they are treated like disposable assets because they do not hit spreadsheet numbers — but they cannot be fired either, because the bank *needs* a global distribution spine. AGF positions itself as the **future bank-roller, critically better than the devil they know**: lower price categories filled with curated third-party partner product, our line moving upward, the flagship landing just above Focal's consumer offering (~$5K USD).",
+      "partner_criteria": [
+        {
+          "criterion": "Owner-operator continuity",
+          "description": "20+ years in the segment; founder still actively involved.",
+          "weight": 0.3
+        },
+        {
+          "criterion": "Independent ownership",
+          "description": "Not currently captured by a PE roll-up or conglomerate parent.",
+          "weight": 0.25
+        },
+        {
+          "criterion": "Brand-build credibility",
+          "description": "Built the regional reputation of at least one premium brand (Polk, Definitive, McIntosh, etc.).",
+          "weight": 0.2
+        },
+        {
+          "criterion": "Integration capability",
+          "description": "Custom install or appointment-based retail with technical staff.",
+          "weight": 0.15
+        },
+        {
+          "criterion": "Performing-arts proximity",
+          "description": "Existing relationships with local venues, artists, or production communities.",
+          "weight": 0.1
+        }
+      ],
+      "revenue_model": "**Curated third-party fills the price floor; AGF owns the price ceiling.** Lower categories backed by partner product (presented honestly, with brand-humility). AGF flagship lands just above Focal consumer (~$5K). The package — not the unit — is the negotiation. The Burmester €5,999 lesson applied across the whole channel.",
+      "territories": [
+        {
+          "region": "North America (US/CA)",
+          "strategy": "Stranded Polk/Definitive/McIntosh independents. Custom install + appointment-only retail.",
+          "priority": 1
+        },
+        {
+          "region": "Western Europe",
+          "strategy": "Munich High-End channel relationships. UK boutique engineering brands as third-party fill.",
+          "priority": 1
+        },
+        {
+          "region": "Japan",
+          "strategy": "Boutique audiophile retailers. Tone-meister culture alignment.",
+          "priority": 2
+        },
+        {
+          "region": "East Asia (CN/HK/TW/KR)",
+          "strategy": "Selective premium retail; avoid PE-captured channels.",
+          "priority": 3
+        },
+        {
+          "region": "Australia / NZ",
+          "strategy": "Owner-operator specialty retail.",
+          "priority": 3
+        }
+      ],
+      "channel_types": [
+        {
+          "type": "Specialty Hi-Fi (independent)",
+          "description": "Owner-operated stores, 20+ years in, often previously aligned with Polk/Definitive/McIntosh.",
+          "approach": "AGF as future bank-roller — line of credit, marketing co-op, AGF flagship as halo, third-party fill as the floor."
+        },
+        {
+          "type": "Custom Install",
+          "description": "Integrators serving the residential and commercial AV market.",
+          "approach": "BT'N-Tech home/facility regeneration as a high-margin install line. l'espacI/O performance capture for project-based architectural integrations."
+        },
+        {
+          "type": "AGF Flagship Venues",
+          "description": "One per financially qualifying market; FoH/Balcony/Green Room blueprint.",
+          "approach": "Direct retail through appointment. Performance arts as the brand surface."
+        },
+        {
+          "type": "Performing-Arts Franchises (Wave 2)",
+          "description": "Community-franchise venues replicating the blueprint globally.",
+          "approach": "l'Art Production line installed in Balcony; consumer retail in Green Room; revenue share to local venues."
+        },
+        {
+          "type": "D2C / Owners Portal",
+          "description": "Owners get permanent virtual all-access pass to live content.",
+          "approach": "Hardware sells through partners; content access ships through AGF directly."
+        }
+      ],
+      "section_label": "Distribution"
+    }
+  },
+  {
+    "id": "7059a2c6-3984-4c40-ada0-81ceb096cdff",
+    "schema_id": "distribution",
+    "title": "09 · Distribution",
+    "display_order": 11,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Distribution — the future bank-roller.",
+      "section_number": "09",
+      "section_label": "Distribution",
+      "philosophy": "Channel partners are owner-operators, often 20+ years in. They built the reputations of Polk, Definitive Tech, McIntosh, et al. Now they are treated like disposable assets because they do not hit spreadsheet numbers — but they cannot be fired either, because the bank *needs* a global distribution spine. AGF positions itself as the **future bank-roller, critically better than the devil they know**: lower price categories filled with curated third-party partner product, our line moving upward, the flagship landing just above Focal's consumer offering (~$5K USD).",
+      "partner_criteria_heading": "Partner Criteria (weighted)",
+      "partner_criteria": [
+        {
+          "criterion": "Owner-operator continuity",
+          "description": "20+ years in the segment; founder still actively involved.",
+          "weight": 0.3
+        },
+        {
+          "criterion": "Independent ownership",
+          "description": "Not currently captured by a PE roll-up or conglomerate parent.",
+          "weight": 0.25
+        },
+        {
+          "criterion": "Brand-build credibility",
+          "description": "Built the regional reputation of at least one premium brand (Polk, Definitive, McIntosh, etc.).",
+          "weight": 0.2
+        },
+        {
+          "criterion": "Integration capability",
+          "description": "Custom install or appointment-based retail with technical staff.",
+          "weight": 0.15
+        },
+        {
+          "criterion": "Performing-arts proximity",
+          "description": "Existing relationships with local venues, artists, or production communities.",
+          "weight": 0.1
+        }
+      ],
+      "revenue_model": "**Curated third-party fills the price floor; AGF owns the price ceiling.** Lower categories backed by partner product (presented honestly, with brand-humility). AGF flagship lands just above Focal consumer (~$5K). The package — not the unit — is the negotiation. The Burmester €5,999 lesson applied across the whole channel.",
+      "territories_heading": "Territories",
+      "territories": [
+        {
+          "region": "North America (US/CA)",
+          "strategy": "Stranded Polk/Definitive/McIntosh independents. Custom install + appointment-only retail.",
+          "priority": 1
+        },
+        {
+          "region": "Western Europe",
+          "strategy": "Munich High-End channel relationships. UK boutique engineering brands as third-party fill.",
+          "priority": 1
+        },
+        {
+          "region": "Japan",
+          "strategy": "Boutique audiophile retailers. Tone-meister culture alignment.",
+          "priority": 2
+        },
+        {
+          "region": "East Asia (CN/HK/TW/KR)",
+          "strategy": "Selective premium retail; avoid PE-captured channels.",
+          "priority": 3
+        },
+        {
+          "region": "Australia / NZ",
+          "strategy": "Owner-operator specialty retail.",
+          "priority": 3
+        }
+      ],
+      "channel_types": [
+        {
+          "type": "Specialty Hi-Fi (independent)",
+          "description": "Owner-operated stores, 20+ years in, often previously aligned with Polk/Definitive/McIntosh.",
+          "approach": "AGF as future bank-roller — line of credit, marketing co-op, AGF flagship as halo, third-party fill as the floor."
+        },
+        {
+          "type": "Custom Install",
+          "description": "Integrators serving the residential and commercial AV market.",
+          "approach": "BT'N-Tech home/facility regeneration as a high-margin install line. l'espacI/O performance capture for project-based architectural integrations."
+        },
+        {
+          "type": "AGF Flagship Venues",
+          "description": "One per financially qualifying market; FoH/Balcony/Green Room blueprint.",
+          "approach": "Direct retail through appointment. Performance arts as the brand surface."
+        },
+        {
+          "type": "Performing-Arts Franchises (Wave 2)",
+          "description": "Community-franchise venues replicating the blueprint globally.",
+          "approach": "l'Art Production line installed in Balcony; consumer retail in Green Room; revenue share to local venues."
+        },
+        {
+          "type": "D2C / Owners Portal",
+          "description": "Owners get permanent virtual all-access pass to live content.",
+          "approach": "Hardware sells through partners; content access ships through AGF directly."
+        }
+      ]
+    }
+  },
+  {
+    "id": "8fafe344-10c4-4dab-a4d3-619029034b2f",
+    "schema_id": "artist-rights",
+    "title": "10 · Artist Rights",
+    "display_order": 12,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Artist Rights — artists drive their own destiny.",
+      "section_number": "10",
+      "philosophy": "AGF aspires to be the catalyst, and driver of, a vibrant and financially healthy arts community. The standard stereo capture and the on-site recording belong to the artist — full stop. The patented version and broadcast-mixed version are co-owned with AGF, **50/50 in perpetuity**, and the artist retains the right to **block any subsequent broadcast by the venue, without cause**. We front-run the inevitable open-source-advocate and big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry.",
+      "ownership_tiers": [
+        {
+          "tier_name": "Standard Stereo (artist-owned)",
+          "description": "Standard stereo, unmixed, raw. **100% owned by the artist.** They can sell it to their heart's content infinitely if they want to perform their own mix/master. AGF takes nothing.",
+          "artist_share_percent": 100,
+          "agf_share_percent": 0,
+          "rights": [
+            "Full ownership of the raw stereo capture",
+            "Right to mix, master, and distribute independently",
+            "Right to monetize via any channel",
+            "No revenue share owed to AGF"
+          ],
+          "restrictions": [
+            "May not represent the recording as a l'Art / patented version"
+          ]
+        },
+        {
+          "tier_name": "l'Art Patented Version (AGF-owned)",
+          "description": "The l'Art-encoded version is **owned by AGF** as the inventor. Distribution gated through stereOS-licensed devices and the AGF owners portal.",
+          "artist_share_percent": 0,
+          "agf_share_percent": 100,
+          "rights": [
+            "Distribution through AGF owners portal",
+            "Performance rights at AGF flagship venues",
+            "Sub-licensing to stereOS adopters"
+          ],
+          "restrictions": [
+            "Cannot exist without the artist's standard-stereo capture as input",
+            "Subject to artist blocking rights on broadcast"
+          ]
+        },
+        {
+          "tier_name": "Broadcast-Mixed Version (50/50)",
+          "description": "Broadcast-optimized mix that combines the captured performance with AGF's broadcast-mix engineering. **Revenue split 50/50 in perpetuity.** Artist retains right to block any subsequent broadcast by the venue, without cause.",
+          "artist_share_percent": 50,
+          "agf_share_percent": 50,
+          "rights": [
+            "50% of broadcast revenue, in perpetuity",
+            "Right to block any subsequent broadcast (no cause required)",
+            "Right to set fan-purchase (\"forever copy\") pricing",
+            "Owner-portal exposure via permanent virtual all-access"
+          ],
+          "restrictions": [
+            "AGF retains the broadcast-mix master",
+            "AGF retains 50% of broadcast revenue"
+          ]
+        }
+      ],
+      "enforcement": {
+        "device_lockout": "If AGF can identify a device capturing patented content for illicit distribution, the user — by accepting the terms of service — is **blocked from all future business with AGF**, and legal action will be taken by AGF, on behalf of the artist, to recover proceeds from illicit marketing.",
+        "legal_remedies": [
+          "Recovery of proceeds on behalf of the artist",
+          "Permanent ban from AGF hardware ecosystem",
+          "Termination of stereOS device entitlements",
+          "Civil action under the terms of service"
+        ],
+        "social_deterrent": [
+          "Bootlegging positioned as a social faux-pas (not a piracy panic)",
+          "Owner status as community-membership signal — withdrawn on violation",
+          "Artist communities surface bad actors organically"
+        ]
+      },
+      "revenue_streams": [
+        {
+          "stream": "Standard stereo (artist-direct)",
+          "description": "Artist sells own mix/master via any channel.",
+          "split": "100% artist · 0% AGF"
+        },
+        {
+          "stream": "l'Art patented version",
+          "description": "AGF distributes through owners portal and stereOS adopters.",
+          "split": "0% artist · 100% AGF (artist retains standard-stereo upside)"
+        },
+        {
+          "stream": "Broadcast-mixed version",
+          "description": "Broadcast-optimized stereo+video, distributed through standard app platforms.",
+          "split": "50% artist · 50% AGF, in perpetuity"
+        },
+        {
+          "stream": "Virtual ticket",
+          "description": "Per-performance virtual ticket sale (broadcast-mix delivery).",
+          "split": "50% artist · 50% AGF"
+        },
+        {
+          "stream": "Owner all-access pass",
+          "description": "AGF hardware owners receive permanent virtual all-access. AGF either provides the venue free or forfeits its share to the venue + artists.",
+          "split": "Variable — AGF subsidizes"
+        },
+        {
+          "stream": "Fan \"forever copy\"",
+          "description": "Artist sets pricing. Fan owns digital copy and is responsible for backup.",
+          "split": "100% artist (within the standard-stereo tier)"
+        }
+      ],
+      "section_label": "Artist Rights"
+    }
+  },
+  {
+    "id": "d1e183d3-6249-4674-bbef-b2ae2c71ffce",
+    "schema_id": "artist-rights",
+    "title": "10 · Artist Rights",
+    "display_order": 12,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Artist Rights — artists drive their own destiny.",
+      "section_number": "10",
+      "section_label": "Artist Rights",
+      "philosophy": "AGF aspires to be the catalyst, and driver of, a vibrant and financially healthy arts community. The standard stereo capture and the on-site recording belong to the artist — full stop. The patented version and broadcast-mixed version are co-owned with AGF, **50/50 in perpetuity**, and the artist retains the right to **block any subsequent broadcast by the venue, without cause**. We front-run the inevitable open-source-advocate and big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry.",
+      "ownership_tiers": [
+        {
+          "tier_name": "Standard Stereo (artist-owned)",
+          "description": "Standard stereo, unmixed, raw. **100% owned by the artist.** They can sell it to their heart's content infinitely if they want to perform their own mix/master. AGF takes nothing.",
+          "artist_share_percent": 100,
+          "agf_share_percent": 0,
+          "rights": [
+            "Full ownership of the raw stereo capture",
+            "Right to mix, master, and distribute independently",
+            "Right to monetize via any channel",
+            "No revenue share owed to AGF"
+          ],
+          "restrictions": [
+            "May not represent the recording as a l'Art / patented version"
+          ]
+        },
+        {
+          "tier_name": "l'Art Patented Version (AGF-owned)",
+          "description": "The l'Art-encoded version is **owned by AGF** as the inventor. Distribution gated through stereOS-licensed devices and the AGF owners portal.",
+          "artist_share_percent": 0,
+          "agf_share_percent": 100,
+          "rights": [
+            "Distribution through AGF owners portal",
+            "Performance rights at AGF flagship venues",
+            "Sub-licensing to stereOS adopters"
+          ],
+          "restrictions": [
+            "Cannot exist without the artist's standard-stereo capture as input",
+            "Subject to artist blocking rights on broadcast"
+          ]
+        },
+        {
+          "tier_name": "Broadcast-Mixed Version (50/50)",
+          "description": "Broadcast-optimized mix that combines the captured performance with AGF's broadcast-mix engineering. **Revenue split 50/50 in perpetuity.** Artist retains right to block any subsequent broadcast by the venue, without cause.",
+          "artist_share_percent": 50,
+          "agf_share_percent": 50,
+          "rights": [
+            "50% of broadcast revenue, in perpetuity",
+            "Right to block any subsequent broadcast (no cause required)",
+            "Right to set fan-purchase (\"forever copy\") pricing",
+            "Owner-portal exposure via permanent virtual all-access"
+          ],
+          "restrictions": [
+            "AGF retains the broadcast-mix master",
+            "AGF retains 50% of broadcast revenue"
+          ]
+        }
+      ],
+      "enforcement": {
+        "device_lockout": "If AGF can identify a device capturing patented content for illicit distribution, the user — by accepting the terms of service — is **blocked from all future business with AGF**, and legal action will be taken by AGF, on behalf of the artist, to recover proceeds from illicit marketing.",
+        "legal_remedies": [
+          "Recovery of proceeds on behalf of the artist",
+          "Permanent ban from AGF hardware ecosystem",
+          "Termination of stereOS device entitlements",
+          "Civil action under the terms of service"
+        ],
+        "social_deterrent": [
+          "Bootlegging positioned as a social faux-pas (not a piracy panic)",
+          "Owner status as community-membership signal — withdrawn on violation",
+          "Artist communities surface bad actors organically"
+        ]
+      },
+      "revenue_streams_heading": "Revenue Streams",
+      "revenue_streams": [
+        {
+          "stream": "Standard stereo (artist-direct)",
+          "description": "Artist sells own mix/master via any channel.",
+          "split": "100% artist · 0% AGF"
+        },
+        {
+          "stream": "l'Art patented version",
+          "description": "AGF distributes through owners portal and stereOS adopters.",
+          "split": "0% artist · 100% AGF (artist retains standard-stereo upside)"
+        },
+        {
+          "stream": "Broadcast-mixed version",
+          "description": "Broadcast-optimized stereo+video, distributed through standard app platforms.",
+          "split": "50% artist · 50% AGF, in perpetuity"
+        },
+        {
+          "stream": "Virtual ticket",
+          "description": "Per-performance virtual ticket sale (broadcast-mix delivery).",
+          "split": "50% artist · 50% AGF"
+        },
+        {
+          "stream": "Owner all-access pass",
+          "description": "AGF hardware owners receive permanent virtual all-access. AGF either provides the venue free or forfeits its share to the venue + artists.",
+          "split": "Variable — AGF subsidizes"
+        },
+        {
+          "stream": "Fan \"forever copy\"",
+          "description": "Artist sets pricing. Fan owns digital copy and is responsible for backup.",
+          "split": "100% artist (within the standard-stereo tier)"
+        }
+      ]
+    }
+  },
+  {
+    "id": "6cc3cc82-bd80-4cca-a9df-eaede886a060",
+    "schema_id": "competitive-positioning",
+    "title": "11 · Competitive Positioning",
+    "display_order": 13,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Competitive Positioning — where AGF lands.",
+      "section_number": "11",
+      "section_label": "Competitive Positioning",
+      "intro_text": "Every direct competitor below either opens a seam (consolidated, struggling, or closed) or defines the ceiling AGF is happy to sit just below. The aspirational tier survived; the ownership consolidated. The opening is the gap between the struggling incumbent and the $250K outlier.",
+      "competitors": [
+        {
+          "brand": "Bang & Olufsen",
+          "category": "Luxury electronics — the comparable spiritual archetype",
+          "status": "struggling",
+          "prestige_score": 92,
+          "price_usd_avg": 45000,
+          "key_data_points": [
+            "FY2007/08 peak revenue **~$853M USD** (≈ $1.25B in 2026 dollars)",
+            "FY2023/24 revenue **$402M** — less than half the peak",
+            "Public, Copenhagen-listed, decades into a slow decline"
+          ],
+          "agf_positioning": "**Spiritual successor** to the era when B&O stood alone. Same archetype: appointment-driven, design-led, premium-only. AGF inherits the customer-acquisition discipline and the *no shoulder-to-shoulder fight* posture — the original B&O playbook, executed with 2026 technology.",
+          "opening": "B&O's struggle vacates the 'lone luxury electronics archetype' chair. AGF takes the seat, with a venue model B&O never built."
+        },
+        {
+          "brand": "Krell",
+          "category": "Aspirational halo — high-current reference",
+          "status": "reopening",
+          "prestige_score": 88,
+          "price_usd_avg": 85000,
+          "key_data_points": [
+            "Closed **June 18, 2024** following the death of owner/CEO Rondi D'Agostino",
+            "Service resumed **March 2025**; son Kristofer awarded **70%+ ownership Feb 2025**",
+            "Reopening through 2025 — re-establishing distribution, dealer trust still soft"
+          ],
+          "agf_positioning": "**The Instrument fills this vacuum.** With Krell offline through 2024–2025 and the rebuild taking time to re-earn dealer/reviewer trust, the high-current aspirational chair is open. Boutique semis + GaN mono-block + FPGA give AGF a credible halo claim during the gap.",
+          "opening": "12–24 month window where the aspirational halo seat has no obvious occupant. The Instrument lands inside the window."
+        },
+        {
+          "brand": "Focal",
+          "category": "Consumer flagship reference (~$5K USD)",
+          "status": "premium-fill",
+          "prestige_score": 75,
+          "price_usd_avg": 5000,
+          "key_data_points": [
+            "**Consumer flagship ~$5K USD** — the established price ceiling for serious consumer audio",
+            "Now under Barco / VerVent (April 2026 acquisition, $135M) — distribution stable",
+            "Sells **~1,000 pcs/month** of flagship reference with a focused rep firm"
+          ],
+          "agf_positioning": "**AGF positions just above Focal's consumer flagship.** The Instrument sits at $5K+ as a deliberate ceiling-tap, leveraging the reference Focal already established without competing for it shoulder-to-shoulder.",
+          "opening": "Focal validated that the consumer market can absorb $5K halo product at meaningful volume. AGF inherits the price discovery and adds the venue + content moat."
+        },
+        {
+          "brand": "Burmester",
+          "category": "Premium electronics — packaging-led pricing",
+          "status": "premium-fill",
+          "prestige_score": 85,
+          "price_usd_avg": 35000,
+          "key_data_points": [
+            "**€5,999** packaging for what AGF identified at Munich High-End as a **$200-class device** with above-average performance",
+            "Burmester executive: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999\""
+          ],
+          "agf_positioning": "**Genuine value at premium pricing.** Burmester proves the pricing model works (premium buyers want a reason, not a discount). AGF takes the same packaging logic and applies it to genuinely better technology — the moat is the delta between what AGF delivers and what is repackaged.",
+          "opening": "The market accepts €5,999 packaging on $200 hardware. AGF can charge premium prices for premium technology and still look like the value play."
+        },
+        {
+          "brand": "Dan D'Agostino",
+          "category": "Aspirational ceiling — $250K monoblocks",
+          "status": "ceiling",
+          "prestige_score": 95,
+          "price_usd_avg": 150000,
+          "key_data_points": [
+            "**$250K monoblocks** moving into Dolby Atmos maximalists",
+            "Rebuilt under his own name after the Krell PE rug-pull — proves a founder can survive consolidation and reach the ceiling on the rebound"
+          ],
+          "agf_positioning": "**Defines the ceiling.** AGF is not chasing $250K monoblocks. The fact that the ceiling exists at that height — and customers exist who pay it — proves the prestige-audio market still has room above Focal and below the outlier. AGF lives in that gap.",
+          "opening": "Confirms a meaningful ceiling exists for prestige audio. AGF needs only to occupy the territory just above Focal, with the option to climb later."
+        },
+        {
+          "brand": "AGF",
+          "category": "Where AGF lands — just above Focal, well below the ceiling",
+          "status": "premium-fill",
+          "prestige_score": 90,
+          "price_usd_avg": 3000,
+          "key_data_points": [
+            "Inaugural lineup spans Over-Ear → Symphony → Instrument",
+            "Symphony lands at $2,990 retail with a $29,990 review-tier anchor",
+            "Venue + content moat that no incumbent has built"
+          ],
+          "agf_positioning": "**The seam between Focal and the ceiling.** AGF inherits B&O's archetype, fills Krell's vacuum, leverages Burmester's pricing logic, and lives just above Focal — with a venue model none of them have.",
+          "opening": "AGF is the position itself: spiritual successor to a vacated archetype, halo without the $250K ask, value at premium pricing."
+        }
+      ],
+      "summary": "B&O struggles. Krell reopens. Focal sets the consumer ceiling. Burmester proves the pricing model. D'Agostino proves the ceiling exists. **AGF lands just above Focal, with B&O's archetype, Krell's vacuum, Burmester's pricing logic, and a venue model none of them have.**",
+      "_viz_config": {
+        "chart_type": "perceptual-map",
+        "x_axis": {
+          "field": "price_usd_avg",
+          "label": "Price (USD)",
+          "min": 500,
+          "max": 250000,
+          "scale": "log"
+        },
+        "y_axis": {
+          "field": "prestige_score",
+          "label": "Prestige",
+          "min": 0,
+          "max": 100,
+          "scale": "linear"
+        },
+        "highlight_color": "#B8860B",
+        "competitor_color": "#A89880",
+        "dot_radius": 28,
+        "enable_animation": true,
+        "show_grid": true,
+        "show_labels": true
+      }
+    }
+  },
+  {
+    "id": "7e745f3d-a9f0-4186-887c-25e41b0e8a92",
+    "schema_id": "competitive-positioning",
+    "title": "11 · Competitive Positioning",
+    "display_order": 13,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Competitive Positioning — where AGF lands.",
+      "section_number": "11",
+      "intro_text": "Every direct competitor below either opens a seam (consolidated, struggling, or closed) or defines the ceiling AGF is happy to sit just below. The aspirational tier survived; the ownership consolidated. The opening is the gap between the struggling incumbent and the $250K outlier.",
+      "competitors": [
+        {
+          "brand": "Bang & Olufsen",
+          "category": "Luxury electronics — the comparable spiritual archetype",
+          "status": "struggling",
+          "prestige_score": 92,
+          "price_usd_avg": 45000,
+          "key_data_points": [
+            "FY2007/08 peak revenue **~$853M USD** (≈ $1.25B in 2026 dollars)",
+            "FY2023/24 revenue **$402M** — less than half the peak",
+            "Public, Copenhagen-listed, decades into a slow decline"
+          ],
+          "agf_positioning": "**Spiritual successor** to the era when B&O stood alone. Same archetype: appointment-driven, design-led, premium-only. AGF inherits the customer-acquisition discipline and the *no shoulder-to-shoulder fight* posture — the original B&O playbook, executed with 2026 technology.",
+          "opening": "B&O's struggle vacates the 'lone luxury electronics archetype' chair. AGF takes the seat, with a venue model B&O never built."
+        },
+        {
+          "brand": "Krell",
+          "category": "Aspirational halo — high-current reference",
+          "status": "reopening",
+          "prestige_score": 88,
+          "price_usd_avg": 85000,
+          "key_data_points": [
+            "Closed **June 18, 2024** following the death of owner/CEO Rondi D'Agostino",
+            "Service resumed **March 2025**; son Kristofer awarded **70%+ ownership Feb 2025**",
+            "Reopening through 2025 — re-establishing distribution, dealer trust still soft"
+          ],
+          "agf_positioning": "**The Instrument fills this vacuum.** With Krell offline through 2024–2025 and the rebuild taking time to re-earn dealer/reviewer trust, the high-current aspirational chair is open. Boutique semis + GaN mono-block + FPGA give AGF a credible halo claim during the gap.",
+          "opening": "12–24 month window where the aspirational halo seat has no obvious occupant. The Instrument lands inside the window."
+        },
+        {
+          "brand": "Focal",
+          "category": "Consumer flagship reference (~$5K USD)",
+          "status": "premium-fill",
+          "prestige_score": 75,
+          "price_usd_avg": 5000,
+          "key_data_points": [
+            "**Consumer flagship ~$5K USD** — the established price ceiling for serious consumer audio",
+            "Now under Barco / VerVent (April 2026 acquisition, $135M) — distribution stable",
+            "Sells **~1,000 pcs/month** of flagship reference with a focused rep firm"
+          ],
+          "agf_positioning": "**AGF positions just above Focal's consumer flagship.** The Instrument sits at $5K+ as a deliberate ceiling-tap, leveraging the reference Focal already established without competing for it shoulder-to-shoulder.",
+          "opening": "Focal validated that the consumer market can absorb $5K halo product at meaningful volume. AGF inherits the price discovery and adds the venue + content moat."
+        },
+        {
+          "brand": "Burmester",
+          "category": "Premium electronics — packaging-led pricing",
+          "status": "premium-fill",
+          "prestige_score": 85,
+          "price_usd_avg": 35000,
+          "key_data_points": [
+            "**€5,999** packaging for what AGF identified at Munich High-End as a **$200-class device** with above-average performance",
+            "Burmester executive: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999\""
+          ],
+          "agf_positioning": "**Genuine value at premium pricing.** Burmester proves the pricing model works (premium buyers want a reason, not a discount). AGF takes the same packaging logic and applies it to genuinely better technology — the moat is the delta between what AGF delivers and what is repackaged.",
+          "opening": "The market accepts €5,999 packaging on $200 hardware. AGF can charge premium prices for premium technology and still look like the value play."
+        },
+        {
+          "brand": "Dan D'Agostino",
+          "category": "Aspirational ceiling — $250K monoblocks",
+          "status": "ceiling",
+          "prestige_score": 95,
+          "price_usd_avg": 150000,
+          "key_data_points": [
+            "**$250K monoblocks** moving into Dolby Atmos maximalists",
+            "Rebuilt under his own name after the Krell PE rug-pull — proves a founder can survive consolidation and reach the ceiling on the rebound"
+          ],
+          "agf_positioning": "**Defines the ceiling.** AGF is not chasing $250K monoblocks. The fact that the ceiling exists at that height — and customers exist who pay it — proves the prestige-audio market still has room above Focal and below the outlier. AGF lives in that gap.",
+          "opening": "Confirms a meaningful ceiling exists for prestige audio. AGF needs only to occupy the territory just above Focal, with the option to climb later."
+        },
+        {
+          "brand": "AGF",
+          "category": "Where AGF lands — just above Focal, well below the ceiling",
+          "status": "premium-fill",
+          "prestige_score": 90,
+          "price_usd_avg": 3000,
+          "key_data_points": [
+            "Inaugural lineup spans Over-Ear → Symphony → Instrument",
+            "Symphony lands at $2,990 retail with a $29,990 review-tier anchor",
+            "Venue + content moat that no incumbent has built"
+          ],
+          "agf_positioning": "**The seam between Focal and the ceiling.** AGF inherits B&O's archetype, fills Krell's vacuum, leverages Burmester's pricing logic, and lives just above Focal — with a venue model none of them have.",
+          "opening": "AGF is the position itself: spiritual successor to a vacated archetype, halo without the $250K ask, value at premium pricing."
+        }
+      ],
+      "summary": "B&O struggles. Krell reopens. Focal sets the consumer ceiling. Burmester proves the pricing model. D'Agostino proves the ceiling exists. **AGF lands just above Focal, with B&O's archetype, Krell's vacuum, Burmester's pricing logic, and a venue model none of them have.**",
+      "_viz_config": {
+        "chart_type": "perceptual-map",
+        "x_axis": {
+          "field": "price_usd_avg",
+          "label": "Price (USD)",
+          "min": 500,
+          "max": 250000,
+          "scale": "log"
+        },
+        "y_axis": {
+          "field": "prestige_score",
+          "label": "Prestige",
+          "min": 0,
+          "max": 100,
+          "scale": "linear"
+        },
+        "highlight_color": "#B8860B",
+        "competitor_color": "#A89880",
+        "dot_radius": 28,
+        "enable_animation": true,
+        "show_grid": true,
+        "show_labels": true
+      },
+      "section_label": "Competitive Positioning"
+    }
+  },
+  {
+    "id": "1a9b389d-4b11-4513-bc4a-3a0644ed77e2",
+    "schema_id": "launch-roadmap",
+    "title": "12 · Launch Roadmap",
+    "display_order": 14,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Launch Roadmap — sequencing the line.",
+      "section_number": "12",
+      "intro_text": "Three phases, one shared platform where it pays. Over-Ear ships first because TTM is shortest and ETL pre-approved PS paths exist. Core-like + Symphony share tooling and ship together. The Instrument lands as halo when the rest of the line is already in market and the Krell vacuum is still open.",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "Phase 1 — Over-Ear Home Centric (fastest to market)",
+          "ttm": "4–6 months",
+          "product": "Over-Ear",
+          "start_slot": 1,
+          "duration_slots": 5,
+          "products": [
+            "Over-Ear — Home Centric"
+          ],
+          "rationale": "**Fastest TTM in the line.** Hardware ~80% complete (refactor for aesthetic + control mods + 6-end-point charge QA). Software ~70% (l'Art algos + 6-end-point concurrent stream). Ships first to establish AGF in market, fund the rest of the line, and validate the channel.",
+          "milestones": [
+            "V1 SKU ships with RF-default dock + BT 5.3 (SBC/AAC/aptX/aptX HD/LDAC)",
+            "ETL/FCC/CE certification (~$30K budget)",
+            "Channel introductions to stranded Polk/Definitive/McIntosh independents",
+            "V2 refactor scoped — execution in 8–12 months ($120K tooling)",
+            {
+              "type": "target",
+              "slot": 5,
+              "label": "1000 pcs/mo"
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "title": "Phase 2 — Core-like Small (shared platform)",
+          "ttm": "8–12 months",
+          "product": "Core Small",
+          "start_slot": 4,
+          "duration_slots": 8,
+          "products": [
+            "Core-like All-in-One (Small)"
+          ],
+          "rationale": "**Shared tooling.** Core-like small shares electronics platform with the soundbar. Three SKUs, one tooling investment.",
+          "milestones": [
+            "Shared electronics platform freeze (l'Art module + power supply)",
+            "Mechanical tooling complete (Core-like ID)",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 3,
+          "title": "Phase 2 — Core-like Soundbar (shared platform)",
+          "ttm": "8–12 months",
+          "product": "Core Soundbar",
+          "start_slot": 4,
+          "duration_slots": 8,
+          "products": [
+            "Core-like All-in-One (Soundbar)"
+          ],
+          "rationale": "**Shared tooling, mid-sandwich pricing.** Core-like soundbar shares the small unit's electronics platform.",
+          "milestones": [
+            "Mechanical tooling complete (soundbar ID)",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 4,
+          "title": "Phase 2 — Symphony Macro-System",
+          "ttm": "8–12 months",
+          "product": "Symphony",
+          "start_slot": 5,
+          "duration_slots": 9,
+          "products": [
+            "The Symphony Macro-System"
+          ],
+          "rationale": "**Mid-sandwich pricing.** Symphony shares manufacturing partners and certification budget with Core-like. $2,990 retail with the $29,990 review-tier anchor.",
+          "milestones": [
+            "Symphony **PR stunt: submitted for review at $29,990, corrected post-submission to $2,990**",
+            "Mechanical tooling complete (Symphony transmission-line cabinet)",
+            "ETL/FCC/CE certification (~$30K)",
+            {
+              "type": "pr",
+              "slot": 10,
+              "label": "$29,990 PR Stunt"
+            }
+          ]
+        },
+        {
+          "phase": 5,
+          "title": "Phase 3 — The Instrument (flagship halo)",
+          "ttm": "8–12 months",
+          "product": "Instrument",
+          "start_slot": 6,
+          "duration_slots": 10,
+          "products": [
+            "The Instrument — Flagship Reference"
+          ],
+          "rationale": "**Halo product, halo timing.** Lands just above Focal's consumer flagship (~$5K) while Krell is still rebuilding dealer trust. Pro-tier UI empowers live-mixing techs to submit innovations (royalty-paid) — feeds Balcony installations at flagship venues.",
+          "milestones": [
+            "Companion GaN mono-block + Gowin FPGA processor + transmission-line sub validated",
+            "Three-mode platform shipped (audiophile / pro / measurement)",
+            "Royalty-paid third-party innovation pipeline open through Balcony",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 6,
+          "title": "Phase 3 — Wasted Real-Estate (suppressed product return)",
+          "ttm": "12+ months",
+          "product": "Wasted Real-Estate",
+          "start_slot": 8,
+          "duration_slots": 12,
+          "products": [
+            "Wasted Real-Estate"
+          ],
+          "rationale": "**Suppressed Dolby concept returns.** Originally killed by Apple licensing threat — the backstory itself carries the launch. Paired with venue pilots to land 1,000 pcs/mo Year-1 globally across 100+ retail partners.",
+          "milestones": [
+            "5-market venue pilots active",
+            "Channel: 100+ retail partners onboarded",
+            "1,000 pcs/mo run-rate validated",
+            {
+              "type": "venue",
+              "slot": 14,
+              "label": "Venue Pilot"
+            }
+          ]
+        }
+      ],
+      "pr_stunts": [
+        {
+          "name": "Symphony Review-Tier Anchor",
+          "description": "**Symphony Macro-System submitted for review at $29,990**, then corrected post-submission to **$2,990 retail**. The press receives the unit at the prestige-audio price; the customer buys it at the mass-premium price. Anchors the perceived ceiling, then drops the ladder.",
+          "timing": "Phase 2 — submitted to long-lead reviewers ahead of retail availability"
+        },
+        {
+          "name": "Wasted Real-Estate Suppression Story",
+          "description": "Originally concepted at Dolby; Apple shut it down via licensing threat. The story itself is the launch — channel-probe-positive, vetted, the suppressed product returns. PR earns its keep with the backstory, not the spec sheet.",
+          "timing": "Phase 2–3 — paired with the Instrument launch for narrative density"
+        }
+      ],
+      "venue_pilots": {
+        "count": 5,
+        "criteria": "**First 5 financially qualifying markets.** Selection by (a) density of arts-aware sophisticated audio buyers, (b) local performing-arts ecosystem strength, (c) availability of an owner-operator partner willing to host the FoH/Balcony/Green Room blueprint. **One venue per market — never two.**",
+        "notes": "Pilots double as Phase 2/3 launch surfaces — l'Art Production line in the Balcony, full consumer line in the Green Room, virtual all-access pass bundled with hardware ownership."
+      },
+      "year_one_targets": {
+        "global_units_per_month": 1000,
+        "anchor_reference": "**Wasted Real-Estate Y1 target: 1,000 pcs/month globally** with 100+ retail partners (100 pcs/mo across 2 PoC venues). Comparable: **Focal's flagship reference moves ~1,000 pcs/month** with a focused rep firm — the volume is real and reachable in Y1.",
+        "notes": "Y1 unit volume compounds across the line: Over-Ear (Phase 1) carries the run-rate, Core-like + Symphony (Phase 2) build margin, the Instrument (Phase 3) opens the halo — and Wasted Real-Estate validates the case-as-product thesis at 1,000 pcs/mo."
+      },
+      "_viz_config": {
+        "chart_type": "gantt",
+        "time_unit": "months",
+        "total_slots": 24,
+        "label_column_width": "160px",
+        "bar_gradient_start": "#1a3a2a",
+        "bar_gradient_end": "#b8860b",
+        "milestone_types": [
+          {
+            "key": "pr",
+            "label": "PR Stunt",
+            "color": "#FFD700"
+          },
+          {
+            "key": "venue",
+            "label": "Venue Pilot",
+            "color": "#90EE90"
+          },
+          {
+            "key": "target",
+            "label": "Volume Target",
+            "color": "#87CEEB"
+          }
+        ],
+        "show_today_marker": true,
+        "enable_hover": true
+      },
+      "section_label": "Launch Roadmap"
+    }
+  },
+  {
+    "id": "2f687946-7437-4ed0-b24a-8b9dda2d7cd9",
+    "schema_id": "launch-roadmap",
+    "title": "12 · Launch Roadmap",
+    "display_order": 14,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "Launch Roadmap — sequencing the line.",
+      "section_number": "12",
+      "section_label": "Launch Roadmap",
+      "intro_text": "Three phases, one shared platform where it pays. Over-Ear ships first because TTM is shortest and ETL pre-approved PS paths exist. Core-like + Symphony share tooling and ship together. The Instrument lands as halo when the rest of the line is already in market and the Krell vacuum is still open.",
+      "phases": [
+        {
+          "phase": 1,
+          "title": "Phase 1 — Over-Ear Home Centric (fastest to market)",
+          "ttm": "4–6 months",
+          "product": "Over-Ear",
+          "start_slot": 1,
+          "duration_slots": 5,
+          "products": [
+            "Over-Ear — Home Centric"
+          ],
+          "rationale": "**Fastest TTM in the line.** Hardware ~80% complete (refactor for aesthetic + control mods + 6-end-point charge QA). Software ~70% (l'Art algos + 6-end-point concurrent stream). Ships first to establish AGF in market, fund the rest of the line, and validate the channel.",
+          "milestones": [
+            "V1 SKU ships with RF-default dock + BT 5.3 (SBC/AAC/aptX/aptX HD/LDAC)",
+            "ETL/FCC/CE certification (~$30K budget)",
+            "Channel introductions to stranded Polk/Definitive/McIntosh independents",
+            "V2 refactor scoped — execution in 8–12 months ($120K tooling)",
+            {
+              "type": "target",
+              "slot": 5,
+              "label": "1000 pcs/mo"
+            }
+          ]
+        },
+        {
+          "phase": 2,
+          "title": "Phase 2 — Core-like Small (shared platform)",
+          "ttm": "8–12 months",
+          "product": "Core Small",
+          "start_slot": 4,
+          "duration_slots": 8,
+          "products": [
+            "Core-like All-in-One (Small)"
+          ],
+          "rationale": "**Shared tooling.** Core-like small shares electronics platform with the soundbar. Three SKUs, one tooling investment.",
+          "milestones": [
+            "Shared electronics platform freeze (l'Art module + power supply)",
+            "Mechanical tooling complete (Core-like ID)",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 3,
+          "title": "Phase 2 — Core-like Soundbar (shared platform)",
+          "ttm": "8–12 months",
+          "product": "Core Soundbar",
+          "start_slot": 4,
+          "duration_slots": 8,
+          "products": [
+            "Core-like All-in-One (Soundbar)"
+          ],
+          "rationale": "**Shared tooling, mid-sandwich pricing.** Core-like soundbar shares the small unit's electronics platform.",
+          "milestones": [
+            "Mechanical tooling complete (soundbar ID)",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 4,
+          "title": "Phase 2 — Symphony Macro-System",
+          "ttm": "8–12 months",
+          "product": "Symphony",
+          "start_slot": 5,
+          "duration_slots": 9,
+          "products": [
+            "The Symphony Macro-System"
+          ],
+          "rationale": "**Mid-sandwich pricing.** Symphony shares manufacturing partners and certification budget with Core-like. $2,990 retail with the $29,990 review-tier anchor.",
+          "milestones": [
+            "Symphony **PR stunt: submitted for review at $29,990, corrected post-submission to $2,990**",
+            "Mechanical tooling complete (Symphony transmission-line cabinet)",
+            "ETL/FCC/CE certification (~$30K)",
+            {
+              "type": "pr",
+              "slot": 10,
+              "label": "$29,990 PR Stunt"
+            }
+          ]
+        },
+        {
+          "phase": 5,
+          "title": "Phase 3 — The Instrument (flagship halo)",
+          "ttm": "8–12 months",
+          "product": "Instrument",
+          "start_slot": 6,
+          "duration_slots": 10,
+          "products": [
+            "The Instrument — Flagship Reference"
+          ],
+          "rationale": "**Halo product, halo timing.** Lands just above Focal's consumer flagship (~$5K) while Krell is still rebuilding dealer trust. Pro-tier UI empowers live-mixing techs to submit innovations (royalty-paid) — feeds Balcony installations at flagship venues.",
+          "milestones": [
+            "Companion GaN mono-block + Gowin FPGA processor + transmission-line sub validated",
+            "Three-mode platform shipped (audiophile / pro / measurement)",
+            "Royalty-paid third-party innovation pipeline open through Balcony",
+            "ETL/FCC/CE certification (~$30K)"
+          ]
+        },
+        {
+          "phase": 6,
+          "title": "Phase 3 — Wasted Real-Estate (suppressed product return)",
+          "ttm": "12+ months",
+          "product": "Wasted Real-Estate",
+          "start_slot": 8,
+          "duration_slots": 12,
+          "products": [
+            "Wasted Real-Estate"
+          ],
+          "rationale": "**Suppressed Dolby concept returns.** Originally killed by Apple licensing threat — the backstory itself carries the launch. Paired with venue pilots to land 1,000 pcs/mo Year-1 globally across 100+ retail partners.",
+          "milestones": [
+            "5-market venue pilots active",
+            "Channel: 100+ retail partners onboarded",
+            "1,000 pcs/mo run-rate validated",
+            {
+              "type": "venue",
+              "slot": 14,
+              "label": "Venue Pilot"
+            }
+          ]
+        }
+      ],
+      "pr_stunts": [
+        {
+          "name": "Symphony Review-Tier Anchor",
+          "description": "**Symphony Macro-System submitted for review at $29,990**, then corrected post-submission to **$2,990 retail**. The press receives the unit at the prestige-audio price; the customer buys it at the mass-premium price. Anchors the perceived ceiling, then drops the ladder.",
+          "timing": "Phase 2 — submitted to long-lead reviewers ahead of retail availability"
+        },
+        {
+          "name": "Wasted Real-Estate Suppression Story",
+          "description": "Originally concepted at Dolby; Apple shut it down via licensing threat. The story itself is the launch — channel-probe-positive, vetted, the suppressed product returns. PR earns its keep with the backstory, not the spec sheet.",
+          "timing": "Phase 2–3 — paired with the Instrument launch for narrative density"
+        }
+      ],
+      "venue_pilots": {
+        "count": 5,
+        "criteria": "**First 5 financially qualifying markets.** Selection by (a) density of arts-aware sophisticated audio buyers, (b) local performing-arts ecosystem strength, (c) availability of an owner-operator partner willing to host the FoH/Balcony/Green Room blueprint. **One venue per market — never two.**",
+        "notes": "Pilots double as Phase 2/3 launch surfaces — l'Art Production line in the Balcony, full consumer line in the Green Room, virtual all-access pass bundled with hardware ownership."
+      },
+      "year_one_targets": {
+        "global_units_per_month": 1000,
+        "anchor_reference": "**Wasted Real-Estate Y1 target: 1,000 pcs/month globally** with 100+ retail partners (100 pcs/mo across 2 PoC venues). Comparable: **Focal's flagship reference moves ~1,000 pcs/month** with a focused rep firm — the volume is real and reachable in Y1.",
+        "notes": "Y1 unit volume compounds across the line: Over-Ear (Phase 1) carries the run-rate, Core-like + Symphony (Phase 2) build margin, the Instrument (Phase 3) opens the halo — and Wasted Real-Estate validates the case-as-product thesis at 1,000 pcs/mo."
+      },
+      "_viz_config": {
+        "chart_type": "gantt",
+        "time_unit": "months",
+        "total_slots": 24,
+        "label_column_width": "160px",
+        "bar_gradient_start": "#1a3a2a",
+        "bar_gradient_end": "#b8860b",
+        "milestone_types": [
+          {
+            "key": "pr",
+            "label": "PR Stunt",
+            "color": "#FFD700"
+          },
+          {
+            "key": "venue",
+            "label": "Venue Pilot",
+            "color": "#90EE90"
+          },
+          {
+            "key": "target",
+            "label": "Volume Target",
+            "color": "#87CEEB"
+          }
+        ],
+        "show_today_marker": true,
+        "enable_hover": true
+      }
+    }
+  },
+  {
+    "id": "79c32b93-0b01-4bbd-83bf-1c3c46b00a9c",
+    "schema_id": "tenet",
+    "title": "Tenets",
+    "display_order": 17,
+    "is_visible": true,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 15:08:29",
+    "data": {
+      "section_title": "The operating gospel.",
+      "section_number": "03",
+      "section_label": "The Six Tenets",
+      "tenets": [
+        {
+          "number": 1,
+          "title": "Thou shalt not compete with existing high-volume audio segments — directly.",
+          "anchor_phrase": "Don't fight the river. Reframe the problem.",
+          "body": "At Dolby, a skunkworks program was chartered to drive top-line growth without interfering with the licensing river of gold. The mandate: build products no one could get mad at — not Apple, not the licensees, not the BoD. The discipline transfers to AGF: never line up shoulder-to-shoulder with a $5B incumbent. Find the seam.",
+          "example_title": "Remora — the soundbar that lived behind the TV",
+          "example_body": "Remora exemplified the principle: invisible from a design-channel perspective, acoustically advantaged by its position behind the TV, room for 16–48 mid/high drivers and 2–6 dedicated subs facing back at the wall for boundary reinforcement. A reframe, not a fight.",
+          "key_insight": "Reframe the problem so the giants are not even the competition."
+        },
+        {
+          "number": 2,
+          "title": "Thou shalt not compete on price with existing premium → luxury brands — directly.",
+          "anchor_phrase": "Don't discount. Package. Convenience is a luxury product.",
+          "body": "Once a sales team has a customer, you are not negotiating price. You are negotiating a budgeted total package. The Mass Fidelity Relay went from $199 → $249 → $299 with sales increasing at every step. A nationally championed high-end retailer's managing director delivered the lesson; a Burmester executive at Munich High-End confirmed it.",
+          "example_title": "Relay $199 → $299 + Burmester €5,999 packaging",
+          "example_body": "Burmester quote at Munich High-End: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999.\" Premium buyers do not want a discount. They want a reason.",
+          "key_insight": "Premium buyers do not want a discount. They want a reason."
+        },
+        {
+          "number": 3,
+          "title": "Thou shalt measure additional features through a lens of exponential value gains — exclusively.",
+          "anchor_phrase": "If a feature doesn't compound, it dilutes.",
+          "body": "The Mass Fidelity Core launched with a kitchen-sink feature set — gesture, IoT, phone-charger. The pre-launch survey was decisive: 80%+ of customers cared about one thing — one speaker sounding like two with the sweet spot eliminated (wave-field synthesis). Multi-room 15%. Portability 4%. Everything else, irrelevant.",
+          "example_title": "Mass Fidelity Core pre-launch survey",
+          "example_body": "80%+ wanted wave-field synthesis. 15% multi-room. 4% portability. The lesson: know what is core, kill what is not, no matter how loudly internal stakeholders defend it.",
+          "key_insight": "Kill features that do not compound — even when defended internally."
+        },
+        {
+          "number": 4,
+          "title": "Thou shalt 'check the boxes' on behalf of corporate buyers — exclusively.",
+          "anchor_phrase": "Parse the checklist like a contract attorney.",
+          "body": "Corporate buyers are rule-bound. They need multi-room, multiple codecs, the Relay Bluetooth tech, and a wired or wireless sub option (wireless preferred, not a deal-breaker). One distributor was lost over IoT. The rest of the checklist was nearly identical. A seasoned executive team is required to parse which boxes must be checked — and which can be quietly dropped.",
+          "example_title": "Mass Fidelity distributor checklists",
+          "example_body": "Multi-room, multi-codec, Relay BT, sub option (wireless preferred). Lost one distributor on IoT. Everything else matched.",
+          "key_insight": "The corporate checklist is a contract. Parse accordingly."
+        },
+        {
+          "number": 5,
+          "title": "Thou shalt always deliver a product-line. Not a single product.",
+          "anchor_phrase": "A single product is a single point of failure.",
+          "body": "Earl Qua, circa 2012/13: \"CE is all about churn.\" Every win in the savage global markets came from innovative product positions that previously did not exist. Product-line depth is what enables an entrenched, bank-rolled distribution partner to acquire your brand without political interference from their big brands. The catch: products must plausibly bridge to a position where AGF looks like a future bank-roller, critically better than the devil they know.",
+          "example_title": "Earl Qua — \"CE is all about churn\"",
+          "example_body": "A Coca-Cola model product line — depth, breadth, inevitability, presence. No rational actor accepts it. If it happens by accident, that's the problem you want to have.",
+          "key_insight": "Depth, breadth, inevitability, presence — the Coca-Cola gospel."
+        },
+        {
+          "number": 6,
+          "title": "Thou shalt lead. Otherwise, by definition, thou art following.",
+          "anchor_phrase": "Execution path is open for discussion. Vision is not.",
+          "body": "The most strongly held belief, with the most flexible application. Followers die slow deaths — almost without exception. The brands that survive relentless CE churn dominate in multiple disciplines OR hold brand IP and patent moats the market values OR own the leadership position in a near-animalistic business practice.",
+          "example_title": "D'Agostino · Bose · Polk",
+          "example_body": "Dan D'Agostino after his PE rug-pull as founder of Krell — rebuilt under his own name, $250K monoblocks moving into Dolby Atmos maximalists. Amar Bose understanding 'the masses wanted impressive, not accurate.' Matthew Polk owning the 'keeper of the truth' #2 position. Different paths, same lesson.",
+          "key_insight": "Know where to push, and how to present it to a global market that eats new entrants for breakfast."
+        }
+      ]
+    }
+  },
+  {
+    "id": "43328e5f-739e-491f-a22e-1042cfe4cdbc",
+    "schema_id": "pdf-config",
+    "title": "PDF Export Config (hidden)",
+    "display_order": 98,
+    "is_visible": false,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "template_sections": [
+        {
+          "key": "header",
+          "enabled": true,
+          "show_logo": true,
+          "background_color": "#1F4A2D"
+        },
+        {
+          "key": "hero_image",
+          "enabled": true
+        },
+        {
+          "key": "overview",
+          "enabled": true
+        },
+        {
+          "key": "audio_specs",
+          "enabled": true,
+          "columns": 2
+        },
+        {
+          "key": "connectivity",
+          "enabled": true
+        },
+        {
+          "key": "technologies",
+          "enabled": true,
+          "format": "badges"
+        },
+        {
+          "key": "form_factor",
+          "enabled": true
+        },
+        {
+          "key": "business_metrics",
+          "enabled": true,
+          "audience": "investor"
+        },
+        {
+          "key": "footer",
+          "enabled": true,
+          "confidentiality_notice": true
+        }
+      ],
+      "page_format": "A4",
+      "margins": {
+        "top": "0.5in",
+        "bottom": "0.5in",
+        "left": "0.75in",
+        "right": "0.75in"
+      },
+      "brand_colors": {
+        "primary": "#1F4A2D",
+        "accent": "#B8860B",
+        "text": "#1A1A1A"
+      },
+      "font_family": "Commissioner",
+      "footer_text": "AGF — All Grounds Floating | Foundational Brand Development | 2026",
+      "brand_mark": "AGF",
+      "brand_tag": "All Grounds Floating"
+    }
+  },
+  {
+    "id": "8a217e00-d375-486f-aba2-6856f5bf8edf",
+    "schema_id": "comparison-config",
+    "title": "Comparison Config (hidden)",
+    "display_order": 99,
+    "is_visible": false,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "comparison_fields": [
+        {
+          "path": "audio.frequency_response",
+          "label": "Frequency Response",
+          "format": "range_hz",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.sensitivity_db_spl",
+          "label": "Sensitivity",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.thd_percent",
+          "label": "THD",
+          "format": "percent",
+          "higher_wins": false
+        },
+        {
+          "path": "audio.snr_db",
+          "label": "SNR",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.max_spl_db",
+          "label": "Max SPL",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "business.asp_usd",
+          "label": "Price",
+          "format": "currency_range",
+          "higher_wins": false
+        },
+        {
+          "path": "agf_technologies",
+          "label": "Technologies",
+          "format": "array_count",
+          "higher_wins": true
+        },
+        {
+          "path": "connectivity.wireless",
+          "label": "Wireless",
+          "format": "array_count",
+          "higher_wins": true
+        }
+      ],
+      "max_compare": 3,
+      "highlight_winner": true,
+      "overlay_freq_curves": true,
+      "show_price_bar": true
+    }
+  },
+  {
+    "id": "c1ceed03-0e3c-4be4-9e5b-f487cc04df82",
+    "schema_id": "pdf-config",
+    "title": "PDF Export Config (hidden)",
+    "display_order": 99,
+    "is_visible": false,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "template_sections": [
+        {
+          "key": "header",
+          "enabled": true,
+          "show_logo": true,
+          "background_color": "#1F4A2D"
+        },
+        {
+          "key": "hero_image",
+          "enabled": true
+        },
+        {
+          "key": "overview",
+          "enabled": true
+        },
+        {
+          "key": "audio_specs",
+          "enabled": true,
+          "columns": 2
+        },
+        {
+          "key": "connectivity",
+          "enabled": true
+        },
+        {
+          "key": "technologies",
+          "enabled": true,
+          "format": "badges"
+        },
+        {
+          "key": "form_factor",
+          "enabled": true
+        },
+        {
+          "key": "business_metrics",
+          "enabled": true,
+          "audience": "investor"
+        },
+        {
+          "key": "footer",
+          "enabled": true,
+          "confidentiality_notice": true
+        }
+      ],
+      "page_format": "A4",
+      "margins": {
+        "top": "0.5in",
+        "bottom": "0.5in",
+        "left": "0.75in",
+        "right": "0.75in"
+      },
+      "brand_colors": {
+        "primary": "#1F4A2D",
+        "accent": "#B8860B",
+        "text": "#1A1A1A"
+      },
+      "font_family": "Commissioner",
+      "footer_text": "AGF — All Grounds Floating | Foundational Brand Development | 2026"
+    }
+  },
+  {
+    "id": "254733ff-74a8-4e09-871a-d475012413ae",
+    "schema_id": "comparison-config",
+    "title": "Comparison Config (hidden)",
+    "display_order": 100,
+    "is_visible": false,
+    "created_at": "2026-07-06 08:21:02",
+    "updated_at": "2026-07-06 08:21:02",
+    "data": {
+      "comparison_fields": [
+        {
+          "path": "audio.frequency_response",
+          "label": "Frequency Response",
+          "format": "range_hz",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.sensitivity_db_spl",
+          "label": "Sensitivity",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.thd_percent",
+          "label": "THD",
+          "format": "percent",
+          "higher_wins": false
+        },
+        {
+          "path": "audio.snr_db",
+          "label": "SNR",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "audio.max_spl_db",
+          "label": "Max SPL",
+          "format": "db",
+          "higher_wins": true
+        },
+        {
+          "path": "business.asp_usd",
+          "label": "Price",
+          "format": "currency_range",
+          "higher_wins": false
+        },
+        {
+          "path": "agf_technologies",
+          "label": "Technologies",
+          "format": "array_count",
+          "higher_wins": true
+        },
+        {
+          "path": "connectivity.wireless",
+          "label": "Wireless",
+          "format": "array_count",
+          "higher_wins": true
+        }
+      ],
+      "max_compare": 3,
+      "highlight_winner": true,
+      "overlay_freq_curves": true,
+      "show_price_bar": true
+    }
+  }
+]

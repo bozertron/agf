@@ -1,0 +1,117 @@
+{
+  "_source": {
+    "table": "products",
+    "id": "09aa54d5-3452-4922-ae15-8cb568eafa76"
+  },
+  "name": "Wasted Real-Estate",
+  "slug": "wasted-real-estate",
+  "category": "earbud",
+  "status": "concept",
+  "tagline": "Why are AirPod cases filled with plastic? Look at the physical volume when closed — not a whole lot different from a small iPhone. What if the case itself was the point, and the earbuds were an exponentially lower-power byproduct?",
+  "description": "Originally concepted at Dolby. Apple shut it down — threatened to pull Dolby's licensing if the headphone program continued. The opportunity is back. Vetted, feasibility-positive, cost-positive, market-positive, channel-probe-positive.",
+  "form_factor": {
+    "finish": "Case-as-product premium materials",
+    "materials": [
+      "machined alloy case",
+      "precision-fit earbud byproduct"
+    ]
+  },
+  "audio": {
+    "drivers": [
+      {
+        "type": "balanced-armature",
+        "quantity": 2
+      }
+    ]
+  },
+  "connectivity": {
+    "wireless": [
+      {
+        "protocol": "Bluetooth",
+        "version": "5.3",
+        "codecs": [
+          "SBC",
+          "AAC",
+          "aptX",
+          "aptX HD",
+          "LDAC"
+        ]
+      },
+      {
+        "protocol": "proprietary",
+        "codecs": [
+          "l'Art"
+        ]
+      }
+    ]
+  },
+  "agf_technologies": [
+    "FRC41",
+    "stereOS"
+  ],
+  "power": {
+    "battery_life_hours": 8,
+    "charging_type": "Case (case is the point)"
+  },
+  "business": {
+    "target_volume_monthly": 1000,
+    "certifications": [
+      "ETL",
+      "FCC",
+      "CE"
+    ],
+    "cert_cost_estimate_usd": 30000
+  },
+  "roadmap_notes": "Y1 target: 1,000 pcs/month globally with 100+ retail partners (100pcs/mo in 2 PoC venues). Comparable: Focal's flagship reference hits 1,000pcs/mo with focused rep firm. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU.",
+  "competitive_reference": {
+    "comparable_products": [
+      "Apple AirPods Pro",
+      "Sony WF-1000XM5",
+      "Bose QuietComfort Ultra Earbuds"
+    ],
+    "price_positioning": "TBD — premium case-as-product positioning",
+    "key_differentiators": [
+      "Case is the point — earbuds are a byproduct",
+      "FRC41 externalization (sweet-spot in your head)",
+      "Originally concepted at Dolby; Apple suppressed it",
+      "Channel-probe-positive at 100+ retail partners"
+    ]
+  },
+  "system_config": {
+    "system_role": "accessory",
+    "companions": [
+      "symphony-macro-system"
+    ],
+    "connection_types": [
+      {
+        "target_slug": "symphony-macro-system",
+        "connection": "analog"
+      }
+    ]
+  },
+  "_viz_config": {
+    "show_freq_response": false,
+    "show_driver_diagram": true,
+    "show_tech_flow": true,
+    "show_connectivity_badges": true,
+    "show_power_gauge": true,
+    "show_material_swatches": true,
+    "freq_response_color": "#B8860B",
+    "freq_response_db_range": 12,
+    "gauge_style": "arc",
+    "tech_flow_order": [
+      "stereOS",
+      "l'Art",
+      "BT'N-Tech",
+      "l'espacI/O",
+      "FRC41",
+      "No-Nails"
+    ],
+    "badge_colors": {
+      "wireless": "#87CEEB",
+      "wired": "#FFD700",
+      "streaming": "#90EE90",
+      "feature": "#DDA0DD"
+    }
+  }
+}
