@@ -1,0 +1,138 @@
+{
+  "slug": "roadmap",
+  "intro": {
+    "headline": "Three phases, one shared platform where it pays.",
+    "lede": "Three phases, one shared platform where it pays. Over-Ear ships first because TTM is shortest and ETL pre-approved PS paths exist. Core-like + Symphony share tooling and ship together. The Instrument lands as halo when the rest of the line is already in market and the Krell vacuum is still open.",
+    "points": [
+      {
+        "eyebrow": "Phase 1",
+        "title": "Over-Ear ships first",
+        "body": "Fastest TTM in the line, ETL pre-approved power supply paths. Establishes AGF in market, funds the rest of the line, validates the channel."
+      },
+      {
+        "eyebrow": "Phase 2",
+        "title": "Core-like and Symphony together",
+        "body": "Shared tooling, three SKUs, one investment. The Symphony goes to long-lead reviewers at $29,990 and to retail at $2,990."
+      },
+      {
+        "eyebrow": "Phase 3",
+        "title": "The Instrument, then the return of Wasted Real-Estate",
+        "body": "The halo lands while Krell rebuilds dealer trust. The suppressed Dolby concept returns, paired with five venue pilots, and the backstory carries the launch."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "24",
+        "unit": "mo",
+        "label": "Planning horizon",
+        "conditions": "Six swimlanes on the document's Gantt"
+      },
+      {
+        "value": "5",
+        "label": "Venue pilots",
+        "conditions": "First five financially qualifying markets, one per market"
+      },
+      {
+        "value": "1,000",
+        "unit": "pcs/mo",
+        "label": "Year-one run-rate target",
+        "conditions": "Global, across 100+ retail partners"
+      }
+    ],
+    "quote": {
+      "text": "Anchors the perceived ceiling, then drops the ladder.",
+      "cite": "The Symphony review-tier stunt, from the document"
+    }
+  },
+  "deep": {
+    "headline": "Launch Roadmap — sequencing the line.",
+    "lede": "Three phases, one shared platform where it pays. Over-Ear ships first because TTM is shortest and ETL pre-approved PS paths exist. Core-like + Symphony share tooling and ship together. The Instrument lands as halo when the rest of the line is already in market and the Krell vacuum is still open.",
+    "note": "The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt is queued for the next pass; the timeline below carries the same months.",
+    "sections": [
+      {
+        "type": "timeline",
+        "id": "phases",
+        "eyebrow": "Six swimlanes",
+        "title": "The phases, month by month",
+        "items": [
+          {
+            "when": "Months 1–5 · TTM 4–6 months",
+            "title": "Phase 1 — Over-Ear Home Centric (fastest to market)",
+            "body": "**Fastest TTM in the line.** Hardware ~80% complete (refactor for aesthetic + control mods + 6-end-point charge QA). Software ~70% (l'Art algos + 6-end-point concurrent stream). Ships first to establish AGF in market, fund the rest of the line, and validate the channel.\n\n• V1 SKU ships with RF-default dock + BT 5.3 (SBC/AAC/aptX/aptX HD/LDAC)\n• ETL/FCC/CE certification (~$30K budget)\n• Channel introductions to stranded Polk/Definitive/McIntosh independents\n• V2 refactor scoped — execution in 8–12 months ($120K tooling)\n• 1000 pcs/mo (month 5, target)",
+            "tag": "Ships: Over-Ear — Home Centric"
+          },
+          {
+            "when": "Months 4–11 · TTM 8–12 months",
+            "title": "Phase 2 — Core-like Small (shared platform)",
+            "body": "**Shared tooling.** Core-like small shares electronics platform with the soundbar. Three SKUs, one tooling investment.\n\n• Shared electronics platform freeze (l'Art module + power supply)\n• Mechanical tooling complete (Core-like ID)\n• ETL/FCC/CE certification (~$30K)",
+            "tag": "Ships: Core-like All-in-One (Small)"
+          },
+          {
+            "when": "Months 4–11 · TTM 8–12 months",
+            "title": "Phase 2 — Core-like Soundbar (shared platform)",
+            "body": "**Shared tooling, mid-sandwich pricing.** Core-like soundbar shares the small unit's electronics platform.\n\n• Mechanical tooling complete (soundbar ID)\n• ETL/FCC/CE certification (~$30K)",
+            "tag": "Ships: Core-like All-in-One (Soundbar)"
+          },
+          {
+            "when": "Months 5–13 · TTM 8–12 months",
+            "title": "Phase 2 — Symphony Macro-System",
+            "body": "**Mid-sandwich pricing.** Symphony shares manufacturing partners and certification budget with Core-like. $2,990 retail with the $29,990 review-tier anchor.\n\n• Symphony **PR stunt: submitted for review at $29,990, corrected post-submission to $2,990**\n• Mechanical tooling complete (Symphony transmission-line cabinet)\n• ETL/FCC/CE certification (~$30K)\n• $29,990 PR Stunt (month 10, pr)",
+            "tag": "Ships: The Symphony Macro-System"
+          },
+          {
+            "when": "Months 6–15 · TTM 8–12 months",
+            "title": "Phase 3 — The Instrument (flagship halo)",
+            "body": "**Halo product, halo timing.** Lands just above Focal's consumer flagship (~$5K) while Krell is still rebuilding dealer trust. Pro-tier UI empowers live-mixing techs to submit innovations (royalty-paid) — feeds Balcony installations at flagship venues.\n\n• Companion GaN mono-block + Gowin FPGA processor + transmission-line sub validated\n• Three-mode platform shipped (audiophile / pro / measurement)\n• Royalty-paid third-party innovation pipeline open through Balcony\n• ETL/FCC/CE certification (~$30K)",
+            "tag": "Ships: The Instrument — Flagship Reference"
+          },
+          {
+            "when": "Months 8–19 · TTM 12+ months",
+            "title": "Phase 3 — Wasted Real-Estate (suppressed product return)",
+            "body": "**Suppressed Dolby concept returns.** Originally killed by Apple licensing threat — the backstory itself carries the launch. Paired with venue pilots to land 1,000 pcs/mo Year-1 globally across 100+ retail partners.\n\n• 5-market venue pilots active\n• Channel: 100+ retail partners onboarded\n• 1,000 pcs/mo run-rate validated\n• Venue Pilot (month 14, venue)",
+            "tag": "Ships: Wasted Real-Estate"
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "pr-levers",
+        "eyebrow": "PR levers",
+        "title": "Two stunts, timed to the sequence",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Phase 2 — submitted to long-lead reviewers ahead of retail availability",
+            "title": "Symphony Review-Tier Anchor",
+            "body": "**Symphony Macro-System submitted for review at $29,990**, then corrected post-submission to **$2,990 retail**. The press receives the unit at the prestige-audio price; the customer buys it at the mass-premium price. Anchors the perceived ceiling, then drops the ladder."
+          },
+          {
+            "eyebrow": "Phase 2–3 — paired with the Instrument launch for narrative density",
+            "title": "Wasted Real-Estate Suppression Story",
+            "body": "Originally concepted at Dolby; Apple shut it down via licensing threat. The story itself is the launch — channel-probe-positive, vetted, the suppressed product returns. PR earns its keep with the backstory, not the spec sheet."
+          }
+        ]
+      },
+      {
+        "type": "prose",
+        "id": "venue-pilots",
+        "eyebrow": "Venue pilots · 5",
+        "title": "First five markets",
+        "body": "**First 5 financially qualifying markets.** Selection by (a) density of arts-aware sophisticated audio buyers, (b) local performing-arts ecosystem strength, (c) availability of an owner-operator partner willing to host the FoH/Balcony/Green Room blueprint. **One venue per market — never two.**\n\nPilots double as Phase 2/3 launch surfaces — l'Art Production line in the Balcony, full consumer line in the Green Room, virtual all-access pass bundled with hardware ownership."
+      },
+      {
+        "type": "prose",
+        "id": "year-one",
+        "eyebrow": "Year-one targets",
+        "title": "1,000 pieces a month, globally",
+        "body": "**Wasted Real-Estate Y1 target: 1,000 pcs/month globally** with 100+ retail partners (100 pcs/mo across 2 PoC venues). Comparable: **Focal's flagship reference moves ~1,000 pcs/month** with a focused rep firm — the volume is real and reachable in Y1.\n\nY1 unit volume compounds across the line: Over-Ear (Phase 1) carries the run-rate, Core-like + Symphony (Phase 2) build margin, the Instrument (Phase 3) opens the halo — and Wasted Real-Estate validates the case-as-product thesis at 1,000 pcs/mo."
+      },
+      {
+        "type": "prose",
+        "id": "beyond",
+        "eyebrow": "Beyond year one",
+        "title": "Phased rollout to year five",
+        "body": "**Phase 1 (Year 1):** Inaugural product line ships from existing IP base. Single flagship venue (PoC). Channel introductions to stranded independents.\n\n**Phase 2 (Years 2–3):** Second-wave AGF community franchises — venues replicating the FoH/Balcony/Green Room blueprint globally. l'Art codec adoption seeded through Balcony installations.\n\n**Phase 3 (Years 3–5):** stereOS third-party adoption. Acquisition / hostile-service / integration decision for ten-ton gorillas. AGF as future bank-roller for stranded distribution channels."
+      }
+    ]
+  }
+}

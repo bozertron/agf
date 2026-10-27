@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "mark": "AGF",
+    "strapline": "All Grounds Floating",
+    "nav_tagline": "Even Rails → Smooth Tracks",
+    "certificate_line": "Measured in silence.",
+    "tagline": "Pure signal.",
+    "meta": "Reference site · working draft · 2026",
+    "sources": "Sources: Bang & Olufsen A/S annual reports (2000/01–2023/24) · Samsung/Harman · Bose · Barco · Gentex · Masimo · HSG · Cosonic · Sony Interactive Entertainment · US BLS CPI · The Absolute Sound · Stereophile · What Hi-Fi? · ecoustics.com",
+    "portal_headline": "The forest holds the gold.",
+    "portal_lede": "When you listen to music, you're hearing your power supply.\n\nTubes as a category sound better because they force low-noise power supplies.\n\nDigital systems are just as sensitive, they just fail more gracefully.\n\nWe plant our flag here because it's strategically advantageous; it's also the truth.",
+    "portal_section_title": "Nine doors into the plan.",
+    "portal_section_lede": "Each door opens on a short introduction, then a deep dive built from the full brand development document. Working notes stay visible until a section is signed off.",
+    "portal_notes": [
+      {
+        "title": "How to read this",
+        "body": "The intro pages are the pitch: one headline, three points, the measurements that matter. The deep dives carry everything the brand document held, reorganised by topic. Nothing has been invented; where a line was drafted for this site rather than lifted from the document, it carries an **assumed** badge."
+      },
+      {
+        "title": "Standing lines",
+        "body": "**All Grounds Floating** under the mark. **Even Rails → Smooth Tracks** in the nav. **Measured in silence.** on the certificate. **Pure signal.** for campaigns. Everything else is open for discussion."
+      }
+    ]
+  },
+  "options": [
+    {
+      "slug": "brand",
+      "number": "01",
+      "eyebrow": "The Brand",
+      "title": "All Grounds Floating",
+      "short": "Brand",
+      "summary": "The name, the thesis behind it, the six tenets, and the posture: lead, or by definition follow."
+    },
+    {
+      "slug": "opportunity",
+      "number": "02",
+      "eyebrow": "The Opportunity",
+      "title": "History rhymes",
+      "short": "Opportunity",
+      "summary": "Two eras of consolidation, one safe harbor that nobody has occupied since Bang & Olufsen walked away from it."
+    },
+    {
+      "slug": "stack",
+      "number": "03",
+      "eyebrow": "The Stack",
+      "title": "Six technologies, one signal path",
+      "short": "Stack",
+      "summary": "l'Art, stereOS, BT'N-Tech, l'espacI/O, FRC41 and No-Nails: the moat, from capture to the room."
+    },
+    {
+      "slug": "lineup",
+      "number": "04",
+      "eyebrow": "The Lineup",
+      "title": "The inaugural product line",
+      "short": "Lineup",
+      "summary": "Six products from a shared platform, sequenced for time-to-market, landing the flagship just above Focal."
+    },
+    {
+      "slug": "venue",
+      "number": "05",
+      "eyebrow": "The Venue",
+      "title": "A church of the performing arts",
+      "short": "Venue",
+      "summary": "Front of House, the Balcony, the Green Room: retail hidden behind a stage, one venue per qualifying market."
+    },
+    {
+      "slug": "artists",
+      "number": "06",
+      "eyebrow": "Artist Rights",
+      "title": "Artists drive their own destiny",
+      "short": "Artists",
+      "summary": "Artists own the stereo master outright. Broadcast mixes are 50/50 in perpetuity. The artist can block any broadcast."
+    },
+    {
+      "slug": "business",
+      "number": "07",
+      "eyebrow": "The Business",
+      "title": "The way the money actually works",
+      "short": "Business",
+      "summary": "Pricing the package, not the unit. Distribution as the future bank-roller. Where AGF lands against the field."
+    },
+    {
+      "slug": "roadmap",
+      "number": "08",
+      "eyebrow": "The Roadmap",
+      "title": "Sequencing the line",
+      "short": "Roadmap",
+      "summary": "Three phases over 24 months, two PR levers, five venue pilots and a 1,000-piece-a-month year-one target."
+    },
+    {
+      "slug": "founder",
+      "number": "09",
+      "eyebrow": "The Founder",
+      "title": "Twenty-five years in this market",
+      "short": "Founder",
+      "summary": "Benjamin Webster: from garage-sale speakers to Mass Fidelity, a Dolby skunkworks, and the plan on the page."
+    }
+  ]
+}

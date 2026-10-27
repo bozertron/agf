@@ -1,0 +1,260 @@
+{
+  "slug": "brand",
+  "intro": {
+    "headline": "When you listen to music, you're hearing your power supply.",
+    "lede": "A floating ground isolates a circuit from the noise of common earth. All Grounds Floating is that idea made into a company: the quietest possible foundation, then everything else.",
+    "points": [
+      {
+        "eyebrow": "The name",
+        "title": "A technical truth, chosen as a flag",
+        "body": "Tubes as a category sound better because they force low-noise power supplies. Digital systems are just as sensitive, they just fail more gracefully. We plant our flag here because it's strategically advantageous; it's also the truth."
+      },
+      {
+        "eyebrow": "The posture",
+        "title": "Lead. Otherwise, by definition, follow.",
+        "body": "Execution path is open for discussion. Vision is not. Followers die slow deaths, almost without exception."
+      },
+      {
+        "eyebrow": "The model",
+        "title": "Channel the B&O of the 70s to 90s",
+        "body": "Bold aesthetics, appointment-only distribution, first movers in Class-D and multi-room. When they spotted an inch, they took it. They had the courage to lead, in every regard."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "6",
+        "label": "Operating tenets",
+        "conditions": "Twenty-five years of lessons, compounding, distilled"
+      },
+      {
+        "value": "3",
+        "label": "Things the strategy must be",
+        "conditions": "Sticky, defensible, and not a boil-the-ocean plan"
+      },
+      {
+        "value": "1",
+        "label": "Courage required",
+        "conditions": "To lead; the costs are lower than the traditional route"
+      }
+    ],
+    "metrics_note": "Hero metrics on this page are structural counts, not measurements. Real measurements with conditions belong on the Stack and Lineup pages.",
+    "quote": {
+      "text": "They had the courage to lead, in every regard.",
+      "cite": "On Bang & Olufsen, from the brand development document"
+    },
+    "note": "Intro copy on this page is lifted from the hero, team note and tenets sections of the document. The three-point framing (name, posture, model) is an editorial choice for the site."
+  },
+  "deep": {
+    "headline": "All Grounds Floating.",
+    "lede": "The thesis, the lineage, the six tenets, and the reasons the plan is sticky and defensible.",
+    "sections": [
+      {
+        "type": "prose",
+        "id": "thesis",
+        "eyebrow": "The thesis",
+        "title": "You're hearing your power supply",
+        "large": true,
+        "body": "When you listen to music, you're hearing your power supply.\n\nTubes as a category sound better because they force low-noise power supplies.\n\nDigital systems are just as sensitive, they just fail more gracefully.\n\nWe plant our flag here because it's strategically advantageous; it's also the truth.",
+        "note": "This is the hero subheadline from the document, verbatim. It doubles as the origin of the name and as the pitch for BT'N-Tech."
+      },
+      {
+        "type": "prose",
+        "id": "prelude",
+        "eyebrow": "Prelude",
+        "title": "Every side of the fence",
+        "body": [
+          "I've been on every side of this fence; from a business perspective. Content Production, Retail Distribution, Technology Provider, Brands, Professional and Consumer. Threading the needle is not trivial.",
+          "The Consumer Audio market is one of the oldest consumer tech markets.\n\nEvery existing Technology and Product Segment is a quagmire; veterans have 'seen it all'.\n\nOur products have to be compelling alternatives to what's available.\n\nBut different enough to stand out.\n\nBut not so different that partners and customers can't easily spot the value proposition.",
+          "Google/Meta/Amazon ad-spend can be a crippling obligation for a start up brand.\n\nAGF and it's products need to be exciting enough to generate buzz:\n\nChannels: An exciting brand story and profitable to sell.\n\nMedia: Newsworthy so reviewers are eager to cover them.\n\n Customers: Are drawn in by the promise of a new brand truly doing new things - that they can't get anywhere else.",
+          "AGF needs every element of it's strategy to be sticky, and defensible.\n\nA savage and relentless campaign on every obvious place the industry is asleep at the wheel.\n\nA seductive and confident beacon of hope to taste makers in adjacent industries.\n\nA welcoming new community focal point for music loving technology enthusiasts, globally.",
+          "As scary as that list looks in aggregate, I assure you, this is not a 'boil the ocean' plan. The dots connected when trying to figure out how to contextualize B&O's old distribution model, how to provision physical space for operations, and R&D relationships for our primary technology differentiators. The costs will be lower than a traditional route, we just need to have the courage to lead; let's connect the dots."
+        ]
+      },
+      {
+        "type": "prose",
+        "id": "lineage",
+        "eyebrow": "The Plan - Channel the B&O of the 70s - 90s: Lead",
+        "title": "Experience and Timing, meet Preparation and Opportunity",
+        "body": "Most aren't aware of the strategic and tactical depth of that B&O. When they spotted an inch, they took it. Bold Aesthetics, Appointment only Distribution, Pioneers in Class-D Amplification; they had gesture control working properly in the 80s! The yield was a beachhead so vast no one even bothered to challenge.\n\nHowever, this wasn't a rookie team. They knew what an inch looked like. The market sold listening rooms, they were first movers in multi-room. The market made fat wood boxes, they made skinny metal ones. The market made brightly lit imposing receivers, they made svelte buttons hidden by smoked glass.\n\nDifferent market, different time, different technologies, what remains important is the ability to take the inches when you see them.\n\nYou can track their meteoric rise to some specific engineering and product talent, but LOTS of companies had this during this time. This is still the era where the computer industry wasn't capturing all the Engineering talent.\n\nDistilled, as an industry insider and life-long aficionado, my opinion is that the strategy can be expressed in much simpler terms: They had the courage to lead, in every regard."
+      },
+      {
+        "type": "cards",
+        "id": "tenets",
+        "eyebrow": "The six tenets",
+        "title": "The Gospel of not having your ass handed to you.",
+        "lede": "Twenty-five years of lessons, compounding, and distilled. Each tenet is a constraint that creates leverage — and a load-bearing rule that protects the others.",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Tenet 1",
+            "brass": true,
+            "title": "Thou shalt not compete with existing high-volume audio segments — directly.",
+            "pull": "Reframe the problem. Deliver a solution that stands alone.",
+            "body": "I ran a skunkworks program on behalf of Dolby, only a few people internally knew what I was working on, and my only report kept the BoD in the loop. The goal was to drive top-line growth because bottom line @90%-ish had nowhere to go. The caveat: Products can't interfere with the sacred cows [licensing revenues].\n\nThe mandate: build products no one could get mad at — \"If the licensees aren't making something similar, what are they going to complain about?\". Apple got very mad and threatened to pull their business entirely. Bad for me - the program was shut down. Good for Dolby - the IP we created was licensed into their headphone program and still drives revenue a nearly a decade later.\n\nThe lesson stands. Don't line up toe-to-toe with the heavies: Find and exploit the seams - there are many.",
+            "kv": [
+              [
+                "Key insight",
+                "When gathering channel support, the giants can not be perceived as competition. This is moreso a shield for independent specialized distribution channels. If you're going to directly interfere with their bankrolling PE/Conglomerate's product definintions, they risk getting strong armed or cut off. If you're presenting something with no logical replacement, they're safe, and you're driving industry chatter and excitement, something there's not a lot of these days."
+              ]
+            ],
+            "list": [
+              "Worked example: Remora — the soundbar that lived behind the TV"
+            ]
+          },
+          {
+            "eyebrow": "Tenet 2",
+            "brass": true,
+            "title": "Thou shalt not compete on price with existing premium → luxury brands — directly.",
+            "pull": "I have a pricing exercise that's based on genuine value - which includes intangibles. We don't price on multiples of anything. We price based on the value we deliver.",
+            "body": "When a sales associate in a premium sales channel identifies a real customer, they are not negotiating price. They are negotiating a budgeted total experience. I had a niche product that I thought would die both times I was forced to increase it's price. Both times the sales increased.",
+            "kv": [
+              [
+                "Key insight",
+                "Premium buyers do not want a discount. They want a reason; even better if there's a story attached."
+              ]
+            ],
+            "list": [
+              "Worked example: Relay $199 → $299 + Burmester €5,999 packaging"
+            ]
+          },
+          {
+            "eyebrow": "Tenet 3",
+            "brass": true,
+            "title": "Thou shalt measure additional features through a lens of exponential value gains — exclusively.",
+            "pull": "If a feature doesn't compound product value, it dilutes product value.",
+            "body": "The Mass Fidelity Core launched with a kitchen-sink feature set — gesture, IoT, phone-charger. The pre-launch survey was decisive: 80%+ of customers cared about one thing — one speaker sounding like two with the sweet spot eliminated (wave-field synthesis). Multi-room 15% - a channel check-box at the time. Portability 4% - we should have removed the battery, it ended up being the product's only weak point. Everything else was completely irrelevant.",
+            "kv": [
+              [
+                "Key insight",
+                "Kill features that do not compound a product's value — even when defended internally."
+              ]
+            ],
+            "list": [
+              "Worked example: Mass Fidelity Core pre-launch survey"
+            ]
+          },
+          {
+            "eyebrow": "Tenet 4",
+            "brass": true,
+            "title": "Thou shalt 'check the boxes' on behalf of corporate buyers — exclusively.",
+            "pull": "Parse their checklists like a contract attorney.",
+            "body": "Corporate buyers are rule-bound. A seasoned executive team is required to parse which boxes must be checked — and which can be quietly dropped. Add based on commitments. Subtract based on commitments. Never compromise the end result - that's your contract with the end user.",
+            "kv": [
+              [
+                "Key insight",
+                "Channels can influence product definintion; they can't influence a commitment to quality."
+              ]
+            ],
+            "list": [
+              "Worked example: Mass Fidelity distributor checklists"
+            ]
+          },
+          {
+            "eyebrow": "Tenet 5",
+            "brass": true,
+            "title": "Thou shalt always deliver a product-line. Not a single product.",
+            "pull": "A single product is a single point of failure.",
+            "body": "Earl Qua, circa 2012/13: \"CE is all about churn.\" Segment-defining product-wins that trigger a migration to 'the new way' come almost exclusively from innovative product positions that previously did not exist. While it's nice to pretend, no one can predict the recipe for a segment-defining product. Stand-alone Product-lines with breadth and depth is what attracts large distribution partners to acquire your brand. The catch: Products must independently and as a whole plausibly bridge to a position where AGF looks like the future they don't want to miss out on; they already sell the present and the past.",
+            "kv": [
+              [
+                "Key insight",
+                "Depth, breadth, with plausible inevitability; be the future that's threatening to pass them by if they don't take action to support you."
+              ]
+            ],
+            "list": [
+              "Worked example: Earl Qua — \"CE is all about churn\""
+            ]
+          },
+          {
+            "eyebrow": "Tenet 6",
+            "brass": true,
+            "title": "Thou shalt lead. Otherwise, by definition, thou art following.",
+            "pull": "Execution path is open for discussion. Vision is not.",
+            "body": "The most strongly held belief, with the most flexible application. Followers die slow deaths — almost without exception. The brands that survive relentless CE churn dominate in multiple disciplines *and/or* hold brand IP and patent moats the market still values *and/or* own the leadership position through business practices that on the front lines reads like violence-via-innovation; Bang & Olufsen, Apple, and Bose in their respective heydays are good examples of this, albeit for different reasons - we aim to achieve all of these characteristics.",
+            "kv": [
+              [
+                "Key insight",
+                "Choose violence."
+              ]
+            ],
+            "list": [
+              "Worked example: D'Agostino · Bose · Polk"
+            ],
+            "note": "Two versions of this tenet's key insight exist in the document: \"Choose violence.\" (July 14) and \"Know where to push, and how to present it to a global market that eats new entrants for breakfast.\" (July 6). The shorter one is shown; say which you want."
+          }
+        ],
+        "note": "Bodies are the first-person July 14 version. Worked-example titles come from the July 6 version. Both versions are kept in content/sections/tenet.json and tenet.v2.json."
+      },
+      {
+        "type": "figures",
+        "id": "boards",
+        "eyebrow": "Earlier explorations",
+        "title": "Brand boards",
+        "lede": "AI-generated boards from before the design system existed. The design system in agf-design-system/ supersedes them; they are kept for the ideas, not the execution.",
+        "items": [
+          {
+            "src": "assets/brand-boards/agf-packaging-measured-in-silence-card.jpeg",
+            "caption": "Packaging exploration: the calibration certificate, \"Measured in Silence.\""
+          },
+          {
+            "src": "assets/brand-boards/agf-master-design-system-board-portrait.png",
+            "caption": "\"The forest holds the gold\" board with the three-division tier system."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "id": "standing-lines",
+        "eyebrow": "Fixed language",
+        "title": "Standing lines",
+        "body": "Four lines belong to the brand and are not rewritten. The rest of the site's copy is open.",
+        "items": [
+          "**All Grounds Floating** · the strapline under the mark",
+          "**Even Rails → Smooth Tracks** · the nav tagline from the document",
+          "**Measured in silence.** · the certificate headline",
+          "**Pure signal.** · the campaign tagline"
+        ],
+        "_assumed": true,
+        "note": "The design system fixed three of these; the fourth came from the document's header. Confirm or cut."
+      },
+      {
+        "type": "cards",
+        "id": "divisions",
+        "eyebrow": "Structure",
+        "title": "Three divisions",
+        "lede": "How the design system organises the brand. The document itself speaks of a consumer line, the l'Art Production line and stereOS; the mapping below is proposed, not settled.",
+        "_assumed": true,
+        "items": [
+          {
+            "eyebrow": "AGF // HEAR",
+            "brass": true,
+            "title": "Consumer",
+            "body": "Reference amplifiers, DACs, headphones, the Core-like all-in-ones, the Symphony. Forest-floor anodise, walnut and leather, a knurled solid-brass volume crown.",
+            "tags": [
+              "Midnight theme"
+            ]
+          },
+          {
+            "eyebrow": "AGF // FIELD",
+            "brass": true,
+            "title": "Professional capture",
+            "body": "The l'Art Production line: capture, preamplifiers, the Instrument in its pro and measurement modes. Bead-blasted aluminium, a recessed photo-etched brass mark.",
+            "tags": [
+              "Midnight theme"
+            ]
+          },
+          {
+            "eyebrow": "AGF // AIR",
+            "brass": true,
+            "title": "Broadcast",
+            "body": "stereOS live-to-air, venue broadcast chains, the Balcony installations. Obsidian faceplates, OLED telemetry on true black, TiN-gold connectors.",
+            "tags": [
+              "Air theme"
+            ]
+          }
+        ],
+        "note": "Open question from the brand page brief: keep the three codes, rename them, or drop them for the document's own framing?"
+      }
+    ]
+  }
+}

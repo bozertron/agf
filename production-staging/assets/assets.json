@@ -1,0 +1,425 @@
+[
+  {
+    "path": "production-staging/assets/brand-boards/agf-brand-board-landscape-design-system.png",
+    "original_path": "AGF.png",
+    "category": "brand-boards",
+    "description": "AI-generated landscape brand/design-system board (not CAD): gold multi-line AGF wordmark on forest green, 'Sound Connects Everything.' tagline, forest-green/brass/warm-neutral palette with hex codes, Monoton/Poiret One/Commissioner typography panel, hero panel with brass AGF headphones on a mossy hillside ('Higher Fidelity A Broader World.'), UI components, iconography, spacing and brand applications (box, mic, hoodie, mug, laptop hero, electronics).",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 2075975
+  },
+  {
+    "path": "production-staging/assets/brand-boards/agf-master-design-system-board-portrait.png",
+    "original_path": "AGF1.png",
+    "category": "brand-boards",
+    "description": "AI-generated portrait 'master design system & brand architecture v1.0' board (not CAD; text is partly garbled by the generator): deep green PCB-textured background with gold traces, headline 'The Forest Holds the Gold.', three-tier brand architecture (AGF // HEAR, HIELD, AIR), colour swatches, material spec sheet, PCB trace motifs, floating-ground badge and a web mock showing a black brass-knobbed amp with a -132.4 dBu THD+N telemetry card.",
+    "width": 1344,
+    "height": 1792,
+    "bytes": 3700936
+  },
+  {
+    "path": "production-staging/assets/brand-boards/agf-brand-board-mark-palette-merch.jpeg",
+    "original_path": "pic.jpeg",
+    "category": "brand-boards",
+    "description": "AI-generated landscape brand board (not CAD): outlined gold AGF wordmark with equaliser bars on dark green, Commissioner type scale with a '96\"' data callout, pill-shaped colour swatches with hex codes, and an equipment and merch strip (black/brass mic and audio interface, green box with AGF, black and gold headphones, phone UI, 'EST. 2026' badge).",
+    "width": 1264,
+    "height": 848,
+    "bytes": 695500
+  },
+  {
+    "path": "production-staging/assets/brand-boards/agf-packaging-measured-in-silence-card.jpeg",
+    "original_path": "pic1.jpeg",
+    "category": "brand-boards",
+    "description": "AI-generated photoreal packaging shot (not CAD): open dark-green rigid box with embossed circuit-trace lid and gold 'AGF ALL GROUNDS FLOATING' mark, a black-and-gold-edged certificate card headed 'Measured in Silence.' with a ground symbol, serial/noise-floor/THD+N table and engineer signature, a green braided cable with brass plugs and a brushed brass cylinder in the foam tray.",
+    "width": 1376,
+    "height": 768,
+    "bytes": 863735
+  },
+  {
+    "path": "production-staging/assets/concept-boards/wasted-real-estate-earbud-case-board.webp",
+    "original_path": "site/assets/screenshots/case 1.webp",
+    "category": "concept-boards",
+    "description": "AI-generated product board (not CAD) headed 'Wasted Real-Estate': black round earbud case with brass crown and triangle logo, Dolby and l'Art on the screen, UI screens, port close-ups, exploded internals, DJ photo, feature icons, '$299 accessory / $799 investment' pricing line and stereOS logo. Black with brass/gold type.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 87624
+  },
+  {
+    "path": "production-staging/assets/concept-boards/stereos-live-to-global-village-case-ad.webp",
+    "original_path": "site/assets/screenshots/case2.webp",
+    "category": "concept-boards",
+    "description": "AI-generated square ad/board (not CAD): black rounded-rectangle earbud case with two brass-mesh earbuds, a red LED display reading 'stereOS LIVE to GLOBAL VILLAGE' with green/red L-CH/R-CH readouts, outlined gold AGF wordmark top left, headline 'Live, Anywhere. Heard, Everywhere.' and four icon columns.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 53912
+  },
+  {
+    "path": "production-staging/assets/concept-boards/venue-three-panel-board-front-of-house-balcony-green-room.webp",
+    "original_path": "site/assets/screenshots/lart.webp",
+    "category": "concept-boards",
+    "description": "AI-generated three-panel venue concept board: 'The Bar / The Stage' (front of house, red-curtain stage, bar), 'The Balcony' (pro mixing consoles and monitors over a purple-lit stage) and 'The Green Room' (hidden retail room with an 'AGF | l'Art Production' sign); each panel has a label, headline, body copy and a VIBE line. Dark, amber/purple lighting, cream and gold type.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 142360
+  },
+  {
+    "path": "production-staging/assets/concept-boards/venue-bar-stage-photo-with-copy-overlay.webp",
+    "original_path": "site/assets/screenshots/lart2.webp",
+    "category": "concept-boards",
+    "description": "Photo (stock-style, with text overlay) of a dark performance venue: marble-fronted bar, band on a wood-slat stage, red seating and a balcony of racked production gear labelled 'l'Art Production'; overlaid headings 'The Bar & The Stage', 'The Balcony', 'The Green Room' with body copy and a 'Green Room' door sign. Warm amber, cream type.",
+    "width": 2688,
+    "height": 1536,
+    "bytes": 5187150
+  },
+  {
+    "path": "production-staging/assets/concept-boards/venue-balcony-marble-control-surface-concept.webp",
+    "original_path": "site/assets/screenshots/1pc.webp",
+    "category": "concept-boards",
+    "description": "AI-generated render (not CAD) of a wood-and-marble 'maestro' control surface on the balcony rail above a dark jazz venue stage: copper-knob equalizer and source panels, two stage-camera monitors, 'VIRTUAL TICKETS 888' and 'LIVE TO AIR IN 8:00 MINUTES' tiles, faders and a wireless keyboard. Black marble, copper and walnut.",
+    "width": 1152,
+    "height": 864,
+    "bytes": 74662
+  },
+  {
+    "path": "production-staging/assets/prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg",
+    "original_path": "site/assets/screenshots/untitled.185(1).jpg",
+    "category": "prior-work",
+    "description": "CAD render (grey studio background, 1920x1083) of the massFidelity 'USB Audio' DAC: dark green slab with brass base plate and a large brass knob at the front-right corner; 'massFIDELITY' on the front edge, 'USB Audio' on the top.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 322004
+  },
+  {
+    "path": "production-staging/assets/prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg",
+    "original_path": "site/assets/screenshots/untitled.224(1).jpg",
+    "category": "prior-work",
+    "description": "CAD render of the same USB Audio DAC slab from the rear/right: dark grey body, copper knob top-left, rear connector strip (red switch, USB-C, four copper binding posts, HDMI, optical, RCA pairs). No massFidelity logo is visible, only mirrored 'USB Audio' text on top.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 225644
+  },
+  {
+    "path": "production-staging/assets/prior-work/massfidelity-usb-audio-dac-black-gold-render.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-23-20.png",
+    "category": "prior-work",
+    "description": "CAD render of the massFidelity 'USB Audio' DAC in black with a gold-brass knob and 'massFIDELITY' on the front edge; grey studio background.",
+    "width": 997,
+    "height": 581,
+    "bytes": 202987
+  },
+  {
+    "path": "production-staging/assets/prior-work/massfidelity-dac-black-copper-slider-render.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-32-27.png",
+    "category": "prior-work",
+    "description": "CAD render of a different massFidelity DAC: low black box with a copper-edged front panel (four round buttons and a USB-C port), a translucent top inset with a copper raised slider/handle, 'massFIDELITY' printed on the top; grey background.",
+    "width": 1116,
+    "height": 622,
+    "bytes": 377934
+  },
+  {
+    "path": "production-staging/assets/prior-work/usb-audio-dac-exploded-assembly-drawing.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-43-06.png",
+    "category": "prior-work",
+    "description": "Technical exploded-assembly drawing (white sheet with border) of the USB Audio box with brass knob: callouts for assembly knob, top panel, spacers, PCB LED, back/side/front/bottom panels, mounting brackets and connector PCB. Small multicolour 'EP' logo stamp bottom-left. No massFidelity text.",
+    "width": 570,
+    "height": 454,
+    "bytes": 105113
+  },
+  {
+    "path": "production-staging/assets/prior-work/remora-speaker-on-tv-rear-render.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-48-56.png",
+    "category": "prior-work",
+    "description": "CAD render of the black 'REMORA' behind-the-TV speaker, a curved slab mounted on the back of a flat-screen TV on a black desk; 'REMORA' in white capitals on the grille.",
+    "width": 575,
+    "height": 596,
+    "bytes": 104994
+  },
+  {
+    "path": "production-staging/assets/prior-work/remora-exploded-mount-diagram.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-49-16.png",
+    "category": "prior-work",
+    "description": "Grey-background CAD diagram of the white 'REMORA' speaker lifted off the back of a TV, with dashed mounting-screw lines to a VESA plate.",
+    "width": 842,
+    "height": 664,
+    "bytes": 113990
+  },
+  {
+    "path": "production-staging/assets/prior-work/remora-driver-layout-cutaway-render.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-49-47.png",
+    "category": "prior-work",
+    "description": "White-background CAD render of the REMORA enclosure with a transparent grille showing the internal driver layout: eight round woofers/radiators and racetrack drivers on the edges; 'REMORA' in white type.",
+    "width": 842,
+    "height": 607,
+    "bytes": 144474
+  },
+  {
+    "path": "production-staging/assets/prior-work/remora-driver-layout-spec-diagram.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-51-12.png",
+    "category": "prior-work",
+    "description": "Spec slide: CAD wireframe of the REMORA driver layout on grey at right and a text list of driver counts at left (12 racetrack drivers, 4 subwoofers, 4 passive radiators).",
+    "width": 1498,
+    "height": 561,
+    "bytes": 203897
+  },
+  {
+    "path": "production-staging/assets/prior-work/round-earbud-case-with-earbuds-paul-simon-screen.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-37-00.png",
+    "category": "prior-work",
+    "description": "CAD render on black: round black earbud case with two earbuds floating above their pockets and a small colour screen showing 'LATE IN THE EVENING / Paul Simon' with prev/next arrows; four hairline buttons on the front.",
+    "width": 662,
+    "height": 686,
+    "bytes": 110851
+  },
+  {
+    "path": "production-staging/assets/prior-work/round-earbud-case-dolby-logo-lid-kod-screen.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 11-37-30.png",
+    "category": "prior-work",
+    "description": "CAD render on black: round black earbud case with a Dolby double-D logo embossed on the lid and a front screen showing 'KOD J. Cole' with an 'E' badge and prev/next arrows.",
+    "width": 672,
+    "height": 686,
+    "bytes": 101408
+  },
+  {
+    "path": "production-staging/assets/concepts/analog-wall-plate-brass-knob-green-ring-walnut.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-13-02.png",
+    "category": "concepts",
+    "description": "AI-generated image of an in-wall plate: dark walnut veneer with sunburst grain, a large brass knob on a green enamel ring, and a round OLED reading 'ANALOG 144' with a blue underline.",
+    "width": 711,
+    "height": 714,
+    "bytes": 336760
+  },
+  {
+    "path": "production-staging/assets/concepts/analog-round-brass-ring-green-graphite-knob.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-15-12.png",
+    "category": "concepts",
+    "description": "AI-generated close-up of a round in-wall control: brass outer ring, green lacquer well, a graphite knob and a small 'ANALOG' label on a pale wall.",
+    "width": 827,
+    "height": 818,
+    "bytes": 476392
+  },
+  {
+    "path": "production-staging/assets/concepts/analog-wall-plate-green-panel-wood-frame-brass-knob.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-16-15.png",
+    "category": "concepts",
+    "description": "AI-generated image of a wall plate: dark green panel in a walnut frame, a brass knob on a brass collar and the label 'ANALOG', in a softly lit room.",
+    "width": 827,
+    "height": 818,
+    "bytes": 395966
+  },
+  {
+    "path": "production-staging/assets/concepts/marble-media-console-projector-screen-planters.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-21-30.png",
+    "category": "concepts",
+    "description": "AI-generated living-room concept: floating white-marble console with two round black speaker drivers and planters, a small control module, under a black-cased roll-down projector screen on a cream wall, wood floor.",
+    "width": 954,
+    "height": 848,
+    "bytes": 519617
+  },
+  {
+    "path": "production-staging/assets/concepts/keyboard-control-surface-knobs-faders-grey-cad.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-31-13.png",
+    "category": "concepts",
+    "description": "Unbranded grey CAD model of a full-size keyboard with a raised rear strip of four-knob groups (blue indicators), jog-wheel style controls and two keys at the left, on dark grey background.",
+    "width": 1116,
+    "height": 622,
+    "bytes": 276128
+  },
+  {
+    "path": "production-staging/assets/concepts/over-ear-headphones-tan-pad-silver-shell-concept.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-26 05-23-49.png",
+    "category": "concepts",
+    "description": "Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Byte-identical to section-backgrounds/prelude-square-1.png.",
+    "width": 480,
+    "height": 651,
+    "bytes": 213747
+  },
+  {
+    "path": "production-staging/assets/concepts/mv2-bundle-plus-white-headphones-stand.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-26 05-27-08.png",
+    "category": "concepts",
+    "description": "Marketing-style render: two white over-ear headphones on a white charging stand in a living room with TV and blue sofa, captioned 'MV2 Bundle+'. Byte-identical to section-backgrounds/prelude-hero.png.",
+    "width": 1120,
+    "height": 617,
+    "bytes": 740083
+  },
+  {
+    "path": "production-staging/assets/concepts/over-ear-headphones-black-red-pair.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-26 05-29-58.png",
+    "category": "concepts",
+    "description": "Product render of two over-ear headphones overlapping, one black and one red with black pads, on a light grey background. No brand marking.",
+    "width": 512,
+    "height": 542,
+    "bytes": 153785
+  },
+  {
+    "path": "production-staging/assets/concepts/waveform-sculpture-copper-wire-teal-patina.png",
+    "original_path": "site/assets/screenshots/agf_v3_1_nanobananapro.png",
+    "category": "concepts",
+    "description": "AI-generated 1024x1024 image of a sculpture on a dark grey gradient: flowing copper/brass wire ribbons wrapped around a teal verdigris audio waveform.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 1845869
+  },
+  {
+    "path": "production-staging/assets/concepts/agf-usb-audio-dac-copper-knob-walnut-shelf.webp",
+    "original_path": "site/assets/screenshots/AMP-1.webp",
+    "category": "concepts",
+    "description": "AI-generated render: black 'USB Audio' box with 'AGF' on the front edge and a large copper knob, sitting on a walnut shelf slab against a pale wall.",
+    "width": 1280,
+    "height": 720,
+    "bytes": 23234
+  },
+  {
+    "path": "production-staging/assets/concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp",
+    "original_path": "site/assets/screenshots/amp-3.webp",
+    "category": "concepts",
+    "description": "AI-generated home-theatre room: wall-hung TV (branded 'SOTA') flanked by two tall slim dark-green speakers with brass driver rings, a small green-and-brass 'USB Audio' box on a black floating console with under-lighting. Byte-identical to section-backgrounds/prelude-hero.webp.",
+    "width": 1152,
+    "height": 864,
+    "bytes": 30812
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-front.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-26.png",
+    "category": "renders/symphony-macro-system",
+    "description": "CAD render of the slim tower speaker in walnut veneer with a honeycomb grille top and one round driver, on a mauve-grey background.",
+    "width": 1116,
+    "height": 807,
+    "bytes": 150244
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-front.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-41.png",
+    "category": "renders/symphony-macro-system",
+    "description": "CAD render of the same tower with a brushed copper front panel.",
+    "width": 1116,
+    "height": 807,
+    "bytes": 164590
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-front.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-38-54.png",
+    "category": "renders/symphony-macro-system",
+    "description": "CAD render of the same tower in dark green with brass edge trim and a brass driver ring.",
+    "width": 1116,
+    "height": 807,
+    "bytes": 157584
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-driver-closeup.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-36.png",
+    "category": "renders/symphony-macro-system",
+    "description": "Close-up CAD render of the walnut tower's driver on a black bezel.",
+    "width": 1116,
+    "height": 825,
+    "bytes": 413009
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-driver-closeup.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-16.png",
+    "category": "renders/symphony-macro-system",
+    "description": "Close-up CAD render of the copper tower's driver on a black bezel.",
+    "width": 1116,
+    "height": 825,
+    "bytes": 358673
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-brass-driver-closeup.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-39-29.png",
+    "category": "renders/symphony-macro-system",
+    "description": "Close-up CAD render of the green tower's driver with a brass ring.",
+    "width": 1116,
+    "height": 825,
+    "bytes": 382885
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-driver-closeup.png",
+    "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-24-33.png",
+    "category": "renders/symphony-macro-system",
+    "description": "Close-up CAD render of a black tower's driver with a brass ring.",
+    "width": 994,
+    "height": 845,
+    "bytes": 418248
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/concept-explainer-background.png",
+    "original_path": "site/assets/sections/concept-explainer/concept-explainer-background.png",
+    "category": "section-backgrounds",
+    "description": "Identical (byte-for-byte) to prelude-square.png and screenshot 11-49-47: white-background CAD cutaway of the REMORA speaker driver layout (eight round drivers, racetrack drivers on edges, 'REMORA' in white).",
+    "width": 842,
+    "height": 607,
+    "bytes": 144474
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/cut-sheet-hero.png",
+    "original_path": "site/assets/sections/cut-sheet/cut-sheet-hero.png",
+    "category": "section-backgrounds",
+    "description": "Identical to overview-background.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines.",
+    "width": 842,
+    "height": 664,
+    "bytes": 113990
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/overview-background.png",
+    "original_path": "site/assets/sections/overview/overview-background.png",
+    "category": "section-backgrounds",
+    "description": "Identical to cut-sheet-hero.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines.",
+    "width": 842,
+    "height": 664,
+    "bytes": 113990
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/prelude-hero.png",
+    "original_path": "site/assets/sections/prelude/prelude-hero.png",
+    "category": "section-backgrounds",
+    "description": "Identical to screenshot 05-27-08: two white headphones on a white stand in a living room, captioned 'MV2 Bundle+'.",
+    "width": 1120,
+    "height": 617,
+    "bytes": 740083
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/prelude-hero.webp",
+    "original_path": "site/assets/sections/prelude/prelude-hero.webp",
+    "category": "section-backgrounds",
+    "description": "Identical to amp-3.webp: AI home-theatre room with a TV flanked by two tall green-and-brass wall speakers and a green USB Audio box on a black console.",
+    "width": 1152,
+    "height": 864,
+    "bytes": 30812
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/prelude-square-1.png",
+    "original_path": "site/assets/sections/prelude/prelude-square-1.png",
+    "category": "section-backgrounds",
+    "description": "Identical to screenshot 05-23-49: tan and silver over-ear headphones on a dark navy dusk backdrop.",
+    "width": 480,
+    "height": 651,
+    "bytes": 213747
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/prelude-square.png",
+    "original_path": "site/assets/sections/prelude/prelude-square.png",
+    "category": "section-backgrounds",
+    "description": "Identical to concept-explainer-background.png: white-background CAD cutaway of the REMORA driver layout.",
+    "width": 842,
+    "height": 607,
+    "bytes": 144474
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/venue-background.webp",
+    "original_path": "site/assets/sections/venue/venue-background.webp",
+    "category": "section-backgrounds",
+    "description": "AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp.",
+    "width": 1152,
+    "height": 864,
+    "bytes": 69312
+  },
+  {
+    "path": "production-staging/assets/section-backgrounds/venue-figure.webp",
+    "original_path": "site/assets/sections/venue/venue-figure.webp",
+    "category": "section-backgrounds",
+    "description": "Identical to venue-background.webp: AI-generated jazz venue with green curtain stage and copper 'AGF' wall sign.",
+    "width": 1152,
+    "height": 864,
+    "bytes": 69312
+  }
+]

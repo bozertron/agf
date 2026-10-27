@@ -1,0 +1,271 @@
+{
+  "slug": "opportunity",
+  "intro": {
+    "headline": "Hundreds of brands, decades apart, one safe harbor.",
+    "lede": "Japanese conglomerates owned the mass market in 1982. Chinese vendors and private-equity roll-ups own it now. Different flags, identical structural pressure. In both eras exactly one brand stood alone, and it is no longer there.",
+    "points": [
+      {
+        "eyebrow": "Then",
+        "title": "1978 to 1991",
+        "body": "Nine Japanese conglomerates held 55% or more of global Hi-Fi share by 1982. Specialty retail differentiated with esoteric brands. The aspirational tier sold $1M systems without a stretch."
+      },
+      {
+        "eyebrow": "Now",
+        "title": "2014 to 2026",
+        "body": "GoerTek, IAG, HSG and Cosonic consolidate the floor. Tweeter is gone, Magnolia is inside Best Buy, Krell closed and is reopening, B&O is public and at less than half its peak."
+      },
+      {
+        "eyebrow": "The outlier",
+        "title": "Bang & Olufsen, 2007/08",
+        "body": "Peak revenue of about $853M, roughly $1.25B in 2026 dollars. You had to put in the work to acquire B&O, the audio equivalent of the Birkin bag. New management didn't recognise their beachhead and almost destroyed the brand."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "853",
+        "unit": "M USD",
+        "label": "B&O peak revenue",
+        "conditions": "FY2007/08, about $1.25B in 2026 dollars"
+      },
+      {
+        "value": "402",
+        "unit": "M USD",
+        "label": "B&O revenue now",
+        "conditions": "FY2023/24, Copenhagen-listed"
+      },
+      {
+        "value": "8.35",
+        "unit": "B USD",
+        "label": "Samsung buys Harman",
+        "conditions": "Seventeen brands in one transaction"
+      }
+    ],
+    "quote": {
+      "text": "History does not repeat. It rhymes.",
+      "cite": "Section title from the brand development document"
+    }
+  },
+  "deep": {
+    "headline": "History rhymes.",
+    "lede": "Hundreds of Brands, Decades Apart, One Safe Harbor. Two eras, the consolidation table, and why each of these facts matters to AGF.",
+    "sections": [
+      {
+        "type": "timeline",
+        "id": "then",
+        "eyebrow": "Then · 1978–1991",
+        "title": "The first wave",
+        "items": [
+          {
+            "when": "1978–1991",
+            "title": "Japanese conglomerates dominate global Hi-Fi",
+            "body": "Sony · Matsushita (Technics) · Pioneer · Yamaha · Kenwood · JVC · Sansui · Onkyo · Aiwa held 55%+ of global Hi-Fi share by 1982, from entry-level to premium big-box tiers."
+          },
+          {
+            "when": "1978–1991",
+            "title": "Specialty retail differentiates with esoteric brands",
+            "body": "Tweeter, Magnolia Hi-Fi, Crutchfield, and regional independents used Bose as entry and built reputations on Polk, Boston Acoustics, Snell, Advent, EPI, JBL, Infinity, ADS — often PE/KE owned even then."
+          },
+          {
+            "when": "1978–1991",
+            "title": "Aspirational tier: the \"eff you money\" customer",
+            "body": "Krell, Wilson Audio, Quad, Magnepan, McIntosh, Mark Levinson, conrad-johnson, Audio Research, Threshold, Bryston — $1M+ systems were not a stretch."
+          },
+          {
+            "when": "2007/08",
+            "title": "Bang & Olufsen stood alone — peak ~$853M USD",
+            "body": "Equivalent to ≈ $1.25B in 2026 dollars. You had to put in the work to acquire B&O — the audio equivalent of the Birkin bag."
+          }
+        ]
+      },
+      {
+        "type": "timeline",
+        "id": "now",
+        "eyebrow": "Now · 2014–2026",
+        "title": "The second wave",
+        "items": [
+          {
+            "when": "2014–2026",
+            "title": "Chinese vendors + global PE roll-ups dominate",
+            "body": "GoerTek/Dynaudio · IAG (Mission, Quad, Audiolab, Wharfedale) · Marshall family + HSG (Jan 2025) · Cosonic/Beyerdynamic. Same shape as the Japanese wave, different flag."
+          },
+          {
+            "when": "2007–2008",
+            "title": "US specialty chain collapse",
+            "body": "Tweeter, et al. — bankrupt 2007, closed Dec 2 2008. Big-box channel replaced by Amazon, JD, Taobao, Media Markt, Elkjøp."
+          },
+          {
+            "when": "2014–2026",
+            "title": "Survivors",
+            "body": "Crutchfield (1974) still private — $230M revenue, 50 years in. Magnolia absorbed inside Best Buy. Regional independents survive via custom install."
+          },
+          {
+            "when": "Jun 2024",
+            "title": "Krell closes",
+            "body": "Following the death of owner/CEO Rondi D'Agostino. Service resumes Mar 2025; son Kristofer awarded 70%+ Feb 2025. Dan D'Agostino — rebuilt under his own name — is selling $250K monoblocks into Dolby Atmos maximalists."
+          },
+          {
+            "when": "2024",
+            "title": "B&O publicly traded, struggling",
+            "body": "FY2023/24 revenue $402M — down from the 2007/08 peak."
+          }
+        ]
+      },
+      {
+        "type": "compare",
+        "id": "rhymes",
+        "eyebrow": "Even Rails → Smooth Tracks",
+        "title": "Where the eras rhyme",
+        "columns": [
+          "1978–1991",
+          "2014–2026"
+        ],
+        "rows": [
+          {
+            "category": "Mass Market Channels",
+            "a": "Japanese conglomerates (Sony, Matsushita, Pioneer, Yamaha, Kenwood, JVC, Sansui, Onkyo, Aiwa)",
+            "b": "Chinese Vendors + Global PE roll-ups",
+            "insight": "Different Flags, Identical Structural Pressure."
+          },
+          {
+            "category": "Specialty retail",
+            "a": "Tweeter · Magnolia Hi-Fi · Crutchfield · Regional Chains",
+            "b": "Magnolia absorbed into Best Buy · Buying Groups· Custom Install Survivors",
+            "insight": "Incumbents now dominate, access is non-trivial."
+          },
+          {
+            "category": "The Outlier",
+            "a": "Bang & Olufsen — peak ~$853M USD (≈ $1.25B in 2026 $)",
+            "b": "B&O — $402M USD: Rebuilding after abandoning Safe Harbor.",
+            "insight": "New management didn't recognize their beachhead and almost destroyed the brand."
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "id": "consolidation",
+        "eyebrow": "The Opportunity",
+        "title": "The Homogenization of the Premium Audio Market",
+        "lede": "Greatest Hits Product Strategies are rampant, Channel Distribution Partners are managed as Commercial Banking Clients",
+        "columns": [
+          "Acquirer",
+          "Brands acquired",
+          "Value"
+        ],
+        "numeric": [
+          2
+        ],
+        "rows": [
+          [
+            "Samsung Electronics",
+            "JBL, Harman Kardon, AKG, Mark Levinson, Revel, Lexicon, Infinity, Arcam, B&O Automotive, B&W, Denon, Marantz, Polk, Definitive, Classé, HEOS, Boston Acoustics",
+            "$8.35B"
+          ],
+          [
+            "Sony Interactive Entertainment",
+            "Audeze Headphones",
+            "undisclosed"
+          ],
+          [
+            "Bose Corp.",
+            "McIntosh, Sonus Faber, Audio Research, Wadia, Sumiko",
+            "undisclosed"
+          ],
+          [
+            "Gentex Corp.",
+            "Klipsch, Onkyo, Integra",
+            "$196M"
+          ],
+          [
+            "HSG (Hillhouse)",
+            "Marshall",
+            "$1.10B"
+          ],
+          [
+            "Cosonic Intelligent Tech",
+            "Beyerdynamic",
+            "$122M"
+          ],
+          [
+            "Barco (Belgium)",
+            "Focal, Naim Electronics",
+            "$135M"
+          ],
+          [
+            "Loewe",
+            "Cabasse Speakers",
+            "undisclosed"
+          ]
+        ],
+        "note": "Dates and source links are blank for all but the Harman transaction in the document. Worth filling before this goes public."
+      },
+      {
+        "type": "cards",
+        "id": "why-it-matters",
+        "eyebrow": "The Concept",
+        "title": "Why This Matters",
+        "lede": "AGF is built on a premise that runs counter to the dominant industry narrative: **stereo is not dead — it has never been properly implemented.** Every major audio innovation of the past 20 years (Dolby Atmos, multi-channel upmixing, object-based audio) has treated stereo as a constraint to escape. AGF treats stereo as the destination, refined to its highest form.",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Concept",
+            "title": "The Sweet Spot Problem",
+            "body": "Stereo inherently creates a narrow optimal listening position — the \"sweet spot.\" The entire home-theatre / multi-channel industry has responded by adding more speakers, more upmixing, and more processing to mask the limitation. This is brute force.\n\nAGF's l'Art codec takes the opposite approach: **eliminate the sweet spot from the rendering equation** rather than drowning it in channels. The result is a stable, immersive stereo soundfield that persists anywhere in the room, with no additional speakers, no extra processing overhead, and no compromise to the artist's intended mix."
+          },
+          {
+            "eyebrow": "Concept",
+            "title": "The Consolidation Opportunity",
+            "body": "Between 2000 and 2024, the audio industry underwent a wave of M&A that concentrated brands under corporate ownership — Samsung/Harman, B&O's restructuring, Bose's retreat, Sonos's locked-in ecosystem. These acquisitions **stranded premium brands inside corporate R&D silos** where the parent's incentives (scale, cross-sell, walled gardens) diverge from the enthusiast buyer's desires (openness, sound quality, build longevity).\n\nAGF's thesis: assemble the fragments that the consolidators left behind. Not by acquisition — by building a platform that independent brands, artists, and venues can adopt."
+          },
+          {
+            "eyebrow": "Concept",
+            "title": "Artist-First Economics",
+            "body": "The streaming era normalized a revenue split of fractions of a cent per play, controlled by labels and platforms. AGF's model inverts this: **artists own their stereo masters**, set their own virtual-ticket pricing, and retain a 50/50 split in perpetuity on broadcast-mixed performances — with the right to block any broadcast without cause.\n\nThe green room is not a metaphor: AGF's physical venues are designed so the consumer product is *discovered* through the artist and the venue, not pushed through a sales funnel."
+          },
+          {
+            "eyebrow": "Concept",
+            "title": "Retail as Community",
+            "body": "Apple's sterile boutiques defined the premium retail playbook for 20 years. AGF's alternative: **a venue that is first a performing-arts space**, second a flagship for the brand. The Front of House (bar + stage) generates foot traffic via live performances. The Balcony serves pros. The Green Room — hidden, appointment-only — is where the consumer product lives.\n\nThis inverts the standard retail funnel: discover the community first, discover the product second. The hard part. The whole point."
+          }
+        ]
+      },
+      {
+        "type": "metrics",
+        "id": "at-a-glance",
+        "eyebrow": "Overview",
+        "title": "At a Glance",
+        "lede": "A strategic move into global audio & consumer technology markets.",
+        "orbit": false,
+        "items": [
+          {
+            "value": "$4.2B",
+            "label": "TAM (Premium Audio)",
+            "conditions": "Global addressable market for premium home and personal audio"
+          },
+          {
+            "value": "12+",
+            "label": "Brand Acquisitions",
+            "conditions": "Key consolidation events mapped across B&O, Harman, Sonos, Bose, and others"
+          },
+          {
+            "value": "6",
+            "label": "Proprietary Technologies",
+            "conditions": "l'Art, stereOS, BT'N-Tech, l'espacI/O, FRC41, No-Nails"
+          },
+          {
+            "value": "50/50",
+            "label": "Artist Revenue Split",
+            "conditions": "In perpetuity on every broadcast-mixed performance"
+          }
+        ],
+        "note": "The $4.2B TAM and the \"12+\" acquisitions count come from the document's At-a-Glance block without a cited source. Treat as unverified until sourced."
+      },
+      {
+        "type": "prose",
+        "id": "summary",
+        "eyebrow": "Summary",
+        "title": "The thesis in three lines",
+        "body": "AGF positions at the intersection of premium audio, proprietary codec technology, and artist-first content distribution. The opportunity is defined by three converging factors: **wave of audio-industry M&A consolidation** that has stranded premium brands under corporate umbrellas, **unaddressed consumer demand** for genuine community-oriented physical retail, and a **patented acoustic rendering stack** (l'Art) that eliminates the sweet spot — a problem the entire industry has accepted as unsolvable.\n\nThe thesis: consolidate the fragments, build the platform, and serve the artists."
+      }
+    ]
+  }
+}

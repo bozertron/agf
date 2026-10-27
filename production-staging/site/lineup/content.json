@@ -1,0 +1,756 @@
+{
+  "slug": "lineup",
+  "intro": {
+    "headline": "Six products. One platform where it pays.",
+    "lede": "Optimized for time-to-market on a full line that stands up to scrutiny from channel interest. The lower price categories are filled with third-party partner product; we move upward and land our flagship just above Focal's consumer offering.",
+    "points": [
+      {
+        "eyebrow": "Ships first",
+        "title": "Over-Ear — Home Centric",
+        "body": "A dock that charges and feeds six pairs at once over RF, with Bluetooth as the fallback. Hardware about 80% complete, software about 70%. Four to six months to market."
+      },
+      {
+        "eyebrow": "Shared tooling",
+        "title": "Core-like small, soundbar, Symphony",
+        "body": "Three SKUs on one electronics platform. The Symphony is where the No-Nails process becomes visible: a single 8-inch woofer in a transmission line reaching below 30 Hz."
+      },
+      {
+        "eyebrow": "Halo",
+        "title": "The Instrument",
+        "body": "A pre-amp that presents as a measurement instrument, an audiophile reference and a mastering reference on one platform. Lands just above Focal while the Krell vacuum is open."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "6",
+        "label": "Products in the inaugural line",
+        "conditions": "Headphone, two all-in-ones, macro-system, flagship, earbud case"
+      },
+      {
+        "value": "4–6",
+        "unit": "mo",
+        "label": "First ship",
+        "conditions": "Over-Ear — Home Centric, ETL/FCC/CE budgeted at about $30K"
+      },
+      {
+        "value": ">5",
+        "unit": "K USD",
+        "label": "Flagship price",
+        "conditions": "The Instrument, just above Focal's consumer flagship"
+      }
+    ],
+    "metrics_note": "Prices, COGS and tooling figures are internal planning numbers from the document and are flagged as such in the deep dive.",
+    "quote": {
+      "text": "Why are AirPod cases filled with plastic? What if the case itself was the point, and the earbuds were an exponentially lower-power byproduct?",
+      "cite": "Wasted Real-Estate, from the document"
+    }
+  },
+  "deep": {
+    "headline": "The inaugural product line.",
+    "lede": "Every product with its specification as the document holds it. Status, pricing and timing are planning values and will change.",
+    "sections": [
+      {
+        "type": "cards",
+        "id": "the-line",
+        "eyebrow": "06 · The Lineup",
+        "title": "Six products",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "headphone",
+            "brass": true,
+            "title": "Over-Ear — Home Centric",
+            "pull": "A charging dock supporting 6 pairs of headphones concurrently with an RF connection defaulting to the dock. Single-action clean BT pairing. Remembers 6 devices.",
+            "body": "Hardware ~80% complete (refactor for aesthetic + control mods + 6-end-point charge QA). Software ~70% (l'Art algos + 6-end-point concurrent stream). Native USB-C high-res A2D, native 3.5mm analog. The home-centric headphone for households that need shared, frictionless premium listening.",
+            "list": [
+              "6-pair shared dock — household-first model",
+              "RF-default with BT fallback (latency + reliability)",
+              "Native USB-C high-res + native 3.5mm analog"
+            ],
+            "kv": [
+              [
+                "Status",
+                "development"
+              ],
+              [
+                "ASP",
+                "$599–$799"
+              ],
+              [
+                "TTM",
+                "4–6 mo"
+              ]
+            ],
+            "tags": [
+              "stereOS",
+              "BT'N-Tech",
+              "FRC41"
+            ]
+          },
+          {
+            "eyebrow": "speaker",
+            "brass": true,
+            "title": "Core-like All-in-One (Small)",
+            "pull": "Physically unobtrusive room-filling speaker. Slightly smaller than the original Core, bigger sound. Matte copper plated mass-loaded alloy + obsidian block emergent feedback UI.",
+            "body": "A spiritual sequel to the Mass Fidelity Core. Wave-field-synthesis lineage, now with the full l'Art stack and l'espacI/O room mapping. 8 transducer outputs (4 custom coaxial + 4 LF assist).",
+            "list": [
+              "Wave-field synthesis with sweet-spot elimination",
+              "Copper + obsidian emergent UI",
+              "8-transducer config (4 coaxial + 4 LF assist)"
+            ],
+            "kv": [
+              [
+                "Status",
+                "concept"
+              ],
+              [
+                "ASP",
+                "$799"
+              ],
+              [
+                "TTM",
+                "8–12 mo"
+              ]
+            ],
+            "tags": [
+              "l'Art",
+              "stereOS",
+              "BT'N-Tech",
+              "l'espacI/O",
+              "No-Nails"
+            ]
+          },
+          {
+            "eyebrow": "soundbar",
+            "brass": true,
+            "title": "Core-like All-in-One (Soundbar)",
+            "pull": "Primary soundbar in 50–100m² rooms. Higher power than the small variant. Same 8-transducer driver config (4 custom coaxial + 4 LF assist).",
+            "body": "Shared tooling and platform with the small Core-like variant. Mid-sandwich pricing slot in the runway, fed by the same l'Art + l'espacI/O stack.",
+            "list": [
+              "l'Art sweet-spot elimination across the full TV-room range",
+              "Shared platform with the small variant — line economics"
+            ],
+            "kv": [
+              [
+                "Status",
+                "concept"
+              ],
+              [
+                "ASP",
+                "$1,199–$1,499"
+              ],
+              [
+                "TTM",
+                "8–12 mo"
+              ]
+            ],
+            "tags": [
+              "l'Art",
+              "stereOS",
+              "BT'N-Tech",
+              "l'espacI/O",
+              "No-Nails"
+            ]
+          },
+          {
+            "eyebrow": "macro-system",
+            "brass": true,
+            "title": "The Symphony Macro-System",
+            "pull": "A historical rhyme on the mini-system fad of the 80s and 90s. Tall (150cm), under 20cm deep, 36cm wide. True full-range high-efficiency. Three application variants: In-Room, On-Wall (sconce-inspired), In-Wall (pre-primed paper).",
+            "body": "Sub-bass that dedicated premium subwoofers can't reach, at low volume. The first product where the No-Nails engineering process is fully visible: a single 8\" woofer transmission-line tuned to reach below 30Hz, beryllium-alloy HF mounted in dustcap position, every domain contributing modestly.",
+            "list": [
+              "Transmission-line single-woofer down to <30Hz at low SPL",
+              "No-Nails engineering process — every discipline contributes modestly",
+              "Three variants (In-Room, On-Wall sconce, In-Wall paper) on shared platform",
+              "PR stunt: $29,990 review tier, corrected to $2,990 retail"
+            ],
+            "kv": [
+              [
+                "Status",
+                "concept"
+              ],
+              [
+                "ASP",
+                "$2,990"
+              ],
+              [
+                "TTM",
+                "8–12 mo"
+              ]
+            ],
+            "tags": [
+              "BT'N-Tech",
+              "l'espacI/O",
+              "No-Nails"
+            ]
+          },
+          {
+            "eyebrow": "flagship",
+            "brass": true,
+            "title": "The Instrument — Flagship Reference",
+            "pull": "A pre-amp that presents as an acoustic measurement instrument, an aspirational audiophile reference, AND a mixing/mastering reference. Same platform, different connectors and housing.",
+            "body": "Boutique semiconductors with a Burr-Brown-like signature. A high-margin halo product spec'd to permit the ongoing development and refinement of the l'Art codecs. Pro-tier UI empowers live-mixing techs to submit innovations (royalty-paid). Adjacency: just above Focal's consumer flagship (~$5K USD).",
+            "list": [
+              "Three-mode platform: audiophile / pro / measurement",
+              "Boutique-semiconductor Burr-Brown-class signature",
+              "Companion GaN mono-block + FPGA + transmission-line sub",
+              "Royalty-paid pro-tier innovation UI"
+            ],
+            "kv": [
+              [
+                "Status",
+                "concept"
+              ],
+              [
+                "ASP",
+                "$5,000–$6,500"
+              ],
+              [
+                "TTM",
+                "8–12 mo"
+              ]
+            ],
+            "tags": [
+              "l'Art",
+              "stereOS",
+              "BT'N-Tech",
+              "l'espacI/O",
+              "FRC41",
+              "No-Nails"
+            ]
+          },
+          {
+            "eyebrow": "earbud",
+            "brass": true,
+            "title": "Wasted Real-Estate",
+            "pull": "Why are AirPod cases filled with plastic? Look at the physical volume when closed — not a whole lot different from a small iPhone. What if the case itself was the point, and the earbuds were an exponentially lower-power byproduct?",
+            "body": "Originally concepted at Dolby. Apple shut it down — threatened to pull Dolby's licensing if the headphone program continued. The opportunity is back. Vetted, feasibility-positive, cost-positive, market-positive, channel-probe-positive.",
+            "list": [
+              "Case is the point — earbuds are a byproduct",
+              "FRC41 externalization (sweet-spot in your head)",
+              "Originally concepted at Dolby; Apple suppressed it",
+              "Channel-probe-positive at 100+ retail partners"
+            ],
+            "kv": [
+              [
+                "Status",
+                "concept"
+              ],
+              [
+                "ASP",
+                "TBD"
+              ],
+              [
+                "TTM",
+                "TBD"
+              ]
+            ],
+            "tags": [
+              "FRC41",
+              "stereOS"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "figures",
+        "id": "renders",
+        "eyebrow": "Renders",
+        "title": "What exists on the bench",
+        "lede": "CAD renders from the repository, shown as work in progress. No product photography exists yet.",
+        "items": [
+          {
+            "src": "assets/renders/symphony-macro-system/symphony-tower-walnut-front.png",
+            "caption": "Symphony Macro-System, walnut. 150 cm tall, 36 cm wide, under 20 cm deep."
+          },
+          {
+            "src": "assets/renders/symphony-macro-system/symphony-tower-copper-front.png",
+            "caption": "Symphony, brushed copper panel."
+          },
+          {
+            "src": "assets/renders/symphony-macro-system/symphony-tower-green-brass-front.png",
+            "caption": "Symphony, forest green with brass."
+          },
+          {
+            "src": "assets/renders/symphony-macro-system/symphony-tower-black-brass-trim-front-angle-61.jpg",
+            "caption": "Symphony, black with brass edge trim."
+          },
+          {
+            "src": "assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-front-three-quarter-135.jpg",
+            "caption": "Over-Ear — Home Centric, matte black with copper trim, on a head form."
+          },
+          {
+            "src": "assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-earcup-closeup-136.jpg",
+            "caption": "Over-Ear, earcup detail."
+          },
+          {
+            "src": "assets/concept-boards/wasted-real-estate-earbud-case-board.webp",
+            "caption": "Wasted Real-Estate concept board (AI-generated board; copy transcribed in assets/ASSETS.md)."
+          }
+        ],
+        "note": "No renders exist yet for the Core-like all-in-ones or the Instrument. The Symphony folder holds two overlapping render sets (numbered JPGs from product-renders, transparent PNGs from the old site); both are kept until you pick."
+      },
+      {
+        "type": "figures",
+        "id": "also-on-the-bench",
+        "eyebrow": "Not in the document",
+        "title": "Also on the bench",
+        "lede": "Four more objects have renders in the repository but no entry in the brand document: a studio microphone, a desktop broadcast microphone, a keyboard-format control surface and a desktop stereo amplifier.",
+        "_assumed": true,
+        "items": [
+          {
+            "src": "assets/renders/studio-microphone/studio-mic-shockmount-front-angle-202.jpg",
+            "caption": "Large-diaphragm studio microphone in a wire shock mount, AGF mark on the crossbar."
+          },
+          {
+            "src": "assets/renders/broadcast-microphone/broadcast-mic-greybox-front-angle-1.png",
+            "caption": "Desktop broadcast microphone on a weighted base (grey-box CAD)."
+          },
+          {
+            "src": "assets/renders/control-surface/control-surface-greybox-angle-1.png",
+            "caption": "Keyboard-format control surface with hinged encoder and fader strip (grey-box CAD)."
+          },
+          {
+            "src": "assets/renders/desktop-stereo-amp/desktop-amp-black-front-65.jpg",
+            "caption": "Desktop stereo amplifier, black faceplate, walnut cheeks."
+          },
+          {
+            "src": "assets/renders/desktop-stereo-amp/desktop-amp-silver-front-agf-logo-small-jr.png",
+            "caption": "Desktop stereo amplifier, silver faceplate."
+          }
+        ],
+        "note": "Decide whether these are products, the l'Art Production line, or explorations. They are shown so nothing is lost; cutting is one line in content.json."
+      },
+      {
+        "type": "spec",
+        "id": "spec-over-ear-home-centric",
+        "eyebrow": "Specification · headphone",
+        "title": "Over-Ear — Home Centric",
+        "caption": "A charging dock supporting 6 pairs of headphones concurrently with an RF connection defaulting to the dock. Single-action clean BT pairing. Remembers 6 devices.",
+        "rows": [
+          [
+            "Drivers",
+            "2× 40 mm beryllium-coated dynamic",
+            "",
+            ""
+          ],
+          [
+            "Wireless",
+            "RF AGF-dock (l'Art); Bluetooth 5.3 (SBC, AAC, aptX, aptX HD, LDAC)",
+            "",
+            ""
+          ],
+          [
+            "Wired",
+            "USB-C A2D high-res, 3.5mm analog",
+            "",
+            ""
+          ],
+          [
+            "Finish",
+            "Matte alloy with leather-wrapped headband",
+            "",
+            "aluminum alloy, memory-foam ear cushions, leather"
+          ],
+          [
+            "Battery",
+            "30",
+            "h",
+            "Dock RF + USB-C"
+          ],
+          [
+            "Comparables",
+            "AirPods Max, Sony WH-1000XM5, B&O Beoplay HX",
+            "",
+            "Below Apple flagship; above mass-market premium"
+          ],
+          [
+            "COGS",
+            "$100–$150",
+            "",
+            "internal"
+          ],
+          [
+            "ASP",
+            "$599–$799",
+            "",
+            "internal until priced"
+          ],
+          [
+            "Time to market",
+            "4–6 mo",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "V1: 6-pair dock with RF default to dock, single-action BT clean pairing, remembers 6 paired devices, native USB-C high-res A2D + native 3.5mm analog. **V2 refactor in 8–12 months** ($120K tooling). Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU."
+      },
+      {
+        "type": "spec",
+        "id": "spec-core-all-in-one-small",
+        "eyebrow": "Specification · speaker",
+        "title": "Core-like All-in-One (Small)",
+        "caption": "Physically unobtrusive room-filling speaker. Slightly smaller than the original Core, bigger sound. Matte copper plated mass-loaded alloy + obsidian block emergent feedback UI.",
+        "rows": [
+          [
+            "Drivers",
+            "4× custom coaxial, 4× LF assist woofer",
+            "",
+            ""
+          ],
+          [
+            "Amplification",
+            "Class D, 8 channels",
+            "",
+            ""
+          ],
+          [
+            "Wireless",
+            "WiFi (l'Art); Bluetooth 5.3 (SBC, AAC, aptX, aptX HD, LDAC)",
+            "",
+            ""
+          ],
+          [
+            "Finish",
+            "Matte copper plated mass-loaded alloy",
+            "",
+            "mass-loaded alloy, matte copper plating, obsidian block (UI)"
+          ],
+          [
+            "Comparables",
+            "Naim Mu-so, B&O Beosound, Sonos Era 300",
+            "",
+            "Premium all-in-one — below Naim Mu-so"
+          ],
+          [
+            "COGS",
+            "$100–$150",
+            "",
+            "internal"
+          ],
+          [
+            "ASP",
+            "$799",
+            "",
+            "internal until priced"
+          ],
+          [
+            "Time to market",
+            "8–12 mo",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "Electronics 80% (power supply + l'Art module selection). Mechanical 0%+ (ID fine-tune, tooling, CFM). Physical UI 90%. Software 70%+. ETL pre-approved PS path. Certifications budgeted at **~$30K combined (ETL/FCC/CE)**."
+      },
+      {
+        "type": "spec",
+        "id": "spec-core-all-in-one-soundbar",
+        "eyebrow": "Specification · soundbar",
+        "title": "Core-like All-in-One (Soundbar)",
+        "caption": "Primary soundbar in 50–100m² rooms. Higher power than the small variant. Same 8-transducer driver config (4 custom coaxial + 4 LF assist).",
+        "rows": [
+          [
+            "Drivers",
+            "4× custom coaxial, 4× LF assist woofer",
+            "",
+            ""
+          ],
+          [
+            "Amplification",
+            "Class D, 8 channels",
+            "",
+            ""
+          ],
+          [
+            "Wireless",
+            "WiFi (l'Art); Bluetooth 5.3 (SBC, AAC, aptX, aptX HD, LDAC)",
+            "",
+            ""
+          ],
+          [
+            "Wired",
+            "HDMI eARC PCM/Atmos passthrough",
+            "",
+            ""
+          ],
+          [
+            "Finish",
+            "Matte copper plated mass-loaded alloy",
+            "",
+            "mass-loaded alloy, matte copper plating, obsidian block (UI)"
+          ],
+          [
+            "Comparables",
+            "Sonos Arc, Sennheiser AMBEO, B&O Beosound Theatre",
+            "",
+            "Above Sonos Arc, below B&O Beosound Theatre"
+          ],
+          [
+            "COGS",
+            "$100–$150",
+            "",
+            "internal"
+          ],
+          [
+            "ASP",
+            "$1,199–$1,499",
+            "",
+            "internal until priced"
+          ],
+          [
+            "Time to market",
+            "8–12 mo",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "Shared tooling with small variant. Mid-sandwich price position in the runway. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU."
+      },
+      {
+        "type": "spec",
+        "id": "spec-symphony-macro-system",
+        "eyebrow": "Specification · macro-system",
+        "title": "The Symphony Macro-System",
+        "caption": "A historical rhyme on the mini-system fad of the 80s and 90s. Tall (150cm), under 20cm deep, 36cm wide. True full-range high-efficiency. Three application variants: In-Room, On-Wall (sconce-inspired), In-Wall (pre-primed paper).",
+        "rows": [
+          [
+            "Drivers",
+            "1× 203 mm woofer, 1× beryllium-alloy tweeter",
+            "",
+            ""
+          ],
+          [
+            "Frequency response",
+            "28–22000",
+            "Hz",
+            "design target"
+          ],
+          [
+            "Amplification",
+            "Class D",
+            "",
+            ""
+          ],
+          [
+            "Enclosure",
+            "transmission-line",
+            "",
+            ""
+          ],
+          [
+            "Dimensions",
+            "1500 × 360 × 200",
+            "mm",
+            "H × W × D"
+          ],
+          [
+            "Finish",
+            "Variant-dependent (cabinet, sconce-mount, in-wall paper)",
+            "",
+            "transmission-line cabinet, beryllium-alloy HF, 8\" woofer cone"
+          ],
+          [
+            "Variants",
+            "In-Room · On-Wall · In-Wall",
+            "",
+            "Free-standing 150cm tower · Sconce-inspired wall mount · Pre-primed paper surface, ready for the enviro-design team's finish coat"
+          ],
+          [
+            "Comparables",
+            "NAD 3020 era references, Wharfedale Linton, JBL L100 Classic",
+            "",
+            "$2,990 retail with $29,990 review-press anchor"
+          ],
+          [
+            "COGS",
+            "$100–$200",
+            "",
+            "internal"
+          ],
+          [
+            "ASP",
+            "$2,990",
+            "",
+            "internal until priced"
+          ],
+          [
+            "Time to market",
+            "8–12 mo",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "CoGS ~$200 at low-1000s; refactors to <$100. **PR stunt: Symphony submitted for review at $29,990 first, corrected post-submission to $2,990 retail** — anchor the price ceiling, then drop the ladder. NAD 3020 anchor: $89 in 1978 ≈ $432 in 2026 — the bargain that minted a global brand. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU."
+      },
+      {
+        "type": "spec",
+        "id": "spec-the-instrument",
+        "eyebrow": "Specification · flagship",
+        "title": "The Instrument — Flagship Reference",
+        "caption": "A pre-amp that presents as an acoustic measurement instrument, an aspirational audiophile reference, AND a mixing/mastering reference. Same platform, different connectors and housing.",
+        "rows": [
+          [
+            "Amplification",
+            "Class GaN, 2000 W per channel",
+            "",
+            "GaN mono-block (companion)"
+          ],
+          [
+            "DAC",
+            "FPGA",
+            "",
+            ""
+          ],
+          [
+            "Wireless",
+            "WiFi (l'Art)",
+            "",
+            ""
+          ],
+          [
+            "Wired",
+            "XLR balanced analog, AES/EBU digital, USB high-res",
+            "",
+            ""
+          ],
+          [
+            "Finish",
+            "Instrument-grade machined housing",
+            "",
+            "boutique semiconductors, Burr-Brown-class DAC silicon, machined alloy chassis"
+          ],
+          [
+            "Variants",
+            "Audiophile Reference · Pro Reference · Measurement Instrument",
+            "",
+            "Consumer-flagship connector set + finish · Mixing/mastering connector set + UI · Lab/test connector set + calibrated reference"
+          ],
+          [
+            "Comparables",
+            "Focal consumer flagship (~$5K), D'Agostino monoblocks, Krell halo references",
+            "",
+            "Just above Focal consumer flagship (~$5K USD)"
+          ],
+          [
+            "ASP",
+            "$5,000–$6,500",
+            "",
+            "internal until priced"
+          ],
+          [
+            "Time to market",
+            "8–12 mo",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "Companions: 2000W GaN mono-block, Gowin FPGA processor, transmission-line sub. Pro tier UI empowers live-mixing techs to submit innovations (royalty-paid). Krell — the original high-current halo competitor — closed Jun 2024 (Rondi D'Agostino's passing) and is reopening through 2025. The vacuum is real."
+      },
+      {
+        "type": "spec",
+        "id": "spec-wasted-real-estate",
+        "eyebrow": "Specification · earbud",
+        "title": "Wasted Real-Estate",
+        "caption": "Why are AirPod cases filled with plastic? Look at the physical volume when closed — not a whole lot different from a small iPhone. What if the case itself was the point, and the earbuds were an exponentially lower-power byproduct?",
+        "rows": [
+          [
+            "Drivers",
+            "2× balanced-armature",
+            "",
+            ""
+          ],
+          [
+            "Wireless",
+            "Bluetooth 5.3 (SBC, AAC, aptX, aptX HD, LDAC); proprietary (l'Art)",
+            "",
+            ""
+          ],
+          [
+            "Finish",
+            "Case-as-product premium materials",
+            "",
+            "machined alloy case, precision-fit earbud byproduct"
+          ],
+          [
+            "Battery",
+            "8",
+            "h",
+            "Case (case is the point)"
+          ],
+          [
+            "Comparables",
+            "Apple AirPods Pro, Sony WF-1000XM5, Bose QuietComfort Ultra Earbuds",
+            "",
+            "TBD — premium case-as-product positioning"
+          ],
+          [
+            "Time to market",
+            "TBD",
+            "",
+            "ETL, FCC, CE"
+          ]
+        ],
+        "note": "Y1 target: 1,000 pcs/month globally with 100+ retail partners (100pcs/mo in 2 PoC venues). Comparable: Focal's flagship reference hits 1,000pcs/mo with focused rep firm. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU."
+      },
+      {
+        "type": "table",
+        "id": "runway",
+        "eyebrow": "The runway, at a glance",
+        "title": "Time to market, cost and price",
+        "columns": [
+          "Product",
+          "TTM",
+          "COGS",
+          "ASP",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "Over-Ear Home",
+            "4–6 mo",
+            "$100–$150",
+            "$599–$799",
+            "V2 refactor in 8–12 mo"
+          ],
+          [
+            "Core-like (small)",
+            "8–12 mo",
+            "$100–$150",
+            "$799",
+            "ETL pre-approved PS"
+          ],
+          [
+            "Core-like (soundbar)",
+            "8–12 mo",
+            "$100–$150",
+            "$1,199–$1,499",
+            "Shared tooling, mid-sandwich"
+          ],
+          [
+            "Symphony Macro",
+            "8–12 mo",
+            "~$200 (refactor <$100)",
+            "$2,990",
+            "Reviewed at $29,990 first as PR stunt"
+          ],
+          [
+            "The Instrument",
+            "8–12 mo",
+            "halo",
+            "just >$5K",
+            "Above Focal consumer flagship"
+          ],
+          [
+            "Wasted Real-Estate",
+            "TBD",
+            "TBD",
+            "TBD",
+            "Y1 1,000pcs/mo target globally"
+          ]
+        ],
+        "note": "Internal planning table. Decide whether COGS stays on any public page."
+      }
+    ]
+  }
+}

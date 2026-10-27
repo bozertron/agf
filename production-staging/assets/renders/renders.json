@@ -1,0 +1,962 @@
+[
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-trim-woofer-closeup-60.jpg",
+    "original_path": "product-renders/untitled.60.jpg",
+    "product": "symphony-macro-system",
+    "kind": "detail",
+    "description": "Close-up of the single woofer on the black matte front baffle, brass edge trim, plain black surround ring; flat mauve-grey studio background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 296503
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-trim-front-angle-61.jpg",
+    "original_path": "product-renders/untitled.61.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Full slim floor-standing tower, black matte front with brass edge trim, hexagonal honeycomb grille at top, plain black woofer surround; front three-quarter angle; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 191079
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-trim-brass-ring-front-angle-66.jpg",
+    "original_path": "product-renders/untitled.66.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Full tower, black front with brass edge trim AND brass woofer surround ring, honeycomb grille at top; front three-quarter angle; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 189046
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-front-angle-67.jpg",
+    "original_path": "product-renders/untitled.67.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Full tower, black front and dark side edges (no brass trim), brass woofer surround ring, honeycomb grille at top; front three-quarter angle; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 145500
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-woofer-closeup-68.jpg",
+    "original_path": "product-renders/untitled.68.jpg",
+    "product": "symphony-macro-system",
+    "kind": "detail",
+    "description": "Close-up of the woofer with brass surround ring on black front baffle, dark side edge; flat mauve-grey studio background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 302169
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-black-brass-ring-front-angle-alt-69.jpg",
+    "original_path": "product-renders/untitled.69.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Same black tower with brass woofer ring as 67 from a slightly more rotated camera angle; honeycomb grille at top; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 146386
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-copper-front-woofer-closeup-71.jpg",
+    "original_path": "product-renders/untitled.71.jpg",
+    "product": "symphony-macro-system",
+    "kind": "detail",
+    "description": "Close-up of the woofer on a brushed copper-toned front panel with black surround ring and black frame; flat mauve-grey studio background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 374340
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-copper-front-angle-99.jpg",
+    "original_path": "product-renders/untitled.99.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Full tower, forest-green metallic front panel with copper woofer ring and copper edge trim, honeycomb grille at top; front three-quarter angle; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 204153
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-green-copper-woofer-closeup-100.jpg",
+    "original_path": "product-renders/untitled.100.jpg",
+    "product": "symphony-macro-system",
+    "kind": "detail",
+    "description": "Close-up of the woofer in a copper ring on the forest-green front panel, copper edge trim; flat mauve-grey studio background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 397591
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-front-angle-101.jpg",
+    "original_path": "product-renders/untitled.101.jpg",
+    "product": "symphony-macro-system",
+    "kind": "finished",
+    "description": "Full tower, walnut-veneer front panel with black woofer surround and black frame, honeycomb grille at top; front three-quarter angle; flat mauve-grey studio background.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 165922
+  },
+  {
+    "path": "production-staging/assets/renders/symphony-macro-system/symphony-tower-walnut-woofer-closeup-102.jpg",
+    "original_path": "product-renders/untitled.102.jpg",
+    "product": "symphony-macro-system",
+    "kind": "detail",
+    "description": "Close-up of the woofer on the walnut-veneer front panel showing wood grain, black surround and frame; flat mauve-grey studio background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 452084
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-angle.png",
+    "original_path": "product-renders/amp-no-bg/Angle.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Front-left high three-quarter angle; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 430519
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-rear-panel.png",
+    "original_path": "product-renders/amp-no-bg/Back.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Rear panel view showing power rocker, 4 copper RCA/binding posts, HDMI, optical and speaker terminals; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 225890
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-bottom.png",
+    "original_path": "product-renders/amp-no-bg/Bottom.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Bottom-up plan view, plain underside with the four wood-grained knobs protruding at the top edge; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 89279
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-front.png",
+    "original_path": "product-renders/amp-no-bg/Front.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Straight-on front elevation, massFIDELITY wordmark on the front lip and copper knob in the corner; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 167320
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-left-side.png",
+    "original_path": "product-renders/amp-no-bg/Left Side.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Left side elevation showing the sloped top and a knurled copper knob at the left end; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 121151
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-right-side.png",
+    "original_path": "product-renders/amp-no-bg/Right Side.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Right side elevation (mirror of the left view); transparent (alpha) background; finished render. Inferred from sibling views, not individually opened.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 99481
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-top.png",
+    "original_path": "product-renders/amp-no-bg/Top.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded USB audio DAC/amp (founder prior company), black chassis with copper control; Straight-down plan view, USB Audio label and large copper rotary control bottom-right, four wood-grained knobs on the rear edge; transparent (alpha) background; finished render.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 559559
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-gold-knob-ui-label-plan-159.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.159.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "detail",
+    "description": "massFIDELITY USB DAC finish study: top-down view of the charcoal top face with the full input-menu legend (Wireless Receive/Transmit/Pairing, Analog One/Two, USB Audio, S/PDIF Coax/Opt, Video, EQ; Volume Up/Down, Mute) and brass-gold rotary control; four black knobs on rear edge; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 379195
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-black-gold-knob-ui-labels-angle-162.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.162.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: black chassis, gold rotary control, input-menu legend printed on top; high three-quarter angle; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 273976
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-black-gold-knob-angle-163.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.163.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: black chassis, gold rotary control, single USB Audio label; high three-quarter angle; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 294660
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-green-marble-top-black-knob-angle-164.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.164.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: green-veined dark marble top, dark wood sides, black rotary control; three-quarter angle; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 418892
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-blue-acrylic-pink-top-silver-knob-angle-172.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.172.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: translucent blue acrylic sides, pink top panel, silver rotary control; three-quarter angle, larger framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 418737
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-blue-acrylic-pink-top-silver-knob-angle-small-173.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.173.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same blue acrylic/pink/silver finish as 172, smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 326512
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-greybox-angle-178.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.178.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "greybox",
+    "description": "massFIDELITY USB DAC finish study: untextured mid-grey clay model with no accent colours, large framing, three-quarter angle; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 353804
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-greybox-angle-small-179.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.179.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "greybox",
+    "description": "massFIDELITY USB DAC finish study: untextured mid-grey clay model, same as 178 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 263149
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-green-gold-base-gold-knob-angle-184.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.184.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: dark green top and sides, gold base trim, gold rotary control; three-quarter angle, large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 468731
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-green-gold-base-gold-knob-angle-small-185.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.185.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same green/gold finish as 184 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 322004
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-green-pink-top-gold-knob-angle-186.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.186.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: dark green sides with pink/magenta top panel, gold rotary control; three-quarter angle, large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 551182
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-green-pink-top-gold-knob-angle-small-187.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.187.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same green/pink/gold finish as 186 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 359084
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-dark-marble-copper-veins-copper-knob-angle-190.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.190.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: dark brown marble with copper veining on top and sides, copper rotary control; three-quarter angle, large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 572755
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-dark-marble-copper-veins-copper-knob-angle-small-191.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.191.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same dark marble/copper finish as 190 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 420264
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-dark-marble-copper-veins-copper-knob-angle-alt-192.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.192.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: dark marble with copper veining, copper rotary control; large framing, near-identical to 190 with darker lower body; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 575241
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-dark-marble-copper-veins-copper-knob-angle-alt-small-193.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.193.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same finish as 192 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 422635
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-marble-sides-dark-top-copper-knob-angle-small-198.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.198.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: black marble sides with copper veining, dark charcoal-green top, copper rotary control; smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 321558
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-marble-sides-dark-top-copper-knob-angle-199.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.199.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: black marble sides with copper veining, dark charcoal-green top, hammered copper rotary control and massFIDELITY wordmark; large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 417147
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-white-sides-gold-knob-angle-208.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.208.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: white lacquer/marble sides, dark charcoal top, gold rotary control; large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 392495
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-white-sides-gold-knob-angle-small-209.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.209.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: same white/dark/gold finish as 208 at smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 293612
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-white-sides-gold-knob-angle-alt-210.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.210.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: white sides, dark charcoal top, gold rotary control; large framing, slightly different camera than 208; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 393360
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-greybox-charcoal-angle-small-216.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.216.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "greybox",
+    "description": "massFIDELITY USB DAC finish study: untextured dark charcoal clay model with no accent colour, smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 244638
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-greybox-charcoal-angle-217.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.217.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "greybox",
+    "description": "massFIDELITY USB DAC finish study: untextured dark charcoal clay model with no accent colour, large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 318155
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-angle-small-220.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.220.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with polished copper rotary control; smaller framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 255248
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-angle-221.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.221.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with polished copper rotary control; large framing; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 337242
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-angle-alt-222.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.222.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with polished copper rotary control; large framing, slightly different camera than 221; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 367108
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-angle-alt-small-223.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.223.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with polished copper rotary control; smaller framing, same camera as 222; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 269025
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-rear-ports-angle-224.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.224.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with copper control seen from the rear-left, rear connector row (copper posts, HDMI, optical, speaker terminals) visible; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 225644
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-low-side-angle-225.jpg",
+    "original_path": "product-renders/amp-w-bg/untitled.225.jpg",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY USB DAC finish study: charcoal body with copper control, low side camera, knurled copper knob visible at the right end; grey studio floor/backdrop.",
+    "width": 1920,
+    "height": 1083,
+    "bytes": 183496
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-labels-usb-in-se-out-519.png",
+    "original_path": "product-renders/broadcast-eb/untitled.519.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view, legend with \"USB Audio Digital Input\" and \"Single-Ended Analog Output\" highlighted, mid-grey background, no port end visible; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 305603
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-labels-usb-in-se-out-ports-520.png",
+    "original_path": "product-renders/broadcast-eb/untitled.520.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view, same highlighted legend, port end panel (4 round jacks + USB-C) visible at top, light-grey background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 380167
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-labels-full-legend-521.png",
+    "original_path": "product-renders/broadcast-eb/untitled.521.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view, full legend (Bluetooth LE/Classic, USB, single-ended, differential in/out), dark-grey background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 322274
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-angle-closeup-labels-ports-522.png",
+    "original_path": "product-renders/broadcast-eb/untitled.522.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "detail",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: close high oblique crop of the rotated full legend, copper slot and the two-jack plus USB-C port end; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 620777
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-labels-full-legend-ports-523.png",
+    "original_path": "product-renders/broadcast-eb/untitled.523.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view, full legend plus port end panel at top, light-grey background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 399617
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-plain-no-labels-524.png",
+    "original_path": "product-renders/broadcast-eb/untitled.524.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view with no legend text, just the copper slot control and trim, dark-grey background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 299896
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-top-plain-no-labels-ports-525.png",
+    "original_path": "product-renders/broadcast-eb/untitled.525.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: top-down view with no legend text, port end panel (4 round jacks + USB-C) at top, light-grey background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 374485
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-angle-port-end-526.png",
+    "original_path": "product-renders/broadcast-eb/untitled.526.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: low three-quarter view of the port end: four round jacks around a central USB-C, copper slot on top; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 380871
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-angle-port-end-light-bg-527.png",
+    "original_path": "product-renders/broadcast-eb/untitled.527.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "finished",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: three-quarter view of the opposite port end (two jacks, USB-C, two jacks), copper slot on top, very light background; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 488524
+  },
+  {
+    "path": "production-staging/assets/prior-work/mass-fidelity/mass-fidelity-portable-dac-copper-slot-control-closeup-528.png",
+    "original_path": "product-renders/broadcast-eb/untitled.528.png",
+    "product": "prior-work/mass-fidelity",
+    "kind": "detail",
+    "description": "massFIDELITY-branded portable DAC/headphone amp, black body with copper trim and copper slot control: extreme close-up of the polished copper slot control and massFIDELITY wordmark; finished render.",
+    "width": 1280,
+    "height": 719,
+    "bytes": 676761
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-glass-dome-walnut-copper-circuitry-06dd7cc9.jpeg",
+    "original_path": "product-renders/media-1/_06dd7cc9-0c9b-4058-998e-956376e93d20.jpeg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Glass cloche dome over a walnut-and-copper circuit assembly on a marble disc and stepped walnut base, warm backlight. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 112804
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-copper-knob-marble-walnut-macro-1363a689.jpg",
+    "original_path": "product-renders/media-1/_1363a689-88b8-4cd5-a600-f5442a67c8bf.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Macro of a large copper knob on a white marble top over a walnut body with small round sockets. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 63218
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-glass-dome-cream-tentacle-cables-5da38c28.jpeg",
+    "original_path": "product-renders/media-1/_5da38c28-bc6c-409b-bd64-4a60d751b315.jpeg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Surreal glass dome over a walnut chassis with cream tentacle-like cables and a glass bulb, on a white marble plinth, black background. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 101323
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-glass-cube-copper-piping-6f82205a.jpeg",
+    "original_path": "product-renders/media-1/_6f82205a-393e-4692-957d-5d253a18b63a.jpeg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Transparent glass/acrylic cube containing copper piping, spheres and boards on a walnut base over marble. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 105942
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-marble-inset-twin-copper-cylinders-8bf14bd3.jpg",
+    "original_path": "product-renders/media-1/_8bf14bd3-980e-40f1-b6f0-ca183f292d01.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): High-angle view of a marble slab inset in a dark walnut box with two copper cylinders, dramatic warm lighting. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 73812
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-twin-marble-copper-columns-walnut-plinth-9dcc8dfa.jpg",
+    "original_path": "product-renders/media-1/_9dcc8dfa-15a7-4086-ba94-a1daa1a6762e.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Two upright marble-and-walnut cylinders with copper edge and copper bridge, on a walnut plinth over marble. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 60068
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-glass-sphere-copper-wire-loops-9ed8eb75.jpeg",
+    "original_path": "product-renders/media-1/_9ed8eb75-de38-4090-a769-8d8f1d9949a5.jpeg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Clear glass sphere containing looping copper wire and components on a marble block, blue-grey background. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 115867
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-marble-cabinet-copper-knob-rows-9fda7216.jpg",
+    "original_path": "product-renders/media-1/_9fda7216-64a2-42ea-8356-792bdbd36d6f.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Frontal view of a marble-sided cabinet with stacked copper and walnut panels and rows of copper knobs, blue-grey background. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 82858
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-glass-case-marble-tree-sculpture-afbb0e15.jpeg",
+    "original_path": "product-renders/media-1/_afbb0e15-d628-40f2-8fa1-54bfd02c3a2c.jpeg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Glass-fronted walnut case holding a sculptural white marble tree with copper and glass fittings, on a dark marble plinth. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 110798
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-walnut-marble-base-lit-copper-tubes-bc39217f.jpg",
+    "original_path": "product-renders/media-1/_bc39217f-65d7-4c08-8bfe-ab10e1428d31.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Walnut-topped marble base with two internally lit copper tube cylinders, valve-amp feel. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 76411
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-backlit-marble-panel-walnut-frame-cylinder-c2111963.jpg",
+    "original_path": "product-renders/media-1/_c2111963-e5ad-4519-90b5-261f426de65d.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Recessed walnut frame with a backlit white marble panel and a single copper-and-black cylinder, reflective surface. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 61064
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-walnut-panel-marble-inlay-twin-copper-cylinders-cd660305.jpg",
+    "original_path": "product-renders/media-1/_cd660305-e6d5-47b0-a2dc-8505c4e9ba93.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Square walnut panel with marble inlay, two copper cylinders and a central black lens/knob, pink-toned background. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 75678
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-walnut-copper-column-corner-closeup-e73823b6.jpg",
+    "original_path": "product-renders/media-1/_e73823b6-80ad-419e-bd99-019112e009f0.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): Corner close-up of a slim walnut-and-copper vertical column on a marble base with two black knobs at its foot. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 66115
+  },
+  {
+    "path": "production-staging/assets/concepts/material-moods/concept-marble-slab-copper-barrel-inset-fc16c2e6.jpg",
+    "original_path": "product-renders/media-1/_fc16c2e6-7f88-4880-a6ac-095caad8a91f.jpg",
+    "product": "concepts/material-moods",
+    "kind": "concept",
+    "description": "AI-generated material/mood concept (small watermark bottom-left, walnut / copper / marble palette): White marble slab with rounded copper barrel/hinge-like cylinders inset and copper edge banding, on marble. Not a product render.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 73166
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-shockmount-front-angle-closeup-197.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.197.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: close crop from front-left three-quarter, round slotted grille on the capsule, red record LED on crossbar, grey gradient background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 233633
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-shockmount-rear-closeup-198.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.198.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: close rear view, USB-C port on the crossbar and connector on the back of the capsule, light-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 186366
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-boom-arm-rear-full-199.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.199.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: full view from behind on a black two-joint desk boom arm with round weighted base, light-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 93309
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-boom-arm-front-full-200.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.200.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: full front view on the black desk boom arm and round base, grille facing camera, mid-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 92196
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-shockmount-front-closeup-201.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.201.jpg",
+    "product": "studio-microphone",
+    "kind": "detail",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: tight frontal close-up of grille, shock-mount wires and crossbar controls; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 177351
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-shockmount-front-angle-202.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.202.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: front three-quarter from the right, capsule barrel visible, close crop, light-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 204662
+  },
+  {
+    "path": "production-staging/assets/renders/studio-microphone/studio-mic-boom-arm-side-angle-dark-bg-203.jpg",
+    "original_path": "product-renders/mic/MIC _ ARM.203.jpg",
+    "product": "studio-microphone",
+    "kind": "finished",
+    "description": "Large-diaphragm studio microphone in a chrome wire-sphere shock mount, black crossbar with AGF logo, brass stem: full side angle on the boom arm and base, dark-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 90609
+  },
+  {
+    "path": "production-staging/assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-front-133.jpg",
+    "original_path": "product-renders/oe-hf-studio/untitled.133.jpg",
+    "product": "over-ear-home-centric",
+    "kind": "finished",
+    "description": "Over-ear headphones, black leather cushions and headband with copper-toned trim and copper wire yoke, on a silver mannequin head: straight-on front view, light-grey studio background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 162283
+  },
+  {
+    "path": "production-staging/assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-front-three-quarter-135.jpg",
+    "original_path": "product-renders/oe-hf-studio/untitled.135.jpg",
+    "product": "over-ear-home-centric",
+    "kind": "finished",
+    "description": "Over-ear headphones, black leather cushions and headband with copper-toned trim and copper wire yoke, on a silver mannequin head: front three-quarter view turned slightly left, light-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 166400
+  },
+  {
+    "path": "production-staging/assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-earcup-closeup-136.jpg",
+    "original_path": "product-renders/oe-hf-studio/untitled.136.jpg",
+    "product": "over-ear-home-centric",
+    "kind": "detail",
+    "description": "Over-ear headphones, black leather cushions and headband with copper-toned trim and copper wire yoke, on a silver mannequin head: extreme close-up of the right ear cup showing leather grain, copper rim, wire yoke and cable; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 180207
+  },
+  {
+    "path": "production-staging/assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-side-three-quarter-139.jpg",
+    "original_path": "product-renders/oe-hf-studio/untitled.139.jpg",
+    "product": "over-ear-home-centric",
+    "kind": "finished",
+    "description": "Over-ear headphones, black leather cushions and headband with copper-toned trim and copper wire yoke, on a silver mannequin head: side three-quarter view with the logo plate on the cup visible, dark-grey background; finished render.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 191184
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-black-front-65.jpg",
+    "original_path": "product-renders/dt-amp-shortie/AMP.65.jpg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Desktop stereo amplifier, black faceplate, walnut cheeks with brass screws, red/blue binding posts, red-pointer rotary selector and black knob; front three-quarter, light studio background.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 121250
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-black-rear-panel-66.jpg",
+    "original_path": "product-renders/dt-amp-shortie/AMP.66.jpg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Same black/walnut desktop amp from the rear: two black round sockets, two RCA jacks, red power rocker, mains inlet; light studio background.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 132494
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-front-plain-no-logo.jpg",
+    "original_path": "product-renders/silver-amp-stereo-dt/AMP SILVER (BACK NO WARM).jpg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Desktop stereo amp, silver faceplate, reddish-walnut cheeks, XLR socket, selector dial and round knob, no logo; this is the FRONT despite the \"BACK\" in the original filename; light studio background.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 121174
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-rear-panel.jpg",
+    "original_path": "product-renders/silver-amp-stereo-dt/AMP SILVER (BACK).jpg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Silver-faceplate desktop amp from the rear: input/output sockets with gold RCAs, red power rocker, mains inlet, brass screws; light studio background.",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 141034
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-front-agf-logo-small-jr.png",
+    "original_path": "product-renders/silver-amp-stereo-dt/jr.png",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Silver desktop amp front with a small AGF logo top-left (2048x2048 PNG, largest file in the set); light studio background.",
+    "width": 2048,
+    "height": 2048,
+    "bytes": 2909229
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-front-agf-logo-large-lb.jpeg",
+    "original_path": "product-renders/silver-amp-stereo-dt/lb.jpeg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Silver desktop amp front with a large AGF wordmark between selector dial and knob; light studio background.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 251540
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-front-agf-logo-topleft-sm.jpeg",
+    "original_path": "product-renders/silver-amp-stereo-dt/sm.jpeg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Silver desktop amp front with a medium AGF wordmark at top-left; light studio background.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 246667
+  },
+  {
+    "path": "production-staging/assets/renders/desktop-stereo-amp/desktop-amp-silver-front-agf-logo-ground-symbol-wvnl.jpeg",
+    "original_path": "product-renders/silver-amp-stereo-dt/wvnl.jpeg",
+    "product": "desktop-stereo-amp",
+    "kind": "finished",
+    "description": "Silver desktop amp front with a small AGF logo top-left and an earth/ground-symbol graphic between dial and knob; light studio background.",
+    "width": 1024,
+    "height": 1024,
+    "bytes": 328788
+  },
+  {
+    "path": "production-staging/assets/renders/broadcast-microphone/broadcast-mic-greybox-front-angle-1.png",
+    "original_path": "product-renders/gotham-broadcast/1.png",
+    "product": "broadcast-microphone",
+    "kind": "greybox",
+    "description": "Desktop broadcast microphone on a weighted oval base with front control panel (AGF logo, XLR, two dials, red LED), flat-plate mic on a yoke; front three-quarter; 3ds-Max-style grey-box (untextured) viewport render on dark gradient.",
+    "width": 849,
+    "height": 754,
+    "bytes": 78569
+  },
+  {
+    "path": "production-staging/assets/renders/broadcast-microphone/broadcast-mic-greybox-side-2.png",
+    "original_path": "product-renders/gotham-broadcast/2.png",
+    "product": "broadcast-microphone",
+    "kind": "greybox",
+    "description": "Same broadcast microphone, side profile: thin mic plate on yoke over art-deco stepped stand and base; 3ds-Max-style grey-box (untextured) viewport render on dark gradient.",
+    "width": 683,
+    "height": 761,
+    "bytes": 32743
+  },
+  {
+    "path": "production-staging/assets/renders/broadcast-microphone/broadcast-mic-greybox-front-3.png",
+    "original_path": "product-renders/gotham-broadcast/3.png",
+    "product": "broadcast-microphone",
+    "kind": "greybox",
+    "description": "Same broadcast microphone, straight front elevation showing yoke, stepped stand and base control panel; 3ds-Max-style grey-box (untextured) viewport render on dark gradient.",
+    "width": 847,
+    "height": 769,
+    "bytes": 47950
+  },
+  {
+    "path": "production-staging/assets/renders/control-surface/control-surface-greybox-angle-1.png",
+    "original_path": "product-renders/portable-daw/1.png",
+    "product": "control-surface",
+    "kind": "greybox",
+    "description": "Keyboard-format control surface, full-size key layout with a raised hinged strip of rotary encoders and faders above; high three-quarter angle; grey-box (untextured) viewport render with blue encoder caps on dark gradient.",
+    "width": 1163,
+    "height": 652,
+    "bytes": 365608
+  },
+  {
+    "path": "production-staging/assets/renders/control-surface/control-surface-greybox-top-plan-2.png",
+    "original_path": "product-renders/portable-daw/2.png",
+    "product": "control-surface",
+    "kind": "greybox",
+    "description": "Same control surface from straight above: key grid plus rows of encoders, faders and a block of 4x2 knobs at the right; grey-box (untextured) viewport render with blue encoder caps on dark gradient.",
+    "width": 1044,
+    "height": 591,
+    "bytes": 285875
+  },
+  {
+    "path": "production-staging/assets/renders/control-surface/control-surface-greybox-side-hinged-panel-3.png",
+    "original_path": "product-renders/portable-daw/3.png",
+    "product": "control-surface",
+    "kind": "greybox",
+    "description": "Side profile showing the upper encoder/fader panel hinged up at a steep angle above the key deck; grey-box (untextured) viewport render with blue encoder caps on dark gradient.",
+    "width": 1103,
+    "height": 604,
+    "bytes": 80326
+  }
+]

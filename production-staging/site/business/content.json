@@ -1,0 +1,405 @@
+{
+  "slug": "business",
+  "intro": {
+    "headline": "Numbers, runway, and the way the money actually works.",
+    "lede": "Once a sales team has a customer, price is not the negotiation. They are negotiating a budgeted total package. Premium buyers do not want a discount. They want a reason.",
+    "points": [
+      {
+        "eyebrow": "Pricing",
+        "title": "The Budgeted Total Package",
+        "body": "Price the package, not the unit. Convenience, integration, and context are the luxury product. The unit is a participant."
+      },
+      {
+        "eyebrow": "Channel",
+        "title": "The future bank-roller",
+        "body": "Owner-operators, often 20+ years in, built Polk, Definitive and McIntosh and are now treated as disposable. AGF is critically better than the devil they know: third-party fill on the floor, our line moving up, the flagship just above Focal."
+      },
+      {
+        "eyebrow": "Position",
+        "title": "Just above Focal, well below the ceiling",
+        "body": "B&O struggles. Krell reopens. Focal sets the consumer ceiling. Burmester proves the pricing model. D'Agostino proves a ceiling exists. AGF lands in the seam with a venue model none of them have."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "199→299",
+        "unit": "USD",
+        "label": "Relay price ladder",
+        "conditions": "Sales went up at each step"
+      },
+      {
+        "value": "5,999",
+        "unit": "EUR",
+        "label": "Burmester packaging",
+        "conditions": "For a $200-class device, for convenience"
+      },
+      {
+        "value": "~1,000",
+        "unit": "pcs/mo",
+        "label": "Focal flagship volume",
+        "conditions": "With a focused rep firm; the year-one comparable"
+      }
+    ],
+    "quote": {
+      "text": "The performance is above average, but you seem to have figured out some details we haven't. We package it with clients for convenience at €5,999.",
+      "cite": "A Burmester executive at Munich High-End, as quoted in the document"
+    }
+  },
+  "deep": {
+    "headline": "Numbers, runway, and the way the money actually works.",
+    "lede": "Pricing, channel approach and the revenue model; then distribution in detail; then where AGF lands against the field.",
+    "sections": [
+      {
+        "type": "cards",
+        "id": "pricing",
+        "eyebrow": "Pricing",
+        "title": "The Budgeted Total Package",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Philosophy",
+            "title": "Price is not the negotiation",
+            "body": "Once a sales team has a customer, price is not the negotiation. The Relay at $199. The Relay at $249. The Relay at $299. Sales went up each time. Burmester at €5,999 packaging a $200-class device for convenience. The lesson is uncomfortable but true: **premium buyers do not want a discount. They want a reason.**"
+          },
+          {
+            "eyebrow": "The model",
+            "title": "Price the package, not the unit",
+            "body": "Price the package, not the unit. Convenience, integration, and context are the luxury product. The unit is a participant."
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "channel",
+        "eyebrow": "Channel approach",
+        "title": "The Bose-Like Third-Party",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Philosophy",
+            "title": "Curated third-party fills the floor",
+            "body": "Lower price categories filled with curated third-party partner product. Presented honestly, humbly, recognizing product gaps. This approach must be backed by numbers — but the net positive is real: increased revenue, increased brand loyalty, educational feedback into our own product teams. **A Bose-like approach.**"
+          },
+          {
+            "eyebrow": "Partner types",
+            "title": "Who we sell with",
+            "list": [
+              "Owner-operated specialty Hi-Fi (20+ years in)",
+              "Custom install integrators",
+              "Performing-arts venues (AGF-aligned franchises)",
+              "Curated third-party brands filling lower price tiers"
+            ]
+          },
+          {
+            "eyebrow": "Target partners",
+            "title": "Who we call first",
+            "list": [
+              "Independent retailers stranded by Samsung/Harman, Bose/McIntosh, Barco/Vervent consolidation",
+              "Custom install firms previously aligned with Polk/Definitive/McIntosh",
+              "Performing-arts venues as franchise candidates for the second wave"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "prose",
+        "id": "revenue-model",
+        "eyebrow": "Revenue model",
+        "title": "Hardware-led with a codec and OS halo",
+        "body": "**Hardware-led with codec/OS halo.** Direct hardware margin from Green Room sales (premium, appointment-driven). l'Art codec licensing is *not* the river — third parties adopt **stereOS** (application-specific implementation), not the codec itself. Performance content revenue is **50/50 split** with artists in perpetuity on broadcast-mixed l'Art versions; standard stereo is artist-owned. Owners receive permanent virtual all-access pass to live content."
+      },
+      {
+        "type": "prose",
+        "id": "scaling",
+        "eyebrow": "Phased rollout",
+        "title": "Three phases over five years",
+        "body": "**Phase 1 (Year 1):** Inaugural product line ships from existing IP base. Single flagship venue (PoC). Channel introductions to stranded independents.\n\n**Phase 2 (Years 2–3):** Second-wave AGF community franchises — venues replicating the FoH/Balcony/Green Room blueprint globally. l'Art codec adoption seeded through Balcony installations.\n\n**Phase 3 (Years 3–5):** stereOS third-party adoption. Acquisition / hostile-service / integration decision for ten-ton gorillas. AGF as future bank-roller for stranded distribution channels."
+      },
+      {
+        "type": "prose",
+        "id": "distribution",
+        "eyebrow": "09 · Distribution",
+        "title": "Distribution — the future bank-roller.",
+        "large": true,
+        "body": "Channel partners are owner-operators, often 20+ years in. They built the reputations of Polk, Definitive Tech, McIntosh, et al. Now they are treated like disposable assets because they do not hit spreadsheet numbers — but they cannot be fired either, because the bank *needs* a global distribution spine. AGF positions itself as the **future bank-roller, critically better than the devil they know**: lower price categories filled with curated third-party partner product, our line moving upward, the flagship landing just above Focal's consumer offering (~$5K USD)."
+      },
+      {
+        "type": "table",
+        "id": "partner-criteria",
+        "eyebrow": "Partner criteria",
+        "title": "Partner Criteria (weighted)",
+        "columns": [
+          "Criterion",
+          "What it evaluates",
+          "Weight"
+        ],
+        "numeric": [
+          2
+        ],
+        "rows": [
+          [
+            "Owner-operator continuity",
+            "20+ years in the segment; founder still actively involved.",
+            "30%"
+          ],
+          [
+            "Independent ownership",
+            "Not currently captured by a PE roll-up or conglomerate parent.",
+            "25%"
+          ],
+          [
+            "Brand-build credibility",
+            "Built the regional reputation of at least one premium brand (Polk, Definitive, McIntosh, etc.).",
+            "20%"
+          ],
+          [
+            "Integration capability",
+            "Custom install or appointment-based retail with technical staff.",
+            "15%"
+          ],
+          [
+            "Performing-arts proximity",
+            "Existing relationships with local venues, artists, or production communities.",
+            "10%"
+          ]
+        ]
+      },
+      {
+        "type": "table",
+        "id": "territories",
+        "eyebrow": "Territories",
+        "title": "Where, in what order",
+        "columns": [
+          "Region",
+          "Strategy",
+          "Priority"
+        ],
+        "numeric": [
+          2
+        ],
+        "rows": [
+          [
+            "North America (US/CA)",
+            "Stranded Polk/Definitive/McIntosh independents. Custom install + appointment-only retail.",
+            "1"
+          ],
+          [
+            "Western Europe",
+            "Munich High-End channel relationships. UK boutique engineering brands as third-party fill.",
+            "1"
+          ],
+          [
+            "Japan",
+            "Boutique audiophile retailers. Tone-meister culture alignment.",
+            "2"
+          ],
+          [
+            "East Asia (CN/HK/TW/KR)",
+            "Selective premium retail; avoid PE-captured channels.",
+            "3"
+          ],
+          [
+            "Australia / NZ",
+            "Owner-operator specialty retail.",
+            "3"
+          ]
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "channel-types",
+        "eyebrow": "Channel types",
+        "title": "Five channels, five approaches",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Channel",
+            "title": "Specialty Hi-Fi (independent)",
+            "body": "Owner-operated stores, 20+ years in, often previously aligned with Polk/Definitive/McIntosh.",
+            "kv": [
+              [
+                "Approach",
+                "AGF as future bank-roller — line of credit, marketing co-op, AGF flagship as halo, third-party fill as the floor."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Channel",
+            "title": "Custom Install",
+            "body": "Integrators serving the residential and commercial AV market.",
+            "kv": [
+              [
+                "Approach",
+                "BT'N-Tech home/facility regeneration as a high-margin install line. l'espacI/O performance capture for project-based architectural integrations."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Channel",
+            "title": "AGF Flagship Venues",
+            "body": "One per financially qualifying market; FoH/Balcony/Green Room blueprint.",
+            "kv": [
+              [
+                "Approach",
+                "Direct retail through appointment. Performance arts as the brand surface."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Channel",
+            "title": "Performing-Arts Franchises (Wave 2)",
+            "body": "Community-franchise venues replicating the blueprint globally.",
+            "kv": [
+              [
+                "Approach",
+                "l'Art Production line installed in Balcony; consumer retail in Green Room; revenue share to local venues."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Channel",
+            "title": "D2C / Owners Portal",
+            "body": "Owners get permanent virtual all-access pass to live content.",
+            "kv": [
+              [
+                "Approach",
+                "Hardware sells through partners; content access ships through AGF directly."
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "type": "prose",
+        "id": "distribution-revenue",
+        "eyebrow": "Channel economics",
+        "title": "Third-party fills the floor; AGF owns the ceiling",
+        "body": "**Curated third-party fills the price floor; AGF owns the price ceiling.** Lower categories backed by partner product (presented honestly, with brand-humility). AGF flagship lands just above Focal consumer (~$5K). The package — not the unit — is the negotiation. The Burmester €5,999 lesson applied across the whole channel."
+      },
+      {
+        "type": "cards",
+        "id": "competitive-positioning",
+        "eyebrow": "11 · Competitive positioning",
+        "title": "Where AGF lands",
+        "lede": "Every direct competitor below either opens a seam (consolidated, struggling, or closed) or defines the ceiling AGF is happy to sit just below. The aspirational tier survived; the ownership consolidated. The opening is the gap between the struggling incumbent and the $250K outlier.",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Struggling · prestige 92 · ~$45,000",
+            "brass": false,
+            "title": "Bang & Olufsen",
+            "pull": "Luxury electronics — the comparable spiritual archetype",
+            "list": [
+              "FY2007/08 peak revenue **~$853M USD** (≈ $1.25B in 2026 dollars)",
+              "FY2023/24 revenue **$402M** — less than half the peak",
+              "Public, Copenhagen-listed, decades into a slow decline"
+            ],
+            "body": "**Spiritual successor** to the era when B&O stood alone. Same archetype: appointment-driven, design-led, premium-only. AGF inherits the customer-acquisition discipline and the *no shoulder-to-shoulder fight* posture — the original B&O playbook, executed with 2026 technology.",
+            "kv": [
+              [
+                "Opening",
+                "B&O's struggle vacates the 'lone luxury electronics archetype' chair. AGF takes the seat, with a venue model B&O never built."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Reopening · prestige 88 · ~$85,000",
+            "brass": false,
+            "title": "Krell",
+            "pull": "Aspirational halo — high-current reference",
+            "list": [
+              "Closed **June 18, 2024** following the death of owner/CEO Rondi D'Agostino",
+              "Service resumed **March 2025**; son Kristofer awarded **70%+ ownership Feb 2025**",
+              "Reopening through 2025 — re-establishing distribution, dealer trust still soft"
+            ],
+            "body": "**The Instrument fills this vacuum.** With Krell offline through 2024–2025 and the rebuild taking time to re-earn dealer/reviewer trust, the high-current aspirational chair is open. Boutique semis + GaN mono-block + FPGA give AGF a credible halo claim during the gap.",
+            "kv": [
+              [
+                "Opening",
+                "12–24 month window where the aspirational halo seat has no obvious occupant. The Instrument lands inside the window."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Premium fill · prestige 75 · ~$5,000",
+            "brass": false,
+            "title": "Focal",
+            "pull": "Consumer flagship reference (~$5K USD)",
+            "list": [
+              "**Consumer flagship ~$5K USD** — the established price ceiling for serious consumer audio",
+              "Now under Barco / VerVent (April 2026 acquisition, $135M) — distribution stable",
+              "Sells **~1,000 pcs/month** of flagship reference with a focused rep firm"
+            ],
+            "body": "**AGF positions just above Focal's consumer flagship.** The Instrument sits at $5K+ as a deliberate ceiling-tap, leveraging the reference Focal already established without competing for it shoulder-to-shoulder.",
+            "kv": [
+              [
+                "Opening",
+                "Focal validated that the consumer market can absorb $5K halo product at meaningful volume. AGF inherits the price discovery and adds the venue + content moat."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Premium fill · prestige 85 · ~$35,000",
+            "brass": false,
+            "title": "Burmester",
+            "pull": "Premium electronics — packaging-led pricing",
+            "list": [
+              "**€5,999** packaging for what AGF identified at Munich High-End as a **$200-class device** with above-average performance",
+              "Burmester executive: \"the performance is above average, but you seem to have figured out some details we haven't — we package it with clients for convenience at €5,999\""
+            ],
+            "body": "**Genuine value at premium pricing.** Burmester proves the pricing model works (premium buyers want a reason, not a discount). AGF takes the same packaging logic and applies it to genuinely better technology — the moat is the delta between what AGF delivers and what is repackaged.",
+            "kv": [
+              [
+                "Opening",
+                "The market accepts €5,999 packaging on $200 hardware. AGF can charge premium prices for premium technology and still look like the value play."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Ceiling · prestige 95 · ~$150,000",
+            "brass": false,
+            "title": "Dan D'Agostino",
+            "pull": "Aspirational ceiling — $250K monoblocks",
+            "list": [
+              "**$250K monoblocks** moving into Dolby Atmos maximalists",
+              "Rebuilt under his own name after the Krell PE rug-pull — proves a founder can survive consolidation and reach the ceiling on the rebound"
+            ],
+            "body": "**Defines the ceiling.** AGF is not chasing $250K monoblocks. The fact that the ceiling exists at that height — and customers exist who pay it — proves the prestige-audio market still has room above Focal and below the outlier. AGF lives in that gap.",
+            "kv": [
+              [
+                "Opening",
+                "Confirms a meaningful ceiling exists for prestige audio. AGF needs only to occupy the territory just above Focal, with the option to climb later."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Premium fill · prestige 90 · ~$3,000",
+            "brass": true,
+            "title": "AGF",
+            "pull": "Where AGF lands — just above Focal, well below the ceiling",
+            "list": [
+              "Inaugural lineup spans Over-Ear → Symphony → Instrument",
+              "Symphony lands at $2,990 retail with a $29,990 review-tier anchor",
+              "Venue + content moat that no incumbent has built"
+            ],
+            "body": "**The seam between Focal and the ceiling.** AGF inherits B&O's archetype, fills Krell's vacuum, leverages Burmester's pricing logic, and lives just above Focal — with a venue model none of them have.",
+            "kv": [
+              [
+                "Opening",
+                "AGF is the position itself: spiritual successor to a vacated archetype, halo without the $250K ask, value at premium pricing."
+              ]
+            ]
+          }
+        ],
+        "note": "The document renders these on a perceptual map (log price versus prestige). That chart is on the list for the next pass; the cards carry the same data."
+      },
+      {
+        "type": "prose",
+        "id": "summary",
+        "eyebrow": "Summary",
+        "title": "The seam",
+        "body": "B&O struggles. Krell reopens. Focal sets the consumer ceiling. Burmester proves the pricing model. D'Agostino proves the ceiling exists. **AGF lands just above Focal, with B&O's archetype, Krell's vacuum, Burmester's pricing logic, and a venue model none of them have.**"
+      }
+    ]
+  }
+}

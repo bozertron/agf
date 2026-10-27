@@ -1,0 +1,258 @@
+{
+  "slug": "venue",
+  "intro": {
+    "headline": "The venue. A church of the performing arts.",
+    "lede": "No sales floor. No clipboards. You arrive through a bar you'd find in any world-class city, with a band downstairs, and discover the consumer product only after you've decided you trust the room.",
+    "points": [
+      {
+        "eyebrow": "Front of House",
+        "title": "The Bar · The Stage",
+        "body": "Vibe: a beautiful bar you'd find in any world-class city."
+      },
+      {
+        "eyebrow": "The Balcony",
+        "title": "Pro Hardware · Pro Software",
+        "body": "Vibe: SOTA studio, with a drink in your hand and a band downstairs."
+      },
+      {
+        "eyebrow": "The Green Room",
+        "title": "Consumer Product · Hidden",
+        "body": "Vibe: back-of-house, in the best possible way."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "1",
+        "label": "Venue per qualifying market",
+        "conditions": "Never two; measured by arts-aware buyer density and a host partner"
+      },
+      {
+        "value": "100",
+        "unit": "%",
+        "label": "Donations to local artists",
+        "conditions": "Front of House ticket donations"
+      },
+      {
+        "value": "50/50",
+        "label": "Broadcast split",
+        "conditions": "In perpetuity, co-owned master, artist may block"
+      }
+    ],
+    "quote": {
+      "text": "Live performance is the brand surface; the consumer product is the secret you discover after you've decided you trust the room.",
+      "cite": "Cultural positioning, from the document"
+    }
+  },
+  "deep": {
+    "headline": "The Focal Point.",
+    "lede": "Appointment only Consumer Retail occurs in \"The Green Room\". Appointment only Professional Retail occurs in \"The Balcony\". Every location is an R&D gold-mine; that we're in full control of.",
+    "sections": [
+      {
+        "type": "cards",
+        "id": "zones",
+        "eyebrow": "Three zones",
+        "title": "Front of House, Balcony, Green Room",
+        "columns": 1,
+        "items": [
+          {
+            "eyebrow": "Step 1 · The Bar · The Stage",
+            "brass": true,
+            "title": "Front of House",
+            "body": "Exclusively focused on promoting the performing arts. Priority to local-regional culture and talent. Preferential ticket allocations split equally between supporters of the space and customers of the Green Room & Balcony. Donations 100% allocated to payment of local artists. **No sales floor. No clipboards.**",
+            "list": [
+              "Live performance stage",
+              "Beautiful bar of world-class-city quality",
+              "Local artist priority booking",
+              "Donation flow → 100% to local artists"
+            ],
+            "kv": [
+              [
+                "Vibe",
+                "a beautiful bar you'd find in any world-class city."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Step 2 · Pro Hardware · Pro Software",
+            "brass": true,
+            "title": "The Balcony",
+            "body": "Built later or pre-existing — both acceptable. Focused on state-of-the-art production-capture and processing hardware and software. The inaugural home of AGF's l'Art Production line, plus submission-based integrations from live mixing techs (paid royalties). The seat from which the industry watches the next generation of pros become pros.",
+            "list": [
+              "l'Art Production line installations",
+              "SOTA capture & processing hardware",
+              "Submission-based integrations from live-mixing techs",
+              "Royalty-paid third-party tooling"
+            ],
+            "kv": [
+              [
+                "Vibe",
+                "SOTA studio, with a drink in your hand and a band downstairs."
+              ]
+            ]
+          },
+          {
+            "eyebrow": "Step 4 · Consumer Product · Hidden",
+            "brass": true,
+            "title": "The Green Room",
+            "body": "The consumer retail space, deliberately *hidden*. You arrive through the venue, not through a glass storefront. Appointment-only access. The privilege of integration with the cool kids driving forward an endless flow of live performance art, at premium pricing, is the product.",
+            "list": [
+              "Appointment-only access",
+              "Hidden behind the venue",
+              "Full AGF consumer line on display",
+              "Integrated with the surrounding live-performance context"
+            ],
+            "kv": [
+              [
+                "Vibe",
+                "back-of-house, in the best possible way."
+              ]
+            ]
+          }
+        ]
+      },
+      {
+        "type": "figures",
+        "id": "boards",
+        "eyebrow": "Concept boards",
+        "title": "How it has been pictured so far",
+        "items": [
+          {
+            "src": "assets/concept-boards/venue-three-panel-board-front-of-house-balcony-green-room.webp",
+            "caption": "Three-panel venue board: Front of House, the Balcony, the Green Room (AI-generated)."
+          },
+          {
+            "src": "assets/concept-boards/venue-balcony-marble-control-surface-concept.webp",
+            "caption": "The Balcony: a marble control surface over the stage, virtual tickets and live-to-air countdown (AI-generated)."
+          },
+          {
+            "src": "assets/section-backgrounds/venue-background.webp",
+            "caption": "Venue interior mood (AI-generated)."
+          }
+        ],
+        "note": "All venue imagery is AI-generated mood work. Fine for discussion, not for publication."
+      },
+      {
+        "type": "steps",
+        "id": "journey",
+        "eyebrow": "The Customer Journey",
+        "title": "Five steps",
+        "items": [
+          {
+            "body": "Arrives at the bar. No sales floor. No clipboards. Sees a beautiful space that supports local culture."
+          },
+          {
+            "body": "Learns we're here. Through the act of being in a community, not through an ad."
+          },
+          {
+            "body": "Books an appointment. Like the original B&O. Like the original Birkin. Real, qualified, human."
+          },
+          {
+            "body": "Meets the Green Room. The consumer product, hidden, integrated, contextualized."
+          },
+          {
+            "body": "Becomes an owner. Or a venue partner. Or both. The platform scales from there."
+          }
+        ]
+      },
+      {
+        "type": "prose",
+        "id": "customer",
+        "eyebrow": "Who it is for",
+        "title": "The target customer",
+        "body": "**Apple-loyal-recoveries-in-waiting** — sophisticated users who appreciate design and technology, who've been questioning the endless scroll, and would click immediately with a community locale that reflects their strengths *without being perceived as Big Brother*. The hard part. The whole point."
+      },
+      {
+        "type": "cards",
+        "id": "royalties",
+        "eyebrow": "Royalty structure",
+        "title": "What the artist keeps",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Broadcast split",
+            "title": "50/50 in perpetuity",
+            "body": "**50/50 in perpetuity** on every broadcast-mixed performance recorded at an AGF venue. Both parties co-own the broadcast master."
+          },
+          {
+            "eyebrow": "Stereo ownership",
+            "title": "The artist's, full stop",
+            "body": "The standard stereo capture and the on-site recording belong to the artist — full stop. They can sell it, mix it, master it, distribute it through any channel. AGF takes nothing."
+          },
+          {
+            "eyebrow": "Blocking rights",
+            "title": "Without cause",
+            "body": "Artist retains the right to **block any subsequent broadcast by the venue, without cause**, even on the 50/50 broadcast-mixed version."
+          },
+          {
+            "eyebrow": "Why",
+            "title": "Front-running the outrage",
+            "body": "Front-runs the inevitable open-source-advocate / big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry."
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "virtual-ticket",
+        "eyebrow": "Virtual ticket",
+        "title": "In the room without being in the room",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Concept",
+            "title": "Broadcast-mixed feed",
+            "body": "Per-performance virtual ticket sales delivered via the broadcast-mixed feed. The fan watches the show as it happens — l'Art-encoded, owners-portal-grade — without being in the room. Owners get permanent virtual all-access included."
+          },
+          {
+            "eyebrow": "Pricing",
+            "title": "Artist-set, venue floor",
+            "body": "Artist-set baseline with venue floor pricing. Revenue split 50/50 with the artist in perpetuity. AGF either provides the venue free or forfeits its share to the venue + artists when an owner uses their all-access pass."
+          },
+          {
+            "eyebrow": "Owner perk",
+            "title": "Permanent all-access",
+            "body": "AGF hardware owners receive a **permanent virtual all-access pass** to live content from every AGF venue, in perpetuity."
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "id": "financial-model",
+        "eyebrow": "Financial model",
+        "title": "Flagship only, one per market",
+        "body": "**Flagship only — one per financially qualifying market.** The throwback with a new rhyme: real physical retail, real appointments, allergy to high-pressure tactics. The venue funds itself through the bar and ticketed performances; the Green Room is a high-margin appointment-driven retail surface, not a sales floor.\n\n**One per financially qualifying market** — measured by the existing density of arts-aware sophisticated audio buyers, the local performing-arts ecosystem, and the availability of an owner-operator partner willing to host an AGF flagship under the FoH/Balcony/Green Room blueprint.",
+        "items": [
+          "Bar / Front-of-House hospitality",
+          "Ticketed live performance (donations 100% to local artists)",
+          "Virtual ticket sales (50/50 with artist)",
+          "Green Room appointment-driven retail (premium hardware)",
+          "Balcony l'Art Production line installations + royalty-paid third-party submissions",
+          "Permanent virtual all-access pass — a perk bundled with hardware ownership"
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "cultural-positioning",
+        "eyebrow": "Cultural positioning",
+        "title": "Touch grass",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Movement",
+            "title": "What it aligns with",
+            "body": "Aligned with the **\"movement to touch grass\"** — the cultural backlash against the sterile, endless-scroll, Big-Brother-flavored boutique experience that Apple has worn out."
+          },
+          {
+            "eyebrow": "Anti-pattern",
+            "title": "What it is not",
+            "body": "Not a sterile glass-storefront boutique. Not a sales floor with clipboards. Not an algorithmically-personalized membrane. The venue resists every retail anti-pattern of the 2014–2026 era."
+          },
+          {
+            "eyebrow": "Summary",
+            "title": "The stance",
+            "body": "**Apple-loyal-recoveries-in-waiting** want a community locale that reflects their strengths — design literacy, technology fluency, cultural sophistication — *without* being surveilled. The Venue is that locale. Live performance is the brand surface; the consumer product is the secret you discover after you've decided you trust the room."
+          }
+        ]
+      }
+    ]
+  }
+}

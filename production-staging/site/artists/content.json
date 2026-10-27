@@ -1,0 +1,185 @@
+{
+  "slug": "artists",
+  "intro": {
+    "headline": "Artists drive their own destiny.",
+    "lede": "The standard stereo capture and the on-site recording belong to the artist, full stop. The broadcast-mixed version is co-owned 50/50 in perpetuity, and the artist can block any broadcast without cause.",
+    "points": [
+      {
+        "eyebrow": "100% artist · 0% AGF",
+        "title": "Standard Stereo (artist-owned)",
+        "body": "Standard stereo, unmixed, raw. **100% owned by the artist.** They can sell it to their heart's content infinitely if they want to perform their own mix/master. AGF takes nothing."
+      },
+      {
+        "eyebrow": "0% artist · 100% AGF",
+        "title": "l'Art Patented Version (AGF-owned)",
+        "body": "The l'Art-encoded version is **owned by AGF** as the inventor. Distribution gated through stereOS-licensed devices and the AGF owners portal."
+      },
+      {
+        "eyebrow": "50% artist · 50% AGF",
+        "title": "Broadcast-Mixed Version (50/50)",
+        "body": "Broadcast-optimized mix that combines the captured performance with AGF's broadcast-mix engineering. **Revenue split 50/50 in perpetuity.** Artist retains right to block any subsequent broadcast by the venue, without cause."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "100",
+        "unit": "%",
+        "label": "Artist share of stereo master",
+        "conditions": "Raw capture; mix, master and sell through any channel"
+      },
+      {
+        "value": "50/50",
+        "label": "Broadcast-mixed split",
+        "conditions": "In perpetuity; artist sets forever-copy pricing"
+      },
+      {
+        "value": "0",
+        "label": "Cause needed to block a broadcast",
+        "conditions": "Artist's right, even on the 50/50 version"
+      }
+    ],
+    "quote": {
+      "text": "We front-run the inevitable open-source-advocate and big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry.",
+      "cite": "Artist rights philosophy, from the document"
+    }
+  },
+  "deep": {
+    "headline": "Artist Rights — artists drive their own destiny.",
+    "lede": "The philosophy, the three ownership tiers, how the agreement is enforced, and every revenue stream with its split.",
+    "sections": [
+      {
+        "type": "prose",
+        "id": "philosophy",
+        "eyebrow": "Philosophy",
+        "title": "A vibrant, financially healthy arts community",
+        "large": true,
+        "body": "AGF aspires to be the catalyst, and driver of, a vibrant and financially healthy arts community. The standard stereo capture and the on-site recording belong to the artist — full stop. The patented version and broadcast-mixed version are co-owned with AGF, **50/50 in perpetuity**, and the artist retains the right to **block any subsequent broadcast by the venue, without cause**. We front-run the inevitable open-source-advocate and big-tech-smear-campaign outrage by being the most artist-favorable contract in the industry."
+      },
+      {
+        "type": "cards",
+        "id": "tiers",
+        "eyebrow": "Ownership tiers",
+        "title": "Three versions of every performance",
+        "columns": 1,
+        "items": [
+          {
+            "eyebrow": "100% artist · 0% AGF",
+            "brass": true,
+            "title": "Standard Stereo (artist-owned)",
+            "body": "Standard stereo, unmixed, raw. **100% owned by the artist.** They can sell it to their heart's content infinitely if they want to perform their own mix/master. AGF takes nothing.",
+            "list": [
+              "Right: Full ownership of the raw stereo capture",
+              "Right: Right to mix, master, and distribute independently",
+              "Right: Right to monetize via any channel",
+              "Right: No revenue share owed to AGF",
+              "Restriction: May not represent the recording as a l'Art / patented version"
+            ]
+          },
+          {
+            "eyebrow": "0% artist · 100% AGF",
+            "brass": true,
+            "title": "l'Art Patented Version (AGF-owned)",
+            "body": "The l'Art-encoded version is **owned by AGF** as the inventor. Distribution gated through stereOS-licensed devices and the AGF owners portal.",
+            "list": [
+              "Right: Distribution through AGF owners portal",
+              "Right: Performance rights at AGF flagship venues",
+              "Right: Sub-licensing to stereOS adopters",
+              "Restriction: Cannot exist without the artist's standard-stereo capture as input",
+              "Restriction: Subject to artist blocking rights on broadcast"
+            ]
+          },
+          {
+            "eyebrow": "50% artist · 50% AGF",
+            "brass": true,
+            "title": "Broadcast-Mixed Version (50/50)",
+            "body": "Broadcast-optimized mix that combines the captured performance with AGF's broadcast-mix engineering. **Revenue split 50/50 in perpetuity.** Artist retains right to block any subsequent broadcast by the venue, without cause.",
+            "list": [
+              "Right: 50% of broadcast revenue, in perpetuity",
+              "Right: Right to block any subsequent broadcast (no cause required)",
+              "Right: Right to set fan-purchase (\"forever copy\") pricing",
+              "Right: Owner-portal exposure via permanent virtual all-access",
+              "Restriction: AGF retains the broadcast-mix master",
+              "Restriction: AGF retains 50% of broadcast revenue"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "cards",
+        "id": "enforcement",
+        "eyebrow": "Enforcement",
+        "title": "Social first, legal second",
+        "columns": 2,
+        "items": [
+          {
+            "eyebrow": "Device lockout",
+            "title": "Terms of service",
+            "body": "If AGF can identify a device capturing patented content for illicit distribution, the user — by accepting the terms of service — is **blocked from all future business with AGF**, and legal action will be taken by AGF, on behalf of the artist, to recover proceeds from illicit marketing."
+          },
+          {
+            "eyebrow": "Legal remedies",
+            "title": "On behalf of the artist",
+            "list": [
+              "Recovery of proceeds on behalf of the artist",
+              "Permanent ban from AGF hardware ecosystem",
+              "Termination of stereOS device entitlements",
+              "Civil action under the terms of service"
+            ]
+          },
+          {
+            "eyebrow": "Social deterrent",
+            "title": "A faux-pas, not a piracy panic",
+            "list": [
+              "Bootlegging positioned as a social faux-pas (not a piracy panic)",
+              "Owner status as community-membership signal — withdrawn on violation",
+              "Artist communities surface bad actors organically"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "table",
+        "id": "revenue-streams",
+        "eyebrow": "Revenue streams",
+        "title": "Every stream and its split",
+        "columns": [
+          "Stream",
+          "What it is",
+          "Split"
+        ],
+        "rows": [
+          [
+            "Standard stereo (artist-direct)",
+            "Artist sells own mix/master via any channel.",
+            "100% artist · 0% AGF"
+          ],
+          [
+            "l'Art patented version",
+            "AGF distributes through owners portal and stereOS adopters.",
+            "0% artist · 100% AGF (artist retains standard-stereo upside)"
+          ],
+          [
+            "Broadcast-mixed version",
+            "Broadcast-optimized stereo+video, distributed through standard app platforms.",
+            "50% artist · 50% AGF, in perpetuity"
+          ],
+          [
+            "Virtual ticket",
+            "Per-performance virtual ticket sale (broadcast-mix delivery).",
+            "50% artist · 50% AGF"
+          ],
+          [
+            "Owner all-access pass",
+            "AGF hardware owners receive permanent virtual all-access. AGF either provides the venue free or forfeits its share to the venue + artists.",
+            "Variable — AGF subsidizes"
+          ],
+          [
+            "Fan \"forever copy\"",
+            "Artist sets pricing. Fan owns digital copy and is responsible for backup.",
+            "100% artist (within the standard-stereo tier)"
+          ]
+        ]
+      }
+    ]
+  }
+}
