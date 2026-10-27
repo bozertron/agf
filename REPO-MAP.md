@@ -1,6 +1,6 @@
 # AGF repository map
 
-Written 2026-10-27 for the founder, as a lookup table for writing website specs: pick a topic, open the files in the order given. Branch `claude/agf-brand-website-37qbgk`, HEAD `03a1e31`, 540 files tracked by git, working tree clean and no untracked files at the time of writing (this file is the only addition). All paths are relative to the repo root (`/home/user/agf`). Nothing in this map was invented: where a description rests on a filename rather than on reading the file, it says "appears to".
+Written 2026-10-27 for the founder, as a lookup table for writing website specs: pick a topic, open the files in the order given. Branch `claude/agf-brand-website-37qbgk`, HEAD `7c5e15b`, 639 files tracked by git (this file included), no untracked files, working tree clean apart from this file's own revision. First written against `03a1e31` (540 files); revised against `7c5e15b` after the stereOS package and the integration plan, `Domains/globl/`, the image rights register, the two chart scripts and the first round of repairs went in. All paths are relative to the repo root (`/home/user/agf`). Nothing in this map was invented: where a description rests on a filename rather than on reading the file, it says "appears to".
 
 Contents: 1 Orientation · 2 Topic index (T01 to T26) · 3 Full file tree · 4 The nine site options · 5 Open questions carried in the content · 6 Known rough edges.
 
@@ -10,25 +10,25 @@ Contents: 1 Orientation · 2 Topic index (T01 to T26) · 3 Full file tree · 4 T
 
 ### 1.1 What this repo is
 
-AGF ("All Grounds Floating") is a premium audio brand. This repo holds everything known about it: the strategy document's text (recovered from the old site's database), every image, the brand book and design system, a working reference website that renders the strategy as nine "options", and the retired code of the earlier site. There is no production website yet; `production-staging/` is where it is being designed, and this map is for writing the specs for it.
+AGF ("All Grounds Floating") is a premium audio brand. This repo holds everything known about it: the strategy document's text (recovered from the old site's database), every image (with a register of which may be published), the brand book and design system, the two sub-brand packages (Globl Radio and stereOS) with the plan that ties the three brands together, a working reference website that renders the strategy as nine "options", and the retired code of the earlier site. There is no production website yet; `production-staging/` is where it is being designed, and this map is for writing the specs for it.
 
-### 1.2 The three trees
+### 1.2 The trees and the brand packages
 
 | Tree | Path | What it is | Status |
 |---|---|---|---|
-| Production staging | `production-staging/` | The one place for new work: reference site (`site/`), the old site's content as JSON (`content/`), every image catalogued (`assets/`), the generator script (`tools/`), the pre-recovery inventory (`CONTENT-HARVEST.md`). Start with `production-staging/README.md`. | Live working area |
-| Design system | `agf-design-system/agf-design-system/` | The brand book and design system: voice, colour, type, space, texture, marks, 19 documented components, applications (CMF, packaging), motion. Open `index.html` there to see it. | The visual law |
+| Production staging | `production-staging/` | The one place for new work: reference site (`site/`), the old site's content as JSON (`content/`), every image catalogued (`assets/`, with its rights register `assets/RIGHTS.md`), the generator script (`tools/`), the pre-recovery inventory (`CONTENT-HARVEST.md`). Start with `production-staging/README.md`. | Live working area |
+| Design system | `agf-design-system/agf-design-system/` | The brand book and design system: voice, colour, type, space, texture, marks, 20 documented components, applications (CMF, packaging), motion. Open `index.html` there to see it. | The visual law |
 | Archive | `archive/legacy-site/` | The retired schema-driven site (web site, in-page editor, PDF spec-sheet renderer, 22 JSON schemas, CSS). Read `LEGACY-MAP.md` there instead of the code. | Reference only, not run |
-| Globl Radio design system | `globl-radio-design-system/` | The sub-brand package for AGF's live-music streaming service, built on the AGF system: brand book (`README.md`), applications, motion, `globl.css` (AGF's stylesheet plus the Globl Radio layer), tokens, 13 components with previews, the monogram, lockup and ring as SVG in three inks (converted from the designer's 2016 EPS files in `assets/Logos/source/`), four added icons, contact sheets, and `build/build.py` which regenerates everything but the hand-written docs. Open `index.html` there. | The visual law for Globl Radio surfaces |
+| Globl Radio design system | `globl-radio-design-system/` | The sub-brand package for AGF's live-music streaming service, built on the AGF system and, per its README, running on stereOS (stereOS Pro captures at the venue, Globl Radio carries the stream, stereOS Home or embedded renders it at home): brand book (`README.md`), applications, motion, `globl.css` (AGF's stylesheet plus the Globl Radio layer), tokens, 13 components with previews, the monogram, lockup and ring as SVG in three inks (converted from the designer's 2016 EPS files in `assets/Logos/source/`), four added icons, contact sheets, and `build/build.py` which regenerates everything but the hand-written docs. Open `index.html` there. | The visual law for Globl Radio surfaces |
 | stereOS brand | `stereos-brand/` | The constructed stereOS wordmark and OS monogram (SVG in three inks, regenerated by `build/build.py`), the edition rules, and a preview page showing the family line, the three voices, the four editions and the capture-to-couch chain. | The visual law for stereOS |
-| Brand integration plan | `BRAND-INTEGRATION.md` | How AGF, stereOS and Globl Radio relate: architecture, naming and spelling, what each may claim, pairings, colour voices, surface-by-surface placement, editions, open items. |
+| Brand integration plan | `BRAND-INTEGRATION.md` | How AGF, stereOS and Globl Radio relate: architecture, naming and spelling, what each may claim, pairings, colour voices, surface-by-surface placement, editions, open items. | The rules for the seams between the three brands; each package's own book governs its details |
 
-Also at the top level: `fonts/` (licensed source fonts with OFL licences and web woff2), `agf.db` (the SQLite database the content was exported from), and this file.
+Also at the top level: `fonts/` (licensed source fonts with OFL licences and web woff2), `agf.db` (the SQLite database the content was exported from), `Domains/globl/` (the Globl Radio logo designer's 2016 deliverables: two EPS originals, two JPG previews, a README and a one-image landing page; the working source for the Globl Radio mark, whose SVG conversions are in `globl-radio-design-system/assets/Logos/`), and this file.
 
 ### 1.3 The two source-of-truth rules
 
-1. **Copy: the `content.json` files are the editable copy.** Each option folder `production-staging/site/<slug>/content.json` holds all words for that option. `production-staging/content/` is the record of what the old database held; it is the evidence, not the working copy. `production-staging/tools/build-content.py` composed the nine `content.json` files from `content/`; re-running it overwrites hand edits. At the time of writing the nine files, `site.json` and the 19 page shells match the generator's output exactly (checked by running the script in a scratch copy and diffing), so no copy has been hand-edited yet.
-2. **Look and feel: the design system is the visual law.** Where the old brand boards (`production-staging/assets/brand-boards/`), the legacy CSS (`archive/legacy-site/styles/`) or anything else disagree with `agf-design-system/agf-design-system/`, the design system wins. `production-staging/site/shared/agf.css` is a byte-identical copy of the design system's `agf.css`, and `site/shared/logos/` and `site/shared/icons/` are byte-identical copies of the design system's `assets/Logos/` and `assets/Icons/` (checked with `cmp`). The design-system folder is the source; if it changes, the copies must be refreshed by hand.
+1. **Copy: the `content.json` files are the editable copy.** Each option folder `production-staging/site/<slug>/content.json` holds all words for that option. `production-staging/content/` is the record of what the old database held; it is the evidence, not the working copy (two files in it have since been edited by hand, `sections/consolidation.json` and `sections/technology.json`, see R21; `content/raw/` is still the untouched export). `production-staging/tools/build-content.py` composed the nine `content.json` files from `content/`; re-running it overwrites hand edits. At the time of this revision the nine files, `site.json` and the 19 page shells match the generator's output exactly (checked again by running the script in a scratch copy and diffing), so no site copy has been hand-edited outside the generator; since the first version of this map the generator itself was extended (chart sections, consolidation date and source columns, unnumbered eyebrows) and the files regenerated or edited in step with it.
+2. **Look and feel: the design system is the visual law.** Where the old brand boards (`production-staging/assets/brand-boards/`), the legacy CSS (`archive/legacy-site/styles/`) or anything else disagree with `agf-design-system/agf-design-system/`, the design system wins. `production-staging/site/shared/agf.css` is a byte-identical copy of the design system's `agf.css`, and `site/shared/logos/` and `site/shared/icons/` are byte-identical copies of the design system's `assets/Logos/` and `assets/Icons/` (checked with `cmp`). The design-system folder is the source; if it changes, the copies must be refreshed by hand. The Globl Radio and stereOS packages inherit the AGF system and govern only their own marks, voices and components; `BRAND-INTEGRATION.md` governs the seams between the three.
 
 A third convention (from `production-staging/README.md`): the **standing lines are not rewritten** (see T14), nothing is invented (lines drafted for the site carry an `_assumed` badge or a note), and internal numbers (COGS, tooling, certification budgets) are present but flagged; decide per page whether they survive to a public site.
 
@@ -40,7 +40,7 @@ cd production-staging/site
 # open http://localhost:8787/site/
 ```
 
-- Needs only `python3`. Browsers refuse to fetch JSON from `file://`, so opening the HTML files directly shows a "Content did not load" message.
+- Needs only `python3`. Browsers refuse to fetch JSON from `file://`, so opening the HTML files directly shows a "Content did not load" message; with JavaScript switched off a page shows a "JavaScript is off" message instead.
 - URLs: portal `/site/`; per option `/site/<slug>/intro.html` and `/site/<slug>/deep.html`; every deep section has an anchor `#<section id>`.
 - The Notes button in the nav hides or shows the visible working notes (`note` fields); the choice is kept in the browser's `localStorage` key `agf-notes`.
 - Editing: change a `content.json`, reload; pages fetch with `cache: 'no-store'`.
@@ -49,10 +49,10 @@ cd production-staging/site
 
 ### 1.5 How the reference site works (for specs)
 
-- 19 page shells (`index.html` plus `intro.html` and `deep.html` per option), each an 18-line file with an empty `<header id="nav">`, `<main id="main">`, `<footer id="foot">` and one script, `site/shared/site.js` (241 lines, no dependencies). The script reads `site/site.json` (the manifest) and the option's `content.json`, then builds nav, body and footer.
-- The theme is fixed to Midnight (`data-theme="midnight"` on every page); there is no Daylight or Air variant in the site yet.
+- 19 page shells (`index.html` plus `intro.html` and `deep.html` per option), each a 20-line file with an empty `<header id="nav">`, a `<main id="main">` that holds only a `<noscript>` fallback ("JavaScript is off ... needs JavaScript", with a link to the portal), an empty `<footer id="foot">` and three deferred scripts: `site/shared/chart-perceptual.js`, `site/shared/chart-gantt.js` and `site/shared/site.js` (252 lines, no dependencies). The script reads `site/site.json` (the manifest) and the option's `content.json`, then builds nav, body and footer. Every shell loads both chart scripts, whether or not the page has a chart.
+- The theme is fixed to Midnight (`data-theme="midnight"` on every page); there is no Daylight or Air variant in the site yet. The page footer repeats the long sources line (`brand.sources`) only on the portal and on the deep pages of the options listed in `brand.sources_on` (default: opportunity and business).
 - `content.json` shape: `intro` (headline, lede, `points` x3, `metrics`, optional `metrics_note`, `quote`, optional `note`) and `deep` (headline, lede, optional `note`, ordered `sections`).
-- Section types the renderer understands: `prose`, `quote`, `list`, `cards`, `table`, `spec`, `timeline`, `steps`, `compare`, `pipeline`, `metrics`, `figures`, `html`. Any section may carry `id` (anchor), `eyebrow`, `title`, `lede`, `note` (visible working note), `_assumed: true` (an "assumed" badge on the heading). `figures` sources are written `assets/...` and resolve against `production-staging/assets/`.
+- Section types the renderer understands: `prose`, `quote`, `list`, `cards`, `table`, `spec`, `timeline`, `steps`, `compare`, `pipeline`, `metrics`, `figures`, `html`. Two more types are registered by the chart scripts on `window.AGF_RENDERERS` (a hook added to `site.js`; a type it does not know falls back to `prose` unless an extension has registered it): `chart-perceptual` (the business page's `competitive-map`, price on a log axis against prestige) and `chart-gantt` (the roadmap page's `gantt`, six swimlanes over 24 months); both draw inline SVG from AGF tokens and read their data from the section itself, which the generator composes from `competitive-positioning.json` and `launch-roadmap.json`. Any section may carry `id` (anchor), `eyebrow`, `title`, `lede`, `note` (visible working note), `_assumed: true` (an "assumed" badge on the heading). `figures` sources are written `assets/...` and resolve against `production-staging/assets/`.
 - Text supports `**bold**`, `*italic*`, blank line = paragraph, newline = line break; `→` is wrapped for styling.
 - The `intro` blocks (three points, metrics, quote) are composed text, lifted and edited from the sections listed in section 4; the `deep` sections follow the database fields closely.
 
@@ -61,7 +61,8 @@ cd production-staging/site
 1. `agf-design-system/agf-design-system/README.md` (voice, colour, type, marks) then `02-applications.md` and `03-motion.md`.
 2. `production-staging/README.md`, then the portal in a browser, then each option's intro and deep page.
 3. This map's section 5 (open questions) and section 6 (rough edges) before deciding what is settled.
-4. `archive/legacy-site/LEGACY-MAP.md` section 8.1 for visualisations to carry forward (T23).
+4. `BRAND-INTEGRATION.md` before specifying the Stack page, any stereOS page or any Globl Radio surface (T25, T26).
+5. `archive/legacy-site/LEGACY-MAP.md` section 8.1 for visualisations to carry forward (T23); the perceptual map and the Gantt are already built (T11, T12), the other thirteen are not.
 
 ---
 
@@ -101,10 +102,10 @@ Each topic lists the files to open, in order, with one line on what each contrib
 
 ### T04 · Consolidation data
 
-1. `production-staging/content/sections/consolidation.json` — eight acquisition rows (acquirer, target brands, `value_usd`, `date`, `type`, `source_url`): five have a disclosed value, three do not (Sony Interactive Entertainment, Bose, Loewe), every `date` is empty and only the Samsung/Harman row has a `source_url`; `independent_heading` and `independent_intro` are empty strings and there is no independents list.
-2. `production-staging/site/opportunity/content.json` — deep section `consolidation`: the table as shown (Acquirer, Brands acquired, Value), with a note that dates and links are blank (see R9).
+1. `production-staging/content/sections/consolidation.json` — eight acquisition rows (acquirer, target brands, `value_usd`, `date`, `type`, `source_url`, and a `verification` object per row added 2026-10-27: date type, the sourced value, a note on what the source says, a confidence level): five have a disclosed value, three do not (Sony Interactive Entertainment, Bose, Loewe); all eight now carry a date and a source link, researched and for the founder to confirm (the Samsung/Harman link is the document's own and was not re-read); `independent_heading` and `independent_intro` are still empty strings and there is no independents list. Three `value_usd` figures are euros in the sources, not dollars (R20).
+2. `production-staging/site/opportunity/content.json` — deep section `consolidation`: the table as shown (Acquirer, Brands acquired, Value, Date, Source), with a note listing what is unconfirmed (see R20).
 3. `production-staging/content/sections/timeline.json` — the "Now" era events (GoerTek, IAG, HSG and Cosonic consolidation; Krell; B&O) that the table supports.
-4. `production-staging/content/sections/footer.json` — `source_text`: the list of sources (B&O annual reports, Samsung/Harman, Bose, Barco, Gentex, Masimo, HSG, Cosonic, Sony, BLS CPI, magazines); reused in `production-staging/site/site.json` as `brand.sources`.
+4. `production-staging/content/sections/footer.json` — `source_text`: the list of sources (B&O annual reports, Samsung/Harman, Bose, Barco, Gentex, Masimo, HSG, Cosonic, Sony, BLS CPI, magazines); reused in `production-staging/site/site.json` as `brand.sources` (shown in the footer of the portal and of the opportunity and business deep pages only).
 5. `archive/legacy-site/LEGACY-MAP.md` sections 6.2 (consolidation schema) and 8.1 item 13 — how the old table adapted its columns.
 
 ### T05 · The technology stack
@@ -122,9 +123,9 @@ The six technologies (signal-flow order used by the old site is stereOS, l'Art, 
 
 | # in `technology.json` | Technology | Full name in database | Tagline | Status (July 14) | Carried by |
 |---|---|---|---|---|---|
-| 1 | l'Art | l'Art — Acoustic Teleportation | Acoustic teleportation, not surround-sound. | Trade secret | Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Instrument |
+| 1 | l'Art | l'Art — Acoustic Teleportation | Acoustic teleportation, not surround-sound. | Trade secret (the July 6 version says Patented; unresolved, R13) | Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Instrument |
 | 2 | stereOS | stereOS — Global OS for Performing Arts | The global operating system for performing arts. | Trade secret | Over-Ear, Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Instrument, Wasted Real-Estate |
-| 3 | BT'N-Tech | BTN-Tech — Bring Tha' Noise Technologies | Bring Tha' Noise Technologies. | Patent pending | Over-Ear, Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Symphony Macro-System, The Instrument |
+| 3 | BT'N-Tech | BT'N-Tech — Bring Tha' Noise Technologies (respelled by hand in `technology.json`, R21; `content/raw/sections.json` still has `BTN-Tech`) | Bring Tha' Noise Technologies. | Patent pending | Over-Ear, Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Symphony Macro-System, The Instrument |
 | 4 | l'espacI/O | l'espacI/O — Spatial I/O | Room tone, weaponized. | Trade secret | Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Symphony Macro-System, The Instrument |
 | 5 | FRC41 | FRC41 — Front Row Center For One | Front Row Center For One. | Patent pending | Over-Ear, The Instrument, Wasted Real-Estate |
 | 6 | No-Nails | No-Nails Engineering Process & Mercy Catch-All | To a hammer, every problem looks like a nail; No engineering domain-hammers allowed. | Trade secret | Core-like All-in-One (Small), Core-like All-in-One (Soundbar), The Symphony Macro-System, The Instrument |
@@ -144,7 +145,7 @@ Source of each: `production-staging/content/products/<slug>.json` (the database 
 
 | Product | Database record | Reference-site card and spec | Images |
 |---|---|---|---|
-| Over-Ear | `production-staging/content/products/over-ear-home-centric.json` | `production-staging/site/lineup/content.json` ids `the-line` (card) and `spec-over-ear-home-centric` | 4 renders in `production-staging/assets/renders/over-ear-home-centric/` |
+| Over-Ear | `production-staging/content/products/over-ear-home-centric.json` | `production-staging/site/lineup/content.json` ids `the-line` (card) and `spec-over-ear-home-centric` | 4 renders in `production-staging/assets/renders/over-ear-home-centric/` (two carry a PS Audio plate, R19) |
 | Core-like All-in-One (Small) | `production-staging/content/products/core-all-in-one-small.json` | `production-staging/site/lineup/content.json` ids `the-line` (card) and `spec-core-all-in-one-small` | none |
 | Core-like All-in-One (Soundbar) | `production-staging/content/products/core-all-in-one-soundbar.json` | `production-staging/site/lineup/content.json` ids `the-line` (card) and `spec-core-all-in-one-soundbar` | none |
 | The Symphony Macro-System | `production-staging/content/products/symphony-macro-system.json` | `production-staging/site/lineup/content.json` ids `the-line` (card) and `spec-symphony-macro-system` | 18 files in `production-staging/assets/renders/symphony-macro-system/` (R1) |
@@ -163,6 +164,7 @@ Also open: `production-staging/content/sections/business-model.v2.json` (`runway
 6. `production-staging/assets/section-backgrounds/venue-background.webp` — AI jazz-venue interior with a copper AGF sign (the only section background left).
 7. `production-staging/assets/ASSETS.md` — transcribed copy of the three venue boards (headings under "Copy on the boards").
 8. `production-staging/content/sections/launch-roadmap.json` — `venue_pilots` (five pilots and their selection criteria) and `production-staging/content/sections/distribution.v2.json` channel type "AGF Flagship Venues".
+9. `production-staging/assets/RIGHTS.md` — publication status of the venue images: the three venue boards and the section background are all AI-generated and rated internal only, which matches the venue note.
 
 ### T08 · Artist rights
 
@@ -171,6 +173,7 @@ Also open: `production-staging/content/sections/business-model.v2.json` (`runway
 3. `production-staging/content/sections/artist-rights.json` — the other row with the same timestamp (no stream heading).
 4. `production-staging/content/sections/venue.json` — `royalty_structure` and `virtual_ticket` (the venue's side of the same rights).
 5. `archive/legacy-site/schemas/artist-rights.schema.json` and `archive/legacy-site/LEGACY-MAP.md` section 6.2 — field-level definitions.
+6. Not to be confused with this topic: `production-staging/assets/RIGHTS.md` is the register of image publication status (see T20), not of artist rights.
 
 ### T09 · Business model
 
@@ -192,17 +195,19 @@ Also open: `production-staging/content/sections/business-model.v2.json` (`runway
 ### T11 · Competitive positioning
 
 1. `production-staging/content/sections/competitive-positioning.json` — intro, six rows (Bang & Olufsen, Krell, Focal, Burmester, Dan D'Agostino, and AGF itself; each with status, price, prestige score, data points, "opening"), summary, and the `_viz_config` for the perceptual map (log price against prestige).
-2. `production-staging/site/business/content.json` — deep ids `competitive-positioning` (cards; the chart itself is queued) and `summary` ("The seam").
-3. `production-staging/site/opportunity/content.json` — B&O (peak, then decline) and Krell (closed June 2024, reopening) events in `then`, `now` and `rhymes`.
-4. `archive/legacy-site/components/positioning-chart.js` — the old perceptual map code; contract in `archive/legacy-site/LEGACY-MAP.md` section 4.1; porting advice in section 8.1 item 1.
-5. `production-staging/content/products/*.json` — `competitive_reference` on each product (comparable products, price positioning, key differentiators).
+2. `production-staging/site/business/content.json` — deep ids `competitive-map` (type `chart-perceptual`: the map, six points, AGF highlighted; its note says the prestige scores are the document's own estimates, not a measured index), `competitive-positioning` (cards; the same data in detail) and `summary` ("The seam").
+3. `production-staging/site/shared/chart-perceptual.js` — the renderer for `chart-perceptual`: log price on x, prestige on y, wide and narrow layouts, labels placed deterministically, a forced-colors rule; the generator `production-staging/tools/build-content.py` composes the section from item 1.
+4. `production-staging/site/opportunity/content.json` — B&O (peak, then decline) and Krell (closed June 2024, reopening) events in `then`, `now` and `rhymes`.
+5. `archive/legacy-site/components/positioning-chart.js` — the old perceptual map code; contract in `archive/legacy-site/LEGACY-MAP.md` section 4.1; porting advice in section 8.1 item 1 (the port is done; read it for the full contract).
+6. `production-staging/content/products/*.json` — `competitive_reference` on each product (comparable products, price positioning, key differentiators).
 
 ### T12 · Launch roadmap
 
-1. `production-staging/site/roadmap/content.json` — option 08 copy: three phases, 24 months, five venue pilots, 1,000 pieces a month; deep ids `phases`, `pr-levers`, `venue-pilots`, `year-one`, `beyond`.
-2. `production-staging/content/sections/launch-roadmap.json` — source: six phase rows (start slot, duration, TTM, rationale, milestones), two PR stunts, venue pilots (count 5), year-one targets, Gantt `_viz_config`.
-3. `production-staging/content/sections/business-model.v2.json` — `scaling_timeline` ("Phased rollout", used in `beyond`).
-4. `archive/legacy-site/components/roadmap-chart.js` — the old Gantt; contract in `archive/legacy-site/LEGACY-MAP.md` section 4.2; porting advice in section 8.1 item 2.
+1. `production-staging/site/roadmap/content.json` — option 08 copy: three phases, 24 months, five venue pilots, 1,000 pieces a month; deep ids `gantt` (type `chart-gantt`: six swimlanes over 24 months with PR, venue-pilot and volume-target markers), `phases`, `pr-levers`, `venue-pilots`, `year-one`, `beyond`.
+2. `production-staging/content/sections/launch-roadmap.json` — source: six phase rows (start slot, duration, TTM, rationale, milestones), two PR stunts, venue pilots (count 5), year-one targets, Gantt `_viz_config` (it feeds `gantt`).
+3. `production-staging/site/shared/chart-gantt.js` — the renderer for `chart-gantt`: month grid as inline SVG on AGF tokens, one marker shape per milestone type, a legend and a table view, no "today" marker.
+4. `production-staging/content/sections/business-model.v2.json` — `scaling_timeline` ("Phased rollout", used in `beyond`).
+5. `archive/legacy-site/components/roadmap-chart.js` — the old Gantt; contract in `archive/legacy-site/LEGACY-MAP.md` section 4.2; porting advice in section 8.1 item 2 (the port is done; read it for the full contract).
 
 ### T13 · Founder and mentors
 
@@ -222,7 +227,7 @@ Standing lines: **All Grounds Floating** (strapline under the mark), **Even Rail
 4. `production-staging/site/brand/content.json` — deep section `standing-lines` (flagged `_assumed`; note: "design system fixed three of these; the fourth came from the document's header").
 5. `production-staging/content/sections/header.json` — origin of "Even Rails → Smooth Tracks" (`tagline`); `production-staging/site/opportunity/content.json` — the same phrase used as the eyebrow of the `rhymes` comparison (it was the comparison heading in the old document, per `production-staging/CONTENT-HARVEST.md` section 3).
 6. `agf-design-system/agf-design-system/components/Certificate/README.md` and `agf-design-system/agf-design-system/02-applications.md` ("Packaging and the box") — where "Measured in silence." is used.
-7. `agf-design-system/agf-design-system/preview-cover.png` and `agf-design-system/agf-design-system/components/Cover/preview.html` — "Pure signal." on the cover.
+7. `agf-design-system/agf-design-system/preview-cover.png`, `agf-design-system/agf-design-system/components/Cover/preview.html` and `agf-design-system/agf-design-system/components/Cover/README.md` — "Pure signal." on the cover (the README says the cover carries the one Poiret One line and must not rewrite the strapline or the tagline).
 8. `production-staging/assets/ASSETS.md` and `production-staging/CONTENT-HARVEST.md` section 5 — other straplines from the AI boards ("Sound Connects Everything.", "Higher fidelity, a broader world.", "Sound moves humanity forward.", and so on); these are draft, not canon.
 9. `production-staging/CONTENT-HARVEST.md` section 3 and `archive/legacy-site/LEGACY-MAP.md` section 9.3 — the hard-coded sentences of the old site's voice that survived outside the database.
 
@@ -272,14 +277,14 @@ Standing lines: **All Grounds Floating** (strapline under the mark), **Even Rail
 
 ### T20 · Images of each product
 
-Catalogues: `production-staging/assets/ASSETS.md` and `assets.json` (brand boards, concept boards, concepts, prior work, section backgrounds, seven Symphony PNGs); `production-staging/assets/renders/RENDERS.md` and `renders/renders.json` (96 images: product renders plus relocated Mass Fidelity renders and material moods). `renders.json` `path` fields are authoritative for location.
+Catalogues: `production-staging/assets/ASSETS.md` and `assets.json` (the 30 images outside `renders/`: brand boards, concept boards, concepts, prior work, section backgrounds; plus the transcribed board copy); `production-staging/assets/renders/RENDERS.md` and `renders/renders.json` (103 images: the 43 under `renders/`, including all 18 Symphony files, plus the relocated Mass Fidelity renders and material moods). Each image is in exactly one catalogue. `renders.json` `path` fields are authoritative for location. The publication status of every one of the 133 images, with the files the reference site displays flagged, is in `production-staging/assets/RIGHTS.md`.
 
 | Product | Where its images are |
 |---|---|
-| Over-Ear — Home Centric | `production-staging/assets/renders/over-ear-home-centric/` — 4 files: `over-ear-headphones-matte-black-copper-<view>-<n>.jpg` (front, front three-quarter, earcup close-up, side three-quarter), 1000x1000, on a silver head form. Two unbranded over-ear concept images (`concepts/over-ear-headphones-tan-pad-silver-shell-concept.png`, `concepts/over-ear-headphones-black-red-pair.png`) are catalogued as "not AGF database products". |
+| Over-Ear — Home Centric | `production-staging/assets/renders/over-ear-home-centric/` — 4 files: `over-ear-headphones-matte-black-copper-<view>-<n>.jpg` (front, front three-quarter, earcup close-up, side three-quarter), 1000x1000, on a silver head form; two of them (`...-front-three-quarter-135.jpg`, shown on the lineup page, and `...-side-three-quarter-139.jpg`) carry a PS Audio plate (R19). Two unbranded over-ear concept images (`concepts/over-ear-headphones-tan-pad-silver-shell-concept.png`, `concepts/over-ear-headphones-black-red-pair.png`) are catalogued as "not AGF database products". |
 | Core-like All-in-One (Small) | none |
 | Core-like All-in-One (Soundbar) | none |
-| The Symphony Macro-System | `production-staging/assets/renders/symphony-macro-system/` — 18 files in two overlapping sets (R1): 11 `symphony-tower-<finish>-<view>-<n>.jpg` (catalogue: `renders/RENDERS.md`, `renders/renders.json`) and 7 `symphony-tower-<finish>-front.png` / `-driver-closeup.png` (catalogue: `ASSETS.md`, `assets.json`). Related but not catalogued as Symphony: `concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp` (AI room with two tall green-and-brass wall speakers). |
+| The Symphony Macro-System | `production-staging/assets/renders/symphony-macro-system/` — 18 files in two overlapping sets (R1): 11 `symphony-tower-<finish>-<view>-<n>.jpg` and 7 `symphony-tower-<finish>-front.png` / `-driver-closeup.png`, all 18 catalogued in `renders/RENDERS.md` and `renders/renders.json`; all rated publishable (as "in development") in `RIGHTS.md`. Related but not catalogued as Symphony: `concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp` (AI room with two tall green-and-brass wall speakers). |
 | The Instrument — Flagship Reference | none. The nearest objects are the unassigned desktop amplifier renders below. |
 | Wasted Real-Estate | `production-staging/assets/concept-boards/wasted-real-estate-earbud-case-board.webp` (the product board; copy transcribed in `ASSETS.md`), `production-staging/assets/concept-boards/stereos-live-to-global-village-case-ad.webp`, and the Dolby-era CAD cases `production-staging/assets/prior-work/round-earbud-case-with-earbuds-paul-simon-screen.png` and `round-earbud-case-dolby-logo-lid-kod-screen.png`. |
 | Objects with renders but no database entry (lineup page "Also on the bench") | `production-staging/assets/renders/studio-microphone/` (7 files, finished renders of a large-diaphragm mic in a shock mount and boom arm), `renders/broadcast-microphone/` (3 grey-box CAD files), `renders/control-surface/` (3 grey-box CAD files, keyboard-format with hinged panel), `renders/desktop-stereo-amp/` (8 files: black and silver faceplates, with and without an AGF logo, rear panels). Plus `production-staging/assets/concepts/keyboard-control-surface-knobs-faders-grey-cad.png`. |
@@ -290,10 +295,11 @@ Catalogues: `production-staging/assets/ASSETS.md` and `assets.json` (brand board
 
 1. `production-staging/site/founder/content.json` — deep section `prior-work` (four images with captions; note: "Renders carry Mass Fidelity and Dolby marks. Check rights before any of these go public.") and `companies`.
 2. `production-staging/content/sections/founder.v2.json` — milestones and key companies (Mass Fidelity 2010s, Core and Relay; Dolby skunkworks mid-2010s).
-3. **Mass Fidelity**: `production-staging/assets/prior-work/mass-fidelity/` (46 files: USB DAC variants, angles and finishes; portable DAC; see `renders.json` entries with product `prior-work/mass-fidelity`; RENDERS.md lists them under the heading "mood-boards") plus five files at `production-staging/assets/prior-work/`: `massfidelity-dac-black-copper-slider-render.png`, `massfidelity-usb-audio-dac-black-gold-render.png`, `massfidelity-usb-audio-dac-green-brass-render.jpg`, `usb-audio-dac-copper-knob-rear-ports-render.jpg`, `usb-audio-dac-exploded-assembly-drawing.png`.
+3. **Mass Fidelity**: `production-staging/assets/prior-work/mass-fidelity/` (46 files: USB DAC variants, angles and finishes; portable DAC; see `renders.json` entries with product `prior-work/mass-fidelity`; RENDERS.md lists them under "Relocated images") plus three files at `production-staging/assets/prior-work/`: `massfidelity-dac-black-copper-slider-render.png`, `massfidelity-usb-audio-dac-black-gold-render.png`, `usb-audio-dac-exploded-assembly-drawing.png`. Two further top-level copies (`massfidelity-usb-audio-dac-green-brass-render.jpg`, `usb-audio-dac-copper-knob-rear-ports-render.jpg`) were deleted as byte-identical to files in `mass-fidelity/` (commit `33c9665`; recorded in the "Removed duplicates" table of `ASSETS.md`).
 4. **Remora** (Dolby behind-the-TV speaker): `production-staging/assets/prior-work/remora-speaker-on-tv-rear-render.png`, `remora-driver-layout-spec-diagram.png` (12 racetrack drivers, 4 subwoofers, 4 passive radiators), `remora-driver-layout-cutaway-render.png`, `remora-exploded-mount-diagram.png`.
 5. **Dolby earbud case** (the concept that became Wasted Real-Estate): `production-staging/assets/prior-work/round-earbud-case-with-earbuds-paul-simon-screen.png` and `production-staging/assets/prior-work/round-earbud-case-dolby-logo-lid-kod-screen.png`; then `production-staging/assets/concept-boards/wasted-real-estate-earbud-case-board.webp` and `production-staging/content/products/wasted-real-estate.json`.
 6. `production-staging/assets/ASSETS.md` — descriptions and on-image text of all prior-work files; `production-staging/CONTENT-HARVEST.md` section 6 for the original inventory.
+7. `production-staging/assets/RIGHTS.md` — all 55 prior-work images (9 here, 46 in `mass-fidelity/`) are rated "needs clearance" (Mass Fidelity, REMORA and Dolby marks, artist names on screens); four of them are displayed on the founder page and flagged.
 
 ### T22 · AI boards and their transcribed copy
 
@@ -304,10 +310,11 @@ AI-generated imagery; text on it is often garbled and the transcriptions mark ga
 3. Concept boards (`production-staging/assets/concept-boards/`): `wasted-real-estate-earbud-case-board.webp` (modes, specs, $299 accessory versus $799 investment), `stereos-live-to-global-village-case-ad.webp`, and the three venue boards (T07).
 4. `production-staging/assets/assets.json` — the same descriptions as JSON.
 5. `production-staging/CONTENT-HARVEST.md` section 5 — summary of the board copy; section 4 — names fixed by the old site.
+6. `production-staging/assets/RIGHTS.md` — all nine boards are rated internal only (AI-generated; generator output, text not reliable); two of them are displayed on the brand page, two on the venue page and one on the lineup page, and are flagged.
 
 ### T23 · The old site's visualisations worth re-implementing
 
-Read `archive/legacy-site/LEGACY-MAP.md` section 8.1 ("Worth porting (15)") and the data contracts in its section 4. Fifteen items, with the code to read and the data that now feeds each:
+Read `archive/legacy-site/LEGACY-MAP.md` section 8.1 ("Worth porting (15)") and the data contracts in its section 4. Fifteen items, with the code to read and the data that now feeds each (items 1 and 2 are also built in the reference site, in `production-staging/site/shared/chart-perceptual.js` and `chart-gantt.js`; the legacy code is still the place to read their full contracts):
 
 | # | What | Code to read first | Data in this repo |
 |---|---|---|---|
@@ -334,7 +341,7 @@ Do-not-port list: `archive/legacy-site/LEGACY-MAP.md` section 8.2 (the in-page e
 1. `agf.db` — SQLite file, tracked in git; four tables: `section_schemas` (22 rows, one per section type, with `schema_json` and `default_data`), `sections` (76 rows), `products` (6 rows), `schema_history` (0 rows). Open read-only (`sqlite3 -readonly agf.db`).
 2. `production-staging/content/raw/sections.json` — 39 of the 76 `sections` rows, untouched export (every row, editor keys included). The other 37 rows are all header rows titled "Test Duplicate" and were not exported.
 3. `production-staging/content/raw/products.json` — the six `products` rows.
-4. `production-staging/content/sections/*.json` and `production-staging/content/products/*.json` — the cleaned export (editor-only keys removed, `_source` block with the row id and timestamps); base name = newest row by `updated_at`, `.v2` to `.v5` = other distinct versions (see rough edge R10).
+4. `production-staging/content/sections/*.json` and `production-staging/content/products/*.json` — the cleaned export (editor-only keys removed, `_source` block with the row id and timestamps); base name = newest row by `updated_at`, `.v2` to `.v5` = other distinct versions (see rough edge R10); `consolidation.json` and `technology.json` also carry hand edits since the export (R21).
 5. `archive/legacy-site/schemas/*.schema.json` (22 files) — the JSON Schemas stored in `section_schemas`; field tables in `archive/legacy-site/LEGACY-MAP.md` section 6.
 6. `archive/legacy-site/LEGACY-MAP.md` sections 9.6 and 10 — data defects in the export and a map of where each page section's data now lives.
 7. `production-staging/tools/build-content.py` — the code that reads `content/` and writes the nine `content.json` files (see section 4).
@@ -343,13 +350,14 @@ Do-not-port list: `archive/legacy-site/LEGACY-MAP.md` section 8.2 (the in-page e
 
 ### T25 Globl Radio (the live streaming service)
 
-1. `globl-radio-design-system/README.md` — the sub-brand brand book: the mark and how to read it, voice, the live colour rule, type, the stave, the components.
+1. `globl-radio-design-system/README.md` — the sub-brand brand book: the mark and how to read it, voice, the live colour rule, type, the stave, the components; it also states that Globl Radio runs on stereOS (Pro captures at the venue, Home or embedded renders at home) and points to `BRAND-INTEGRATION.md`.
 2. `globl-radio-design-system/02-applications.md` — the player, venue signage, the virtual ticket and all-access pass, broadcast lower thirds, hardware screens, print.
 3. `globl-radio-design-system/03-motion.md` — what moves, and only while something is live.
 4. `globl-radio-design-system/index.html` — every component rendered, with the Midnight / Daylight / Air switch; `components/<Name>/README.md` for each one's rules.
-5. `globl-radio-design-system/assets/Logos/` — `gr-mark`, `gr-lockup`, `gr-ring` in brass, `-ink`, `-bone`; `source/` holds the two EPS originals.
+5. `globl-radio-design-system/assets/Logos/` — `gr-mark`, `gr-lockup`, `gr-ring` (and `gr-ring-small`) in brass, `-ink`, `-bone`; `source/` holds the two EPS originals, byte-identical to the two in `Domains/globl/` (R22). `globl-radio-design-system/assets/Icons/` — AGF's ten plus clock, globe, ticket, venue.
 6. `globl-radio-design-system/tokens.json` — only the tokens added to AGF's (the live voice, the stave).
 7. Source material the package drew on: `production-staging/content/sections/venue.json` and `artist-rights.v2.json` (virtual ticket, royalties, all-access pass), `production-staging/assets/ASSETS.md` ("Copy on the boards": the stereOS board's "Live, anywhere. Heard, everywhere.").
+8. `Domains/globl/README.md` — the designer's 2016 originals (EPS and two JPG previews), the two reversed EPS duplicates that were removed, and where the conversions live; `Domains/globl/index.html` shows the preview image full-window. Neither this folder nor the Globl artwork is in the rights register (R19).
 
 ### T26 stereOS (the operating system) and the family
 
@@ -358,34 +366,38 @@ Do-not-port list: `archive/legacy-site/LEGACY-MAP.md` section 8.2 (the in-page e
 3. `stereos-brand/index.html` — the preview: wordmark on three grounds, the family line, three voices, editions, capture-to-couch chain, badges.
 4. `production-staging/content/sections/technology.json` (the `stereos` entry), `business-model.v2.json`, `artist-rights.v2.json` — what the document says: locked kernel, open application space, adopters take the implementation, entitlements enforced on device.
 5. `production-staging/assets/ASSETS.md` — the stereOS concept board's copy.
+6. `stereos-brand/assets/Logos/` — `stereos-wordmark` and `stereos-os` (the OS monogram) in brass, `-ink`, `-bone`; `stereos-brand/build/build.py` regenerates them (the geometry is in the script).
+7. `BRAND-INTEGRATION.md` section 8 — five open items (reserved line, edition spelling, Globl Radio on Home only or on any edition, adopter badge on vehicles, patent posture); repeated in section 5.3 of this map.
 
 ## 3. Full file tree
 
-Every tracked file appears once. Image sequences are collapsed as "N files: pattern" with a pointer to the catalogue that lists each one. The archive is collapsed to folder level with counts (details in `archive/legacy-site/LEGACY-MAP.md`). Counts are checked against `git ls-files` (540 files; with this map the count becomes 541).
+Every tracked file appears once. Image sequences are collapsed as "N files: pattern" with a pointer to the catalogue that lists each one. The archive is collapsed to folder level with counts (details in `archive/legacy-site/LEGACY-MAP.md`). Counts are checked against `git ls-files` (639 files, this map included). The check is a short script that reads the block below, expands every collapsed line (`<...>` stands for any name, `[...]` is an optional part, `a|b` after the dot is an extension alternative) and compares the result with `git ls-files`: each tracked file must be claimed exactly once, each collapsed folder's count must equal the files left under it, and each listed pattern must match something.
 
 ```text
 production-staging/ — the one place for new work (read `README.md` first)
-  README.md — what is where, how to run the site, section types the renderer understands, collaboration conventions
-  CONTENT-HARVEST.md — pre-recovery inventory (98 lines): story skeleton, recovered fallback copy, fixed names, board copy, image inventory; partly superseded (R7)
+  README.md — what is where, how to run the site, which database version the site uses (table), the unexported test rows, section types the renderer understands, collaboration conventions
+  CONTENT-HARVEST.md — pre-recovery inventory (107 lines): story skeleton, recovered fallback copy, fixed names, board copy, image inventory; paths updated to the current layout and section 7 marked resolved (R7)
   site/ — the reference website (serve with `serve.sh`)
-    index.html — portal page shell (18 lines); builds from `site.json` via `shared/site.js`
+    index.html — portal page shell (20 lines: a `<noscript>` message inside `<main>`, then three deferred scripts); builds from `site.json` via `shared/site.js`
     site.json — manifest: brand lines (mark, strapline, nav tagline, certificate line, tagline, sources, portal copy and notes) and the nine options in order (slug, number, eyebrow, title, short, summary)
     serve.sh — one-line local server (`python3 -m http.server 8787` from `production-staging/`)
-    brand/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 01, "All Grounds Floating"
-    opportunity/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 02, "History rhymes"
-    stack/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 03, "Six technologies, one signal path"
-    lineup/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 04, "The inaugural product line"
-    venue/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 05, "A church of the performing arts"
-    artists/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 06, "Artists drive their own destiny"
-    business/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 07, "The way the money actually works"
-    roadmap/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 08, "Sequencing the line"
-    founder/ — 3 files: `intro.html`, `deep.html` (18-line shells), `content.json` (all copy, the editable source); option 09, "Twenty-five years in this market"
+    brand/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 01, "All Grounds Floating"
+    opportunity/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 02, "History rhymes"
+    stack/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 03, "Six technologies, one signal path"
+    lineup/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 04, "The inaugural product line"
+    venue/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 05, "A church of the performing arts"
+    artists/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 06, "Artists drive their own destiny"
+    business/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 07, "The way the money actually works"
+    roadmap/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 08, "Sequencing the line"
+    founder/ — 3 files: `intro.html`, `deep.html` (20-line shells), `content.json` (all copy, the editable source); option 09, "Twenty-five years in this market"
     shared/ — assets common to every page
       agf.css — byte-identical copy of the design system stylesheet (372 lines, about 181 KB: tokens, three embedded fonts, components)
       site.css — page chrome and section layouts built only from design-system tokens (193 lines)
-      site.js — the one renderer for portal, intro and deep pages (241 lines; 13 section types, nav, footer, reveal, TOC highlight, Notes toggle)
+      site.js — the one renderer for portal, intro and deep pages (252 lines; 13 section types plus a `window.AGF_RENDERERS` hook for extension types, nav, footer with the sources line only on the portal and the opportunity and business deep pages, reveal, TOC highlight, Notes toggle)
+      chart-gantt.js — extension renderer for section type `chart-gantt` (178 lines): the 24-month Gantt as inline SVG on AGF tokens, with a legend and a table view; drawn for the roadmap `gantt` section
+      chart-perceptual.js — extension renderer for section type `chart-perceptual` (272 lines): price (log) against prestige as inline SVG on AGF tokens, wide and narrow layouts, a forced-colors rule; drawn for the business `competitive-map` section
       logos/ — 5 files: `README.md` plus `agf-lockup.svg`, `agf-mark.svg`, `agf-seal.svg`, `floating-ground.svg`; identical copies of the design system logos
-      icons/ — 11 files: `README.md` plus 10 line icons (broadcast, gain, ground, headphones, mic, phantom, play, record, spark, waveform); identical copies of the design system icons
+      icons/ — 11 files: `README.md` plus `<name>.svg` for the 10 line icons (broadcast, gain, ground, headphones, mic, phantom, play, record, spark, waveform); identical copies of the design system icons
   content/ — the old site's database exported to JSON (evidence, not the working copy)
     sections/ — one file per section; base name = newest row, `.v2`..`.v5` = other distinct versions (R10); each has a `_source` block (row id, timestamps)
       artist-rights.json — artist rights, row without `revenue_streams_heading`
@@ -396,7 +408,7 @@ production-staging/ — the one place for new work (read `README.md` first)
       competitive-positioning.json — six competitor rows including AGF, summary, perceptual-map config
       concept-explainer.json — empty shell (415 bytes, title "How It Works", no modules)
       concept-explainer.v2.json — "Why This Matters": four modules (used)
-      consolidation.json — eight acquisition rows (five with a disclosed value, all dates empty, one source link); independents block empty
+      consolidation.json — eight acquisition rows (five with a disclosed value); dates, source links and a `verification` object per row were researched 2026-10-27 and added by hand (R20, R21); independents block empty
       distribution.json — distribution, row without territory / criteria headings
       distribution.v2.json — distribution: philosophy, five weighted criteria, five territories, five channel types (used)
       footer.json — brand name, tagline, meta line ("Foundational Brand Development Document · 2026 ..."), sources line
@@ -416,7 +428,7 @@ production-staging/ — the one place for new work (read `README.md` first)
       prelude.v4.json — prelude draft titled "Foundations - Products and Technologies"
       prelude.v5.json — prelude, full three-square version with intro text (used)
       team-note.json — founder interlude "Experience and Timing, meet Preparation and Opportunity"
-      technology.json — six technologies, codec diagram, l'Art stack block (July 14; used)
+      technology.json — six technologies, codec diagram, l'Art stack block (July 14; used); BT'N-Tech respelled and one split capability rejoined by hand, recorded in an `_edits` key (R21)
       technology.v2.json — same section, July 6 version (differs in substance)
       tenet.json — six tenets, July 14 version (used for bodies)
       tenet.v2.json — six tenets, July 6 version (used for worked-example titles)
@@ -433,8 +445,9 @@ production-staging/ — the one place for new work (read `README.md` first)
       products.json — the 6 `products` rows (id, name, slug, category, status, display_order, is_visible, `data`)
       sections.json — 39 `sections` rows (the 37 "Test Duplicate" header rows are not included)
   assets/ — every image in the repo, catalogued
-    ASSETS.md — catalogue of brand boards, concept boards, concepts, prior work, section backgrounds, seven Symphony PNGs; verbatim transcribed board copy; duplicates; not-found list (204 lines; R6)
-    assets.json — the same catalogue as JSON (47 entries; 8 point at removed files, R3)
+    ASSETS.md — catalogue of the 30 images outside `renders/` (brand boards, concept boards, concepts, prior work, section backgrounds); verbatim transcribed board copy; removed-duplicates record; not-found list (190 lines; R6)
+    assets.json — the same catalogue as JSON (30 entries, every path resolves on disk)
+    RIGHTS.md — image rights register (305 lines): one row per image under `assets/` (133) with origin, visible third-party marks and a proposed publication status; counts per status; the 21 files the reference site displays and the 11 of them it flags (R19)
     brand-boards/ — AI brand boards (superseded by the design system)
       agf-brand-board-landscape-design-system.png — 1536x1024: gold wordmark, "Sound Connects Everything.", early palette, typography panel, UI components, applications
       agf-brand-board-mark-palette-merch.jpeg — 1264x848: outlined wordmark with equaliser bars, type scale, colour swatches, equipment and merch strip
@@ -458,54 +471,52 @@ production-staging/ — the one place for new work (read `README.md` first)
       over-ear-headphones-black-red-pair.png — unbranded render of two over-ear headphones, black and red
       over-ear-headphones-tan-pad-silver-shell-concept.png — unbranded render of tan-and-silver over-ear headphones on navy
       waveform-sculpture-copper-wire-teal-patina.png — AI sculpture: copper wire ribbons around a teal waveform
-      material-moods/ — 14 files: `concept-<description>-<8 hex>.jpg|jpeg`, 1024x1024 AI material moods (walnut, copper, marble, glass); listed individually in `renders/renders.json` (product `concepts/material-moods`) and `renders/RENDERS.md` (section "mood-boards")
+      material-moods/ — 14 files: `concept-<description>-<8 hex>.jpg|jpeg`, 1024x1024 AI material moods (walnut, copper, marble, glass); listed individually in `renders/renders.json` (product `concepts/material-moods`) and `renders/RENDERS.md` (section "Relocated images")
     prior-work/ — founder's earlier products: Mass Fidelity, Remora, Dolby earbud case
       massfidelity-dac-black-copper-slider-render.png — CAD: low black Mass Fidelity DAC with copper slider
       massfidelity-usb-audio-dac-black-gold-render.png — CAD: Mass Fidelity "USB Audio" DAC, black with gold-brass knob
-      massfidelity-usb-audio-dac-green-brass-render.jpg — CAD: dark green slab with brass base and knob
       remora-driver-layout-cutaway-render.png — CAD cutaway of the REMORA driver layout
       remora-driver-layout-spec-diagram.png — spec slide: 12 racetrack drivers, 4 subwoofers, 4 passive radiators
       remora-exploded-mount-diagram.png — CAD: REMORA lifted off a TV with VESA mounting lines
       remora-speaker-on-tv-rear-render.png — CAD: black REMORA mounted on the back of a TV
       round-earbud-case-dolby-logo-lid-kod-screen.png — CAD: round earbud case, Dolby logo on lid, screen "KOD / J. Cole"
       round-earbud-case-with-earbuds-paul-simon-screen.png — CAD: round earbud case with earbuds, screen "LATE IN THE EVENING / Paul Simon"
-      usb-audio-dac-copper-knob-rear-ports-render.jpg — CAD: USB Audio DAC from the rear, copper knob, connector strip
       usb-audio-dac-exploded-assembly-drawing.png — exploded assembly drawing of the USB Audio box
-      mass-fidelity/ — 46 files: `mass-fidelity-usb-dac-<finish>-<view>[-<n>].png|jpg` (USB DAC, 36 files) and `mass-fidelity-portable-dac-<view>-<n>.png` (portable DAC, 10 files); listed individually in `renders/renders.json` (product `prior-work/mass-fidelity`) and `renders/RENDERS.md` (section "mood-boards")
+      mass-fidelity/ — 46 files: `mass-fidelity-usb-dac-<view>.png` (7 plain views), `mass-fidelity-usb-dac-<finish>-<view>[-<n>].jpg` (29 finish and angle variants) and `mass-fidelity-portable-dac-<view>-<n>.png` (portable DAC, 10 files); listed individually in `renders/renders.json` (product `prior-work/mass-fidelity`); `renders/RENDERS.md` records them under "Relocated images"
     renders/ — per-product renders and the render catalogue
-      RENDERS.md — render catalogue (181 lines): kinds, per-product tables with shown content and sizes; R6
-      renders.json — the same as JSON: 96 entries with path, original path, product, kind, description, size
+      RENDERS.md — render catalogue (116 lines): kinds, per-product tables with shown content and sizes, a note on the 60 relocated images; R6
+      renders.json — the same as JSON: 103 entries (43 under `renders/`, 60 relocated) with path, original path, product, kind, description, size
       over-ear-home-centric/ — 4 files: `over-ear-headphones-matte-black-copper-<view>-<n>.jpg`, 1000x1000, finished renders and one close-up
-      symphony-macro-system/ — 18 files: 11 `symphony-tower-<finish>-<view>-<n>.jpg` (1920x1083; catalogued in `renders.json`) and 7 `symphony-tower-<finish>-front|driver-closeup.png` (catalogued in `assets.json`); overlapping sets, R1
-      studio-microphone/ — 7 files: `studio-mic-<boom-arm|shockmount>-<view>-<n>.jpg`; large-diaphragm mic (not in the product database)
+      symphony-macro-system/ — 18 files: 11 `symphony-tower-<finish>-<view>-<n>.jpg` (1920x1083, set A) and 7 `symphony-tower-<finish>-front.png` or `symphony-tower-<finish>-driver-closeup.png` (994 to 1116 px wide, set B, from the old site's screenshots); all 18 catalogued in `renders.json`; overlapping sets, R1
+      studio-microphone/ — 7 files: `studio-mic-boom-arm-<view>-<n>.jpg` or `studio-mic-shockmount-<view>-<n>.jpg`; large-diaphragm mic (not in the product database)
       broadcast-microphone/ — 3 files: `broadcast-mic-greybox-<view>-<n>.png`; grey-box CAD desktop broadcast mic (not in the database)
       control-surface/ — 3 files: `control-surface-greybox-<view>-<n>.png`; grey-box CAD keyboard-format control surface (not in the database)
-      desktop-stereo-amp/ — 8 files: `desktop-amp-<black|silver>-<view>[-<logo variant>]-<id>.jpg|jpeg|png`; desktop stereo amplifier, black and silver faceplates (not in the database)
+      desktop-stereo-amp/ — 8 files: `desktop-amp-black-<view>-<n>.jpg` (2) and `desktop-amp-silver-<view>[-<logo variant>].jpg|jpeg|png` (6); desktop stereo amplifier, black and silver faceplates (not in the database)
     section-backgrounds/ — old site's section backgrounds, reduced to one file (R3)
       venue-background.webp — 1152x864 AI jazz-venue interior with a copper AGF wall sign; used on the venue page
   tools/
-    build-content.py — 661 lines: composes the nine `content.json`, `site.json`, 19 page shells and `serve.sh` from `content/` (run once to scaffold; re-running overwrites hand edits)
+    build-content.py — 688 lines: composes the nine `content.json` (including the perceptual-map and Gantt sections and the consolidation date and source columns), `site.json`, 19 page shells and `serve.sh` from `content/` (run once to scaffold; re-running overwrites hand edits; a scratch run reproduces the live files byte for byte)
 agf-design-system/agf-design-system/ — the brand book and design system (open `index.html`)
   README.md — the brand book (65 lines): voice, colour, typography, space and shape, texture, marks, component list
   02-applications.md — divisions, CMF (colour / material / finish), hardware, packaging, gifts, web (52 lines)
   03-motion.md — damped-motion rules (13 lines)
-  HOW-TO-USE.md — file guide (14 lines)
+  HOW-TO-USE.md — file guide (14 lines; still says 19 components, R16)
   agf.css — the one stylesheet to link: tokens, three embedded fonts, components (372 lines, about 181 KB)
   tokens.json — every token for the three themes, machine-readable (649 lines)
   tokens.css — the tokens as CSS custom properties, fonts referenced by file (146 lines)
-  index.html — showcase of every component with a Midnight / Daylight / Air switch (778 lines)
+  index.html — showcase of every component with a Midnight / Daylight / Air switch (780 lines)
   design-system.json — index for the published Claude artifact (Logos and Icons asset groups); ignore elsewhere
   preview-air.png — 960x1271 contact sheet in the Air theme: badge and seal, Certificate, Knobs, Meters, Nav
-  preview-cover.png — 960x888 contact sheet: the Cover ("All Grounds Floating", "Pure signal.") in the three themes
+  preview-cover.png — 1100x360: the Cover banner ("All Grounds Floating", "Pure signal.") on a dark page
   preview-daylight.png — 960x1342 contact sheet in Daylight: Faceplate, Sleeve, inside-the-lid card, Nav, Hero, Wordmark
   preview-marks.png — 1050x700: mark, lockup, seal and the ten icons
   preview-midnight.png — 960x1323 contact sheet in Midnight: Faceplate, Meters, Sleeve, Nav, Hero
-  components/ — 20 folders: 19 documented components (`README.md` + `preview.html`) and Cover (preview only)
+  components/ — 20 folders, each with `README.md` and `preview.html` (Cover gained its README after the first version of this map), plus `bundle.css`
     bundle.css — component styles composed from tokens; defines `--ease-damped` (223 lines)
     Badge/ — 2 files: `preview.html` and `README.md`; status pill with lamp: live, brass, nominal, plain
     Button/ — 2 files: `preview.html` and `README.md`; primary (solid brass), secondary (outline), quiet; verb-first labels
     Certificate/ — 2 files: `preview.html` and `README.md`; calibration card in the box: mark, floating-ground badge, "Measured in silence.", unit measurements
-    Cover/ — 1 file: `preview.html`; preview only, no README: the 960x288 cover with "All Grounds Floating" and "Pure signal."
+    Cover/ — 2 files: `preview.html` and `README.md`; the 960x288 cover: the AGF mark in Monoton, one uppercase Poiret One strapline, "Pure signal." on surface-deep
     Faceplate/ — 2 files: `preview.html` and `README.md`; hardware front plate: chamfer, screws, legends, lamps, knobs
     FloatingGround/ — 2 files: `preview.html` and `README.md`; the Floating Ground badge (IEC earth symbol in a broken orbital ring)
     Heading/ — 2 files: `preview.html` and `README.md`; headline stack: eyebrow, display, 48px rule, lede
@@ -524,10 +535,10 @@ agf-design-system/agf-design-system/ — the brand book and design system (open 
     Wordmark/ — 2 files: `preview.html` and `README.md`; the lockup: AGF in Monoton over "All Grounds Floating" in Poiret One
   assets/
     Logos/ — 5 files: `README.md`, `agf-mark.svg`, `agf-lockup.svg`, `agf-seal.svg`, `floating-ground.svg` (all brass)
-    Icons/ — 11 files: `README.md` and 10 line icons (mic, headphones, waveform, broadcast, record, play, gain, ground, phantom, spark)
+    Icons/ — 11 files: `README.md` and `<name>.svg` for the 10 line icons (mic, headphones, waveform, broadcast, record, play, gain, ground, phantom, spark)
   fonts/ — 3 files: `Commissioner-Variable.woff2`, `Monoton-Regular.woff2`, `PoiretOne-Regular.woff2` (identical to `fonts/web/`)
 archive/legacy-site/ — the retired schema-driven site; read `LEGACY-MAP.md` instead of the code (215 files)
-  LEGACY-MAP.md — 1,588 lines: architecture, every module, component data contracts, 22 schema tables, CSS layer and token comparison, "worth porting" (15) and "do not port" lists, defects, content map (sections 1 to 10)
+  LEGACY-MAP.md — 1,590 lines (header note and sections 1.1 and 1.2 corrected for the committed move and the deleted fonts, R5): architecture, every module, component data contracts, 22 schema tables, CSS layer and token comparison, "worth porting" (15) and "do not port" lists, defects, content map (sections 1 to 10)
   README.md — README of the PDF spec-sheet package (not the website)
   index.html — the site shell (empty `<main id="app">`, loads the monoliths)
   index.js — PDF: `renderPdfHtml(product, pdfConfig)`
@@ -543,24 +554,78 @@ archive/legacy-site/ — the retired schema-driven site; read `LEGACY-MAP.md` in
   editor/ — 23 files: unloaded split extraction of the editor (21 modules plus `LOAD_ORDER.md`, `EXTRACT_REPORT.txt`)
   schemas/ — 22 files: `<section>.schema.json`, JSON Schema for each section type plus `product` and `cut-sheet`
   sections/ — 10 files: PDF section renderers (audio-specs, business-metrics, connectivity, footer, form-factor, header, hero-image, overview, technologies, index)
-  css/ — 11 files: PDF stylesheet partials as JS modules plus `index.js` assembler
-  styles/ — 67 files: site CSS: `index.css`, `_manifest.json` and 9 sub-folders of partials (core, layout, sections 22, compare, configurator, viz, feedback, util, editor 12)
-  assets/Commissioner/README.txt — the Google Fonts download readme; the only file left in `assets/` (R4)
+  css/ — 11 files: PDF stylesheet partials as JS modules, `<partial>.css.js`, plus the `index.js` assembler
+  styles/ — 67 files: site CSS: `index.css`, `_manifest.json` and `<folder>/<partial>.css` in 9 sub-folders of partials (core, layout, sections 22, compare, configurator, viz, feedback, util, editor 12); `core/fonts.css` now loads `fonts/web/*.woff2` (R4)
+  assets/Commissioner/README.txt — the Google Fonts download readme; the only file left in `assets/` (the duplicate fonts beside it were deleted, R4)
+globl-radio-design-system/ — the Globl Radio sub-brand package, built on the AGF system; open `index.html` (76 files)
+  README.md — the sub-brand book (73 lines): the mark and how to read it, voice, the live colour rule, type, the stave, components; states that Globl Radio runs on stereOS
+  02-applications.md — the player, venue signage, virtual ticket and all-access pass, broadcast lower thirds, hardware screens, print, web (47 lines)
+  03-motion.md — what moves, and only while something is live (12 lines)
+  HOW-TO-USE.md — file guide (16 lines)
+  globl.css — the one stylesheet to link: AGF's `agf.css` plus the Globl Radio layer, fonts embedded (551 lines)
+  globl-layer.css — the Globl Radio layer alone, for pages that already load `agf.css` (178 lines)
+  tokens.json — only the tokens Globl Radio adds to AGF's: the live voice, the stave (115 lines)
+  tokens.css — the same as CSS custom properties (34 lines)
+  index.html — showcase of every component with a Midnight / Daylight / Air switch (57 lines)
+  design-system.json — index for a published Claude artifact (222 lines); ignore elsewhere
+  preview-air.png — 1100x9036 contact sheet in the Air theme
+  preview-cover.png — 1100x620: the Globl Radio cover (monogram, "Live, anywhere. Heard, everywhere.", ON AIR, endorsement line)
+  preview-daylight.png — 1100x9036 contact sheet in Daylight
+  preview-marks.png — 1024x571: monogram, lockup and ring in brass, ink and bone
+  preview-midnight.png — 1100x9036 contact sheet in Midnight
+  build/build.py — 404 lines: regenerates everything in the package but the hand-written docs
+  assets/
+    Logos/ — 13 files: `README.md`, `gr-<form>.svg` (brass), `gr-<form>-ink.svg`, `gr-<form>-bone.svg` for the monogram (`gr-mark`), lockup (`gr-lockup`), ring (`gr-ring`) and small ring (`gr-ring-small`)
+      source/ — 2 files: `3-logofinal-mark02.1.eps`, `3-logofinal-mark02.2.eps`; the designer's EPS originals the monogram and lockup were converted from (byte-identical to the files in `Domains/globl/`, R22)
+    Icons/ — 15 files: `README.md` and `<name>.svg` for 14 line icons: AGF's ten plus clock, globe, ticket, venue
+  fonts/ — 3 files: `Commissioner-Variable.woff2`, `Monoton-Regular.woff2`, `PoiretOne-Regular.woff2`
+  components/ — 14 folders: 13 documented components (`README.md` + `preview.html`) and Cover (preview only)
+    Countdown/ — 2 files: `preview.html` and `README.md`; a clock to air in tabular figures
+    Cover/ — 1 file: `preview.html`; preview only, no README
+    Credit/ — 2 files: `preview.html` and `README.md`; the artist's line on every ticket and stream page
+    Endorsement/ — 2 files: `preview.html` and `README.md`; Globl Radio beside AGF, "A live service of All Grounds Floating"
+    Lockup/ — 2 files: `preview.html` and `README.md`; the monogram with GLOBL RADIO inside the rings
+    Monogram/ — 2 files: `preview.html` and `README.md`; the primary mark, G and R in five lines inside five rings
+    OnAir/ — 2 files: `preview.html` and `README.md`; the live word with its lamp, and three other states
+    Player/ — 2 files: `preview.html` and `README.md`; the now-playing bar, always in the Air theme
+    Ring/ — 2 files: `preview.html` and `README.md`; five concentric rings, the small mark and the live indicator
+    Schedule/ — 2 files: `preview.html` and `README.md`; tonight's and upcoming performances as a table
+    Stave/ — 2 files: `preview.html` and `README.md`; the signature texture, the mark's five lines laid flat
+    Ticket/ — 2 files: `preview.html` and `README.md`; the virtual ticket, sibling of the AGF Certificate
+    VenueCard/ — 2 files: `preview.html` and `README.md`; one card per AGF venue with the stream's state
+    Waveform/ — 2 files: `preview.html` and `README.md`; the performance drawn on a single stave
+stereos-brand/ — the stereOS wordmark package (13 files)
+  README.md — the wordmark's construction and rules, the four editions, voice colour, endorsement and ingredient badge (40 lines)
+  index.html — preview: wordmark on three grounds, the family line, three voices, editions, capture-to-couch chain, badges (64 lines; links the Globl Radio stylesheet, so it needs the sibling packages beside it)
+  preview-daylight.png — 1100x2966 capture of the preview in Daylight
+  preview-family.png — 1024x337: AGF, Globl Radio and stereOS on one baseline
+  preview-midnight.png — 1100x2966 capture of the preview in Midnight
+  build/build.py — 227 lines: regenerates the SVGs (the geometry is in the script)
+  assets/Logos/ — 7 files: `README.md`, `stereos-wordmark.svg` (brass), `stereos-wordmark-ink.svg`, `stereos-wordmark-bone.svg`, `stereos-os.svg` (the OS monogram), `stereos-os-ink.svg`, `stereos-os-bone.svg`
+BRAND-INTEGRATION.md — how AGF, stereOS and Globl Radio relate (84 lines): architecture, naming and spelling, what each may claim, marks together, colour voices, surface by surface, editions and products, open items
+Domains/globl/ — the Globl Radio logo designer's 2016 deliverables, working source (6 files)
+  3-logofinal-mark02.1.eps — the final mark artwork, rich black on white (about 1.6 MB)
+  3-logofinal-mark02.2.eps — the lockup artwork, rich black on white (about 1.6 MB)
+  README.md — what the files are, which two reversed duplicates were removed and why, where the conversions live (18 lines)
+  globl-logo.jpg — 3507x2480 preview render
+  globl-logo-wo.jpg — 3507x2480 preview render
+  index.html — landing page: the preview image fitted to the window, plain JavaScript (35 lines)
 fonts/ — licensed source fonts
   Commissioner/Commissioner-Variable.ttf — 4-axis variable font (FLAR, VOLM, slnt, wght)
-  Commissioner/static/ — 9 files: `Commissioner-<Thin|ExtraLight|Light|Regular|Medium|SemiBold|Bold|ExtraBold|Black>.ttf`
+  Commissioner/static/ — 9 files: `Commissioner-<weight>.ttf` for Thin, ExtraLight, Light, Regular, Medium, SemiBold, Bold, ExtraBold and Black
   Monoton/Monoton-Regular.ttf — the mark face
   PoiretOne/PoiretOne-Regular.ttf — the strapline face
   licenses/ — 3 files: `OFL-Commissioner.txt`, `OFL-Monoton.txt`, `OFL-PoiretOne.txt`
   web/ — 3 files: woff2 builds of the three faces
 agf.db — the SQLite database the content was exported from (T24)
+REPO-MAP.md — this file
 ```
 
 ---
 
 ## 4. The nine site options
 
-Built by `production-staging/tools/build-content.py` (661 lines) from `production-staging/content/`. "Sections files" are `production-staging/content/sections/<name>.json`; "Products" are `production-staging/content/products/<slug>.json`. The generator's own hand-written text (intro points, metrics, quotes, portal copy, figure picks and some labels) sits in the script itself; the database fields feed the rest. `site.json` also draws `brand.sources` from `footer.json` and `brand.portal_lede` from `hero.json`.
+Built by `production-staging/tools/build-content.py` (688 lines) from `production-staging/content/`. "Sections files" are `production-staging/content/sections/<name>.json`; "Products" are `production-staging/content/products/<slug>.json`. The generator's own hand-written text (intro points, metrics, quotes, portal copy, figure picks and some labels) sits in the script itself; the database fields feed the rest. `site.json` also draws `brand.sources` from `footer.json` and `brand.portal_lede` from `hero.json`. Two deep sections are not of the 13 built-in types: `competitive-map` (business) is type `chart-perceptual` and `gantt` (roadmap) is type `chart-gantt`, drawn by the scripts in `production-staging/site/shared/` (section 1.5); the generator composes both from the same section files as the cards and timeline beside them.
 
 | Slug | No. | Title (manifest) | Intro headline | Deep sections | Deep section ids (type) | Sections files (`production-staging/content/sections/`) | Products | Images shown |
 |---|---|---|---|---|---|---|---|---|
@@ -570,11 +635,13 @@ Built by `production-staging/tools/build-content.py` (661 lines) from `productio
 | `lineup` | 04 | The Lineup — The inaugural product line | Six products. One platform where it pays. | 10 | `the-line` (cards), `renders` (figures), `also-on-the-bench` (figures), `spec-over-ear-home-centric` (spec), `spec-core-all-in-one-small` (spec), `spec-core-all-in-one-soundbar` (spec), `spec-symphony-macro-system` (spec), `spec-the-instrument` (spec), `spec-wasted-real-estate` (spec), `runway` (table) | `business-model.v2.json` (`runway_table` only) | all six: `over-ear-home-centric`, `core-all-in-one-small`, `core-all-in-one-soundbar`, `symphony-macro-system`, `the-instrument`, `wasted-real-estate` | 6 renders (4 Symphony, 2 Over-Ear), the Wasted Real-Estate board, 5 "on the bench" renders |
 | `venue` | 05 | The Venue — A church of the performing arts | The venue. A church of the performing arts. | 8 | `zones` (cards), `boards` (figures), `journey` (steps), `customer` (prose), `royalties` (cards), `virtual-ticket` (cards), `financial-model` (list), `cultural-positioning` (cards) | `venue.json` | none | 2 concept boards, `section-backgrounds/venue-background.webp` |
 | `artists` | 06 | Artist Rights — Artists drive their own destiny | Artists drive their own destiny. | 4 | `philosophy` (prose), `tiers` (cards), `enforcement` (cards), `revenue-streams` (table) | `artist-rights.v2.json` | none | none |
-| `business` | 07 | The Business — The way the money actually works | Numbers, runway, and the way the money actually works. | 11 | `pricing` (cards), `channel` (cards), `revenue-model` (prose), `scaling` (prose), `distribution` (prose), `partner-criteria` (table), `territories` (table), `channel-types` (cards), `distribution-revenue` (prose), `competitive-positioning` (cards), `summary` (prose) | `business-model.v2.json`, `distribution.v2.json`, `competitive-positioning.json` | none | none |
-| `roadmap` | 08 | The Roadmap — Sequencing the line | Three phases, one shared platform where it pays. | 5 | `phases` (timeline), `pr-levers` (cards), `venue-pilots` (prose), `year-one` (prose), `beyond` (prose) | `launch-roadmap.json`, `business-model.v2.json` (`scaling_timeline` only) | none | none |
+| `business` | 07 | The Business — The way the money actually works | Numbers, runway, and the way the money actually works. | 12 | `pricing` (cards), `channel` (cards), `revenue-model` (prose), `scaling` (prose), `distribution` (prose), `partner-criteria` (table), `territories` (table), `channel-types` (cards), `distribution-revenue` (prose), `competitive-map` (chart-perceptual), `competitive-positioning` (cards), `summary` (prose) | `business-model.v2.json`, `distribution.v2.json`, `competitive-positioning.json` | none | none |
+| `roadmap` | 08 | The Roadmap — Sequencing the line | Three phases, one shared platform where it pays. | 6 | `gantt` (chart-gantt), `phases` (timeline), `pr-levers` (cards), `venue-pilots` (prose), `year-one` (prose), `beyond` (prose) | `launch-roadmap.json`, `business-model.v2.json` (`scaling_timeline` only) | none | none |
 | `founder` | 09 | The Founder — Twenty-five years in this market | Twenty-five years in this market, longer if you count the garage sales. | 5 | `milestones` (timeline), `prior-work` (figures), `companies` (cards), `mentors` (table), `now-what` (prose) | `founder.v2.json` | none | 4 prior-work images |
 
 Per option the folder `production-staging/site/<slug>/` holds `intro.html`, `deep.html` (page shells) and `content.json`. Manifest order, numbers, eyebrows, titles and summaries live in `production-staging/site/site.json` (`options`); reorder or rename there.
+
+Eyebrows: deep-section eyebrows no longer carry the brand document's own section numbers. The four that did ("06 · The Lineup" on `the-line`, "09 · Distribution" on `distribution`, and "11 · Competitive positioning" on both `competitive-map` and `competitive-positioning`) are unnumbered in the content files and in the generator (commit `7c5e15b`); the only number left on a deep page is the option number in the page header. The old numbering still exists in the database (R12).
 
 Not used by the generator at all: `header.json`, `header.v2.json`, `header.v3.json` (the nav tagline is typed into the script), `comparison-config.json`, `pdf-config.json`, `pdf-config.v2.json`, and the older versions `artist-rights.json`, `business-model.json`, `concept-explainer.json`, `distribution.json`, `founder.json`, `prelude.json` to `prelude.v4.json`. `tenet.v2.json` and `technology.v2.json` are used only as secondary sources inside the tenets and technologies cards.
 
@@ -582,9 +649,9 @@ Not used by the generator at all: `header.json`, `header.v2.json`, `header.v3.js
 
 ## 5. Open questions carried in the content
 
-Compiled with a script from every `note` and `_assumed` field in the nine `production-staging/site/*/content.json` files (nested ones included). These are the working notes the site shows by default. Delete a `note` key when its section is signed off. 25 `note` fields and 3 `_assumed` flags appear in total; the table gives each with its option slug and section id (`intro` means the option's intro page; `deep` means the deep page's lede block).
+Compiled with a script from every `note` and `_assumed` field in the nine `production-staging/site/*/content.json` files (nested ones included). These are the working notes the site shows by default. Delete a `note` key when its section is signed off. 27 `note` fields and 3 `_assumed` flags appear in total (the two added since the first version of this map are the notes on the new chart sections, `competitive-map` and `gantt`; three older notes were rewritten, on `consolidation`, `competitive-positioning` and the roadmap `deep` lede, and the `renders` note was reworded); the table gives each with its option slug and section id (`intro` means the option's intro page; `deep` means the deep page's lede block).
 
-Extraction one-liner (run from `production-staging/site`; it lists every `note` and `_assumed` line per option, and the section ids in the table below were then resolved by walking the JSON):
+Extraction one-liner (run from `production-staging/site`; it lists every `note` and `_assumed` line per option, 30 lines in all at `7c5e15b`, and the section ids in the table below were then resolved by walking the JSON, which also yields the `metrics_note` rows in 5.2):
 
 ```sh
 python3 -I -c 'import glob,re;[print(f.split("/")[0],m[:90]) for f in sorted(glob.glob("*/content.json")) for m in re.findall(r"\"(?:note|_assumed)\": [^\n]*",open(f).read())]'
@@ -602,11 +669,11 @@ python3 -I -c 'import glob,re;[print(f.split("/")[0],m[:90]) for f in sorted(glo
 | `brand` | `standing-lines` | `note` | The design system fixed three of these; the fourth came from the document's header. Confirm or cut. |
 | `brand` | `divisions` | `_assumed` | true: the section title shows an "assumed" badge (the line was drafted for the site, not lifted from the document) |
 | `brand` | `divisions` | `note` | Open question from the brand page brief: keep the three codes, rename them, or drop them for the document's own framing? |
-| `opportunity` | `consolidation` | `note` | Dates and source links are blank for all but the Harman transaction in the document. Worth filling before this goes public. |
+| `opportunity` | `consolidation` | `note` | Dates and sources researched 2026-10-27; founder to confirm before publishing. All eight rows now have a source, but not all are final: closing is unconfirmed for Sony/Audeze, Marshall (majority stake) and Beyerdynamic, and the Harman source page was not re-read. Values are as in the brand document: the sourced Marshall, Beyerdynamic and Barco figures are euros (EUR 1.1B, 122M and 135M), and the $8.35B Samsung figure matches no single source (Harman was about $8B in 2017). Loewe/Cabasse was an insolvency asset purchase. |
 | `opportunity` | `at-a-glance` | `note` | The $4.2B TAM and the "12+" acquisitions count come from the document's At-a-Glance block without a cited source. Treat as unverified until sourced. |
 | `stack` | `technologies (card 1)` | `note` | Patent status differs between document versions: Patented (July 6) versus Trade secret (July 14). Shown as the newer one. This must be settled before publication. |
 | `stack` | `technologies` | `note` | Capabilities and advantages are the July 14 version. The July 6 version (content/sections/technology.v2.json) adds a few lines worth considering: Sony America's California R&D had similar tech and 'the marketing guys completely ruined it'; No-Nails lists beryllium-alloy HF in the dustcap position and light final-stage DSP; FRC41's effect is described as moving to a pair of high-end speakers in the sweet spot. |
-| `lineup` | `renders` | `note` | No renders exist yet for the Core-like all-in-ones or the Instrument. The Symphony folder holds two overlapping render sets (numbered JPGs from product-renders, transparent PNGs from the old site); both are kept until you pick. |
+| `lineup` | `renders` | `note` | No renders exist yet for the Core-like all-in-ones or the Instrument. The Symphony folder holds two overlapping render sets (numbered JPGs from product-renders, PNGs from the old site's screenshots); both are kept until you pick. |
 | `lineup` | `also-on-the-bench` | `_assumed` | true: the section title shows an "assumed" badge (the line was drafted for the site, not lifted from the document) |
 | `lineup` | `also-on-the-bench` | `note` | Decide whether these are products, the l'Art Production line, or explorations. They are shown so nothing is lost; cutting is one line in content.json. |
 | `lineup` | `spec-over-ear-home-centric` | `note` | V1: 6-pair dock with RF default to dock, single-action BT clean pairing, remembers 6 paired devices, native USB-C high-res A2D + native 3.5mm analog. **V2 refactor in 8–12 months** ($120K tooling). Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU. |
@@ -617,8 +684,10 @@ python3 -I -c 'import glob,re;[print(f.split("/")[0],m[:90]) for f in sorted(glo
 | `lineup` | `spec-wasted-real-estate` | `note` | Y1 target: 1,000 pcs/month globally with 100+ retail partners (100pcs/mo in 2 PoC venues). Comparable: Focal's flagship reference hits 1,000pcs/mo with focused rep firm. Certifications budgeted at **~$30K combined (ETL/FCC/CE)** per SKU. |
 | `lineup` | `runway` | `note` | Internal planning table. Decide whether COGS stays on any public page. |
 | `venue` | `boards` | `note` | All venue imagery is AI-generated mood work. Fine for discussion, not for publication. |
-| `business` | `competitive-positioning` | `note` | The document renders these on a perceptual map (log price versus prestige). That chart is on the list for the next pass; the cards carry the same data. |
-| `roadmap` | `deep` | `note` | The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt is queued for the next pass; the timeline below carries the same months. |
+| `business` | `competitive-map` | `note` | Prestige scores are the source document's own estimates, not a measured index. Prices are the average flagship price the document assigns each brand. The cards below carry the same data. |
+| `business` | `competitive-positioning` | `note` | The document renders these on a perceptual map (log price versus prestige); the cards carry the same data. |
+| `roadmap` | `deep` | `note` | The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt above summarises the six swimlanes; the timeline below carries the same months. |
+| `roadmap` | `gantt` | `note` | Bars span each phase from start month to finish. Markers show the PR lever, the venue pilot and the volume target; the timeline below carries the detail. |
 | `founder` | `prior-work` | `note` | Renders carry Mass Fidelity and Dolby marks. Check rights before any of these go public. |
 | `founder` | `mentors` | `note` | Named people on a public page need their consent or a public record. Flag any name that should stay internal. |
 | `founder` | `now-what` | `note` | The document's CTA was 'Request the Deck' with a placeholder address. The real contact is still an open question. |
@@ -640,40 +709,44 @@ These appear in the sections' own text or in the data, and are repeated in secti
 - Whether COGS, tooling and certification figures survive to a public site (lineup / runway; `production-staging/README.md`).
 - Whether the four extra objects with renders (studio microphone, broadcast microphone, control surface, desktop amplifier) are products, the l'Art Production line, or explorations (lineup / also-on-the-bench).
 - The real contact address for "Request the Deck" (founder / now-what).
+- Whether the consolidation table's figures stay as the document has them or follow the sources: three of the values are euros shown with a dollar sign, the $8.35B Samsung figure matches no source, and closing is unconfirmed for three rows (R20). The table's own note asks the founder to confirm before publishing.
+- The image decisions in `production-staging/assets/RIGHTS.md` ("the founder decides"): whether the over-ear headphone design with the PS Audio plate is AGF's (re-render without the plate or clear it), where `concepts/mv2-bundle-plus-white-headphones-stand.png` and the two unbranded over-ear concept images came from, and the commission or licence record for the Globl Radio artwork (R19).
+- The five open items in `BRAND-INTEGRATION.md` section 8: the stereOS reserved line ("Sound first" is proposed), edition spelling (Home and Pro capitalised, embedded and mobile lower case), whether Globl Radio runs on stereOS Home only or on any edition, whether a vehicle maker's dash shows the wordmark or only the type form, and the patent posture for stereOS (trade secret in the document; confirm before a stereOS page is public).
+- The two Globl Radio standing lines, "Live to the global village." and "Live, anywhere. Heard, everywhere.", are proposed for sign-off in `globl-radio-design-system/README.md`.
 
 ---
 
 ## 6. Known rough edges
 
-Numbered so other sections can refer to them. Each says where to look.
+Numbered so other sections can refer to them. Each says where to look and opens with its status at HEAD `7c5e15b`. The first version of this map (against `03a1e31`) listed R1 to R18; since then R3, R4, R5, R7 and R14 are resolved, R6, R9, R12, R13, R15 and R16 are partly resolved and restated, R1, R2, R8, R10, R11, R17 and R18 stand (R1 and R8 restated), and R19 to R22 are new.
 
 ### Images and catalogues
 
-**R1. The Symphony render folder holds two overlapping sets.** `production-staging/assets/renders/symphony-macro-system/` has 18 files: 11 numbered JPGs (1920x1083, from the former `product-renders/`; catalogued in `renders/RENDERS.md` and `renders/renders.json`) and 7 PNGs named `symphony-tower-<finish>-front.png` or `-driver-closeup.png` (994 to 1116 px wide, from the old site's screenshots; catalogued only in `ASSETS.md` and `assets.json`). Both sets show the same slim tower in overlapping finishes (walnut, copper, green with brass or copper, black with brass trim or ring). `RENDERS.md` ("Note: files already present...") calls the PNGs "transparent-background" and says they are not described there; `ASSETS.md` does describe them, and the corner pixels of all seven PNGs are opaque mauve-grey (RGBA mode, alpha 255), so they do not appear to be transparent. The lineup page's note on `renders` says both sets are kept "until you pick". The lineup page currently shows three of the PNGs and one JPG.
+**R1. The Symphony render folder holds two overlapping sets.** Open (the catalogue part is fixed). `production-staging/assets/renders/symphony-macro-system/` has 18 files: 11 numbered JPGs (1920x1083, from the former `product-renders/`) and 7 PNGs named `symphony-tower-<finish>-front.png` or `-driver-closeup.png` (994 to 1116 px wide, from the old site's screenshots). Both sets show the same slim tower in overlapping finishes (walnut, copper, green with brass or copper, black with brass trim or ring). Since commit `968d6bc` all 18 are catalogued in `renders/RENDERS.md` and `renders/renders.json` (the PNGs moved there from `ASSETS.md` and `assets.json`), and the catalogue no longer calls the PNGs "transparent-background": it describes them on a mauve-grey background, which agrees with the corner pixels of all seven (RGBA mode, alpha 255, opaque mauve-grey). The lineup page's note on `renders` was reworded the same way and still says both sets are kept "until you pick". The page shows three of the PNGs and one JPG. `RIGHTS.md` rates all 18 publishable as "in development".
 
-**R2. Four of the six products have no product render.** `core-all-in-one-small`, `core-all-in-one-soundbar`, `the-instrument` have no images anywhere; `wasted-real-estate` has only the AI concept board, the "stereOS live to global village" ad and two Dolby-era CAD case renders in `prior-work/`. `renders.json` and `RENDERS.md` list the empty slugs. The lineup page notes "No product photography exists yet."
+**R2. Four of the six products have no product render.** Open. `core-all-in-one-small`, `core-all-in-one-soundbar`, `the-instrument` have no images anywhere; `wasted-real-estate` has only the AI concept board, the "stereOS live to global village" ad and two Dolby-era CAD case renders in `prior-work/`. `renders.json` and `RENDERS.md` list the empty slugs. The lineup page notes "No product photography exists yet."
 
-**R3. `section-backgrounds/` has been reduced to one file.** Eight files were byte-identical duplicates of images kept under `concepts/`, `prior-work/` or `venue-background.webp` itself, and were removed after a sha256 check. `ASSETS.md` and `assets.json` were pruned to match (39 entries) after this map was first written; the duplicates list in `ASSETS.md` records the pairings.
+**R3. `section-backgrounds/` has been reduced to one file.** Resolved (`451dc12`, `968d6bc`, `33c9665`). Eight files that were byte-identical duplicates of images kept under `concepts/`, `prior-work/` or `venue-background.webp` itself were removed after a sha256 check, and two more byte-identical duplicates in `prior-work/` went later (T21). `ASSETS.md` and `assets.json` were pruned to match: 30 entries, every path resolves on disk; with `renders/renders.json` (103) they account for all 133 image files, each in one catalogue. The "Removed duplicates" table in `ASSETS.md` records the ten pairings.
 
-**R4. The archive's one remaining non-code asset.** `archive/legacy-site/assets/Commissioner/README.txt` (the Google Fonts download readme) is the only file left under `archive/legacy-site/assets/`; the other 22 font and licence files were dropped in commit `03a1e31` because they duplicated `fonts/`. As a result the archived stylesheet `archive/legacy-site/styles/core/fonts.css` still points at `../../assets/Commissioner/...`, `../../assets/Monoton/...` and `../../assets/PoiretOne-Regular/...`, which no longer exist, so the archived site would render without the brand fonts unless those URLs are repointed to `fonts/`.
+**R4. The archive's one remaining non-code asset.** Resolved (`af15ee7`). `archive/legacy-site/assets/Commissioner/README.txt` (the Google Fonts download readme) is the only file left under `archive/legacy-site/assets/`; the other 22 font and licence files were dropped in `03a1e31` because they duplicated `fonts/`. `archive/legacy-site/styles/core/fonts.css` now points at the licensed web builds (`../../../../fonts/web/Commissioner-Variable.woff2`, `Monoton-Regular.woff2`, `PoiretOne-Regular.woff2`, all present), so the archived site loads the brand fonts again, as WOFF2 rather than the original TTFs.
 
-**R5. `LEGACY-MAP.md` is slightly out of date on its own header.** `archive/legacy-site/LEGACY-MAP.md` sections 1.1 and 1.2 say 236 files moved, "nothing deleted" and "nothing committed". Since commit `03a1e31` the archive holds 215 files and the duplicate fonts are deleted. Everything else in it was written against the code as it stands.
+**R5. `LEGACY-MAP.md` is slightly out of date on its own header.** Resolved (`af15ee7`). `archive/legacy-site/LEGACY-MAP.md` now opens with a dated note and sections 1.1 and 1.2 say the move is committed, the archive holds 215 tracked files and the duplicate fonts are deleted (with `fonts.css` repointed). The file is 1,590 lines.
 
-**R6. Catalogue inconsistencies.**
-- `production-staging/assets/ASSETS.md` section "Not found / ambiguous" says there is no headphones-on-head-form image and nothing was placed in `renders/over-ear-home-centric/`; that folder now holds four (`RENDERS.md`: matte black with copper, on a silver mannequin head).
-- `production-staging/assets/renders/RENDERS.md` has a section "mood-boards" with 60 images and a count table row "mood-boards (relocated...)"; there is no `mood-boards` folder. Those images now live in `assets/prior-work/mass-fidelity/` (46) and `assets/concepts/material-moods/` (14); use the `path` and `product` fields in `renders/renders.json`.
-- Every "Original path" column in both catalogues refers to folders that no longer exist (`site/assets/screenshots/`, `site/assets/sections/`, `product-renders/`, root `AGF.png` and so on). They record provenance only.
-- `ASSETS.md` section "Duplicates" lists files that no longer exist (see R3).
+**R6. Catalogue inconsistencies.** Partly resolved (`968d6bc`). Fixed: `ASSETS.md` "Not found / ambiguous" now says `renders/over-ear-home-centric/` holds four renders; `RENDERS.md` no longer has a "mood-boards" section (it has "Relocated images", which says the 60 files moved to `assets/prior-work/mass-fidelity/` (46) and `assets/concepts/material-moods/` (14) and are listed in `renders.json` with a `product` of `prior-work/mass-fidelity` or `concepts/material-moods`); the stale "Duplicates" list became "Removed duplicates". Still true: every "Original path" column in both catalogues refers to folders that no longer exist (`site/assets/screenshots/`, `site/assets/sections/`, `product-renders/`, root `AGF.png` and so on); `ASSETS.md` says so in a note at the top, and `RENDERS.md` appears to carry no such note. They record provenance only.
 
-**R7. `production-staging/CONTENT-HARVEST.md` is partly superseded.** Its banner says the database was recovered; sections 1 to 6 remain accurate as an inventory but cite the old layout (`site/`, `product-renders/`, root images), and section 7 "Known gaps" has been resolved by `content/`.
+**R7. `production-staging/CONTENT-HARVEST.md` is partly superseded.** Resolved (`af15ee7`). Its paths now use the current layout (`archive/legacy-site/`, `production-staging/assets/...`), a layout note says so, and section 7 is headed "Known gaps (resolved)". It remains a record of what survived without the database, not a description of the repo.
 
-**R8. Rights and provenance of imagery.** All venue imagery and all board and concept images are AI-generated mood work (the venue note says "fine for discussion, not for publication"); `prior-work/` renders carry Mass Fidelity, REMORA and Dolby marks (founder note: "check rights before any of these go public"); one concept image shows a "SOTA" TV logo and another a "Dolby" mark. Text on AI boards is frequently garbled; the master design-system board has garbled hex values (`ASSETS.md` marks them `[sic]`), so take hex values from `tokens.json`, not from boards.
+**R8. Rights and provenance of imagery.** Open, now with a register (`141cf2a`). All venue imagery and all board and concept images are AI-generated mood work (the venue note says "fine for discussion, not for publication"); `prior-work/` renders carry Mass Fidelity, REMORA and Dolby marks (founder note: "check rights before any of these go public"); one concept image shows a "SOTA" TV logo and another a "Dolby" mark. Text on AI boards is frequently garbled; the master design-system board has garbled hex values (`ASSETS.md` marks them `[sic]`), so take hex values from `tokens.json`, not from boards. `production-staging/assets/RIGHTS.md` now rates every image; its findings are R19.
+
+**R19. The image rights register's findings.** Open (new). `production-staging/assets/RIGHTS.md` (133 files, written 2026-10-27, "proposed, not legal advice; the founder decides") rates 42 images publishable, 31 internal only, 59 needs clearance and 1 do not publish. Of the 21 images the reference site displays, 10 are publishable and 11 are flagged (brand 2, founder 4, lineup 2, venue 3). Points for a decision: (1) two of the four over-ear renders carry a PS Audio plate: `over-ear-headphones-matte-black-copper-front-three-quarter-135.jpg` (small, on the right cup yoke; displayed on the lineup page) and `...-side-three-quarter-139.jpg` (a "PS AUDIO" plate on the cup, not displayed); both are rated needs clearance, and the other two renders (133 and 136) are rated publishable with a caveat to confirm with the founder that the headphone design is AGF's. `RENDERS.md` describes 139 only as showing a "logo plate", and 135 not at all. (2) `concepts/mv2-bundle-plus-white-headphones-stand.png` is the one do-not-publish file (it appears to be third-party marketing, captioned "MV2 Bundle+"); the two unbranded over-ear concept images have no recorded source and are rated needs clearance. (3) The register covers only `production-staging/assets/`: the Globl Radio artwork (`globl-radio-design-system/assets/`) and `Domains/globl/` have no rows. The Globl README credits Melvin Galapon for the 2016 monogram, but no commission, assignment or licence is recorded in the repo; the register's advice is to keep the signed agreement with it.
+
+**R22. The Globl Radio source art exists twice, in a top-level folder nothing else refers to.** Open (new). `Domains/globl/3-logofinal-mark02.1.eps` and `3-logofinal-mark02.2.eps` (about 1.6 MB each) are byte-identical (`cmp`) to the two files in `globl-radio-design-system/assets/Logos/source/`; the `Domains/globl/README.md` says so and notes that EPS does not delta-compress in git. Two reversed "mark03" EPS duplicates (about 3 MB) were removed in `af15ee7` after the path geometry was checked identical; the README says they remain recoverable from git history. `Domains/` also holds two 3507x2480 JPG previews (about 0.85 MB each) and a landing page, and `git grep` finds no reference to `Domains` outside its own README, so it appears to be a working folder rather than part of any site.
 
 ### Content and database
 
-**R9. The database export has gaps.** `production-staging/content/sections/consolidation.json` has empty `independent_heading` and `independent_intro` and no list of surviving independent brands; every acquisition `date` is empty and only the Harman row has a `source_url` (the working note under opportunity / consolidation says dates are blank "for all but the Harman transaction"; in the data all eight dates are blank). `wasted-real-estate.json` has no ASP, TTM or COGS (only a monthly volume target of 1,000); `the-instrument.json` has no COGS. The competitive-positioning table includes AGF itself as a row (prestige 90, average price $3,000), a self-score. The overview figures "$4.2B TAM" and "12+ brand acquisitions" have no cited source.
+**R9. The database export has gaps.** Partly resolved (`b451387`). Resolved: every acquisition now has a `date` and a `source_url` in `production-staging/content/sections/consolidation.json` (researched 2026-10-27, for the founder to confirm; see R20 for what is unconfirmed). Still true: `independent_heading` and `independent_intro` are empty and there is no list of surviving independent brands; `wasted-real-estate.json` has no ASP, TTM or COGS (only a monthly volume target of 1,000); `the-instrument.json` has no COGS; the competitive-positioning table includes AGF itself as a row (prestige 90, average price $3,000), a self-score that the new perceptual map plots and highlights; the overview figures "$4.2B TAM" and "12+ brand acquisitions" have no cited source (the `at-a-glance` note still says so).
 
-**R10. Which database version is "current" is not always the base file.** `production-staging/README.md` says the base file is newest and `.v2`, `.v3` older, which is true by `updated_at`, but several versions share one timestamp and `archive/legacy-site/LEGACY-MAP.md` section 9.6 explains the tie-break was arbitrary. `build-content.py` therefore deliberately uses these versions:
+**R10. Which database version is "current" is not always the base file.** Open, and now documented in `production-staging/README.md` ("Which version the site uses", corrected in `af15ee7`). The README's rule is that the base file is the newest row by `updated_at`, but several versions share one timestamp and `archive/legacy-site/LEGACY-MAP.md` section 9.6 explains the tie-break was arbitrary. `build-content.py` therefore deliberately uses these versions:
 
 | Section | Base file | Used by the site | Why (from the files) |
 |---|---|---|---|
@@ -686,26 +759,29 @@ Numbered so other sections can refer to them. Each says where to look.
 | tenet | `tenet.json` (July 14) | both | bodies from base, worked-example titles from `.v2` (July 6) |
 | technology | `technology.json` (July 14) | both | base shown; `.v2` used to flag the patent-status conflict |
 
-**R11. Test rows in the database.** `agf.db` `sections` has 76 rows; 37 are header rows titled "Test Duplicate" (all `2026-07-06 08:21:02`), not exported. The exported `header` rows have empty `nav_links`; `header.v2.json` holds the "Request the Deck" call to action; `header.v3.json` has only empty strings. The two hidden config rows (`comparison-config`, `pdf-config`) are configuration for the old compare overlay and PDF export, not page content.
+**R11. Test rows in the database.** Open (a fact of the export; documented in `production-staging/README.md` since `af15ee7`). `agf.db` `sections` has 76 rows; 37 are header rows titled "Test Duplicate" (all `2026-07-06 08:21:02`), not exported. The exported `header` rows have empty `nav_links`; `header.v2.json` holds the "Request the Deck" call to action; `header.v3.json` has only empty strings. The two hidden config rows (`comparison-config`, `pdf-config`) are configuration for the old compare overlay and PDF export, not page content.
 
-**R12. Numbering and ordering.** The database titles number sections 01 to 12 (01 Opportunity, 02 Consolidation, 03 Tenets, 04 Venue, 05 Stack, 06 Lineup, 07 Business, 08 Founder, 09 Distribution, 10 Artist Rights, 11 Competitive Positioning, 12 Launch Roadmap), which does not match either the old display order or the new nine options (01 Brand ... 09 Founder). Roadmap phase titles in `launch-roadmap.json` read "Phase 1, 2, 2, 2, 3, 3" for six rows.
+**R12. Numbering and ordering.** Partly resolved (`7c5e15b`). The site no longer shows the document's numbering: the four deep-section eyebrows that carried it (06, 09, 11 twice) are unnumbered (section 4). Still true: the database titles number sections 01 to 12 (01 Opportunity, 02 Consolidation, 03 Tenets, 04 Venue, 05 Stack, 06 Lineup, 07 Business, 08 Founder, 09 Distribution, 10 Artist Rights, 11 Competitive Positioning, 12 Launch Roadmap), which does not match either the old display order or the new nine options (01 Brand ... 09 Founder); roadmap phase titles in `launch-roadmap.json` read "Phase 1, 2, 2, 2, 3, 3" for six rows, and the new Gantt row titles repeat them.
 
-**R13. Naming and wording conflicts inside the content.**
-- The technology is written **BT'N-Tech** in products, most site copy and `technology.v2.json`, but `technology.json` names it `BTN-Tech` (full name "Bring Tha' Noise Technologies"), and the BT'N-Tech card on `production-staging/site/stack/deep.html` (`content.json`, `technologies`) carries "BTN-Tech" as eyebrow and title while the rest of that page says "BT'N-Tech".
-- l'Art's patent status is "Patented" in the July 6 version and "Trade secret" in the July 14 version (the site shows the newer one and flags it).
-- Tenet 6's key insight has two wordings ("Choose violence." versus a longer line); the site shows the shorter one.
+**R13. Naming and wording conflicts inside the content.** Partly resolved. Resolved: **BT'N-Tech** is now spelled that way everywhere in the working files: `technology.json` was respelled by hand (`af15ee7`, recorded in its `_edits` key; see R21) and the BT'N-Tech card on `production-staging/site/stack/content.json` carries "BT'N-Tech" as eyebrow and title (restored in `451dc12`); only the untouched `content/raw/sections.json` still reads `BTN-Tech`. Still open:
+- l'Art's patent status is "Patented" in the July 6 version (`technology.v2.json`) and "Trade secret" in the July 14 version (`technology.json`); the site shows the newer one and flags it ("This must be settled before publication"). Nothing in the repo settles it; `BRAND-INTEGRATION.md` section 8 also calls it unresolved.
+- Tenet 6's key insight has two wordings ("Choose violence." versus a longer line); the site shows the shorter one and flags it.
 - The standing-lines list and the three division codes are flagged `_assumed` for confirmation.
 
-**R14. Visuals the documents had that the reference site does not yet draw.** The competitive perceptual map and the 24-month Gantt are "queued for the next pass" (notes under business / competitive-positioning and roadmap); the site shows cards and a timeline instead. The renderer's `quote` and `html` section types are defined but no deep section uses them.
+**R14. Visuals the documents had that the reference site does not yet draw.** Resolved for the two named (`1a2eacb`, `b451387`; hook `4ca7745`; generator `d9c7741`). The competitive perceptual map and the 24-month Gantt are now drawn by `production-staging/site/shared/chart-perceptual.js` and `chart-gantt.js` in the business `competitive-map` and roadmap `gantt` sections, with the cards and timeline kept beneath as the detail. One remark stands: the renderer's `quote` and `html` section types are defined but no deep section uses them.
+
+**R20. The consolidation table shows the document's values, which the sources do not all bear out.** Open (new; recorded in `b451387`). Per the `verification` objects in `production-staging/content/sections/consolidation.json` and the note on the opportunity page: the Marshall (HSG), Beyerdynamic (Cosonic) and Barco rows show `$1.10B`, `$122M` and `$135M`, but the sourced figures are euros (EUR 1.1B valuation for a majority stake; EUR 122M, about $139M; EUR 135M enterprise value), so the `value_usd` field holds euros in three rows; the Samsung row's `$8.35B` is found in no source for the Harman deal (about $8.0B, completed about March 2017), the objects suggest it may be $8.0B plus $0.35B for Harman's 2025 Sound United purchase but call that an inference, and several brands on that row (B&W, Denon, Marantz, Polk, Definitive Technology, Classé, Boston Acoustics, HEOS) came with Sound United in 2025, not the 2017 deal; closing is unconfirmed for Sony/Audeze, Marshall (a majority stake) and Beyerdynamic; the Harman source page could not be re-read; Gentex's target was VOXX, which holds Klipsch, Onkyo and Integra; Barco's agreement date (2026-03-09) differs from the "April" in the document's other section; Loewe/Cabasse was an asset purchase out of insolvency, not a share deal. The site table shows each date as "(announced)" or "(completed)". Confidence levels in the objects are medium for Samsung, Bose, Marshall, Beyerdynamic and Loewe and high for Sony, Gentex and Barco.
+
+**R21. `content/` is no longer a pure export.** Open (new). Two files carry hand edits dated 2026-10-27: `production-staging/content/sections/technology.json` (an `_edits` key records the BT'N-Tech respelling and a `key_capabilities` string that the old editor had split on its comma, rejoined as "Apple bought 1,000pc Relay runs ...") and `production-staging/content/sections/consolidation.json` (dates, source links and `verification` objects added to the eight rows; the document's values unchanged). `content/raw/` remains untouched (it still reads `BTN-Tech` and still has the empty dates), so a comparison with `agf.db` will show these two differences. The generator reads the edited files, so the site follows them.
 
 ### Site and design system
 
-**R15. Reference-site limits.** Midnight theme only (no Daylight or Air page variants); requires a local server (`file://` fails); pages are 18-line shells that rely entirely on `site.js` (no content without JavaScript); every page footer repeats the long sources line from `site.json` (`brand.sources`).
+**R15. Reference-site limits.** Partly resolved (`4ca7745`). Still true: Midnight theme only (no Daylight or Air page variants); requires a local server (`file://` shows "Content did not load"); the pages are 20-line shells and no content appears without JavaScript. Changed: the shells now hold a `<noscript>` message ("JavaScript is off") instead of nothing, and the long sources line in the footer shows only on the portal and the opportunity and business deep pages (`site.js`, `brand.sources_on`) rather than on every page. Every shell loads both chart scripts even where there is no chart.
 
-**R16. Design-system housekeeping.** `agf-design-system/agf-design-system/components/Cover/` has a `preview.html` but no `README.md` and is not in the README's list of 19 components (the 19 are the READMEs). `design-system.json` is an index for a published artifact and can be ignored. `components/Hero/README.md` says content reveals with "600ms, ease-out" while `03-motion.md` (and `production-staging/site/shared/site.css`) use 700ms on the damped curve and say nothing uses ease-out or ease-in-out; treat `03-motion.md` as the rule. `components/bundle.css` uses tokens but does not define them (use `agf.css`, which embeds tokens and fonts, or pair `bundle.css` with `tokens.css`). The reference site's copies of `agf.css`, logos and icons must be refreshed by hand if the design system changes (rule 2 in section 1.3).
+**R16. Design-system housekeeping.** Partly resolved (`af15ee7`, `968d6bc`). Resolved: `agf-design-system/agf-design-system/components/Cover/` now has a `README.md` and the design-system README's component list includes Cover, so all 20 component folders are documented (the Cover preview and showcase were also reset to the brand book: mark in Monoton, one uppercase Poiret One strapline, on surface-deep); `components/Hero/README.md` now agrees with `03-motion.md` (700ms on the damped curve). Still true: `design-system.json` is an index for a published artifact and can be ignored; `components/bundle.css` uses tokens but does not define them (use `agf.css`, which embeds tokens and fonts, or pair `bundle.css` with `tokens.css`); `HOW-TO-USE.md` in that folder still says "19 components" where there are now 20; the reference site's copies of `agf.css`, logos and icons must be refreshed by hand if the design system changes (rule 2 in section 1.3; re-checked byte-identical with `cmp` and `diff -r`). The Globl Radio package has the same shape on a smaller scale: its `components/Cover/` is a preview with no README, and its `HOW-TO-USE.md` says 13 components, which counts the documented ones.
 
 ### Archive
 
-**R17. The archive is two programs glued together, and its defects are catalogued.** `archive/legacy-site/README.md`, `index.js`, `helpers.js`, `sections/` and `css/` belong to the PDF spec-sheet renderer, not the website. `index.html` loads the monolith `schema-renderer.js` and `editor.js`; the split trees `schema-renderer/`, `editor/` and `components/system-configurator/` are never loaded. The live renderer cannot draw `overview` or `concept-explainer` (only the unloaded split tree can). The `.broken` files parse and are older revisions, not broken code. `vitest.config.js` points to a `tests/` folder that does not exist. Full list: `archive/legacy-site/LEGACY-MAP.md` section 9 (9.1 wiring and dead code, 9.2 the `.broken` files, 9.3 hard-coded fallback copy, 9.4 renderer bugs, 9.5 component bugs, 9.6 data defects).
+**R17. The archive is two programs glued together, and its defects are catalogued.** Open (unchanged apart from `fonts.css`, R4). `archive/legacy-site/README.md`, `index.js`, `helpers.js`, `sections/` and `css/` belong to the PDF spec-sheet renderer, not the website. `index.html` loads the monolith `schema-renderer.js` and `editor.js`; the split trees `schema-renderer/`, `editor/` and `components/system-configurator/` are never loaded. The live renderer cannot draw `overview` or `concept-explainer` (only the unloaded split tree can). The `.broken` files parse and are older revisions, not broken code. `vitest.config.js` points to a `tests/` folder that does not exist. Full list: `archive/legacy-site/LEGACY-MAP.md` section 9 (9.1 wiring and dead code, 9.2 the `.broken` files, 9.3 hard-coded fallback copy, 9.4 renderer bugs, 9.5 component bugs, 9.6 data defects).
 
-**R18. Old token names clash with the new ones.** Legacy `--ink` is dark text while the new `--ink` is light text in Midnight; legacy `--type-micro` is 16 px while the new `micro` is 11 px; legacy `--taupe` and `--obsidian-2` have no new equivalent; several legacy colour pairs fail contrast (full list in `archive/legacy-site/LEGACY-MAP.md` section 7.4).
+**R18. Old token names clash with the new ones.** Open (unchanged). Legacy `--ink` is dark text while the new `--ink` is light text in Midnight; legacy `--type-micro` is 16 px while the new `micro` is 11 px; legacy `--taupe` and `--obsidian-2` have no new equivalent; several legacy colour pairs fail contrast (full list in `archive/legacy-site/LEGACY-MAP.md` section 7.4).

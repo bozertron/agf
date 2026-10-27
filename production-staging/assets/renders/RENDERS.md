@@ -1,5 +1,7 @@
 # Render catalogue
 
+> Every "Original path" in this file is provenance only: those folders (`product-renders/`, the old `site/assets/screenshots/`) no longer exist. The new path is the only one that resolves.
+
 Catalogue of everything under `renders/` (43 images), plus the 60 images that were catalogued here when they lived in `product-renders/` and have since moved out (see "Relocated images" below); `renders.json` has 103 entries in total. 96 of them come from the former `product-renders/` tree and 7 from the old site's screenshots. Layout: `<product-slug>/<descriptive-name>.<ext>`. Machine-readable copy: `renders.json`. Rule: every image under `renders/` is listed in this file and in `renders.json`; `../ASSETS.md` and `../assets.json` cover all other images under `assets/`.
 
 Kinds: finished (shaded/material render), greybox (untextured CAD/clay model), detail (close-up crop), concept (mood/concept art).

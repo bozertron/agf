@@ -7,7 +7,7 @@
 - `03-motion.md` — the damped motion rules.
 - `agf.css` — the one stylesheet to link in your own pages: `<link rel="stylesheet" href="agf.css">`, then set `data-theme="midnight|daylight|air"` on `<html>` and use the `.agf-*` classes from the component previews.
 - `tokens.json` — every token (3 themes), machine-readable. `tokens.css` is the same compiled to CSS custom properties (fonts referenced by file; `agf.css` embeds them instead so it works from `file://`).
-- `components/<Name>/preview.html` + `README.md` — 19 components; each preview opens on its own (it links `../../agf.css`).
+- `components/<Name>/preview.html` + `README.md` — 20 components; each preview opens on its own (it links `../../agf.css`).
 - `assets/Logos/` — mark, lockup, seal, floating-ground (SVG). `assets/Icons/` — 10 line icons.
 - `fonts/` — Commissioner (4-axis variable), Monoton, Poiret One (woff2, OFL).
 - `preview-*.png` — rendered contact sheets.
