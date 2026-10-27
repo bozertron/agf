@@ -95,7 +95,8 @@
 
   function section(s, idx) {
     const id = s.id || slug(s.title || ('section-' + idx));
-    const fn = R[s.type] || R.prose;
+    const ext = window.AGF_RENDERERS || {};
+    const fn = R[s.type] || ext[s.type] || R.prose;
     let h = '<section class="sec" id="' + esc(id) + '" data-reveal>';
     if (s.eyebrow || s.title || s.lede) {
       h += '<div class="sec-head">';
@@ -108,6 +109,10 @@
     if (s.note) h += note(s.note);
     return h + '</section>';
   }
+
+  // Extension renderers (shared/chart-*.js) register on window.AGF_RENDERERS[type] = (section) => html,
+  // and may use these helpers.
+  window.AGF_RENDER_HELPERS = { esc, inline, md, slug, note, assumed };
 
   // ---------- chrome ----------
   function nav(site, opt, prev, next) {
@@ -130,11 +135,17 @@
   }
 
   function footer(site) {
+    // Sources only where cited data appears: the portal, and the deep dives of
+    // options listed in brand.sources_on (default: opportunity, business).
+    const on = Array.isArray(site.brand.sources_on) ? site.brand.sources_on : ['opportunity', 'business'];
+    const showSources = !!site.brand.sources && (PAGE === 'portal' || (PAGE === 'deep' && on.indexOf(OPTION) >= 0));
     return '<footer class="agf-deep site-foot" data-theme="midnight"><div class="wrap"><div class="row">' +
       '<div><div class="agf-wordmark"><span class="agf-wordmark__mark">AGF</span><span class="agf-wordmark__strap"><span>All</span><span>Grounds</span><span>Floating</span></span></div>' +
       '<p class="agf-caption" style="margin-top:var(--space-16)">' + inline(site.brand.meta) + '</p></div>' +
       '<div class="badge-line">' + GROUND(32, 'var(--brass-text)') + '<div><p class="agf-caption" style="color:var(--ink-on-deep)">' + inline(site.brand.strapline) + '</p><p class="agf-caption">' + inline(site.brand.certificate_line) + '</p></div></div>' +
-      '</div><hr class="agf-rule" style="margin:var(--space-32) 0 var(--space-16)"><p class="agf-caption">' + inline(site.brand.sources) + '</p></div></footer>';
+      '</div>' +
+      (showSources ? '<hr class="agf-rule" style="margin:var(--space-32) 0 var(--space-16)"><p class="agf-caption">' + inline(site.brand.sources) + '</p>' : '') +
+      '</div></footer>';
   }
 
   // ---------- pages ----------

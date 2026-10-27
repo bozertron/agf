@@ -640,12 +640,14 @@ def shell(page, opt, title, desc):
 <body data-page="%s"%s>
   <a class="skip" href="#main">Skip to content</a>
   <header id="nav"></header>
-  <main id="main" aria-busy="true"></main>
+  <main id="main" aria-busy="true"><noscript><div class="loadfail"><p class="agf-eyebrow agf-eyebrow--brass">JavaScript is off</p><h1 class="agf-h3">This page is rendered from JSON and needs JavaScript.</h1><p class="agf-body" style="margin-top:var(--space-16)">Turn it on and reload, or start from the <a href="%sindex.html">portal</a>.</p></div></noscript></main>
   <footer id="foot"></footer>
+  <script src="%sshared/chart-perceptual.js" defer></script>
+  <script src="%sshared/chart-gantt.js" defer></script>
   <script src="%sshared/site.js" defer></script>
 </body>
 </html>
-""" % (title, desc.replace('"', "&quot;"), rel, rel, page, (' data-option="%s"' % opt) if opt else "", rel)
+""" % (title, desc.replace('"', "&quot;"), rel, rel, page, (' data-option="%s"' % opt) if opt else "", rel, rel, rel, rel)
 
 write(os.path.join(SITE, "index.html"), shell("portal", None, "AGF · All Grounds Floating", "The AGF reference site: nine doors into the brand, the opportunity, the stack, the lineup, the venue, artist rights, the business, the roadmap and the founder."))
 for o in OPTIONS:
