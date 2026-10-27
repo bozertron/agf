@@ -118,7 +118,7 @@
       {
         "type": "prose",
         "id": "distribution",
-        "eyebrow": "09 · Distribution",
+        "eyebrow": "Distribution",
         "title": "Distribution — the future bank-roller.",
         "large": true,
         "body": "Channel partners are owner-operators, often 20+ years in. They built the reputations of Polk, Definitive Tech, McIntosh, et al. Now they are treated like disposable assets because they do not hit spreadsheet numbers — but they cannot be fired either, because the bank *needs* a global distribution spine. AGF positions itself as the **future bank-roller, critically better than the devil they know**: lower price categories filled with curated third-party partner product, our line moving upward, the flagship landing just above Focal's consumer offering (~$5K USD)."
@@ -279,7 +279,7 @@
       {
         "type": "chart-perceptual",
         "id": "competitive-map",
-        "eyebrow": "11 · Competitive positioning",
+        "eyebrow": "Competitive positioning",
         "title": "The map: price against prestige",
         "lede": "Average flagship price on a log scale against prestige. AGF lands just above Focal's consumer flagship and well below the incumbents that define the ceiling.",
         "points": [
@@ -341,7 +341,7 @@
       {
         "type": "cards",
         "id": "competitive-positioning",
-        "eyebrow": "11 · Competitive positioning",
+        "eyebrow": "Competitive positioning",
         "title": "Where AGF lands",
         "lede": "Every direct competitor below either opens a seam (consolidated, struggling, or closed) or defines the ceiling AGF is happy to sit just below. The aspirational tier survived; the ownership consolidated. The opening is the gap between the struggling incumbent and the $250K outlier.",
         "columns": 2,

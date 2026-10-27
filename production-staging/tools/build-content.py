@@ -389,7 +389,7 @@ lineup = {
         "headline": "The inaugural product line.",
         "lede": "Every product with its specification as the document holds it. Status, pricing and timing are planning values and will change.",
         "sections": [
-            {"type": "cards", "id": "the-line", "eyebrow": "06 · The Lineup", "title": "Six products", "columns": 2, "items": prod_cards},
+            {"type": "cards", "id": "the-line", "eyebrow": "The Lineup", "title": "Six products", "columns": 2, "items": prod_cards},
             {"type": "figures", "id": "renders", "eyebrow": "Renders", "title": "What exists on the bench", "lede": "CAD renders from the repository, shown as work in progress. No product photography exists yet.", "items": [
                 {"src": "assets/renders/symphony-macro-system/symphony-tower-walnut-front.png", "caption": "Symphony Macro-System, walnut. 150 cm tall, 36 cm wide, under 20 cm deep."},
                 {"src": "assets/renders/symphony-macro-system/symphony-tower-copper-front.png", "caption": "Symphony, brushed copper panel."},
@@ -529,7 +529,7 @@ business = {
                 {"eyebrow": "Target partners", "title": "Who we call first", "list": [tidy(x) for x in biz["channel_approach"]["target_partners"]]}]},
             {"type": "prose", "id": "revenue-model", "eyebrow": "Revenue model", "title": "Hardware-led with a codec and OS halo", "body": tidy(biz["revenue_model"])},
             {"type": "prose", "id": "scaling", "eyebrow": tidy(biz["scaling_heading"]), "title": "Three phases over five years", "body": tidy(biz["scaling_timeline"])},
-            {"type": "prose", "id": "distribution", "eyebrow": "09 · Distribution", "title": tidy(dist["section_title"]), "large": True, "body": tidy(dist["philosophy"])},
+            {"type": "prose", "id": "distribution", "eyebrow": "Distribution", "title": tidy(dist["section_title"]), "large": True, "body": tidy(dist["philosophy"])},
             {"type": "table", "id": "partner-criteria", "eyebrow": "Partner criteria", "title": tidy(dist["partner_criteria_heading"]), "columns": ["Criterion", "What it evaluates", "Weight"], "numeric": [2],
              "rows": [[tidy(c["criterion"]), tidy(c["description"]), "%d%%" % round(c["weight"] * 100)] for c in dist["partner_criteria"]]},
             {"type": "table", "id": "territories", "eyebrow": "Territories", "title": "Where, in what order", "columns": ["Region", "Strategy", "Priority"], "numeric": [2],
@@ -537,13 +537,13 @@ business = {
             {"type": "cards", "id": "channel-types", "eyebrow": "Channel types", "title": "Five channels, five approaches", "columns": 2,
              "items": [{"eyebrow": "Channel", "title": tidy(c["type"]), "body": tidy(c["description"]), "kv": [["Approach", tidy(c["approach"])]]} for c in dist["channel_types"]]},
             {"type": "prose", "id": "distribution-revenue", "eyebrow": "Channel economics", "title": "Third-party fills the floor; AGF owns the ceiling", "body": tidy(dist["revenue_model"])},
-            {"type": "chart-perceptual", "id": "competitive-map", "eyebrow": "11 · Competitive positioning", "title": "The map: price against prestige",
+            {"type": "chart-perceptual", "id": "competitive-map", "eyebrow": "Competitive positioning", "title": "The map: price against prestige",
              "lede": "Average flagship price on a log scale against prestige. AGF lands just above Focal's consumer flagship and well below the incumbents that define the ceiling.",
              "points": [{"brand": tidy(c["brand"]), "price_usd_avg": c["price_usd_avg"], "prestige_score": c["prestige_score"], "status": c["status"], "highlight": c["brand"] == "AGF"} for c in comp["competitors"]],
              "x": {"min": comp["_viz_config"]["x_axis"]["min"], "max": comp["_viz_config"]["x_axis"]["max"], "label": "Average flagship price (USD, log)"},
              "y": {"min": comp["_viz_config"]["y_axis"]["min"], "max": comp["_viz_config"]["y_axis"]["max"], "label": "Prestige"},
              "note": "Prestige scores are the source document's own estimates, not a measured index. Prices are the average flagship price the document assigns each brand. The cards below carry the same data."},
-            {"type": "cards", "id": "competitive-positioning", "eyebrow": "11 · Competitive positioning", "title": "Where AGF lands", "lede": tidy(comp["intro_text"]), "columns": 2,
+            {"type": "cards", "id": "competitive-positioning", "eyebrow": "Competitive positioning", "title": "Where AGF lands", "lede": tidy(comp["intro_text"]), "columns": 2,
              "items": [{"eyebrow": status_word.get(c["status"], c["status"]) + " · prestige %s · ~%s" % (c["prestige_score"], money(c["price_usd_avg"])), "brass": c["brand"] == "AGF", "title": tidy(c["brand"]), "pull": tidy(c["category"]), "list": [tidy(k) for k in c.get("key_data_points", [])], "body": tidy(c["agf_positioning"]), "kv": [["Opening", tidy(c["opening"])]]} for c in comp["competitors"]],
              "note": "The document renders these on a perceptual map (log price versus prestige); the cards carry the same data."},
             {"type": "prose", "id": "summary", "eyebrow": "Summary", "title": "The seam", "body": tidy(comp["summary"])}
