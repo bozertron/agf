@@ -25,6 +25,9 @@ Pages read their copy from JSON, and browsers refuse to fetch JSON from `file://
 | `assets/` | Every image in the repo, catalogued: `renders/` (per product), `brand-boards/`, `concept-boards/`, `concepts/`, `prior-work/`, `section-backgrounds/`. `ASSETS.md` and `renders/RENDERS.md` describe each file; `assets.json` and `renders/renders.json` are the same data as JSON. Copy transcribed from the boards is in `ASSETS.md`. |
 | `tools/build-content.py` | Composed the nine `content.json` files from `content/`. Re-running overwrites hand edits; only re-run to start over from the database. |
 | `CONTENT-HARVEST.md` | The inventory written before the database was recovered, plus a note on what the recovery added. |
+| `../REPO-MAP.md` | The whole-repo map: topic index, full file tree, open questions compiled from the content files. Start there when writing a spec. |
+| `../archive/legacy-site/LEGACY-MAP.md` | Module-by-module map of the retired site, including the visualisations worth re-implementing and their data contracts. |
+| `../agf-design-system/agf-design-system/` | The brand book and design system. `site/shared/agf.css` is a copy of its stylesheet; the folder is the source. |
 
 ## Section types the renderer understands
 
