@@ -2,6 +2,8 @@
 
 Globl Radio is the live-music streaming service of All Grounds Floating: the broadcast-mixed performances captured at AGF venues, delivered as virtual tickets to anyone, anywhere, with the permanent all-access pass that comes with AGF hardware. It is a service of the brand, not a brand of its own, so it inherits the AGF system whole and adds exactly four things: one voice (**live**), one texture (**the stave**), one shape (**the ring**) and the components a live service needs. If a page could be an AGF page with a Globl Radio mark on it, that is what it should be.
 
+Globl Radio runs on stereOS, the AGF operating system: stereOS Pro captures at the venue, Globl Radio carries the stream, stereOS Home or embedded renders it at home. That chain is what the brand document calls acoustic teleportation, and the cross-brand rules are in `../BRAND-INTEGRATION.md`.
+
 The name drops the *a* on purpose. The global village was coined in Toronto; Globl Radio is that idea with a stage in it: one room, broadcast everywhere, and the artist paid.
 
 Use the files as follows: `globl.css` is `agf.css` plus the Globl Radio layer in one file (fonts embedded, works from `file://`); `globl-layer.css` is the layer alone for pages that already load `agf.css`; `tokens.json` and `tokens.css` carry only the additions, every other token is AGF's; `assets/Logos/` holds the monogram, lockup and ring as finished SVG in brass, ink and bone; `assets/Icons/` adds four line icons to AGF's ten; `components/` has the previews and READMEs. Sections 02 and 03 cover applications and motion.
