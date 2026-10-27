@@ -149,7 +149,9 @@
         "columns": [
           "Acquirer",
           "Brands acquired",
-          "Value"
+          "Value",
+          "Date",
+          "Source"
         ],
         "numeric": [
           2
@@ -158,45 +160,61 @@
           [
             "Samsung Electronics",
             "JBL, Harman Kardon, AKG, Mark Levinson, Revel, Lexicon, Infinity, Arcam, B&O Automotive, B&W, Denon, Marantz, Polk, Definitive, Classé, HEOS, Boston Acoustics",
-            "$8.35B"
+            "$8.35B",
+            "Mar 2017 (completed)",
+            "news.samsung.com"
           ],
           [
             "Sony Interactive Entertainment",
             "Audeze Headphones",
-            "undisclosed"
+            "undisclosed",
+            "Aug 2023 (announced)",
+            "sonyinteractive.com"
           ],
           [
             "Bose Corp.",
             "McIntosh, Sonus Faber, Audio Research, Wadia, Sumiko",
-            "undisclosed"
+            "undisclosed",
+            "Nov 2024 (announced)",
+            "bose.com"
           ],
           [
             "Gentex Corp.",
             "Klipsch, Onkyo, Integra",
-            "$196M"
+            "$196M",
+            "Apr 2025 (completed)",
+            "sec.gov"
           ],
           [
             "HSG (Hillhouse)",
             "Marshall",
-            "$1.10B"
+            "$1.10B",
+            "Jan 2025 (announced)",
+            "group.marshall.com"
           ],
           [
             "Cosonic Intelligent Tech",
             "Beyerdynamic",
-            "$122M"
+            "$122M",
+            "Jun 2025 (announced)",
+            "musicbusinessworldwide.com"
           ],
           [
             "Barco (Belgium)",
             "Focal, Naim Electronics",
-            "$135M"
+            "$135M",
+            "May 2026 (completed)",
+            "barco.com"
           ],
           [
             "Loewe",
             "Cabasse Speakers",
-            "undisclosed"
+            "undisclosed",
+            "Apr 2026 (announced)",
+            "whathifi.com"
           ]
         ],
-        "note": "Every date field is blank in the document and only the Harman row carries a source link. Worth filling before this goes public."
+        "note": "Dates and sources researched 2026-10-27; founder to confirm before publishing. All eight rows now have a source, but not all are final: closing is unconfirmed for Sony/Audeze, Marshall (majority stake) and Beyerdynamic, and the Harman source page was not re-read. Values are as in the brand document: the sourced Marshall, Beyerdynamic and Barco figures are euros (EUR 1.1B, 122M and 135M), and the $8.35B Samsung figure matches no single source (Harman was about $8B in 2017). Loewe/Cabasse was an insolvency asset purchase."
       },
       {
         "type": "cards",

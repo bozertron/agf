@@ -17,73 +17,129 @@
       "acquirer": "Samsung Electronics",
       "target": "JBL, Harman Kardon, AKG, Mark Levinson, Revel, Lexicon, Infinity, Arcam, B&O Automotive, B&W, Denon, Marantz, Polk, Definitive, Classé, HEOS, Boston Acoustics",
       "value_usd": 8350000000,
-      "date": "",
+      "date": "2017-03",
       "type": "acquisition",
       "source_url": "https://news.samsung.com/global/samsung-electronics-completes-acquisition-of-harman",
-      "appendix": ""
+      "appendix": "",
+      "verification": {
+        "date_type": "completed",
+        "sourced_value": "USD 8.0B (about $8 billion equity value, $112/share cash); announced 2016-11-14, completed about 2017-03-10",
+        "sourced_note": "Completion date and ~$8B headline confirmed by multiple trade outlets (Korea JoongAng Daily, SamMobile, Fonearena, Ubergizmo, TVBEurope). Samsung's own press-release page (the existing source_url) could not be opened from this environment, so it was kept as recorded but not independently re-read. Document value $8.35B is not found in any source for the Harman deal itself; it is consistent with $8.0B (Harman, 2017) plus $0.35B (Harman's separate 2025 purchase of Sound United from Masimo, announced 2025-05-06, completed 2025-09-23), which would be a second deal and is an inference only. Several listed brands (Bowers & Wilkins, Denon, Marantz, Polk, Definitive Technology, Classe, Boston Acoustics, HEOS) came via Sound United in 2025, not the 2017 Harman deal; Arcam and B&O Automotive were not confirmed in sources. Sound United source: https://secure.businesswire.com/news/home/20250923135384/en/HARMAN-Completes-Sound-United-Acquisition-to-Expand-Premium-Audio-Leadership",
+        "confidence": "medium"
+      }
     },
     {
       "acquirer": "Sony Interactive Entertainment",
       "target": "Audeze Headphones",
-      "date": "",
+      "date": "2023-08-24",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://sonyinteractive.com/en/press-releases/2023/sony-interactive-entertainment-to-acquire-audeze/",
+      "appendix": "",
+      "verification": {
+        "date_type": "announced",
+        "sourced_value": "undisclosed",
+        "sourced_note": "SIE press release dated 2023-08-24 announcing an agreement to acquire Audeze; financial terms not disclosed (matches document). No closing announcement found; some outlets say 'acquired' but only restate the announcement. Page fetched via search snippets only (host not reachable from this environment).",
+        "confidence": "high"
+      }
     },
     {
       "acquirer": "Bose Corp.",
       "target": "McIntosh, Sonus Faber, Audio Research, Wadia, Sumiko",
-      "date": "",
+      "date": "2024-11-19",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://www.bose.com/pressroom/bose-acquires-mcintosh-group-announcement",
+      "appendix": "",
+      "verification": {
+        "date_type": "announced",
+        "sourced_value": "undisclosed",
+        "sourced_note": "Bose press release 2024-11-19; bought McIntosh Group from Highlander Partners. Trade coverage reports the deal closed 2024-11-15 (not confirmed against a primary source). Bose's release and coverage name McIntosh, Sonus faber and Sumiko; Audio Research and Wadia were not named in the sources found (they are understood to be McIntosh Group brands but this was not verified). No value disclosed (matches document).",
+        "confidence": "medium"
+      }
     },
     {
       "acquirer": "Gentex Corp.",
       "target": "Klipsch, Onkyo,  Integra",
       "value_usd": 196000000,
-      "date": "",
+      "date": "2025-04-01",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://www.sec.gov/Archives/edgar/data/355811/000035581125000041/gntx-20250630.htm",
+      "appendix": "",
+      "verification": {
+        "date_type": "completed",
+        "sourced_value": "USD 196M total deal value for VOXX ($7.50/share all-cash, announced Dec 2024); closing cash payment USD 148.3M per 8-K (Gentex already held about 10%)",
+        "sourced_note": "Gentex completed the VOXX merger 2025-04-01 (Gentex 10-Q for period ended 2025-06-30; VOXX shareholders approved 2025-03-31). Klipsch, Onkyo and Integra sit in VOXX's Premium Audio Company, so the target is VOXX, not the three brands directly. Document $196M matches the announced deal value.",
+        "confidence": "high"
+      }
     },
     {
       "acquirer": "HSG (Hillhouse)",
       "target": "Marshall",
       "value_usd": 1100000000,
-      "date": "",
+      "date": "2025-01-24",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://group.marshall.com/2025/01/24/marshall-to-turn-up-the-volume-with-hsg-as-new-majority-shareholder/",
+      "appendix": "",
+      "verification": {
+        "date_type": "announced",
+        "sourced_value": "EUR 1.1B valuation (press conversions range roughly $1.1B to $1.4B depending on outlet)",
+        "sourced_note": "Marshall Group release 2025-01-24: funds managed by HSG (HongShan Capital) signed a definitive agreement for a majority stake at a EUR 1.1B valuation; family retains over 20%. Closing was subject to regulatory approvals and no completion announcement was found. The deal is a majority stake, not a full acquisition, and the figure is euros, not dollars; document shows $1.1B.",
+        "confidence": "medium"
+      }
     },
     {
       "acquirer": "Cosonic Intelligent Tech",
       "target": "Beyerdynamic",
       "value_usd": 122000000,
-      "date": "",
+      "date": "2025-06-05",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://www.musicbusinessworldwide.com/headphone-maker-beyerdynamic-sold-to-chinas-cosonic-for-139m/",
+      "appendix": "",
+      "verification": {
+        "date_type": "announced",
+        "sourced_value": "EUR 122M (about USD 139M to 140M at announcement); final price subject to audit",
+        "sourced_note": "Signed 2025-06-05 (Music Business Worldwide and others); covers 93.63% of Beyerdynamic GmbH & Co. KG plus about EUR 14M shareholder loans. Closing not confirmed in any source found (a 2025-10-21 Lowyat.NET piece says 'officially sold' without a closing date). Document $122M is the euro figure; the dollar equivalent is about $139M.",
+        "confidence": "medium"
+      }
     },
     {
       "acquirer": "Barco (Belgium)",
       "target": "Focal,  Naim Electronics",
       "value_usd": 135000000,
-      "date": "",
+      "date": "2026-05-13",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://www.barco.com/en/news/news-insights/general/barco-completes-acquisition-of-focal-and-naim-strengthening-its-entertainment-offering",
+      "appendix": "",
+      "verification": {
+        "date_type": "completed",
+        "sourced_value": "EUR 135M enterprise value (about 100% of VerVent Audio Holding, revenue about EUR 110M)",
+        "sourced_note": "Barco announced an agreement in principle 2026-03-09 (not April, as the document's other section states) and completion was announced by VerVent Audio on 2026-05-13, with Barco's own release about a week later (its page is undated in the sources found; the 2026-05-13 date is from the VerVent release as reported by trade press). Figure is euros enterprise value, not dollars; document shows $135M.",
+        "confidence": "high"
+      }
     },
     {
       "acquirer": "Loewe",
       "target": "Cabasse Speakers",
-      "date": "",
+      "date": "2026-04-20",
       "type": "acquisition",
-      "source_url": "",
-      "appendix": ""
+      "source_url": "https://www.whathifi.com/tv-home-cinema/tv-maker-loewe-acquires-french-speaker-specialist-cabasse",
+      "appendix": "",
+      "verification": {
+        "date_type": "announced",
+        "sourced_value": "undisclosed",
+        "sourced_note": "Cabasse was in receivership; a Montpellier court on 2026-04-20 selected Loewe Technology to take over the majority of assets and 24 of 27 jobs; announced about 2026-04-22. This is an asset purchase out of insolvency proceedings, not a share acquisition. Value undisclosed (matches document). Source is a reputable trade outlet, not a Loewe release.",
+        "confidence": "medium"
+      }
     }
   ],
   "independent_heading": "",
   "independent_intro": "",
-  "appendix": ""
+  "appendix": "",
+  "_edits": [
+    {
+      "date": "2026-10-27",
+      "by": "Claude (automated research)",
+      "summary": "Dates and source URLs added to all eight consolidation rows from web research; each row has a verification object with the sourced value, a note and a confidence level. Document values were not changed. To be checked by the founder before anything is public.",
+      "status": "pending founder review"
+    }
+  ]
 }

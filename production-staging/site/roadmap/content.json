@@ -47,8 +47,80 @@
   "deep": {
     "headline": "Launch Roadmap — sequencing the line.",
     "lede": "Three phases, one shared platform where it pays. Over-Ear ships first because TTM is shortest and ETL pre-approved PS paths exist. Core-like + Symphony share tooling and ship together. The Instrument lands as halo when the rest of the line is already in market and the Krell vacuum is still open.",
-    "note": "The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt is queued for the next pass; the timeline below carries the same months.",
+    "note": "The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt above summarises the six swimlanes; the timeline below carries the same months.",
     "sections": [
+      {
+        "type": "chart-gantt",
+        "id": "gantt",
+        "eyebrow": "24 months at a glance",
+        "title": "The launch, drawn to scale",
+        "lede": "Six swimlanes across 24 months. Over-Ear starts first; Core-like and Symphony overlap on shared tooling; the Instrument and Wasted Real-Estate follow.",
+        "months": 24,
+        "unit": "Month",
+        "rows": [
+          {
+            "label": "Over-Ear",
+            "title": "Phase 1 — Over-Ear Home Centric (fastest to market)",
+            "start": 1,
+            "duration": 5,
+            "milestones": [
+              {
+                "type": "target",
+                "slot": 5,
+                "label": "1000 pcs/mo"
+              }
+            ]
+          },
+          {
+            "label": "Core Small",
+            "title": "Phase 2 — Core-like Small (shared platform)",
+            "start": 4,
+            "duration": 8,
+            "milestones": []
+          },
+          {
+            "label": "Core Soundbar",
+            "title": "Phase 2 — Core-like Soundbar (shared platform)",
+            "start": 4,
+            "duration": 8,
+            "milestones": []
+          },
+          {
+            "label": "Symphony",
+            "title": "Phase 2 — Symphony Macro-System",
+            "start": 5,
+            "duration": 9,
+            "milestones": [
+              {
+                "type": "pr",
+                "slot": 10,
+                "label": "$29,990 PR Stunt"
+              }
+            ]
+          },
+          {
+            "label": "Instrument",
+            "title": "Phase 3 — The Instrument (flagship halo)",
+            "start": 6,
+            "duration": 10,
+            "milestones": []
+          },
+          {
+            "label": "Wasted Real-Estate",
+            "title": "Phase 3 — Wasted Real-Estate (suppressed product return)",
+            "start": 8,
+            "duration": 12,
+            "milestones": [
+              {
+                "type": "venue",
+                "slot": 14,
+                "label": "Venue Pilot"
+              }
+            ]
+          }
+        ],
+        "note": "Bars span each phase from start month to finish. Markers show the PR lever, the venue pilot and the volume target; the timeline below carries the detail."
+      },
       {
         "type": "timeline",
         "id": "phases",
