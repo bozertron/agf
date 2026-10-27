@@ -1,0 +1,3 @@
+# Monogram
+
+The primary mark: G and R in five lines inside five rings, as drawn in the designer's file and delivered in `assets/Logos/gr-mark.svg`. Inline it inside `.gr-mark` and the path takes `currentColor`: `brass` on dark grounds (the default), `--ink` on paper, `--forest` on bone packaging, `--live` only on an ON AIR surface where the whole mark is the lamp. Sizes `--xl` 320px, `--lg` 200px, `--md` 120px, `--sm` 72px; nothing smaller, because below 72px the five lines close up and below 48px the mark is a coin. Clear space all round equals one ring width. The consumer provides size and colour only. Never two colours, never a gradient, never rotated, never over imagery without a `scrim`, and never set GR in type.

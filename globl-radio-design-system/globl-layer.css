@@ -1,0 +1,178 @@
+/* Globl Radio — the sub-brand layer over agf.css.
+   Load agf.css first (tokens, fonts, components), then this file; or load globl.css, which is both in one.
+   Globl Radio adds one voice (live), one texture (the stave), one shape (the ring) and the components a live
+   service needs. Everything else is AGF. */
+
+/* ---------- Tokens: the live voice ---------- */
+:root, [data-theme="midnight"], [data-theme="air"] {
+  --live: #e0523a;
+  --live-glow: #f0765f;
+  --live-text: #f28b76;
+  --live-hairline: rgba(224,82,58,0.32);
+  --on-live: #0e1612;
+  --shadow-live: 0 0 16px rgba(224,82,58,0.55);
+  --opacity-stave: 0.22;
+  --stave-pitch: 6px;
+  --stave-group: 72px;
+}
+[data-theme="daylight"] {
+  --live: #d2452d;
+  --live-glow: #e0523a;
+  --live-text: #a8341f;
+  --live-hairline: rgba(210,69,45,0.4);
+  --on-live: #fbf9f4;
+  --shadow-live: 0 0 12px rgba(224,82,58,0.35);
+  --opacity-stave: 0.3;
+}
+
+/* ---------- Marks ---------- */
+.gr-mark { display: inline-block; color: var(--brass); line-height: 0; }
+.gr-mark svg { width: 100%; height: auto; display: block; }
+.gr-mark path { fill: currentColor; }
+.gr-mark--ink { color: var(--ink); }
+.gr-mark--forest { color: var(--forest); }
+.gr-mark--live { color: var(--live); }
+.gr-mark--xl { width: 320px; }
+.gr-mark--lg { width: 200px; }
+.gr-mark--md { width: 120px; }
+.gr-mark--sm { width: 72px; }
+
+/* The ring: five concentric hairlines, the small-size and status form of the mark. */
+.gr-ring { display: inline-block; width: 48px; height: 48px; color: var(--brass); position: relative; line-height: 0; }
+.gr-ring svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.gr-ring circle { fill: none; stroke: currentColor; stroke-width: 1.5; vector-effect: non-scaling-stroke; }
+.gr-ring circle.dash { transform-origin: 50% 50%; }
+.gr-ring .lamp { fill: currentColor; stroke: none; opacity: 0; }
+.gr-ring.is-live { color: var(--live); }
+.gr-ring.is-live circle.dash { stroke-dasharray: 3 7; animation: agf-orbit 12s linear infinite; }
+.gr-ring.is-live .lamp { opacity: 1; animation: gr-breathe 1.6s ease-in-out infinite; }
+.gr-ring--lg { width: 96px; height: 96px; }
+.gr-ring--sm { width: 24px; height: 24px; }
+.gr-ring--sm circle { stroke-width: 1.25; }
+@keyframes gr-breathe { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+/* The endorsement: GR beside AGF, one hairline between them. */
+.gr-endorse { display: inline-flex; align-items: center; gap: var(--space-24); }
+.gr-endorse__rule { width: 1px; align-self: stretch; background: var(--brass-hairline); }
+.gr-endorse .agf-caption { color: var(--ink-faint); margin-top: var(--space-4); }
+
+/* ---------- Texture: the stave ---------- */
+.gr-stave { position: relative; isolation: isolate; }
+.gr-stave::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: var(--opacity-stave);
+  background-image: repeating-linear-gradient(to bottom,
+    var(--brass) 0 1px, transparent 1px var(--stave-pitch),
+    var(--brass) var(--stave-pitch) calc(var(--stave-pitch) + 1px), transparent calc(var(--stave-pitch) + 1px) calc(var(--stave-pitch) * 2),
+    var(--brass) calc(var(--stave-pitch) * 2) calc(var(--stave-pitch) * 2 + 1px), transparent calc(var(--stave-pitch) * 2 + 1px) calc(var(--stave-pitch) * 3),
+    var(--brass) calc(var(--stave-pitch) * 3) calc(var(--stave-pitch) * 3 + 1px), transparent calc(var(--stave-pitch) * 3 + 1px) calc(var(--stave-pitch) * 4),
+    var(--brass) calc(var(--stave-pitch) * 4) calc(var(--stave-pitch) * 4 + 1px), transparent calc(var(--stave-pitch) * 4 + 1px) var(--stave-group));
+  background-position: 0 var(--space-24);
+}
+.gr-stave > * { position: relative; z-index: 1; }
+.gr-stave--one::before { background-image: repeating-linear-gradient(to bottom,
+    var(--brass) 0 1px, transparent 1px var(--stave-pitch),
+    var(--brass) var(--stave-pitch) calc(var(--stave-pitch) + 1px), transparent calc(var(--stave-pitch) + 1px) calc(var(--stave-pitch) * 2),
+    var(--brass) calc(var(--stave-pitch) * 2) calc(var(--stave-pitch) * 2 + 1px), transparent calc(var(--stave-pitch) * 2 + 1px) calc(var(--stave-pitch) * 3),
+    var(--brass) calc(var(--stave-pitch) * 3) calc(var(--stave-pitch) * 3 + 1px), transparent calc(var(--stave-pitch) * 3 + 1px) calc(var(--stave-pitch) * 4),
+    var(--brass) calc(var(--stave-pitch) * 4) calc(var(--stave-pitch) * 4 + 1px), transparent calc(var(--stave-pitch) * 4 + 1px) 100%);
+  background-repeat: no-repeat; background-size: 100% calc(var(--stave-pitch) * 4 + 1px); background-position: 0 50%; }
+.gr-stave--rule { height: calc(var(--stave-pitch) * 4 + 1px); border: 0; margin: 0; }
+.gr-stave--rule::before { background-position: 0 0; opacity: 0.6; }
+
+/* ---------- Status: ON AIR ---------- */
+.gr-onair { display: inline-flex; align-items: center; gap: var(--space-8); font-family: var(--font-sans); font-size: 12px; font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--live-text); }
+.gr-onair::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--live); box-shadow: var(--shadow-live); animation: gr-breathe 1.6s ease-in-out infinite; }
+.gr-onair--solid { background: var(--live); color: var(--on-live); padding: 0 var(--space-16) 0 var(--space-8); height: 28px; border-radius: var(--radius-4); box-shadow: var(--shadow-live); }
+.gr-onair--solid::before { background: var(--on-live); box-shadow: none; }
+.gr-onair--idle { color: var(--ink-faint); }
+.gr-onair--idle::before { background: var(--moss); box-shadow: none; animation: none; }
+.gr-onair--soon { color: var(--brass-text); }
+.gr-onair--soon::before { background: var(--brass); box-shadow: none; animation: none; }
+
+/* ---------- Waveform on the stave ---------- */
+.gr-wave { position: relative; display: block; width: 100%; height: 96px; }
+.gr-wave svg { width: 100%; height: 100%; display: block; }
+.gr-wave .stave { stroke: var(--brass); stroke-width: 1; opacity: var(--opacity-stave); }
+.gr-wave .fill { fill: var(--brass-glow); opacity: 0.25; }
+.gr-wave .line { fill: none; stroke: var(--brass-glow); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.gr-wave .head { stroke: var(--live); stroke-width: 1.5; }
+.gr-wave .head-dot { fill: var(--live); }
+.gr-wave--live .line { stroke: var(--brass-glow); }
+.gr-wave--draw .line { stroke-dasharray: 2000; stroke-dashoffset: 2000; animation: gr-draw 1.8s cubic-bezier(.16,1,.3,1) forwards; }
+@keyframes gr-draw { to { stroke-dashoffset: 0; } }
+
+/* ---------- Player ---------- */
+.gr-player { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: var(--space-16); align-items: center; padding: var(--space-16) var(--space-24); background: var(--surface-raised); border: 1px solid var(--brass-hairline); border-radius: var(--radius-8); font-family: var(--font-sans); }
+.gr-player--deep { background: var(--surface-deep); color: var(--ink-on-deep); }
+.gr-player__art { width: 72px; height: 72px; border-radius: var(--radius-4); background: var(--surface-sunken); border: 1px solid var(--brass-hairline); display: grid; place-items: center; overflow: hidden; }
+.gr-player__art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.gr-player__meta { min-width: 0; display: grid; gap: var(--space-4); }
+.gr-player__title { font-size: 16px; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gr-player--deep .gr-player__title { color: var(--ink-on-deep); }
+.gr-player__where { font-size: 13px; color: var(--ink-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.gr-player__status { display: flex; align-items: center; gap: var(--space-16); }
+.gr-player__controls { display: flex; align-items: center; gap: var(--space-8); }
+.gr-play { width: 48px; height: 48px; border-radius: 50%; border: 2px solid var(--brass); background: transparent; color: var(--brass); display: grid; place-items: center; cursor: pointer; transition: background 300ms cubic-bezier(.16,1,.3,1), color 300ms cubic-bezier(.16,1,.3,1), box-shadow 300ms cubic-bezier(.16,1,.3,1); }
+.gr-play:hover { background: var(--brass); color: var(--on-brass); box-shadow: var(--shadow-glow); }
+.gr-play:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--surface), 0 0 0 4px var(--focus-ring); }
+.gr-play svg { width: 20px; height: 20px; }
+.gr-play--live { border-color: var(--live); color: var(--live); }
+.gr-play--live:hover { background: var(--live); color: var(--on-live); box-shadow: var(--shadow-live); }
+.gr-player__wave { grid-column: 1 / -1; margin-top: var(--space-8); }
+.gr-player__wave .gr-wave { height: 56px; }
+
+/* ---------- Schedule ---------- */
+.gr-schedule { width: 100%; border-collapse: collapse; font-family: var(--font-sans); font-size: 15px; }
+.gr-schedule th, .gr-schedule td { text-align: left; padding: var(--space-16) var(--space-16) var(--space-16) 0; border-bottom: 1px solid var(--brass-hairline); vertical-align: middle; }
+.gr-schedule thead th { font-size: 11px; font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-faint); padding-top: 0; }
+.gr-schedule .t { font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 500; white-space: nowrap; }
+.gr-schedule .t small { display: block; font-size: 12px; color: var(--ink-faint); font-weight: 400; }
+.gr-schedule .act { color: var(--ink); font-weight: 500; }
+.gr-schedule .act small { display: block; font-size: 13px; color: var(--ink-muted); font-weight: 400; }
+.gr-schedule .venue { color: var(--ink-muted); }
+.gr-schedule tr.is-live { background: linear-gradient(90deg, rgba(224,82,58,0.1), transparent 55%); }
+.gr-schedule tr.is-live .t { color: var(--live-text); }
+.gr-schedule td:last-child { text-align: right; padding-right: 0; white-space: nowrap; }
+
+/* ---------- Venue card ---------- */
+.gr-venue { display: grid; gap: var(--space-16); padding: var(--space-24); background: var(--surface-raised); border: 1px solid var(--brass-hairline); border-radius: var(--radius-8); font-family: var(--font-sans); min-width: 0; }
+.gr-venue__head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-16); }
+.gr-venue__name { font-size: 24px; font-weight: 300; line-height: 1.1; color: var(--ink); margin: var(--space-4) 0 0; }
+.gr-venue__city { font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.gr-venue__act { display: grid; gap: var(--space-4); padding-top: var(--space-16); border-top: 1px solid var(--brass-hairline); }
+.gr-venue__act .who { font-size: 17px; font-weight: 500; color: var(--ink); }
+.gr-venue__act .when { font-size: 13px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.gr-venue__foot { display: flex; justify-content: space-between; align-items: center; gap: var(--space-16); }
+
+/* ---------- Countdown ---------- */
+.gr-countdown { display: inline-grid; gap: var(--space-4); font-family: var(--font-sans); }
+.gr-countdown__num { font-size: 48px; line-height: 1; font-weight: 200; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--ink); font-variation-settings: "FLAR" 0, "VOLM" 0; }
+.gr-countdown__num b { font-weight: 200; color: var(--brass-text); }
+.gr-countdown--lg .gr-countdown__num { font-size: 96px; letter-spacing: -0.02em; }
+.gr-countdown__label { font-size: 12px; font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-faint); }
+.gr-countdown.is-live .gr-countdown__num { color: var(--live-text); }
+
+/* ---------- Virtual ticket ---------- */
+.gr-ticket { width: 100%; max-width: 640px; background: var(--surface-deep); color: var(--ink-on-deep); border: 2px solid var(--brass); outline: 1px solid var(--brass-hairline); outline-offset: 4px; border-radius: var(--radius-2); font-family: var(--font-sans); position: relative; overflow: hidden; }
+.gr-ticket__body { padding: var(--space-32) var(--space-48); }
+.gr-ticket__head { display: flex; justify-content: space-between; align-items: flex-start; }
+.gr-ticket__strap { font-family: var(--font-strapline); font-size: 24px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--brass-glow); margin: var(--space-24) 0 0; line-height: 1.15; }
+.gr-ticket__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-16); margin-top: var(--space-24); }
+.gr-ticket__grid dt { font-size: 11px; font-weight: 600; letter-spacing: var(--tracking-eyebrow); text-transform: uppercase; color: var(--ink-on-deep-muted); }
+.gr-ticket__grid dd { margin: var(--space-4) 0 0; font-size: 16px; color: var(--ink-on-deep); font-variant-numeric: tabular-nums; }
+.gr-ticket__stub { border-top: 1px dashed var(--brass-hairline); padding: var(--space-16) var(--space-48); display: flex; justify-content: space-between; align-items: center; gap: var(--space-16); background: var(--surface-sunken); }
+.gr-ticket__stub .agf-caption { color: var(--ink-on-deep-muted); }
+.gr-ticket__serial { font-family: var(--font-strapline); letter-spacing: 0.2em; font-size: 14px; color: var(--brass); white-space: nowrap; }
+.gr-ticket__stub .agf-caption { text-align: right; }
+.gr-ticket--pass { border-color: var(--brass-glow); }
+
+/* ---------- Credit: the artist's line ---------- */
+.gr-credit { display: flex; gap: var(--space-16); align-items: flex-start; padding: var(--space-16) 0; border-top: 1px solid var(--brass-hairline); border-bottom: 1px solid var(--brass-hairline); font-family: var(--font-sans); max-width: 640px; }
+.gr-credit__text { font-size: 13px; line-height: 1.5; color: var(--ink-muted); }
+.gr-credit__text b { font-weight: 600; color: var(--ink); }
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .gr-ring.is-live circle.dash, .gr-ring.is-live .lamp, .gr-onair::before { animation: none; }
+  .gr-wave--draw .line { animation: none; stroke-dashoffset: 0; }
+}

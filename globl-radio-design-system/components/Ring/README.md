@@ -1,0 +1,3 @@
+# Ring
+
+Five concentric rings derived from the monogram: the mark at small sizes and the live indicator everywhere. Default 48px, `--lg` 96px, `--sm` 24px (three rings). States: idle in `brass` with the outer ring still; `is-live` turns the mark `live`, lights a centre lamp that breathes at 1.6 s, and sets the outer dashed ring turning at 5 rpm. The ring only turns while a stream is on air and stops dead when it ends. It never spins as a loader and never appears beside the monogram on the same line. The consumer provides the state. Below 24px use `gr-ring-small.svg` or, at 16px, one ring with the lamp.

@@ -1,0 +1,3 @@
+# Waveform
+
+The performance drawn on a single stave: a 2px `brass-glow` polyline with a 25%-to-transparent fill beneath it, the same rule as an AGF OLED frequency curve, over five stave hairlines. While live, a 1.5px `live` playhead with a dot marks now; `--draw` draws the line once over 1.8 s on the damped curve when first seen. The waveform is an illustration of signal level, not a measurement: it is never labelled with dB and never presented as a frequency response. Heights 96px default, 56px inside the Player. The consumer provides the points (or the live audio analyser's output) and the live state; a canned loop is not allowed.

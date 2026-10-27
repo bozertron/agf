@@ -1,0 +1,3 @@
+# Countdown
+
+A clock to air: hours, minutes and seconds in `data` (Commissioner 200, tabular, `"FLAR" 0`) with the colons in `brass-text`, and an `eyebrow` label beneath (*Live to air in*). `--lg` sets it in `data-mega` for title cards and the Balcony OLED. Digits change by replacement, never by rolling; at zero the numbers turn `live-text` (`is-live`), the Ring starts and the OnAir lamp lights, in that order over 300 ms. It always shows the venue's local air time beside it in `caption` so the clock has a reference. The consumer provides the target time; the countdown is never used for anything but air time.

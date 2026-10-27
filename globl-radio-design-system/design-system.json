@@ -1,0 +1,222 @@
+{
+  "v": 3,
+  "layout": "files",
+  "title": "Globl Radio",
+  "namespace": "GR",
+  "extends": "AGF",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "gr-lockup-bone.svg",
+        "gr-lockup-ink.svg",
+        "gr-lockup.svg",
+        "gr-mark-bone.svg",
+        "gr-mark-ink.svg",
+        "gr-mark.svg",
+        "gr-ring-bone.svg",
+        "gr-ring-ink.svg",
+        "gr-ring-small-bone.svg",
+        "gr-ring-small-ink.svg",
+        "gr-ring-small.svg",
+        "gr-ring.svg"
+      ],
+      "files": {
+        "gr-lockup-bone.svg": {
+          "name": "gr-lockup-bone.svg",
+          "blob": "f97c943183def15256d061b9a3a70ef8",
+          "size": 16920,
+          "type": "image/svg+xml"
+        },
+        "gr-lockup-ink.svg": {
+          "name": "gr-lockup-ink.svg",
+          "blob": "dd7dfba99642ec87610e35858678a45c",
+          "size": 16920,
+          "type": "image/svg+xml"
+        },
+        "gr-lockup.svg": {
+          "name": "gr-lockup.svg",
+          "blob": "c7a7a956641b4d89f354dea9719f0cb3",
+          "size": 16920,
+          "type": "image/svg+xml"
+        },
+        "gr-mark-bone.svg": {
+          "name": "gr-mark-bone.svg",
+          "blob": "65139b441fd017022c1ba647b0cea857",
+          "size": 11982,
+          "type": "image/svg+xml"
+        },
+        "gr-mark-ink.svg": {
+          "name": "gr-mark-ink.svg",
+          "blob": "1e0eb6aea14f31ca7b60102dcf03aadb",
+          "size": 11982,
+          "type": "image/svg+xml"
+        },
+        "gr-mark.svg": {
+          "name": "gr-mark.svg",
+          "blob": "76cdb47ef19c5dc4b6960db81e1699fd",
+          "size": 11982,
+          "type": "image/svg+xml"
+        },
+        "gr-ring-bone.svg": {
+          "name": "gr-ring-bone.svg",
+          "blob": "0ab69cd8d754f0ffdc0749facbd499b1",
+          "size": 315,
+          "type": "image/svg+xml"
+        },
+        "gr-ring-ink.svg": {
+          "name": "gr-ring-ink.svg",
+          "blob": "c8db4b24cb1f16e9ebe3d0a9223c17b5",
+          "size": 315,
+          "type": "image/svg+xml"
+        },
+        "gr-ring-small-bone.svg": {
+          "name": "gr-ring-small-bone.svg",
+          "blob": "52a77e1358f66d066b5d1df943f6a0de",
+          "size": 251,
+          "type": "image/svg+xml"
+        },
+        "gr-ring-small-ink.svg": {
+          "name": "gr-ring-small-ink.svg",
+          "blob": "52bca34016a2337337ac031c27310d07",
+          "size": 251,
+          "type": "image/svg+xml"
+        },
+        "gr-ring-small.svg": {
+          "name": "gr-ring-small.svg",
+          "blob": "1aa28cbbc9865d32f94e45449b2b6f5d",
+          "size": 251,
+          "type": "image/svg+xml"
+        },
+        "gr-ring.svg": {
+          "name": "gr-ring.svg",
+          "blob": "efd991e69a3b82b7d4c4b8a40389d5bd",
+          "size": 315,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "s",
+      "order": [
+        "broadcast.svg",
+        "clock.svg",
+        "gain.svg",
+        "globe.svg",
+        "ground.svg",
+        "headphones.svg",
+        "mic.svg",
+        "phantom.svg",
+        "play.svg",
+        "record.svg",
+        "spark.svg",
+        "ticket.svg",
+        "venue.svg",
+        "waveform.svg"
+      ],
+      "files": {
+        "broadcast.svg": {
+          "name": "broadcast.svg",
+          "blob": "7fdae9f908253ee86ab7c602af21e1c9",
+          "size": 336,
+          "type": "image/svg+xml"
+        },
+        "clock.svg": {
+          "name": "clock.svg",
+          "blob": "91322804f8454615266d7e6a04ed0f36",
+          "size": 247,
+          "type": "image/svg+xml"
+        },
+        "gain.svg": {
+          "name": "gain.svg",
+          "blob": "79c78c967bc194685c8ed8f7d8c41b9d",
+          "size": 262,
+          "type": "image/svg+xml"
+        },
+        "globe.svg": {
+          "name": "globe.svg",
+          "blob": "1bd7be6df96ee151f3a4ddd3eee1bc2f",
+          "size": 307,
+          "type": "image/svg+xml"
+        },
+        "ground.svg": {
+          "name": "ground.svg",
+          "blob": "0028c66330bcb242cbe4a1fc2a9b5e0d",
+          "size": 236,
+          "type": "image/svg+xml"
+        },
+        "headphones.svg": {
+          "name": "headphones.svg",
+          "blob": "5a24fa7efb74898c58334937868190eb",
+          "size": 334,
+          "type": "image/svg+xml"
+        },
+        "mic.svg": {
+          "name": "mic.svg",
+          "blob": "34a5a559d3c9a7315e9c00510467bab5",
+          "size": 284,
+          "type": "image/svg+xml"
+        },
+        "phantom.svg": {
+          "name": "phantom.svg",
+          "blob": "b999de9fa9604638eaa54a63fd812bd9",
+          "size": 233,
+          "type": "image/svg+xml"
+        },
+        "play.svg": {
+          "name": "play.svg",
+          "blob": "d41270d062d8937604ffd4c98b10c657",
+          "size": 218,
+          "type": "image/svg+xml"
+        },
+        "record.svg": {
+          "name": "record.svg",
+          "blob": "9516a7bfa42c3e641cf6a27a8d1685ac",
+          "size": 283,
+          "type": "image/svg+xml"
+        },
+        "spark.svg": {
+          "name": "spark.svg",
+          "blob": "a23cdb77dcaebcc711b7f855f124a965",
+          "size": 301,
+          "type": "image/svg+xml"
+        },
+        "ticket.svg": {
+          "name": "ticket.svg",
+          "blob": "d665502983d34a6c97a914e3196a103a",
+          "size": 396,
+          "type": "image/svg+xml"
+        },
+        "venue.svg": {
+          "name": "venue.svg",
+          "blob": "722838a4d7c88d2a2a0f4dc274de467d",
+          "size": 274,
+          "type": "image/svg+xml"
+        },
+        "waveform.svg": {
+          "name": "waveform.svg",
+          "blob": "1c5b865f3fffbb8afb77a0e6a7262b28",
+          "size": 237,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "via": "build/build.py",
+    "note": "Globl Radio sub-brand: 1 voice, 1 texture, 1 shape, 13 components, 12 marks, 14 icons"
+  }
+}

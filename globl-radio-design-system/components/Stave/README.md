@@ -1,0 +1,3 @@
+# Stave
+
+Globl Radio's signature texture: the mark's five lines laid flat. Five 1px hairlines in `brass` at a 6px pitch (`stave-pitch`), tiled every 72px (`stave-group`), at `opacity-stave` over `surface-deep`; `.gr-stave` applies it to any band and keeps the content above it. `--one` draws a single stave centred in the element, for a rule beneath a heading or the grid behind a waveform; `--rule` makes a 25px-tall standalone rule. A stave is horizontal, never angled or curved, never over Daylight paper or photography, and never under a second texture. The consumer provides the band; the stave never carries text on its lines.

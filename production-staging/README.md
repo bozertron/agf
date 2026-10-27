@@ -28,6 +28,7 @@ Pages read their copy from JSON, and browsers refuse to fetch JSON from `file://
 | `../REPO-MAP.md` | The whole-repo map: topic index, full file tree, open questions compiled from the content files. Start there when writing a spec. |
 | `../archive/legacy-site/LEGACY-MAP.md` | Module-by-module map of the retired site, including the visualisations worth re-implementing and their data contracts. |
 | `../agf-design-system/agf-design-system/` | The brand book and design system. `site/shared/agf.css` is a copy of its stylesheet; the folder is the source. |
+| `../globl-radio-design-system/` | The Globl Radio sub-brand package (live streaming service), built on the AGF system. Open its `index.html`. |
 
 ## Section types the renderer understands
 

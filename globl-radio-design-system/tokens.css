@@ -1,0 +1,34 @@
+/* Globl Radio — tokens added to AGF's. Load after agf.css or tokens.css from the AGF package. */
+:root, [data-theme="midnight"] {
+  --live: #e0523a;
+  --live-glow: #f0765f;
+  --live-text: #f28b76;
+  --live-hairline: rgba(224,82,58,0.32);
+  --on-live: #0e1612;
+  --shadow-live: 0 0 16px rgba(224,82,58,0.55);
+  --opacity-stave: 0.22;
+  --stave-pitch: 6px;
+  --stave-group: 72px;
+}
+[data-theme="daylight"] {
+  --live: #d2452d;
+  --live-glow: #e0523a;
+  --live-text: #a8341f;
+  --live-hairline: rgba(210,69,45,0.4);
+  --on-live: #fbf9f4;
+  --shadow-live: 0 0 12px rgba(224,82,58,0.35);
+  --opacity-stave: 0.3;
+  --stave-pitch: 6px;
+  --stave-group: 72px;
+}
+[data-theme="air"] {
+  --live: #e0523a;
+  --live-glow: #f0765f;
+  --live-text: #f28b76;
+  --live-hairline: rgba(224,82,58,0.32);
+  --on-live: #0e1612;
+  --shadow-live: 0 0 16px rgba(224,82,58,0.55);
+  --opacity-stave: 0.22;
+  --stave-pitch: 6px;
+  --stave-group: 72px;
+}

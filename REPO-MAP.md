@@ -2,7 +2,7 @@
 
 Written 2026-10-27 for the founder, as a lookup table for writing website specs: pick a topic, open the files in the order given. Branch `claude/agf-brand-website-37qbgk`, HEAD `03a1e31`, 540 files tracked by git, working tree clean and no untracked files at the time of writing (this file is the only addition). All paths are relative to the repo root (`/home/user/agf`). Nothing in this map was invented: where a description rests on a filename rather than on reading the file, it says "appears to".
 
-Contents: 1 Orientation · 2 Topic index (T01 to T24) · 3 Full file tree · 4 The nine site options · 5 Open questions carried in the content · 6 Known rough edges.
+Contents: 1 Orientation · 2 Topic index (T01 to T25) · 3 Full file tree · 4 The nine site options · 5 Open questions carried in the content · 6 Known rough edges.
 
 ---
 
@@ -19,6 +19,7 @@ AGF ("All Grounds Floating") is a premium audio brand. This repo holds everythin
 | Production staging | `production-staging/` | The one place for new work: reference site (`site/`), the old site's content as JSON (`content/`), every image catalogued (`assets/`), the generator script (`tools/`), the pre-recovery inventory (`CONTENT-HARVEST.md`). Start with `production-staging/README.md`. | Live working area |
 | Design system | `agf-design-system/agf-design-system/` | The brand book and design system: voice, colour, type, space, texture, marks, 19 documented components, applications (CMF, packaging), motion. Open `index.html` there to see it. | The visual law |
 | Archive | `archive/legacy-site/` | The retired schema-driven site (web site, in-page editor, PDF spec-sheet renderer, 22 JSON schemas, CSS). Read `LEGACY-MAP.md` there instead of the code. | Reference only, not run |
+| Globl Radio design system | `globl-radio-design-system/` | The sub-brand package for AGF's live-music streaming service, built on the AGF system: brand book (`README.md`), applications, motion, `globl.css` (AGF's stylesheet plus the Globl Radio layer), tokens, 13 components with previews, the monogram, lockup and ring as SVG in three inks (converted from the designer's 2016 EPS files in `assets/Logos/source/`), four added icons, contact sheets, and `build/build.py` which regenerates everything but the hand-written docs. Open `index.html` there. | The visual law for Globl Radio surfaces |
 
 Also at the top level: `fonts/` (licensed source fonts with OFL licences and web woff2), `agf.db` (the SQLite database the content was exported from), and this file.
 
@@ -337,6 +338,16 @@ Do-not-port list: `archive/legacy-site/LEGACY-MAP.md` section 8.2 (the in-page e
 7. `production-staging/tools/build-content.py` — the code that reads `content/` and writes the nine `content.json` files (see section 4).
 
 ---
+
+### T25 Globl Radio (the live streaming service)
+
+1. `globl-radio-design-system/README.md` — the sub-brand brand book: the mark and how to read it, voice, the live colour rule, type, the stave, the components.
+2. `globl-radio-design-system/02-applications.md` — the player, venue signage, the virtual ticket and all-access pass, broadcast lower thirds, hardware screens, print.
+3. `globl-radio-design-system/03-motion.md` — what moves, and only while something is live.
+4. `globl-radio-design-system/index.html` — every component rendered, with the Midnight / Daylight / Air switch; `components/<Name>/README.md` for each one's rules.
+5. `globl-radio-design-system/assets/Logos/` — `gr-mark`, `gr-lockup`, `gr-ring` in brass, `-ink`, `-bone`; `source/` holds the two EPS originals.
+6. `globl-radio-design-system/tokens.json` — only the tokens added to AGF's (the live voice, the stave).
+7. Source material the package drew on: `production-staging/content/sections/venue.json` and `artist-rights.v2.json` (virtual ticket, royalties, all-access pass), `production-staging/assets/ASSETS.md` ("Copy on the boards": the stereOS board's "Live, anywhere. Heard, everywhere.").
 
 ## 3. Full file tree
 

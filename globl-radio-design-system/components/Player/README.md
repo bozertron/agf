@@ -1,0 +1,3 @@
+# Player
+
+The now-playing bar, always in the Air theme (wrap it in `data-theme="air"` inside any page): artwork or the small ring at the left, artist and set in `body-strong`, venue · city · local time (and the listener's own time when it differs) in `caption` tabular, the OnAir state with the listener count and its conditions, the play control, and a 56px Waveform on its stave across the bottom. The play control is a 48px ring in `brass` that fills on hover; while the stream is on air it is `live` and shows pause. One player per page, no volume knob (the device has one), no skip controls on a live stream, no autoplay with sound. The consumer provides artist, set, venue, city, times, state, count, artwork and the audio element.
