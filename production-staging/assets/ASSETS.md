@@ -69,15 +69,7 @@ Folder: `production-staging/assets/section-backgrounds/`
 
 | New path | Original path | Shows | Size (px) |
 |---|---|---|---|
-| `production-staging/assets/section-backgrounds/concept-explainer-background.png` | `site/assets/sections/concept-explainer/concept-explainer-background.png` | Identical (byte-for-byte) to prelude-square.png and screenshot 11-49-47: white-background CAD cutaway of the REMORA speaker driver layout (eight round drivers, racetrack drivers on edges, 'REMORA' in white). | 842x607 |
-| `production-staging/assets/section-backgrounds/cut-sheet-hero.png` | `site/assets/sections/cut-sheet/cut-sheet-hero.png` | Identical to overview-background.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines. | 842x664 |
-| `production-staging/assets/section-backgrounds/overview-background.png` | `site/assets/sections/overview/overview-background.png` | Identical to cut-sheet-hero.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines. | 842x664 |
-| `production-staging/assets/section-backgrounds/prelude-hero.png` | `site/assets/sections/prelude/prelude-hero.png` | Identical to screenshot 05-27-08: two white headphones on a white stand in a living room, captioned 'MV2 Bundle+'. | 1120x617 |
-| `production-staging/assets/section-backgrounds/prelude-hero.webp` | `site/assets/sections/prelude/prelude-hero.webp` | Identical to amp-3.webp: AI home-theatre room with a TV flanked by two tall green-and-brass wall speakers and a green USB Audio box on a black console. | 1152x864 |
-| `production-staging/assets/section-backgrounds/prelude-square-1.png` | `site/assets/sections/prelude/prelude-square-1.png` | Identical to screenshot 05-23-49: tan and silver over-ear headphones on a dark navy dusk backdrop. | 480x651 |
-| `production-staging/assets/section-backgrounds/prelude-square.png` | `site/assets/sections/prelude/prelude-square.png` | Identical to concept-explainer-background.png: white-background CAD cutaway of the REMORA driver layout. | 842x607 |
 | `production-staging/assets/section-backgrounds/venue-background.webp` | `site/assets/sections/venue/venue-background.webp` | AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp. | 1152x864 |
-| `production-staging/assets/section-backgrounds/venue-figure.webp` | `site/assets/sections/venue/venue-figure.webp` | Identical to venue-background.webp: AI-generated jazz venue with green curtain stage and copper 'AGF' wall sign. | 1152x864 |
 
 ## Renders: symphony-macro-system (7)
 

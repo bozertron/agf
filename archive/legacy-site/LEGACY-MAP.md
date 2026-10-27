@@ -1,6 +1,8 @@
+> Note (2026-10-27): the 22 font files under `assets/` that duplicated `/fonts/` were deleted after this map was written, so `styles/core/fonts.css` now points at missing files; the licensed fonts live in `/fonts/`. The move described below has been committed.
+
 # LEGACY-MAP: the retired AGF schema-driven brand site
 
-Location: `archive/legacy-site/` (moved with `git mv` from `site/`, 2026-10-27, nothing deleted, nothing committed).
+Location: `archive/legacy-site/` (moved with `git mv` from `site/`, 2026-10-27, nothing deleted at move time; committed 2026-10-27, duplicate fonts removed afterwards, see note above).
 Purpose: a map detailed enough to rebuild every behaviour of the old site **without the server or database**. The content itself now lives in `production-staging/content/` (`sections/*.json`, `products/*.json`, `raw/*.json`).
 
 Read this first, because four facts change how you read everything below:

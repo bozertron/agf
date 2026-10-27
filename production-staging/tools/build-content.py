@@ -208,7 +208,7 @@ opportunity = {
              "rows": [{"category": tidy(c["category"]), "a": tidy(c["era_1_value"]), "b": tidy(c["era_2_value"]), "insight": tidy(c["insight"])} for c in timeline["comparison_points"]]},
             {"type": "table", "id": "consolidation", "eyebrow": tidy(consolidation["section_label"]), "title": tidy(consolidation["section_title"]), "lede": tidy(consolidation["intro_text"]),
              "columns": ["Acquirer", "Brands acquired", "Value"], "numeric": [2], "rows": acq_rows,
-             "note": "Dates and source links are blank for all but the Harman transaction in the document. Worth filling before this goes public."},
+             "note": "Every date field is blank in the document and only the Harman row carries a source link. Worth filling before this goes public."},
             {"type": "cards", "id": "why-it-matters", "eyebrow": tidy(explainer["section_label"]), "title": tidy(explainer["section_title"]), "lede": tidy(explainer["intro_text"]), "columns": 2,
              "items": [{"eyebrow": "Concept", "title": tidy(m["headline"]), "body": tidy(m["body"])} for m in explainer["modules"]]},
             {"type": "metrics", "id": "at-a-glance", "eyebrow": tidy(overview["section_label"]), "title": tidy(overview["section_title"]), "lede": tidy(overview["headline"]), "orbit": False,
@@ -237,7 +237,8 @@ def tech_cards():
                 stitched[-1] = stitched[-1] + "," + c
             else:
                 stitched.append(c)
-        card = {"eyebrow": tidy(t["full_name"]), "brass": True, "title": tidy(t["name"]), "pull": tidy(t.get("tagline")),
+        name = tidy(t["name"]).replace("BTN-Tech", "BT'N-Tech")  # the July 14 row dropped the apostrophe
+        card = {"eyebrow": tidy(t["full_name"]).replace("BTN-Tech", "BT'N-Tech"), "brass": True, "title": name, "pull": tidy(t.get("tagline")),
                 "body": tidy(t.get("description")), "list": stitched,
                 "kv": [["Advantage", tidy(t.get("competitive_advantage"))]],
                 "tags": [status_label.get(t.get("patent_status"), tidy(t.get("patent_status")))]}
@@ -385,7 +386,7 @@ lineup = {
                 {"src": "assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-front-three-quarter-135.jpg", "caption": "Over-Ear — Home Centric, matte black with copper trim, on a head form."},
                 {"src": "assets/renders/over-ear-home-centric/over-ear-headphones-matte-black-copper-earcup-closeup-136.jpg", "caption": "Over-Ear, earcup detail."},
                 {"src": "assets/concept-boards/wasted-real-estate-earbud-case-board.webp", "caption": "Wasted Real-Estate concept board (AI-generated board; copy transcribed in assets/ASSETS.md)."}
-            ], "note": "No renders exist yet for the Core-like all-in-ones or the Instrument. The Symphony folder holds two overlapping render sets (numbered JPGs from product-renders, transparent PNGs from the old site); both are kept until you pick."},
+            ], "note": "No renders exist yet for the Core-like all-in-ones or the Instrument. The Symphony folder holds two overlapping render sets (numbered JPGs from product-renders, PNGs from the old site's screenshots); both are kept until you pick."},
             {"type": "figures", "id": "also-on-the-bench", "eyebrow": "Not in the document", "title": "Also on the bench", "lede": "Four more objects have renders in the repository but no entry in the brand document: a studio microphone, a desktop broadcast microphone, a keyboard-format control surface and a desktop stereo amplifier.", "_assumed": True, "items": [
                 {"src": "assets/renders/studio-microphone/studio-mic-shockmount-front-angle-202.jpg", "caption": "Large-diaphragm studio microphone in a wire shock mount, AGF mark on the crossbar."},
                 {"src": "assets/renders/broadcast-microphone/broadcast-mic-greybox-front-angle-1.png", "caption": "Desktop broadcast microphone on a weighted base (grey-box CAD)."},

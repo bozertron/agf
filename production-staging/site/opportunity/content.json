@@ -196,7 +196,7 @@
             "undisclosed"
           ]
         ],
-        "note": "Dates and source links are blank for all but the Harman transaction in the document. Worth filling before this goes public."
+        "note": "Every date field is blank in the document and only the Harman row carries a source link. Worth filling before this goes public."
       },
       {
         "type": "cards",

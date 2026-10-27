@@ -342,82 +342,10 @@
     "bytes": 418248
   },
   {
-    "path": "production-staging/assets/section-backgrounds/concept-explainer-background.png",
-    "original_path": "site/assets/sections/concept-explainer/concept-explainer-background.png",
-    "category": "section-backgrounds",
-    "description": "Identical (byte-for-byte) to prelude-square.png and screenshot 11-49-47: white-background CAD cutaway of the REMORA speaker driver layout (eight round drivers, racetrack drivers on edges, 'REMORA' in white).",
-    "width": 842,
-    "height": 607,
-    "bytes": 144474
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/cut-sheet-hero.png",
-    "original_path": "site/assets/sections/cut-sheet/cut-sheet-hero.png",
-    "category": "section-backgrounds",
-    "description": "Identical to overview-background.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines.",
-    "width": 842,
-    "height": 664,
-    "bytes": 113990
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/overview-background.png",
-    "original_path": "site/assets/sections/overview/overview-background.png",
-    "category": "section-backgrounds",
-    "description": "Identical to cut-sheet-hero.png and screenshot 11-49-16: grey-background CAD exploded view of the white REMORA speaker lifted off the back of a TV with mounting-screw lines.",
-    "width": 842,
-    "height": 664,
-    "bytes": 113990
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/prelude-hero.png",
-    "original_path": "site/assets/sections/prelude/prelude-hero.png",
-    "category": "section-backgrounds",
-    "description": "Identical to screenshot 05-27-08: two white headphones on a white stand in a living room, captioned 'MV2 Bundle+'.",
-    "width": 1120,
-    "height": 617,
-    "bytes": 740083
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/prelude-hero.webp",
-    "original_path": "site/assets/sections/prelude/prelude-hero.webp",
-    "category": "section-backgrounds",
-    "description": "Identical to amp-3.webp: AI home-theatre room with a TV flanked by two tall green-and-brass wall speakers and a green USB Audio box on a black console.",
-    "width": 1152,
-    "height": 864,
-    "bytes": 30812
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/prelude-square-1.png",
-    "original_path": "site/assets/sections/prelude/prelude-square-1.png",
-    "category": "section-backgrounds",
-    "description": "Identical to screenshot 05-23-49: tan and silver over-ear headphones on a dark navy dusk backdrop.",
-    "width": 480,
-    "height": 651,
-    "bytes": 213747
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/prelude-square.png",
-    "original_path": "site/assets/sections/prelude/prelude-square.png",
-    "category": "section-backgrounds",
-    "description": "Identical to concept-explainer-background.png: white-background CAD cutaway of the REMORA driver layout.",
-    "width": 842,
-    "height": 607,
-    "bytes": 144474
-  },
-  {
     "path": "production-staging/assets/section-backgrounds/venue-background.webp",
     "original_path": "site/assets/sections/venue/venue-background.webp",
     "category": "section-backgrounds",
     "description": "AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp.",
-    "width": 1152,
-    "height": 864,
-    "bytes": 69312
-  },
-  {
-    "path": "production-staging/assets/section-backgrounds/venue-figure.webp",
-    "original_path": "site/assets/sections/venue/venue-figure.webp",
-    "category": "section-backgrounds",
-    "description": "Identical to venue-background.webp: AI-generated jazz venue with green curtain stage and copper 'AGF' wall sign.",
     "width": 1152,
     "height": 864,
     "bytes": 69312
