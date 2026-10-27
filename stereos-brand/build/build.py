@@ -41,16 +41,25 @@ def letter_s(x): return s_spine(x, 0, 100)
 def letter_S(x): return s_spine(x, -40, 140)
 
 def letter_t(x):
-    stem = "M%.2f %.2f L%.2f %.2f" % (x + 18, -30, x + 18, 100)
-    bar = "M%.2f %.2f L%.2f %.2f" % (x, BAND / 2, x + 48, BAND / 2)
-    return [stem, ("halo", bar)], 48
+    """Stem continuous with a hooked foot (a quarter circle to the right at the baseline); two arms one band wide
+    stop one gap short of the stem. Nothing crosses."""
+    arm = BAND
+    sx = x + arm + 3 + BAND / 2
+    hr = BAND            # hook radius on the spine
+    stem = "M%.2f %.2f L%.2f %.2f A%.2f %.2f 0 0 0 %.2f %.2f L%.2f %.2f" % (sx, -30, sx, 100 - hr, hr, hr, sx + hr, 100, sx + hr + 10, 100)
+    y = BAND / 2
+    left = "M%.2f %.2f L%.2f %.2f" % (x, y, sx - BAND / 2 - 3, y)
+    right = "M%.2f %.2f L%.2f %.2f" % (sx + BAND / 2 + 3, y, sx + BAND / 2 + 3 + arm, y)
+    return [stem, left, right], sx + BAND / 2 + 3 + arm - x
 
 def letter_e(x):
+    """Bowl continuous from just above the bar, counter-clockwise round to the lower-right terminal;
+    the bar starts one gap inside the bowl's inner edge and runs flush to its outer edge. Nothing crosses."""
     r = (100 - BAND) / 2.0; cx, cy = x + 50, 50
-    x0, y0 = pt(cx, cy, r, 0)
-    ring = "M%.2f %.2f %s" % (x0, y0, arc_to(cx, cy, r, 0, 38, 0))
-    bar = "M%.2f %.2f L%.2f %.2f" % (cx - r, cy, cx + r, cy)
-    return [ring, ("halo", bar)], 100
+    x0, y0 = pt(cx, cy, r, -26)
+    ring = "M%.2f %.2f %s" % (x0, y0, arc_to(cx, cy, r, -26, 38, 0))
+    bar = "M%.2f %.2f L%.2f %.2f" % (cx - r + BAND / 2 - 1, cy, cx + r + BAND / 2, cy)
+    return [ring, bar], 100
 
 def letter_r(x):
     stem = "M%.2f %.2f L%.2f %.2f" % (x + BAND / 2, 0, x + BAND / 2, 100)
