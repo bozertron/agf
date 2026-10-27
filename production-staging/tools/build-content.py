@@ -176,11 +176,24 @@ write(os.path.join(SITE, "brand", "content.json"), brand)
 # --------------------------------------------------------------------------
 # 02 · Opportunity
 eras = timeline["eras"]
+MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+def when(a):
+    d = (a.get("date") or "").strip()
+    if not d: return ""
+    y, m = d.split("-")[0], d.split("-")[1] if "-" in d else ""
+    label = (MONTHS[int(m) - 1] + " " + y) if m else y
+    kind = ((a.get("verification") or {}).get("date_type") or "").strip()
+    return label + (" (%s)" % kind if kind else "")
+def domain(a):
+    u = (a.get("source_url") or "").strip()
+    if not u: return ""
+    host = u.split("//", 1)[-1].split("/", 1)[0]
+    return host[4:] if host.startswith("www.") else host
 acq_rows = []
 for a in consolidation["acquisitions"]:
     v = a.get("value_usd")
     val = "undisclosed" if not v else ("$%.2fB" % (v / 1e9) if v >= 1e9 else "$%dM" % round(v / 1e6))
-    acq_rows.append([tidy(a["acquirer"]), tidy(a["target"]), val])
+    acq_rows.append([tidy(a["acquirer"]), tidy(a["target"]), val, when(a), domain(a)])
 opportunity = {
     "slug": "opportunity",
     "intro": {
@@ -207,8 +220,8 @@ opportunity = {
             {"type": "compare", "id": "rhymes", "eyebrow": "Even Rails → Smooth Tracks", "title": "Where the eras rhyme", "columns": ["1978–1991", "2014–2026"],
              "rows": [{"category": tidy(c["category"]), "a": tidy(c["era_1_value"]), "b": tidy(c["era_2_value"]), "insight": tidy(c["insight"])} for c in timeline["comparison_points"]]},
             {"type": "table", "id": "consolidation", "eyebrow": tidy(consolidation["section_label"]), "title": tidy(consolidation["section_title"]), "lede": tidy(consolidation["intro_text"]),
-             "columns": ["Acquirer", "Brands acquired", "Value"], "numeric": [2], "rows": acq_rows,
-             "note": "Every date field is blank in the document and only the Harman row carries a source link. Worth filling before this goes public."},
+             "columns": ["Acquirer", "Brands acquired", "Value", "Date", "Source"], "numeric": [2], "rows": acq_rows,
+             "note": "Dates and sources researched 2026-10-27; founder to confirm before publishing. All eight rows now have a source, but not all are final: closing is unconfirmed for Sony/Audeze, Marshall (majority stake) and Beyerdynamic, and the Harman source page was not re-read. Values are as in the brand document: the sourced Marshall, Beyerdynamic and Barco figures are euros (EUR 1.1B, 122M and 135M), and the $8.35B Samsung figure matches no single source (Harman was about $8B in 2017). Loewe/Cabasse was an insolvency asset purchase."},
             {"type": "cards", "id": "why-it-matters", "eyebrow": tidy(explainer["section_label"]), "title": tidy(explainer["section_title"]), "lede": tidy(explainer["intro_text"]), "columns": 2,
              "items": [{"eyebrow": "Concept", "title": tidy(m["headline"]), "body": tidy(m["body"])} for m in explainer["modules"]]},
             {"type": "metrics", "id": "at-a-glance", "eyebrow": tidy(overview["section_label"]), "title": tidy(overview["section_title"]), "lede": tidy(overview["headline"]), "orbit": False,
@@ -237,8 +250,7 @@ def tech_cards():
                 stitched[-1] = stitched[-1] + "," + c
             else:
                 stitched.append(c)
-        name = tidy(t["name"]).replace("BTN-Tech", "BT'N-Tech")  # the July 14 row dropped the apostrophe
-        card = {"eyebrow": tidy(t["full_name"]).replace("BTN-Tech", "BT'N-Tech"), "brass": True, "title": name, "pull": tidy(t.get("tagline")),
+        card = {"eyebrow": tidy(t["full_name"]), "brass": True, "title": tidy(t["name"]), "pull": tidy(t.get("tagline")),
                 "body": tidy(t.get("description")), "list": stitched,
                 "kv": [["Advantage", tidy(t.get("competitive_advantage"))]],
                 "tags": [status_label.get(t.get("patent_status"), tidy(t.get("patent_status")))]}
@@ -525,9 +537,15 @@ business = {
             {"type": "cards", "id": "channel-types", "eyebrow": "Channel types", "title": "Five channels, five approaches", "columns": 2,
              "items": [{"eyebrow": "Channel", "title": tidy(c["type"]), "body": tidy(c["description"]), "kv": [["Approach", tidy(c["approach"])]]} for c in dist["channel_types"]]},
             {"type": "prose", "id": "distribution-revenue", "eyebrow": "Channel economics", "title": "Third-party fills the floor; AGF owns the ceiling", "body": tidy(dist["revenue_model"])},
+            {"type": "chart-perceptual", "id": "competitive-map", "eyebrow": "11 · Competitive positioning", "title": "The map: price against prestige",
+             "lede": "Average flagship price on a log scale against prestige. AGF lands just above Focal's consumer flagship and well below the incumbents that define the ceiling.",
+             "points": [{"brand": tidy(c["brand"]), "price_usd_avg": c["price_usd_avg"], "prestige_score": c["prestige_score"], "status": c["status"], "highlight": c["brand"] == "AGF"} for c in comp["competitors"]],
+             "x": {"min": comp["_viz_config"]["x_axis"]["min"], "max": comp["_viz_config"]["x_axis"]["max"], "label": "Average flagship price (USD, log)"},
+             "y": {"min": comp["_viz_config"]["y_axis"]["min"], "max": comp["_viz_config"]["y_axis"]["max"], "label": "Prestige"},
+             "note": "Prestige scores are the source document's own estimates, not a measured index. Prices are the average flagship price the document assigns each brand. The cards below carry the same data."},
             {"type": "cards", "id": "competitive-positioning", "eyebrow": "11 · Competitive positioning", "title": "Where AGF lands", "lede": tidy(comp["intro_text"]), "columns": 2,
              "items": [{"eyebrow": status_word.get(c["status"], c["status"]) + " · prestige %s · ~%s" % (c["prestige_score"], money(c["price_usd_avg"])), "brass": c["brand"] == "AGF", "title": tidy(c["brand"]), "pull": tidy(c["category"]), "list": [tidy(k) for k in c.get("key_data_points", [])], "body": tidy(c["agf_positioning"]), "kv": [["Opening", tidy(c["opening"])]]} for c in comp["competitors"]],
-             "note": "The document renders these on a perceptual map (log price versus prestige). That chart is on the list for the next pass; the cards carry the same data."},
+             "note": "The document renders these on a perceptual map (log price versus prestige); the cards carry the same data."},
             {"type": "prose", "id": "summary", "eyebrow": "Summary", "title": "The seam", "body": tidy(comp["summary"])}
         ]
     }
@@ -568,8 +586,14 @@ roadmap_c = {
     "deep": {
         "headline": tidy(roadmap["section_title"]),
         "lede": tidy(roadmap["intro_text"]),
-        "note": "The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt is queued for the next pass; the timeline below carries the same months.",
+        "note": "The document drew this as a 24-month Gantt with milestone markers for PR stunts, venue pilots and volume targets. The Gantt above summarises the six swimlanes; the timeline below carries the same months.",
         "sections": [
+            {"type": "chart-gantt", "id": "gantt", "eyebrow": "24 months at a glance", "title": "The launch, drawn to scale",
+             "lede": "Six swimlanes across 24 months. Over-Ear starts first; Core-like and Symphony overlap on shared tooling; the Instrument and Wasted Real-Estate follow.",
+             "months": roadmap["_viz_config"]["total_slots"], "unit": "Month",
+             "rows": [{"label": tidy(ph["product"]), "title": tidy(ph["title"]), "start": ph["start_slot"], "duration": ph["duration_slots"],
+                       "milestones": [{"type": m["type"], "slot": m["slot"], "label": tidy(m["label"])} for m in ph.get("milestones", []) if isinstance(m, dict)]} for ph in roadmap["phases"]],
+             "note": "Bars span each phase from start month to finish. Markers show the PR lever, the venue pilot and the volume target; the timeline below carries the detail."},
             {"type": "timeline", "id": "phases", "eyebrow": "Six swimlanes", "title": "The phases, month by month", "items": phase_items()},
             {"type": "cards", "id": "pr-levers", "eyebrow": "PR levers", "title": "Two stunts, timed to the sequence", "columns": 2,
              "items": [{"eyebrow": tidy(s["timing"]), "title": tidy(s["name"]), "body": tidy(s["description"])} for s in roadmap["pr_stunts"]]},
