@@ -1,10 +1,10 @@
 # AGF image assets
 
-Catalogued from `site/assets/screenshots/`, `site/assets/sections/` and the four root images (AGF.png, AGF1.png, pic.jpeg, pic1.jpeg). All files were moved with `git mv` (history preserved); nothing was copied. Eight byte-identical duplicates were deleted in a later reorganisation (see Removed duplicates). Machine-readable version: `assets.json`.
+Catalogued from `site/assets/screenshots/`, `site/assets/sections/` and the four root images (AGF.png, AGF1.png, pic.jpeg, pic1.jpeg). All files were moved with `git mv` (history preserved); nothing was copied. Ten byte-identical duplicates were deleted in later reorganisations (see Removed duplicates). Machine-readable version: `assets.json`.
 
 Note: every "Original path" value below is provenance only. It records where the file lived before the reorganisation (`site/assets/screenshots/`, `site/assets/sections/` and the repo root) and those folders no longer exist; the "New path" column is the only path that resolves on disk.
 
-This file catalogues 32 images: everything under `assets/` outside `renders/`. Every image under `renders/` (43, including the seven `symphony-tower-*.png` screenshots in `renders/symphony-macro-system/`) is catalogued in `renders/RENDERS.md` and `renders/renders.json`, as are the 60 images in `prior-work/mass-fidelity/` (46) and `concepts/material-moods/` (14); none of those are listed here.
+This file catalogues 30 images: everything under `assets/` outside `renders/`. Every image under `renders/` (43, including the seven `symphony-tower-*.png` screenshots in `renders/symphony-macro-system/`) is catalogued in `renders/RENDERS.md` and `renders/renders.json`, as are the 60 images in `prior-work/mass-fidelity/` (46) and `concepts/material-moods/` (14); none of those are listed here. Two former `prior-work/` copies of `mass-fidelity/` files were removed as duplicates, so their surviving twins are catalogued only in `renders/RENDERS.md`.
 
 Notes: "AI" means generated imagery (text on it is often garbled); "CAD" means a rendered 3D model. Dimensions are width x height in pixels. The old section-background duplicates of screenshot-derived files have been removed (see the Removed duplicates section).
 
@@ -31,7 +31,7 @@ Folder: `production-staging/assets/concept-boards/`
 | `production-staging/assets/concept-boards/venue-three-panel-board-front-of-house-balcony-green-room.webp` | `site/assets/screenshots/lart.webp` | AI-generated three-panel venue concept board: 'The Bar / The Stage' (front of house, red-curtain stage, bar), 'The Balcony' (pro mixing consoles and monitors over a purple-lit stage) and 'The Green Room' (hidden retail room with an 'AGF / l'Art Production' sign); each panel has a label, headline, body copy and a VIBE line. Dark, amber/purple lighting, cream and gold type. | 1024x1024 |
 | `production-staging/assets/concept-boards/wasted-real-estate-earbud-case-board.webp` | `site/assets/screenshots/case 1.webp` | AI-generated product board (not CAD) headed 'Wasted Real-Estate': black round earbud case with brass crown and triangle logo, Dolby and l'Art on the screen, UI screens, port close-ups, exploded internals, DJ photo, feature icons, '$299 accessory / $799 investment' pricing line and stereOS logo. Black with brass/gold type. | 1024x1024 |
 
-## Prior work (founder earlier products) (11)
+## Prior work (founder earlier products) (9)
 
 Folder: `production-staging/assets/prior-work/` (the `mass-fidelity/` subfolder, 46 files, is catalogued in `renders/RENDERS.md`, not here)
 
@@ -39,14 +39,12 @@ Folder: `production-staging/assets/prior-work/` (the `mass-fidelity/` subfolder,
 |---|---|---|---|
 | `production-staging/assets/prior-work/massfidelity-dac-black-copper-slider-render.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-32-27.png` | CAD render of a different massFidelity DAC: low black box with a copper-edged front panel (four round buttons and a USB-C port), a translucent top inset with a copper raised slider/handle, 'massFIDELITY' printed on the top; grey background. | 1116x622 |
 | `production-staging/assets/prior-work/massfidelity-usb-audio-dac-black-gold-render.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-23-20.png` | CAD render of the massFidelity 'USB Audio' DAC in black with a gold-brass knob and 'massFIDELITY' on the front edge; grey studio background. | 997x581 |
-| `production-staging/assets/prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg` | `site/assets/screenshots/untitled.185(1).jpg` | CAD render (grey studio background, 1920x1083) of the massFidelity 'USB Audio' DAC: dark green slab with brass base plate and a large brass knob at the front-right corner; 'massFIDELITY' on the front edge, 'USB Audio' on the top. | 1920x1083 |
 | `production-staging/assets/prior-work/remora-driver-layout-cutaway-render.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-49-47.png` | White-background CAD render of the REMORA enclosure with a transparent grille showing the internal driver layout: eight round woofers/radiators and racetrack drivers on the edges; 'REMORA' in white type. | 842x607 |
 | `production-staging/assets/prior-work/remora-driver-layout-spec-diagram.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-51-12.png` | Spec slide: CAD wireframe of the REMORA driver layout on grey at right and a text list of driver counts at left (12 racetrack drivers, 4 subwoofers, 4 passive radiators). | 1498x561 |
 | `production-staging/assets/prior-work/remora-exploded-mount-diagram.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-49-16.png` | Grey-background CAD diagram of the white 'REMORA' speaker lifted off the back of a TV, with dashed mounting-screw lines to a VESA plate. | 842x664 |
 | `production-staging/assets/prior-work/remora-speaker-on-tv-rear-render.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-48-56.png` | CAD render of the black 'REMORA' behind-the-TV speaker, a curved slab mounted on the back of a flat-screen TV on a black desk; 'REMORA' in white capitals on the grille. | 575x596 |
 | `production-staging/assets/prior-work/round-earbud-case-dolby-logo-lid-kod-screen.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-37-30.png` | CAD render on black: round black earbud case with a Dolby double-D logo embossed on the lid and a front screen showing 'KOD J. Cole' with an 'E' badge and prev/next arrows. | 672x686 |
 | `production-staging/assets/prior-work/round-earbud-case-with-earbuds-paul-simon-screen.png` | `site/assets/screenshots/Screenshot From 2026-06-15 11-37-00.png` | CAD render on black: round black earbud case with two earbuds floating above their pockets and a small colour screen showing 'LATE IN THE EVENING / Paul Simon' with prev/next arrows; four hairline buttons on the front. | 662x686 |
-| `production-staging/assets/prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg` | `site/assets/screenshots/untitled.224(1).jpg` | CAD render of the same USB Audio DAC slab from the rear/right: dark grey body, copper knob top-left, rear connector strip (red switch, USB-C, four copper binding posts, HDMI, optical, RCA pairs). No massFidelity logo is visible, only mirrored 'USB Audio' text on top. | 1920x1083 |
 | `production-staging/assets/prior-work/usb-audio-dac-exploded-assembly-drawing.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-43-06.png` | Technical exploded-assembly drawing (white sheet with border) of the USB Audio box with brass knob: callouts for assembly knob, top panel, spacers, PCB LED, back/side/front/bottom panels, mounting brackets and connector PCB. Small multicolour 'EP' logo stamp bottom-left. No massFidelity text. | 570x454 |
 
 ## Concepts (not AGF database products) (11)
@@ -59,12 +57,12 @@ Folder: `production-staging/assets/concepts/` (the `material-moods/` subfolder, 
 | `production-staging/assets/concepts/analog-round-brass-ring-green-graphite-knob.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-15-12.png` | AI-generated close-up of a round in-wall control: brass outer ring, green lacquer well, a graphite knob and a small 'ANALOG' label on a pale wall. | 827x818 |
 | `production-staging/assets/concepts/analog-wall-plate-brass-knob-green-ring-walnut.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-13-02.png` | AI-generated image of an in-wall plate: dark walnut veneer with sunburst grain, a large brass knob on a green enamel ring, and a round OLED reading 'ANALOG 144' with a blue underline. | 711x714 |
 | `production-staging/assets/concepts/analog-wall-plate-green-panel-wood-frame-brass-knob.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-16-15.png` | AI-generated image of a wall plate: dark green panel in a walnut frame, a brass knob on a brass collar and the label 'ANALOG', in a softly lit room. | 827x818 |
-| `production-staging/assets/concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp` | `site/assets/screenshots/amp-3.webp` | AI-generated home-theatre room: wall-hung TV (branded 'SOTA') flanked by two tall slim dark-green speakers with brass driver rings, a small green-and-brass 'USB Audio' box on a black floating console with under-lighting. Byte-identical to section-backgrounds/prelude-hero.webp. | 1152x864 |
+| `production-staging/assets/concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp` | `site/assets/screenshots/amp-3.webp` | AI-generated home-theatre room: wall-hung TV (branded 'SOTA') flanked by two tall slim dark-green speakers with brass driver rings, a small green-and-brass 'USB Audio' box on a black floating console with under-lighting. Formerly duplicated as section-backgrounds/prelude-hero.webp, since removed. | 1152x864 |
 | `production-staging/assets/concepts/keyboard-control-surface-knobs-faders-grey-cad.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-31-13.png` | Unbranded grey CAD model of a full-size keyboard with a raised rear strip of four-knob groups (blue indicators), jog-wheel style controls and two keys at the left, on dark grey background. | 1116x622 |
 | `production-staging/assets/concepts/marble-media-console-projector-screen-planters.png` | `site/assets/screenshots/Screenshot From 2026-06-15 12-21-30.png` | AI-generated living-room concept: floating white-marble console with two round black speaker drivers and planters, a small control module, under a black-cased roll-down projector screen on a cream wall, wood floor. | 954x848 |
-| `production-staging/assets/concepts/mv2-bundle-plus-white-headphones-stand.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-27-08.png` | Marketing-style render: two white over-ear headphones on a white charging stand in a living room with TV and blue sofa, captioned 'MV2 Bundle+'. Byte-identical to section-backgrounds/prelude-hero.png. | 1120x617 |
+| `production-staging/assets/concepts/mv2-bundle-plus-white-headphones-stand.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-27-08.png` | Marketing-style render: two white over-ear headphones on a white charging stand in a living room with TV and blue sofa, captioned 'MV2 Bundle+'. Formerly duplicated as section-backgrounds/prelude-hero.png, since removed. | 1120x617 |
 | `production-staging/assets/concepts/over-ear-headphones-black-red-pair.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-29-58.png` | Product render of two over-ear headphones overlapping, one black and one red with black pads, on a light grey background. No brand marking. | 512x542 |
-| `production-staging/assets/concepts/over-ear-headphones-tan-pad-silver-shell-concept.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-23-49.png` | Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Byte-identical to section-backgrounds/prelude-square-1.png. | 480x651 |
+| `production-staging/assets/concepts/over-ear-headphones-tan-pad-silver-shell-concept.png` | `site/assets/screenshots/Screenshot From 2026-06-26 05-23-49.png` | Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Formerly duplicated as section-backgrounds/prelude-square-1.png, since removed. | 480x651 |
 | `production-staging/assets/concepts/waveform-sculpture-copper-wire-teal-patina.png` | `site/assets/screenshots/agf_v3_1_nanobananapro.png` | AI-generated 1024x1024 image of a sculpture on a dark grey gradient: flowing copper/brass wire ribbons wrapped around a teal verdigris audio waveform. | 1024x1024 |
 
 ## Section backgrounds (old site) (1)
@@ -73,7 +71,7 @@ Folder: `production-staging/assets/section-backgrounds/`
 
 | New path | Original path | Shows | Size (px) |
 |---|---|---|---|
-| `production-staging/assets/section-backgrounds/venue-background.webp` | `site/assets/sections/venue/venue-background.webp` | AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp. | 1152x864 |
+| `production-staging/assets/section-backgrounds/venue-background.webp` | `site/assets/sections/venue/venue-background.webp` | AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Formerly duplicated as section-backgrounds/venue-figure.webp, since removed. | 1152x864 |
 
 ## Copy on the boards
 
@@ -168,7 +166,7 @@ Verbatim as read from the images. AI-generated text is often garbled; garbles ar
 
 ## Removed duplicates
 
-Eight files in `section-backgrounds/` were byte-identical (md5) to files kept elsewhere and have been deleted. Each description above that still says "Byte-identical to" or "Identical to" a section-background file refers to one of these.
+Ten files were byte-identical (md5, confirmed with sha256) to files kept elsewhere and have been deleted: eight in `section-backgrounds/` and two in `prior-work/`. Descriptions above that say "formerly duplicated as" a file refer to one of these.
 
 | Removed file | Matched surviving file |
 |---|---|
@@ -180,6 +178,8 @@ Eight files in `section-backgrounds/` were byte-identical (md5) to files kept el
 | `section-backgrounds/cut-sheet-hero.png` | `prior-work/remora-exploded-mount-diagram.png` |
 | `section-backgrounds/overview-background.png` | `prior-work/remora-exploded-mount-diagram.png` |
 | `section-backgrounds/venue-figure.webp` | `section-backgrounds/venue-background.webp` |
+| `prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg` | `prior-work/mass-fidelity/mass-fidelity-usb-dac-green-gold-base-gold-knob-angle-small-185.jpg` (catalogued in `renders/RENDERS.md`) |
+| `prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg` | `prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-rear-ports-angle-224.jpg` (catalogued in `renders/RENDERS.md`) |
 
 ## Not found / ambiguous
 

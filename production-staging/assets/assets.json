@@ -81,24 +81,6 @@
     "bytes": 74662
   },
   {
-    "path": "production-staging/assets/prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg",
-    "original_path": "site/assets/screenshots/untitled.185(1).jpg",
-    "category": "prior-work",
-    "description": "CAD render (grey studio background, 1920x1083) of the massFidelity 'USB Audio' DAC: dark green slab with brass base plate and a large brass knob at the front-right corner; 'massFIDELITY' on the front edge, 'USB Audio' on the top.",
-    "width": 1920,
-    "height": 1083,
-    "bytes": 322004
-  },
-  {
-    "path": "production-staging/assets/prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg",
-    "original_path": "site/assets/screenshots/untitled.224(1).jpg",
-    "category": "prior-work",
-    "description": "CAD render of the same USB Audio DAC slab from the rear/right: dark grey body, copper knob top-left, rear connector strip (red switch, USB-C, four copper binding posts, HDMI, optical, RCA pairs). No massFidelity logo is visible, only mirrored 'USB Audio' text on top.",
-    "width": 1920,
-    "height": 1083,
-    "bytes": 225644
-  },
-  {
     "path": "production-staging/assets/prior-work/massfidelity-usb-audio-dac-black-gold-render.png",
     "original_path": "site/assets/screenshots/Screenshot From 2026-06-15 12-23-20.png",
     "category": "prior-work",
@@ -228,7 +210,7 @@
     "path": "production-staging/assets/concepts/over-ear-headphones-tan-pad-silver-shell-concept.png",
     "original_path": "site/assets/screenshots/Screenshot From 2026-06-26 05-23-49.png",
     "category": "concepts",
-    "description": "Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Byte-identical to section-backgrounds/prelude-square-1.png.",
+    "description": "Product render of over-ear headphones with tan leather band and pads and silver-grey shells on a dark navy dusk backdrop; USB-C port and LED visible. No brand marking. Formerly duplicated as section-backgrounds/prelude-square-1.png, since removed.",
     "width": 480,
     "height": 651,
     "bytes": 213747
@@ -237,7 +219,7 @@
     "path": "production-staging/assets/concepts/mv2-bundle-plus-white-headphones-stand.png",
     "original_path": "site/assets/screenshots/Screenshot From 2026-06-26 05-27-08.png",
     "category": "concepts",
-    "description": "Marketing-style render: two white over-ear headphones on a white charging stand in a living room with TV and blue sofa, captioned 'MV2 Bundle+'. Byte-identical to section-backgrounds/prelude-hero.png.",
+    "description": "Marketing-style render: two white over-ear headphones on a white charging stand in a living room with TV and blue sofa, captioned 'MV2 Bundle+'. Formerly duplicated as section-backgrounds/prelude-hero.png, since removed.",
     "width": 1120,
     "height": 617,
     "bytes": 740083
@@ -273,7 +255,7 @@
     "path": "production-staging/assets/concepts/home-theatre-green-brass-wall-speakers-usb-audio.webp",
     "original_path": "site/assets/screenshots/amp-3.webp",
     "category": "concepts",
-    "description": "AI-generated home-theatre room: wall-hung TV (branded 'SOTA') flanked by two tall slim dark-green speakers with brass driver rings, a small green-and-brass 'USB Audio' box on a black floating console with under-lighting. Byte-identical to section-backgrounds/prelude-hero.webp.",
+    "description": "AI-generated home-theatre room: wall-hung TV (branded 'SOTA') flanked by two tall slim dark-green speakers with brass driver rings, a small green-and-brass 'USB Audio' box on a black floating console with under-lighting. Formerly duplicated as section-backgrounds/prelude-hero.webp, since removed.",
     "width": 1152,
     "height": 864,
     "bytes": 30812
@@ -282,7 +264,7 @@
     "path": "production-staging/assets/section-backgrounds/venue-background.webp",
     "original_path": "site/assets/sections/venue/venue-background.webp",
     "category": "section-backgrounds",
-    "description": "AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Identical to venue-figure.webp.",
+    "description": "AI-generated dark jazz-venue interior: bar and stools at left, stage with upright bass and drums behind green velvet curtains, wood tables with candles, a large copper 'AGF' sign on the right wall. Formerly duplicated as section-backgrounds/venue-figure.webp, since removed.",
     "width": 1152,
     "height": 864,
     "bytes": 69312

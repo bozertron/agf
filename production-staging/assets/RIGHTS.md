@@ -1,6 +1,6 @@
 # Image rights register
 
-Status of every file under `production-staging/assets/` (135 files) for public use. Proposed, not legal advice; the founder decides. Written 2026-10-27 against repo map item R8. Nothing in the image library was moved or edited.
+Status of every file under `production-staging/assets/` (133 files) for public use. Proposed, not legal advice; the founder decides. Written 2026-10-27 against repo map item R8. Nothing in the image library was moved or edited.
 
 ## Rules
 
@@ -79,22 +79,20 @@ Folder `production-staging/assets/concepts/material-moods/`. 14 internal only.
 | `concepts/material-moods/concept-walnut-marble-base-lit-copper-tubes-bc39217f.jpg` | AI-generated | none (small generator watermark bottom-left) | **internal only** | AI-generated material mood; carries the generator watermark. Not a product render. |
 | `concepts/material-moods/concept-walnut-panel-marble-inlay-twin-copper-cylinders-cd660305.jpg` | AI-generated | none (small generator watermark bottom-left) | **internal only** | AI-generated material mood; carries the generator watermark. Not a product render. |
 
-### Prior work (11)
+### Prior work (9)
 
-Folder `production-staging/assets/prior-work/`. 11 needs clearance.
+Folder `production-staging/assets/prior-work/`. 9 needs clearance.
 
 | Path (under `assets/`) | Origin | Third-party marks visible | Status | Why |
 |---|---|---|---|---|
 | `prior-work/massfidelity-dac-black-copper-slider-render.png` | founder CAD render | massFIDELITY printed on top | **needs clearance** | Founder prior-company product (not an AGF product), shows the massFIDELITY mark. |
 | `prior-work/massfidelity-usb-audio-dac-black-gold-render.png` | founder CAD render | massFIDELITY on front edge | **needs clearance** | Founder prior-company product, shows the massFIDELITY mark. DISPLAYED on the founder page. |
-| `prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg` | founder CAD render | massFIDELITY on front edge | **needs clearance** | Founder prior-company product, shows the massFIDELITY mark. |
 | `prior-work/remora-driver-layout-cutaway-render.png` | founder CAD render | REMORA | **needs clearance** | Shows the REMORA mark; prior-work product, not AGF. Same bytes as two section-backgrounds files not on disk. |
 | `prior-work/remora-driver-layout-spec-diagram.png` | founder CAD render | REMORA named in the spec text | **needs clearance** | Spec slide naming Remora; prior-work product. DISPLAYED on the founder page. |
 | `prior-work/remora-exploded-mount-diagram.png` | founder CAD render | REMORA | **needs clearance** | Shows the REMORA mark; prior-work product. Same bytes as two section-backgrounds files not on disk. |
 | `prior-work/remora-speaker-on-tv-rear-render.png` | founder CAD render | REMORA; the TV is a generic flat screen, no TV brand seen | **needs clearance** | Shows the REMORA mark; prior-work product. DISPLAYED on the founder page. |
 | `prior-work/round-earbud-case-dolby-logo-lid-kod-screen.png` | founder CAD render | Dolby double-D on lid; "KOD / J. Cole" with album art on screen | **needs clearance** | Dolby mark plus a real artist, track and cover art. The case itself is the AGF earbud concept. |
 | `prior-work/round-earbud-case-with-earbuds-paul-simon-screen.png` | founder CAD render | "Late in the Evening / Paul Simon" on screen, small album thumbnail | **needs clearance** | No brand logo, but a real artist and track name and album art on screen need clearance. DISPLAYED on the founder page. |
-| `prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg` | founder CAD render | none (mirrored "USB Audio" only) | **needs clearance** | No mark visible, but it is the same prior-company USB Audio DAC; the founder note says check rights before any prior-work render goes public. |
 | `prior-work/usb-audio-dac-exploded-assembly-drawing.png` | founder CAD render | small multicolour "EP" logo stamp bottom-left (owner not identified) | **needs clearance** | Viewed: exploded drawing of the prior-company USB Audio box with an unidentified "EP" stamp. Confirm who owns the drawing and the logo. |
 
 ### Prior work / Mass Fidelity (46)
@@ -249,16 +247,16 @@ Folder `production-staging/assets/renders/desktop-stereo-amp/`. 8 publishable.
 |---|---|
 | publishable | 42 |
 | internal only | 31 |
-| needs clearance | 61 |
+| needs clearance | 59 |
 | do not publish | 1 |
-| **Total** | **135** |
+| **Total** | **133** |
 
 By origin and status:
 
 | Origin | Status | Files |
 |---|---|---|
 | AI-generated | internal only | 31 |
-| founder CAD render | needs clearance | 59 |
+| founder CAD render | needs clearance | 57 |
 | founder CAD render | publishable | 42 |
 | screenshot of third-party material | do not publish | 1 |
 | screenshot of third-party material | needs clearance | 2 |
@@ -303,4 +301,5 @@ Flagged files, by page:
 ## Not in this register
 
 - The Globl Radio artwork (`gr-mark.svg`, `gr-lockup.svg`, icons) lives in `globl-radio-design-system/assets/`, not in this library, so it has no rows. The README credits Melvin Galapon (monogram drawn in 2016, from his Illustrator file) but does not record a commission, assignment or licence. Rule 4 treats it as publishable; keep the signed agreement with it.
+- Removed duplicates: `prior-work/massfidelity-usb-audio-dac-green-brass-render.jpg` and `prior-work/usb-audio-dac-copper-knob-rear-ports-render.jpg` were deleted as byte-identical (sha256) to `prior-work/mass-fidelity/mass-fidelity-usb-dac-green-gold-base-gold-knob-angle-small-185.jpg` and `prior-work/mass-fidelity/mass-fidelity-usb-dac-charcoal-copper-knob-rear-ports-angle-224.jpg`, which keep their rows above (needs clearance). Neither deleted file was displayed on the site.
 - `ASSETS.md` heading "Section backgrounds (9)" and its Duplicates list name eight files that are not on disk (`prelude-hero.png`, `prelude-hero.webp`, `prelude-square-1.png`, `prelude-square.png`, `concept-explainer-background.png`, `cut-sheet-hero.png`, `overview-background.png`, `venue-figure.webp`). Each is byte-identical to a file registered above and takes that file's status.
