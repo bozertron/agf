@@ -1,0 +1,105 @@
+/* ============================================================
+   PARTIAL:  compare/charts.css
+   PURPOSE:  freq overlay + price bar + responsive
+   SOURCE:   site/styles.css  L3144–L3238   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* --- frequency overlay chart --- */
+.compare-freq-overlay {
+  padding: var(--space-md) var(--space-md) var(--space-md);
+  background: var(--dark);
+  border: var(--border-hair) solid var(--gold-mute);
+}
+.cmp-freq-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.cmp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  margin-top: var(--space-sm);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  color: var(--dark-ink);
+}
+.cmp-legend-item { display: inline-flex; align-items: center; gap: var(--space-xs); }
+.cmp-legend-swatch {
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: var(--border-hair);
+}
+
+/* --- horizontal price bar chart --- */
+.compare-price-bar {
+  padding: var(--space-md) var(--space-md) var(--space-md);
+  background: var(--dark);
+  border: var(--border-hair) solid var(--gold-mute);
+}
+.cmp-pb-rows { display: flex; flex-direction: column; gap: var(--space-sm); }
+.cmp-pb-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 200px) 1fr minmax(90px, auto);
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--type-body);
+  color: var(--dark-ink);
+  letter-spacing: var(--track-wide);
+}
+.cmp-pb-name {
+  font-size: var(--type-body);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--taupe-2);
+}
+.cmp-pb-track {
+  position: relative;
+  height: 10px;
+  background:
+    repeating-linear-gradient(90deg, rgba(184, 134, 11, 0.10) 0 1px, transparent 1px 60px),
+    rgba(14, 22, 18, 0.7);
+  border: var(--border-hair) solid rgba(184, 134, 11, 0.12);
+  border-radius: var(--border-hair);
+  overflow: hidden;
+}
+.cmp-pb-fill {
+  display: block;
+  height: 100%;
+  background: var(--gold);
+  box-shadow: 0 0 0 var(--space-2xs) rgba(255, 255, 255, 0.06) inset;
+  transform-origin: left center;
+  animation: cmpPbGrow .55s var(--ease) both;
+}
+@keyframes cmpPbGrow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.cmp-pb-val {
+  font-family: var(--font);
+  font-variant-numeric: tabular-nums;
+  font-size: var(--type-body);
+  font-weight: 700;
+  color: var(--gold-soft);
+  letter-spacing: var(--track-wide);
+  text-align: right;
+}
+
+/* --- responsive --- */
+@media (max-width: 768px) {
+  .compare-overlay-panel { padding: var(--space-md) var(--space-sm) var(--space-xl); }
+  .compare-grid {
+    grid-template-columns: minmax(130px, 160px) repeat(var(--cmp-cols, 3), minmax(0, 1fr));
+  }
+  .cmp-grid-row > * { padding: var(--space-sm) var(--space-sm); font-size: var(--type-body); }
+  .cmp-cell-val { font-size: var(--type-body); }
+  .cmp-col-head h4 { font-size: var(--type-body); }
+  .cmp-pb-row { grid-template-columns: 1fr; gap: var(--space-2xs); }
+  .cmp-pb-val { text-align: left; }
+}
+
+

@@ -1,0 +1,136 @@
+/* ============================================================
+   PARTIAL:  sections/venue.css
+   PURPOSE:  .venue-*, .floor-zone, .zone-*
+   SOURCE:   site/styles.css  L1117–L1242   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Venue
+   ========================================================================== */
+.venue-floor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: var(--border-hair) solid var(--dark-rule);
+  margin-bottom: var(--space-2xl);
+}
+.floor-zone {
+  padding: var(--space-xl) var(--space-lg);
+  border-right: var(--border-hair) solid var(--dark-rule);
+  position: relative;
+}
+.floor-zone:last-child { border-right: none; }
+.zone-num {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: var(--border-hair) solid var(--gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font);
+  font-size: var(--type-lede);
+  font-weight: 500;
+  color: var(--gold-soft);
+  margin-bottom: var(--space-lg);
+}
+.floor-zone h3 {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 500;
+  margin: 0 0 var(--space-xs);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.zone-tag {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  margin: 0 0 var(--space-md);
+}
+.floor-zone p {
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  margin: 0 0 var(--space-sm);
+  font-weight: 300;
+}
+.zone-feel {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-hair) dashed var(--dark-rule);
+  font-family: var(--font);
+  font-style: italic;
+  font-variation-settings: "slnt" -8;
+  color: var(--taupe-2);
+  font-size: var(--type-body);
+  font-weight: 400;
+}
+.zone-green {
+  background: linear-gradient(180deg, transparent, rgba(184, 134, 11, 0.05));
+}
+
+@media (max-width: 1024px) {
+  .venue-floor { grid-template-columns: 1fr; }
+  .floor-zone { border-right: none; border-bottom: var(--border-hair) solid var(--dark-rule); }
+  .floor-zone:last-child { border-bottom: none; }
+}
+
+.venue-caption {
+  max-width: var(--col-meta);
+  margin: 0 auto var(--space-3xl);
+  font-family: var(--font);
+  font-size: var(--type-lede);
+  line-height: var(--leading-relaxed);
+  color: var(--taupe);
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: var(--track-tight);
+}
+.venue-caption strong { color: var(--gold-soft); font-weight: 500; }
+
+.venue-flow {
+  max-width: var(--col-deck);
+  margin: 0 auto;
+}
+.venue-flow h3 {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 500;
+  margin: 0 0 var(--space-lg);
+  color: var(--taupe-2);
+  text-align: center;
+}
+.venue-flow ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: v;
+}
+.venue-flow li {
+  position: relative;
+  padding: var(--space-md) 0 var(--space-md) var(--space-2xl);
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  font-weight: 300;
+}
+.venue-flow li::before {
+  counter-increment: v;
+  content: counter(v, decimal-leading-zero);
+  position: absolute;
+  left: 0; top: var(--space-md);
+  font-family: var(--font);
+  font-size: var(--type-lede);
+  color: var(--gold-soft);
+  font-weight: 600;
+}
+.venue-flow li strong { color: var(--taupe-2); font-weight: 500; }
+

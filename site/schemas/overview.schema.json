@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "overview",
+  "title": "Overview",
+  "description": "A high-level orienting section with headline, summary, metrics, and optional image — the 'at a glance' executive view.",
+  "type": "object",
+  "required": ["section_title"],
+  "properties": {
+    "section_label": { "type": "string", "description": "Eyebrow label", "default": "" },
+    "section_number": { "type": "string", "description": "Section number", "default": "" },
+    "section_title": { "type": "string", "description": "Main section title", "default": "At a Glance" },
+    "headline": { "type": "string", "description": "Bold tagline or headline", "default": "" },
+    "summary": { "type": "string", "description": "Markdown summary narrative", "default": "" },
+    "intro_text": { "type": "string", "description": "Deck/intro narrative below the title", "default": "" },
+    "mode": { "type": "string", "enum": ["text", "image"], "description": "Display mode — text-only or image alongside text", "default": "text" },
+    "image": { "type": "string", "description": "Image path/URL (used when mode='image')", "default": "" },
+    "image_position": { "type": "string", "enum": ["left", "right"], "description": "Image placement when mode='image'", "default": "right" },
+    "metrics": {
+      "type": "array",
+      "description": "Key headline proof-point metrics",
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": { "type": "string", "description": "Metric value", "default": "" },
+          "label": { "type": "string", "description": "Metric label", "default": "" },
+          "context": { "type": "string", "description": "Optional context line", "default": "" }
+        }
+      }
+    },
+    "highlights": {
+      "type": "array",
+      "description": "Bullet-style highlight items",
+      "items": {
+        "type": "object",
+        "properties": {
+          "icon": { "type": "string", "description": "Emoji or icon", "default": "" },
+          "title": { "type": "string", "description": "Highlight title", "default": "" },
+          "description": { "type": "string", "description": "Short description", "default": "" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true,
+  "default_data": {
+    "section_label": "",
+    "section_number": "",
+    "section_title": "At a Glance",
+    "headline": "",
+    "summary": "",
+    "intro_text": "",
+    "mode": "text",
+    "image": "",
+    "image_position": "right",
+    "metrics": [],
+    "highlights": []
+  }
+}

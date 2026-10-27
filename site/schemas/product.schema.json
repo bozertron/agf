@@ -1,0 +1,235 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "product",
+  "title": "AGF Product Specification",
+  "description": "Professional-grade audio product specification for enthusiast-level detail",
+  "type": "object",
+  "required": ["name", "category", "tagline"],
+  "properties": {
+    "name": { "type": "string", "description": "Product name" },
+    "category": { "type": "string", "enum": ["headphone", "speaker", "flagship", "accessory", "earbud", "macro-system", "soundbar"] },
+    "tagline": { "type": "string" },
+    "hero_image": { "type": "string", "format": "uri" },
+    "description": { "type": "string", "description": "Markdown-formatted product description" },
+    "form_factor": {
+      "type": "object",
+      "properties": {
+        "dimensions": {
+          "type": "object",
+          "properties": {
+            "height_mm": { "type": "number" },
+            "width_mm": { "type": "number" },
+            "depth_mm": { "type": "number" }
+          }
+        },
+        "weight_g": { "type": "number" },
+        "finish": { "type": "string" },
+        "materials": { "type": "array", "items": { "type": "string" } },
+        "color_options": { "type": "array", "items": { "type": "string" } },
+        "variants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "differentiator": { "type": "string" },
+              "asp_usd": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+    "audio": {
+      "type": "object",
+      "properties": {
+        "frequency_response": {
+          "type": "object",
+          "properties": {
+            "low_hz": { "type": "number" },
+            "high_hz": { "type": "number" },
+            "tolerance_db": { "type": "number" }
+          }
+        },
+        "sensitivity_db_spl": { "type": "number" },
+        "impedance_ohms": { "type": "number" },
+        "thd_percent": { "type": "number" },
+        "snr_db": { "type": "number" },
+        "max_spl_db": { "type": "number" },
+        "drivers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "type": "string", "enum": ["dynamic", "planar", "electrostatic", "balanced-armature", "coaxial", "woofer", "tweeter", "full-range"] },
+              "size_mm": { "type": "number" },
+              "material": { "type": "string" },
+              "quantity": { "type": "integer" },
+              "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+            }
+          }
+        },
+        "amplification": {
+          "type": "object",
+          "properties": {
+            "class": { "type": "string", "enum": ["A", "AB", "D", "H", "GaN", "chip-amp"] },
+            "watts_per_channel": { "type": "number" },
+            "channels": { "type": "integer" },
+            "topology": { "type": "string" }
+          }
+        },
+        "dac": {
+          "type": "object",
+          "properties": {
+            "chipset": { "type": "string" },
+            "bit_depth": { "type": "integer" },
+            "max_sample_rate_khz": { "type": "number" },
+            "architecture": { "type": "string", "enum": ["delta-sigma", "R2R", "hybrid", "FPGA"] }
+          }
+        },
+        "crossover": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "enum": ["passive", "active-DSP", "none"] },
+            "frequency_hz": { "type": "number" },
+            "slope_db_oct": { "type": "number" }
+          }
+        },
+        "enclosure": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "enum": ["sealed", "ported", "transmission-line", "open-baffle", "horn", "isobaric"] },
+            "tuning_hz": { "type": "number" },
+            "volume_liters": { "type": "number" }
+          }
+        }
+      }
+    },
+    "connectivity": {
+      "type": "object",
+      "properties": {
+        "wireless": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "protocol": { "type": "string", "enum": ["Bluetooth", "WiFi", "RF", "proprietary"] },
+              "version": { "type": "string" },
+              "codecs": { "type": "array", "items": { "type": "string" } },
+              "range_m": { "type": "number" }
+            }
+          }
+        },
+        "wired": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "connector": { "type": "string" },
+              "format": { "type": "string" },
+              "max_resolution": { "type": "string" }
+            }
+          }
+        },
+        "multi_room": { "type": "boolean" },
+        "max_paired_devices": { "type": "integer" },
+        "streaming_protocols": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "agf_technologies": {
+      "type": "array",
+      "items": { "type": "string", "enum": ["l'Art", "stereOS", "BT'N-Tech", "l'espacI/O", "FRC41", "No-Nails"] }
+    },
+    "power": {
+      "type": "object",
+      "properties": {
+        "battery_life_hours": { "type": "number" },
+        "charging_type": { "type": "string" },
+        "charge_time_minutes": { "type": "number" },
+        "wall_power_watts": { "type": "number" },
+        "standby_watts": { "type": "number" },
+        "power_supply": { "type": "string" }
+      }
+    },
+    "business": {
+      "type": "object",
+      "properties": {
+        "ttm_months": { "type": "object", "properties": { "min": { "type": "number" }, "max": { "type": "number" } } },
+        "cogs_usd": { "type": "object", "properties": { "min": { "type": "number" }, "max": { "type": "number" } } },
+        "asp_usd": { "type": "object", "properties": { "min": { "type": "number" }, "max": { "type": "number" } } },
+        "tooling_cost_usd": { "type": "number" },
+        "target_volume_monthly": { "type": "integer" },
+        "certifications": { "type": "array", "items": { "type": "string" } },
+        "cert_cost_estimate_usd": { "type": "number" },
+        "v2_refactor_months": { "type": "number" },
+        "gross_margin_target": { "type": "number" }
+      }
+    },
+    "status": { "type": "string", "enum": ["concept", "development", "prototype", "production", "shipping"] },
+    "roadmap_notes": { "type": "string" },
+    "competitive_reference": {
+      "type": "object",
+      "properties": {
+        "comparable_products": { "type": "array", "items": { "type": "string" } },
+        "price_positioning": { "type": "string" },
+        "key_differentiators": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "system_config": {
+      "type": "object",
+      "description": "System configurator relationships (editable via Edit UI)",
+      "properties": {
+        "companions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Slugs of products that pair well with this one"
+        },
+        "connection_types": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "target_slug": { "type": "string" },
+              "connection": { "type": "string", "enum": ["RF", "BT", "USB-C", "WiFi", "analog", "digital-coax"] }
+            }
+          },
+          "description": "How this product connects to other products"
+        },
+        "system_role": {
+          "type": "string",
+          "enum": ["source", "processor", "amplifier", "output", "accessory"],
+          "description": "Where this product sits in the signal chain"
+        }
+      }
+    },
+    "_viz_config": {
+      "type": "object",
+      "description": "Per-product visualization configuration — controls which visual components are shown and their styling",
+      "properties": {
+        "show_freq_response": { "type": "boolean", "default": true, "description": "Show frequency response curve" },
+        "show_driver_diagram": { "type": "boolean", "default": true, "description": "Show driver arrangement diagram" },
+        "show_tech_flow": { "type": "boolean", "default": true, "description": "Show technology signal flow" },
+        "show_connectivity_badges": { "type": "boolean", "default": true, "description": "Show connectivity badges" },
+        "show_power_gauge": { "type": "boolean", "default": true, "description": "Show power gauge" },
+        "show_material_swatches": { "type": "boolean", "default": true, "description": "Show material swatches" },
+        "freq_response_color": { "type": "string", "default": "#B8860B", "description": "Primary color for frequency curve" },
+        "freq_response_db_range": { "type": "number", "default": 12, "description": "dB range for Y-axis (+/-)" },
+        "gauge_style": { "type": "string", "enum": ["arc", "bar", "meter"], "default": "arc", "description": "Power gauge display style" },
+        "tech_flow_order": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": ["stereOS", "l'Art", "BT'N-Tech", "l'espacI/O", "FRC41", "No-Nails"],
+          "description": "Order of technologies in signal flow diagram"
+        },
+        "badge_colors": {
+          "type": "object",
+          "properties": {
+            "wireless": { "type": "string", "default": "#87CEEB" },
+            "wired": { "type": "string", "default": "#FFD700" },
+            "streaming": { "type": "string", "default": "#90EE90" },
+            "feature": { "type": "string", "default": "#DDA0DD" }
+          }
+        }
+      }
+    }
+  }
+}

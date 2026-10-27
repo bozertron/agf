@@ -1,0 +1,3 @@
+# Hero
+
+The web hero: `surface-deep` with the TraceField and grain, a `strapline-small` in Poiret One `brass` as the one reserved line, a `mega`-class headline in Commissioner 200 (72-96px, two lines at most), a primary and a quiet Button. Photography, when used, sits beneath a `scrim` and the trace field is dropped so there is one texture, not two. Content enters with the scroll-reveal motion (rise 24px, fade, 600ms, ease-out) and the background drifts at 0.6× scroll for parallax; both stop under `prefers-reduced-motion`. The consumer provides strapline, headline, two actions and optional imagery; no carousel, no autoplaying video with sound.

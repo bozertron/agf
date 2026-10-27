@@ -1,0 +1,137 @@
+/* ============================================================
+   PARTIAL:  viz/product-viz.css
+   PURPOSE:  freq response, driver, tech-flow + caption rail
+   SOURCE:   site/styles.css  L2365–L2491   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   PRODUCT VISUALIZATION STYLES — instrument-panel aesthetic
+   Moss greens + brass gold + Commissioner. Each module reads as a measurement
+   plate stacked into the product spec sheet.
+   ========================================================================== */
+
+/* Container — appears inside the expanded spec sheet, after group tables */
+.product-visualizations {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: var(--border-hair) dashed rgba(184, 134, 11, 0.25);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+}
+
+/* Shared caption rail used across modules */
+.freq-caption,
+.driver-caption,
+.tech-flow-caption,
+.connectivity-caption,
+.material-swatches-caption {
+  display: flex;
+  align-items: baseline;
+  gap: 0.85rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.55rem;
+  border-bottom: var(--border-hair) solid rgba(184, 134, 11, 0.18);
+  font-family: 'Commissioner', sans-serif;
+  flex-wrap: wrap;
+}
+.freq-caption-mark,
+.driver-caption-mark,
+.tech-flow-caption-mark,
+.connectivity-caption-mark,
+.ms-mark,
+.pg-mark {
+  font-size: 0.62rem;
+  letter-spacing: var(--track-mega);
+  color: #b8860b;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: var(--border-hair) solid rgba(184, 134, 11, 0.45);
+  padding: var(--space-2xs) var(--space-xs);
+  border-radius: var(--border-rule);
+}
+.freq-caption-title,
+.driver-caption-title,
+.tech-flow-caption-title,
+.connectivity-caption-title,
+.ms-title {
+  font-size: 0.82rem;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: #f4ecd8;
+  font-weight: 500;
+}
+.freq-caption-sub,
+.driver-caption-sub,
+.tech-flow-caption-sub,
+.ms-sub {
+  font-size: 0.72rem;
+  letter-spacing: var(--track-wide);
+  color: #9aa899;
+  margin-left: auto;
+  font-style: italic;
+}
+
+/* ----- Frequency response chart -------------------------------------------- */
+.freq-wrap {
+  background: linear-gradient(180deg, rgba(15, 42, 31, 0.55) 0%, rgba(10, 26, 20, 0.4) 100%);
+  border: var(--border-hair) solid rgba(42, 74, 58, 0.55);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem 1.1rem;
+  position: relative;
+  overflow: hidden;
+}
+.freq-wrap::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: repeating-linear-gradient(0deg, rgba(184, 134, 11, 0.012) 0 1px, transparent 1px 4px);
+  pointer-events: none;
+}
+.freq-chart {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.freq-curve {
+  filter: drop-shadow(0 0 6px rgba(184, 134, 11, 0.35));
+  stroke-dasharray: 2400;
+  stroke-dashoffset: 2400;
+  animation: freqDraw 1.6s ease-out 0.15s forwards;
+}
+@keyframes freqDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* ----- Driver diagram ------------------------------------------------------ */
+.driver-wrap {
+  background: linear-gradient(180deg, rgba(15, 42, 31, 0.55) 0%, rgba(10, 26, 20, 0.4) 100%);
+  border: var(--border-hair) solid rgba(42, 74, 58, 0.55);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem 1.1rem;
+}
+.driver-diagram {
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  display: block;
+}
+
+/* ----- Tech flow ----------------------------------------------------------- */
+.tech-flow-wrap {
+  background: linear-gradient(180deg, rgba(15, 42, 31, 0.55) 0%, rgba(10, 26, 20, 0.4) 100%);
+  border: var(--border-hair) solid rgba(42, 74, 58, 0.55);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.1rem 1.1rem;
+}
+.tech-flow-diagram {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+

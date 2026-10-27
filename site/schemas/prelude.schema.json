@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "prelude",
+  "title": "Prelude",
+  "description": "An orienting section with title, three visual squares, and a summary.",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "section_label": { "type": "string", "description": "Eyebrow label", "default": "" },
+    "section_number": { "type": "string", "description": "Section number", "default": "" },
+    "section_title": { "type": "string", "description": "Title in the top rectangle", "default": "Prelude" },
+    "intro_text": { "type": "string", "description": "Small orienting paragraph below the title", "default": "" },
+    "squares": {
+      "type": "array",
+      "description": "Three content squares",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": { "type": "string", "description": "Text content for this square", "default": "" },
+          "image": { "type": "string", "format": "uri", "description": "Image for this square", "default": "" }
+        }
+      }
+    },
+    "summary": { "type": "string", "description": "Summary paragraph in the bottom rectangle", "default": "" }
+  },
+  "additionalProperties": true,
+  "default_data": {
+    "section_label": "",
+    "section_number": "",
+    "section_title": "Prelude",
+    "intro_text": "",
+    "squares": [
+      { "text": "", "image": "" },
+      { "text": "", "image": "" },
+      { "text": "", "image": "" }
+    ],
+    "summary": ""
+  }
+}

@@ -1,0 +1,122 @@
+/* ============================================================
+   PARTIAL:  sections/hero-secondary.css
+   PURPOSE:  .lede, .hero-actions, .btn (SHARED), .hero-meta, scrollhint
+   SOURCE:   site/styles.css  L503–L601   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+.lede {
+  font-family: var(--font);
+  font-weight: 300;
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: var(--leading-normal);
+  color: var(--taupe);
+  max-width: var(--col-prose);
+  margin: 0 0 var(--space-xl);
+  letter-spacing: var(--track-tight);
+}
+.hero-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2xl);
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-pill);
+  font-size: var(--type-body);
+  font-weight: 600;
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+  cursor: pointer;
+  border: var(--border-hair) solid transparent;
+}
+.btn.primary {
+  background: var(--gold);
+  color: var(--obsidian);
+}
+.btn.primary:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.btn.ghost {
+  background: transparent;
+  color: var(--gold);
+  border-color: var(--gold);
+}
+.btn.ghost:hover { background: var(--gold); color: var(--obsidian); }
+
+.hero-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  max-width: var(--col-meta);
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  padding-top: var(--space-lg);
+}
+.hero-meta > div { display: flex; flex-direction: column; gap: var(--space-xs); }
+.hero-meta .num {
+  font-family: var(--font);
+  font-size: var(--type-display);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-tight);
+}
+.hero-meta .lbl {
+  font-size: var(--type-micro);
+  font-weight: 500;
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.hero-meta .suf {
+  font-family: var(--font);
+  font-size: var(--type-display);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-tight);
+  margin-left: 0.1em;
+}
+.hero-subheadline {
+  max-width: var(--col-prose);
+  margin-top: 0;
+}
+
+.hero-scrollhint {
+  position: absolute;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-mega);
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.hero-scrollhint .bar {
+  width: 1px;
+  height: 36px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scroll-pulse 2.4s var(--ease) infinite;
+}
+@keyframes scroll-pulse {
+  0%   { transform: scaleY(0); transform-origin: top; }
+  50%  { transform: scaleY(1); transform-origin: top; }
+  51%  { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@media (max-width: 1024px) {
+  .hero-meta { grid-template-columns: repeat(2, 1fr); gap: var(--space-md); }
+}
+

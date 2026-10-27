@@ -1,0 +1,128 @@
+/* ============================================================
+   PARTIAL:  editor/edit-forms.css
+   PURPOSE:  .edit-form-overlay, .form-field/group/array
+   SOURCE:   site/styles.css  L1866–L1983   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* Inline edit form */
+.edit-form-overlay {
+  background: #fafafa; border: var(--border-hair) solid #e0e0e0; border-radius: var(--radius-lg);
+  padding: 1.5rem; margin: 1rem 0;
+  color: #1a1a1a;
+  width: 100%;
+  box-sizing: border-box;
+}
+.edit-form-overlay h3 {
+  font-family: 'Commissioner', sans-serif;
+  color: #1a3a2a; margin: 0 0 1rem 0;
+  font-size: 1.1rem; letter-spacing: var(--track-normal);
+}
+.form-field { margin-bottom: 1rem; }
+.form-field label {
+  display: block; font-weight: 600; font-size: 0.85rem;
+  color: #444; margin-bottom: 0.3rem;
+  font-family: 'Commissioner', sans-serif;
+}
+.form-field-inline { display: flex; align-items: center; gap: 0.5rem; }
+.form-field-inline label { margin-bottom: 0; }
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%; padding: 0.5rem 0.75rem;
+  border: var(--border-hair) solid #ccc; border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif; font-size: 0.9rem;
+  background: #fff; color: #1a1a1a;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+.form-field input[type="checkbox"] { width: auto; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none; border-color: #1a3a2a;
+  box-shadow: 0 0 0 var(--space-2xs) rgba(26, 58, 42, 0.1);
+}
+.form-field textarea { min-height: 100px; resize: vertical; }
+.form-field .field-hint {
+  margin: 0.3rem 0 0; font-size: 0.75rem; color: #888;
+  font-family: 'Commissioner', sans-serif;
+}
+.form-checks {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+  padding: 0.5rem 0.75rem; border: var(--border-hair) solid #e0e0e0; border-radius: var(--radius-sm);
+  background: #fff;
+}
+.form-checks .check-row {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.85rem; color: #333; cursor: pointer;
+  font-family: 'Commissioner', sans-serif;
+}
+
+/* Nested object group */
+.form-group {
+  border: var(--border-hair) solid #e0e0e0; border-radius: var(--radius-md);
+  padding: 0.75rem 1rem; margin-bottom: 1rem; background: #fff;
+}
+.form-group-header {
+  display: flex; justify-content: space-between; align-items: center;
+  cursor: pointer; font-weight: 600; color: #1a3a2a;
+  font-family: 'Commissioner', sans-serif;
+  user-select: none;
+}
+.form-group-header .fg-arrow {
+  font-size: 1rem; color: #888; padding-left: 0.5rem;
+}
+.form-group-body { display: none; padding-top: 0.75rem; }
+.form-group-body.is-open { display: block; }
+
+/* Array items */
+.form-array { }
+.array-items { margin-left: 1rem; margin-top: 0.5rem; }
+.array-item {
+  border-left: var(--border-bold) solid #b8860b; padding: 0.5rem 0 0.5rem 1rem;
+  margin-bottom: 0.75rem; position: relative;
+  background: rgba(184, 134, 11, 0.03);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.array-item .remove-item {
+  position: absolute; top: 0.25rem; right: 0.25rem;
+  background: none; border: none; color: #c00; cursor: pointer; font-size: 1.2rem;
+  line-height: var(--leading-tight); padding: 0.25rem 0.5rem;
+}
+.array-item .remove-item:hover { background: #fee; border-radius: var(--border-bold); }
+.add-array-item {
+  background: none; border: var(--border-hair) dashed #1a3a2a; color: #1a3a2a;
+  padding: 0.4rem 0.8rem; border-radius: var(--radius-sm); cursor: pointer;
+  font-family: 'Commissioner', sans-serif; font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+.add-array-item:hover { background: rgba(26, 58, 42, 0.05); }
+
+/* Form actions */
+.form-actions {
+  display: flex; gap: 0.75rem; margin-top: 1.5rem;
+  padding-top: 1rem; border-top: var(--border-hair) solid #e0e0e0;
+}
+.btn-save {
+  background: #1a3a2a; color: #fff; border: none;
+  padding: 0.6rem 1.5rem; border-radius: var(--radius-sm); cursor: pointer;
+  font-family: 'Commissioner', sans-serif; font-weight: 600;
+}
+.btn-save:hover { background: #2a5a3a; }
+.btn-cancel {
+  background: #fff; color: #666; border: var(--border-hair) solid #ccc;
+  padding: 0.6rem 1.5rem; border-radius: var(--radius-sm); cursor: pointer;
+  font-family: 'Commissioner', sans-serif;
+}
+.btn-cancel:hover { background: #f5f5f5; }
+.btn-danger {
+  background: #c00; color: #fff; border: none;
+  padding: 0.6rem 1.5rem; border-radius: var(--radius-sm); cursor: pointer;
+  font-family: 'Commissioner', sans-serif; font-weight: 600;
+}
+.btn-danger:hover { background: #a00; }
+

@@ -1,0 +1,63 @@
+/* ============================================================
+   PARTIAL:  editor/enhance-controls.css
+   PURPOSE:  .enh-align-* paragraph alignment controls
+   SOURCE:   site/styles.css  L3881–L3933   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* === enhance: paragraph controls === */
+.enhance-group-title {
+  font-size: var(--type-micro);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  color: var(--gold);
+  border-top: var(--border-hair) solid #e0d8cc;
+  padding-top: var(--space-sm);
+  margin-top: var(--space-2xs);
+  margin-bottom: var(--space-xs);
+  grid-column: 1 / -1;
+}
+.enh-align-group {
+  display: flex;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-sm);
+  grid-column: 1 / -1;
+}
+.enh-align-btn {
+  flex: 1;
+  padding: var(--space-xs) 0;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  background: #faf9f7;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  cursor: pointer;
+  color: #6e665b;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.enh-align-btn:hover {
+  background: #f0ece4;
+}
+.enh-align-btn.is-active {
+  background: var(--gold);
+  color: #1a2a1a;
+  border-color: var(--gold);
+}
+/* Width toggle buttons carry longer text labels ("Margin-to-Margin");
+   shrink the font so the label fits without wrapping. */
+.enh-align-btn.is-wide {
+  font-size: var(--type-micro);
+}
+.enh-hint {
+  font-size: var(--type-micro);
+  color: #9a9288;
+  font-style: italic;
+  margin: 0 0 var(--space-xs);
+  line-height: var(--leading-normal);
+  grid-column: 1 / -1;
+}
+

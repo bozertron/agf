@@ -1,0 +1,23 @@
+/* ============================================================
+   PARTIAL:  layout/scroll-progress.css
+   PURPOSE:  .scroll-progress indicator
+   SOURCE:   site/styles.css  L221–L233   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Scroll progress
+   ========================================================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold-soft), var(--gold), var(--gold));
+  z-index: 100;
+  transition: width 80ms linear;
+}
+

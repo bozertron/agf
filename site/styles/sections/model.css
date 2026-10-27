@@ -1,0 +1,55 @@
+/* ============================================================
+   PARTIAL:  sections/model.css
+   PURPOSE:  .model-* business model cards
+   SOURCE:   site/styles.css  L1456–L1500   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Business Model
+   ========================================================================== */
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xs);
+  background: var(--forrest-sink);
+  border: var(--border-hair) solid var(--forrest-sink);
+  margin-bottom: var(--space-3xl);
+}
+.model-card {
+  background: var(--forrest);
+  padding: var(--space-xl) var(--space-lg);
+}
+.m-kind {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-sm);
+}
+.model-card h3 {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-md);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.model-card p {
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  margin: 0;
+  font-weight: 300;
+}
+.model-card em { color: var(--gold); font-style: italic; font-variation-settings: "slnt" -8; }
+
+@media (max-width: 1024px) {
+  .model-grid { grid-template-columns: 1fr; }
+}
+

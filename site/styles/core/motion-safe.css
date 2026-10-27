@@ -1,0 +1,47 @@
+/* ============================================================
+   PARTIAL:  core/motion-safe.css
+   PURPOSE:  prefers-reduced-motion overrides (manifest: load LAST)
+   SOURCE:   site/styles.css  L1717–L1753   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Motion-safe respects
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  [data-reveal] { opacity: 1; transform: none; }
+
+  /* Freq-curve draw-on (stroke-dashoffset) */
+  .freq-response-curve,
+  .freq-svg path,
+  .cmp-freq-svg path {
+    stroke-dashoffset: 0 !important;
+    animation: none !important;
+  }
+  /* Pulse animations (brand dots) */
+  .brand-dot,
+  .brand-dot.animate:hover {
+    animation: none !important;
+  }
+  /* Marching-ants (wireless connection dashes) */
+  .wireless-line,
+  .chain-link--wireless,
+  [stroke-dasharray] {
+    animation: none !important;
+  }
+  /* Transitions > 0.3s */
+  .hero-scrollhint .bar,
+  .pdf-download-btn .pdf-download-icon,
+  .roadmap__bar {
+    transition-duration: 0s !important;
+  }
+}
+

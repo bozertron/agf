@@ -1,0 +1,101 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "competitive-positioning",
+  "title": "AGF Competitive Positioning Section",
+  "description": "Direct competitor analysis. Where AGF sits relative to the consolidated, struggling, and ceiling-defining incumbents — and why each opens a seam.",
+  "type": "object",
+  "required": ["section_title", "competitors"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "intro_text": {
+      "type": "string",
+      "description": "Markdown-formatted positioning thesis. Sets up why each competitor matters to AGF."
+    },
+    "competitors": {
+      "type": "array",
+      "description": "Per-competitor positioning entries.",
+      "items": {
+        "type": "object",
+        "required": ["brand"],
+        "properties": {
+          "brand": { "type": "string", "description": "Competitor brand name." },
+          "category": {
+            "type": "string",
+            "description": "Tier this competitor occupies (e.g., 'luxury electronics', 'aspirational halo', 'consumer flagship')."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["dominant", "struggling", "closed", "reopening", "ceiling", "premium-fill"],
+            "description": "Current market state of the competitor."
+          },
+          "key_data_points": {
+            "type": "array",
+            "description": "Sourced numbers and dates that anchor the positioning claim.",
+            "items": { "type": "string" }
+          },
+          "agf_positioning": {
+            "type": "string",
+            "description": "Markdown-formatted articulation of how AGF positions itself relative to this competitor."
+          },
+          "opening": {
+            "type": "string",
+            "description": "Short statement of the seam or vacuum AGF can occupy because of this competitor's state."
+          },
+          "source_urls": {
+            "type": "array",
+            "description": "Primary-source links (press releases, SEC filings, public reports).",
+            "items": { "type": "string", "format": "uri" }
+          },
+          "prestige_score": {
+            "type": "number",
+            "description": "Perceived prestige score (0–100) used by the perceptual-map visualization."
+          },
+          "price_usd_avg": {
+            "type": "number",
+            "description": "Average flagship price in USD used by the perceptual-map visualization."
+          },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "summary": {
+      "type": "string",
+      "description": "Markdown-formatted summary of AGF's overall competitive stance after surveying the field."
+    },
+    "_viz_config": {
+      "type": "object",
+      "description": "Chart visualization configuration (editable via Edit UI)",
+      "properties": {
+        "chart_type": { "type": "string", "enum": ["perceptual-map", "table", "bar-chart"], "default": "perceptual-map" },
+        "x_axis": {
+          "type": "object",
+          "properties": {
+            "field": { "type": "string", "default": "price_usd_avg" },
+            "label": { "type": "string", "default": "Price (USD)" },
+            "min": { "type": "number", "default": 500 },
+            "max": { "type": "number", "default": 250000 },
+            "scale": { "type": "string", "enum": ["log", "linear"], "default": "log" }
+          }
+        },
+        "y_axis": {
+          "type": "object",
+          "properties": {
+            "field": { "type": "string", "default": "prestige_score" },
+            "label": { "type": "string", "default": "Prestige" },
+            "min": { "type": "number", "default": 0 },
+            "max": { "type": "number", "default": 100 },
+            "scale": { "type": "string", "enum": ["linear", "log"], "default": "linear" }
+          }
+        },
+        "highlight_color": { "type": "string", "default": "#B8860B" },
+        "competitor_color": { "type": "string", "default": "#A89880" },
+        "dot_radius": { "type": "number", "default": 28 },
+        "enable_animation": { "type": "boolean", "default": true },
+        "show_grid": { "type": "boolean", "default": true },
+        "show_labels": { "type": "boolean", "default": true }
+      }
+    }
+  }
+}

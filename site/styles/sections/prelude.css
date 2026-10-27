@@ -1,0 +1,58 @@
+/* ============================================================
+   PARTIAL:  sections/prelude.css
+   PURPOSE:  .prelude-grid three-column intro
+   SOURCE:   site/styles.css  L4429–L4476   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Prelude
+   ======================================================================== */
+.prelude-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+.prelude-square {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background-color: var(--forrest-lift);
+  border: 1px solid var(--gold-mute);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+.prelude-square-text {
+  position: relative;
+  z-index: 1;
+  color: var(--taupe-2);
+  font-size: var(--type-body);
+  line-height: 1.5;
+}
+.prelude-summary {
+  margin-top: var(--space-xl);
+  padding: var(--space-lg);
+  background-color: var(--forrest-deep);
+  border: 1px solid var(--gold-mute);
+  border-radius: 8px;
+}
+.prelude-summary-text {
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: 1.6;
+}
+@media (max-width: 1024px) {
+  .prelude-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .prelude-grid { grid-template-columns: 1fr; }
+}
+

@@ -1,0 +1,97 @@
+/* ============================================================
+   PARTIAL:  layout/nav.css
+   PURPOSE:  .nav + children + scrolled state
+   SOURCE:   site/styles.css  L234–L303   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Top nav
+   ========================================================================== */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  padding: var(--space-lg) 0;
+  background: transparent;
+  border-bottom: var(--border-hair) solid transparent;
+  transition: padding .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease);
+}
+.nav.is-scrolled {
+  padding: var(--space-md) 0;
+  background: rgba(31, 74, 45, 0.92);
+  border-bottom-color: var(--forrest-sink);
+}
+.nav-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.nav-mark {
+  display: inline-flex;
+  align-items: center;
+  color: var(--gold);
+  letter-spacing: var(--track-normal);
+  line-height: var(--leading-tight);
+  padding: var(--space-2xs) 0;
+  flex-shrink: 0;
+}
+.mark-glyph { display: inline-flex; color: var(--gold); }
+.mark-word {
+  font-family: 'Monoton', sans-serif;
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: var(--track-wide);
+  color: var(--gold);
+  line-height: var(--leading-tight);
+  font-feature-settings: normal;
+}
+.nav-tagline {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--moss);
+  letter-spacing: var(--track-wide);
+  line-height: var(--leading-tight);
+  white-space: nowrap;
+  margin-left: 24px;
+  transition: color .2s var(--ease);
+}
+.nav-tagline:hover {
+  color: var(--taupe);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+.nav-link {
+  font-size: var(--type-body);
+  font-weight: 600;
+  color: var(--gold-soft);
+  letter-spacing: var(--track-wide);
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color .2s var(--ease);
+}
+.nav-link:hover { color: var(--gold); }
+.nav-cta { margin-left: var(--space-sm); }
+

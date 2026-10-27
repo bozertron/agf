@@ -1,0 +1,82 @@
+/* ============================================================
+   PARTIAL:  sections/founder.css
+   PURPOSE:  .founder-grid, .timeline, .mentor-callout
+   SOURCE:   site/styles.css  L1552–L1623   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Founder
+   ========================================================================== */
+.founder-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+.timeline { position: relative; }
+.tl-item {
+  position: relative;
+  padding: var(--space-md) 0 var(--space-md) var(--space-4xl);
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+}
+.tl-item:last-child { border-bottom: none; }
+.tl-yr {
+  position: absolute;
+  left: 0; top: var(--space-md);
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 600;
+  color: var(--gold-soft);
+  width: 80px;
+  border-right: var(--border-hair) solid var(--dark-rule);
+  padding-right: var(--space-sm);
+  text-align: right;
+  letter-spacing: var(--track-tight);
+}
+.tl-item p {
+  margin: 0;
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  font-weight: 300;
+}
+
+.mentor-callout {
+  background: var(--dark-2);
+  border: var(--border-hair) solid var(--dark-rule);
+  padding: var(--space-xl) var(--space-lg);
+  position: sticky;
+  top: var(--space-5xl);
+}
+.mentor-callout h3 {
+  font-family: var(--font);
+  font-size: var(--type-h4);
+  font-weight: 500;
+  margin: 0 0 var(--space-md);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.mentor-callout ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mentor-callout li {
+  padding: var(--space-sm) 0;
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  font-weight: 300;
+}
+.mentor-callout li:last-child { border-bottom: none; }
+.mentor-callout strong { color: var(--gold-soft); font-weight: 500; }
+
+@media (max-width: 1024px) {
+  .founder-grid { grid-template-columns: 1fr; gap: var(--space-xl); }
+  .mentor-callout { position: static; }
+}

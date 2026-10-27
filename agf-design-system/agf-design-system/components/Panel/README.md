@@ -1,0 +1,3 @@
+# Panel
+
+Two containers. **Card** is `surface-raised` with a `brass-hairline` border and `radius-8`, padding `space-24`; it lifts to `surface-lifted` on hover or selection, and in Midnight only `ink` and `brass-glow` text may sit on the lifted state. **Panel** is the glass variant: the `glass` colour with `blur-glass`, the same hairline border and `shadow-panel`, used only when it overlaps imagery or a trace field; glass on a flat surface is a card pretending. Neither takes a coloured left border, a drop shadow on a flat ground, or more than one brass fill inside it. The consumer provides the content; the panel sets no type of its own.

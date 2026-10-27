@@ -1,0 +1,3 @@
+# TraceField
+
+The PCB trace overlay: hairline `brass` polylines with 45° bends and round pads, tiled as an SVG pattern over `surface-deep` at `opacity-trace`, with the `agf-grain` film overlay at `opacity-grain` on top. Wrap any dark band in `.agf-trace` and drop the SVG in as its first child; content stacks above it. The field is background, so it never crosses a headline's measure at more than 0.28 and never appears in Daylight sections, on paper interiors, or on `surface-raised`. On hardware the same geometry is screen-printed at one weight in brass on the rear panel and inside lids, not on the front plate.

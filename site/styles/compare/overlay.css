@@ -1,0 +1,112 @@
+/* ============================================================
+   PARTIAL:  compare/overlay.css
+   PURPOSE:  .compare-overlay shell + header
+   SOURCE:   site/styles.css  L2895–L2996   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* --- overlay shell --- */
+body.compare-locked { overflow: hidden; }
+
+.compare-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .25s var(--ease);
+}
+.compare-overlay.is-open { opacity: 1; }
+.compare-overlay-backdrop {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top, rgba(14, 35, 23, 0.92), rgba(8, 15, 11, 0.97));
+  backdrop-filter: blur(6px) saturate(1.1);
+  -webkit-backdrop-filter: blur(6px) saturate(1.1);
+}
+.compare-overlay-panel {
+  position: relative;
+  width: min(1280px, 100%);
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 28px clamp(20px, 4vw, 56px) 56px;
+  background:
+    linear-gradient(180deg, rgba(31, 74, 45, 0.18), transparent 240px),
+    var(--forrest-deep);
+  color: var(--dark-ink);
+  overflow-y: auto;
+  border-left: var(--border-hair) solid var(--gold-mute);
+  border-right: var(--border-hair) solid var(--gold-mute);
+  transform: translateY(18px);
+  transition: transform .35s var(--ease);
+  font-family: var(--font);
+}
+.compare-overlay.is-open .compare-overlay-panel { transform: translateY(0); }
+
+/* --- header --- */
+.compare-overlay-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) 0 var(--space-md);
+  margin-bottom: var(--space-md);
+  background: linear-gradient(180deg, var(--forrest-deep) 70%, transparent);
+  border-bottom: var(--border-hair) solid var(--gold-mute);
+}
+.cmp-head-mark { display: flex; flex-direction: column; gap: var(--space-2xs); }
+.cmp-head-eyebrow {
+  font-family: 'Monoton', var(--font);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-mega);
+  color: var(--gold);
+}
+.cmp-head-mark h3 {
+  margin: 0;
+  font-family: var(--font);
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 700;
+  letter-spacing: var(--track-tight);
+  color: var(--dark-ink);
+}
+.cmp-head-mark h3::after {
+  content: '.';
+  color: var(--gold);
+}
+.cmp-head-sub {
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-mega);
+  text-transform: uppercase;
+  color: var(--moss);
+}
+.compare-overlay-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: var(--border-hair) solid var(--gold-mute);
+  background: transparent;
+  color: var(--gold-soft);
+  font-size: var(--type-body);
+  cursor: pointer;
+  border-radius: 0;
+  transition: background .2s var(--ease), color .2s var(--ease), border-color .2s var(--ease), transform .2s var(--ease);
+}
+.compare-overlay-close:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+  border-color: var(--gold);
+  transform: rotate(90deg);
+}
+
+.compare-overlay-body { display: flex; flex-direction: column; gap: var(--space-xl); }
+

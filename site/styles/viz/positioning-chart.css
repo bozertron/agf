@@ -1,0 +1,52 @@
+/* ============================================================
+   PARTIAL:  viz/positioning-chart.css
+   PURPOSE:  .positioning-chart / .brand-dot / .pmap-*
+   SOURCE:   site/styles.css  L2259–L2300   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ===== POSITIONING CHART STYLES ===== */
+.positioning-chart { width: 100%; max-width: 1000px; margin: 2rem auto; position: relative; }
+.positioning-chart svg { width: 100%; height: auto; display: block; }
+.brand-dot { cursor: pointer; transition: filter 0.2s, transform 0.2s; transform-origin: center; transform-box: fill-box; }
+.brand-dot:hover { filter: drop-shadow(0 0 8px rgba(184,134,11,0.5)); transform: scale(1.1); }
+@keyframes pulse-dot { 0%,100% { transform: scale(1); } 50% { transform: scale(1.14); } }
+.brand-dot.animate:hover { animation: pulse-dot 0.8s infinite; }
+.pmap-tick { font: 600 11px 'Commissioner', sans-serif; fill: #6e665b; }
+.pmap-axis { font: 600 12px 'Commissioner', sans-serif; fill: #1a3a2a; letter-spacing: var(--track-wide); text-transform: uppercase; }
+.pmap-brand { font: 600 12px 'Commissioner', sans-serif; fill: #1a3a2a; letter-spacing: var(--track-normal); pointer-events: none; }
+.brand-group.is-agf .pmap-brand { fill: #b8860b; }
+.positioning-detail-host { position: absolute; inset: 0; pointer-events: none; }
+.positioning-detail-card {
+  position: absolute; background: #fff; border: var(--border-hair) solid #e0e0e0;
+  border-radius: var(--radius-lg); padding: 1rem; box-shadow: 0 var(--space-2xs) var(--space-sm) rgba(0,0,0,0.15);
+  z-index: 100; max-width: 280px; font-size: 0.85rem;
+  font-family: 'Commissioner', sans-serif; pointer-events: auto;
+}
+.positioning-detail-card h4 { margin: 0 0 0.25rem; color: #1a3a2a; font-size: 1rem; }
+.positioning-detail-card .detail-cat { margin: 0 0 0.5rem; color: #6e665b; font-size: 0.75rem; }
+.positioning-detail-card .detail-stats { display: flex; gap: 1rem; margin-bottom: 0.5rem; }
+.positioning-detail-card .detail-stats span { font-weight: 600; color: #b8860b; }
+.positioning-detail-card .detail-pos { margin: 0; color: #333; line-height: var(--leading-normal); }
+
+.positioning-data-table { width: 100%; border-collapse: collapse; font: 13px/1.5 'Commissioner', sans-serif; }
+.positioning-data-table th, .positioning-data-table td { padding: var(--space-sm) var(--space-sm); border-bottom: var(--border-hair) solid rgba(26,58,42,0.1); text-align: left; }
+.positioning-data-table th { background: rgba(26,58,42,0.04); font-weight: 700; color: #1a3a2a; }
+.positioning-data-table tr.is-agf td { background: rgba(184,134,11,0.08); font-weight: 600; }
+
+.positioning-bars { display: flex; flex-direction: column; gap: var(--space-sm); padding: 1rem 0; }
+.pbar-row { display: grid; grid-template-columns: 140px 1fr 80px; gap: var(--space-sm); align-items: center; font: 13px/1.5 'Commissioner', sans-serif; }
+.pbar-label { color: #1a3a2a; font-weight: 600; }
+.pbar-track { background: rgba(26,58,42,0.06); border-radius: var(--radius-sm); height: 18px; overflow: hidden; }
+.pbar-fill { display: block; height: 100%; transition: width 0.6s ease; }
+.pbar-value { color: #b8860b; font-weight: 700; text-align: right; }
+
+/* Static fallback (noscript / chart absent) */
+.cp-fallback { display: flex; flex-direction: column; gap: var(--space-sm); }
+.cp-row { display: grid; grid-template-columns: 1.2fr 2fr 1fr 3fr; gap: var(--space-sm); padding: var(--space-sm) 0; border-bottom: var(--border-hair) solid rgba(26,58,42,0.08); }
+.cp-brand { font-weight: 700; color: #1a3a2a; }
+.cp-summary { max-width: var(--col-meta); margin: 2rem auto 0; font: 15px/1.6 'Commissioner', sans-serif; color: #333; padding: 0 var(--space-md); }
+

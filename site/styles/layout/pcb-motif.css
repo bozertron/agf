@@ -1,0 +1,31 @@
+/* ============================================================
+   PARTIAL:  layout/pcb-motif.css
+   PURPOSE:  body.is-pcb::before decorative PCB trace
+   SOURCE:   site/styles.css  L200–L220   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   PCB-Trace motif (subtle, toggleable)
+   ========================================================================== */
+body.is-pcb::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.05;
+  background-image:
+    linear-gradient(0deg, transparent 49.7%, var(--gold) 49.7%, var(--gold) 50.3%, transparent 50.3%),
+    linear-gradient(90deg, transparent 49.7%, var(--gold) 49.7%, var(--gold) 50.3%, transparent 50.3%),
+    radial-gradient(circle at 20% 30%, var(--gold) 0.6px, transparent 1px),
+    radial-gradient(circle at 80% 70%, var(--gold) 0.6px, transparent 1px),
+    radial-gradient(circle at 60% 20%, var(--gold) 0.6px, transparent 1px);
+  background-size: 64px 64px, 64px 64px, 280px 280px, 320px 320px, 240px 240px;
+  background-position: 0 0, 0 0, 0 0, 80px 40px, 160px 120px;
+  mix-blend-mode: screen;
+}
+

@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "comparison-config",
+  "title": "Product Comparison Configuration",
+  "description": "Schema-driven configuration for the interactive product comparison overlay. Defines which fields are compared, how they are formatted, and which visualizations appear.",
+  "type": "object",
+  "properties": {
+    "comparison_fields": {
+      "type": "array",
+      "description": "Ordered list of fields to display as rows in the comparison grid.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Dot-notation path into product.data (e.g. 'audio.frequency_response')."
+          },
+          "label": {
+            "type": "string",
+            "description": "Human-readable row label."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "range_hz",
+              "db",
+              "percent",
+              "currency_range",
+              "array_count",
+              "text",
+              "number"
+            ],
+            "description": "Formatter applied to the resolved value."
+          },
+          "higher_wins": {
+            "type": "boolean",
+            "description": "If true, the largest value wins; if false, the smallest value wins. Used when highlight_winner is enabled."
+          }
+        },
+        "required": ["path", "label", "format"]
+      }
+    },
+    "max_compare": {
+      "type": "integer",
+      "default": 3,
+      "minimum": 2,
+      "maximum": 5,
+      "description": "Maximum number of products that may be selected for comparison."
+    },
+    "highlight_winner": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true, the winning value in each row is highlighted."
+    },
+    "overlay_freq_curves": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true, an overlaid frequency-response chart is rendered if multiple products expose audio.frequency_response."
+    },
+    "show_price_bar": {
+      "type": "boolean",
+      "default": true,
+      "description": "When true, a horizontal price-comparison bar chart is rendered."
+    }
+  }
+}

@@ -1,0 +1,64 @@
+/* ============================================================
+   PARTIAL:  sections/independent-block.css
+   PURPOSE:  .independent-block (.ib-*)
+   SOURCE:   site/styles.css  L1006–L1059   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+.independent-block {
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  padding-top: var(--space-2xl);
+}
+.independent-block h3 {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 400;
+  margin: 0 0 var(--space-md);
+  color: var(--gold);
+  letter-spacing: var(--track-tight);
+}
+.ib-intro {
+  max-width: var(--col-narrow);
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--space-xl);
+  font-weight: 300;
+}
+.ib-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-lg);
+}
+.ib-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ib-h {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-sm);
+  border-bottom: var(--border-hair) solid var(--forrest-sink);
+  padding-bottom: var(--space-sm);
+}
+.ib-group li {
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  color: var(--taupe);
+  margin: 0 0 var(--space-sm);
+  font-weight: 300;
+}
+.ib-group li strong { color: var(--taupe-2); font-weight: 500; }
+.ib-group li span { color: var(--moss); font-size: var(--type-body); }
+
+@media (max-width: 1280px) { .ib-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 1024px) { .ib-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .ib-grid { grid-template-columns: 1fr; } }
+

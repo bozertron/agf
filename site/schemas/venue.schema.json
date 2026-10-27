@@ -1,0 +1,97 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "venue",
+  "title": "AGF Venue / Retail Experience Section",
+  "description": "Definition of the physical retail venue concept, its experiential zones, and the customer journey through them.",
+  "type": "object",
+  "required": ["section_title", "zones"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "concept_description": { "type": "string", "description": "Markdown-formatted overview of the venue concept." },
+    "zones": {
+      "type": "array",
+      "description": "Discrete experiential zones inside the venue.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "description": "Stable slug identifier for the zone." },
+          "name": { "type": "string", "description": "Display name of the zone." },
+          "tagline": { "type": "string", "description": "Short evocative tagline." },
+          "description": { "type": "string", "description": "Markdown-formatted description of the zone." },
+          "features": {
+            "type": "array",
+            "description": "Notable features or installations within the zone.",
+            "items": { "type": "string" }
+          },
+          "atmosphere": { "type": "string", "description": "Description of the sensory atmosphere." },
+          "customer_journey_step": {
+            "type": "number",
+            "description": "Numeric position of this zone in the customer journey."
+          },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "customer_journey": {
+      "type": "array",
+      "description": "Ordered steps of the customer journey through the venue.",
+      "items": {
+        "type": "object",
+        "required": ["step"],
+        "properties": {
+          "step": { "type": ["string", "integer"], "description": "Step ordinal or label." },
+          "description": { "type": "string", "description": "Description of what happens at this step." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "target_customer_profile": {
+      "type": "string",
+      "description": "Markdown-formatted persona description of the target venue customer."
+    },
+    "royalty_structure": {
+      "type": "object",
+      "description": "Performance-recording royalty structure unique to the venue model.",
+      "properties": {
+        "broadcast_split": { "type": "string", "description": "Revenue split on broadcast-mixed performances (e.g., '50/50 in perpetuity')." },
+        "stereo_ownership": { "type": "string", "description": "Ownership rule for the standard stereo capture." },
+        "artist_blocking_rights": { "type": "string", "description": "Conditions under which the artist may block downstream broadcast." },
+        "notes": { "type": "string", "description": "Additional royalty-structure detail." }
+      }
+    },
+    "virtual_ticket": {
+      "type": "object",
+      "description": "Virtual-ticketing concept for broadcast-mixed performances.",
+      "properties": {
+        "concept": { "type": "string", "description": "Markdown-formatted description of the virtual ticket product." },
+        "pricing_model": { "type": "string", "description": "Pricing model for virtual tickets." },
+        "owner_perks": { "type": "string", "description": "Permanent virtual all-access pass entitlements for AGF hardware owners." }
+      }
+    },
+    "financial_model": {
+      "type": "object",
+      "description": "Per-venue financial model and qualifying-market criteria.",
+      "properties": {
+        "philosophy": { "type": "string", "description": "Markdown-formatted statement of the venue financial model." },
+        "qualification_rule": { "type": "string", "description": "Rule for which markets qualify (e.g., 'one per financially qualifying market')." },
+        "revenue_streams": {
+          "type": "array",
+          "description": "Venue revenue streams.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "cultural_positioning": {
+      "type": "object",
+      "description": "Cultural and brand positioning for the venue concept.",
+      "properties": {
+        "movement": { "type": "string", "description": "The cultural movement the venue aligns with (e.g., 'touch grass')." },
+        "anti_pattern": { "type": "string", "description": "What the venue is explicitly NOT (e.g., the sterile boutique)." },
+        "summary": { "type": "string", "description": "Markdown-formatted summary of the cultural stance." }
+      }
+    }
+  }
+}

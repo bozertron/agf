@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "footer",
+  "title": "AGF Footer",
+  "description": "Schema for the site footer: brand mark, tagline, meta text, and source citations.",
+  "type": "object",
+  "properties": {
+    "brand_name": {
+      "type": "string",
+      "description": "Brand mark text rendered in Monoton type."
+    },
+    "tagline": {
+      "type": "string",
+      "description": "Tagline following the brand name (e.g. '— All Grounds Floating')."
+    },
+    "meta_text": {
+      "type": "string",
+      "description": "Meta / distribution line (e.g. 'Foundational Brand Development Document · 2026 · Internal & Investor Distribution')."
+    },
+    "source_text": {
+      "type": "string",
+      "description": "markdown — Source citations and attributions."
+    }
+  }
+}

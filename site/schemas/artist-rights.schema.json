@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "artist-rights",
+  "title": "AGF Artist Rights Section",
+  "description": "Content ownership philosophy, ownership tiers, enforcement mechanisms, and revenue-sharing streams that define AGF's stance on artist rights.",
+  "type": "object",
+  "required": ["section_title", "philosophy"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "philosophy": { "type": "string", "description": "Markdown-formatted philosophy on artist rights and content ownership." },
+    "ownership_tiers": {
+      "type": "array",
+      "description": "Tiered ownership and rights structures available to artists.",
+      "items": {
+        "type": "object",
+        "required": ["tier_name"],
+        "properties": {
+          "tier_name": { "type": "string", "description": "Name of the tier (e.g., 'Founder', 'Resident', 'Guest')." },
+          "description": { "type": "string", "description": "Markdown-formatted description of the tier." },
+          "artist_share_percent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Percent of revenue retained by the artist."
+          },
+          "agf_share_percent": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "description": "Percent of revenue retained by AGF."
+          },
+          "rights": {
+            "type": "array",
+            "description": "Rights granted to the artist at this tier.",
+            "items": { "type": "string" }
+          },
+          "restrictions": {
+            "type": "array",
+            "description": "Restrictions imposed at this tier.",
+            "items": { "type": "string" }
+          },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "enforcement": {
+      "type": "object",
+      "description": "Mechanisms by which artist-rights agreements are enforced.",
+      "properties": {
+        "device_lockout": {
+          "type": ["string", "boolean"],
+          "description": "Whether/how device-level lockout is used to enforce ownership terms."
+        },
+        "legal_remedies": {
+          "type": ["string", "array"],
+          "description": "Legal remedies available to AGF and the artist.",
+          "items": { "type": "string" }
+        },
+        "social_deterrent": {
+          "type": ["string", "array"],
+          "description": "Social or reputational deterrents that reinforce compliance.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "revenue_streams": {
+      "type": "array",
+      "description": "Distinct revenue streams produced by artist content and how they are split.",
+      "items": {
+        "type": "object",
+        "required": ["stream"],
+        "properties": {
+          "stream": { "type": "string", "description": "Name of the revenue stream." },
+          "description": { "type": "string", "description": "Markdown-formatted description." },
+          "split": { "type": "string", "description": "Revenue-split formula (e.g., '70/30 artist/AGF')." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

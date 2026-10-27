@@ -1,0 +1,66 @@
+/* ============================================================
+   PARTIAL:  sections/footer.css
+   PURPOSE:  .foot-* site footer
+   SOURCE:   site/styles.css  L1661–L1716   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.foot {
+  background: var(--forrest-deep);
+  border-top: var(--border-hair) solid var(--dark-rule);
+  padding: var(--gutter) var(--gutter);
+}
+.foot-inner {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+.foot-mark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  color: var(--gold-soft);
+  font-family: var(--font);
+}
+.foot-mark .mark-word {
+  font-size: var(--type-lede);
+  color: var(--gold-soft);
+}
+.foot-mark-text {
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 300;
+  letter-spacing: var(--track-wide);
+  text-transform: none;
+  color: var(--taupe);
+  white-space: nowrap;
+}
+.foot-meta {
+  margin: 0;
+  color: var(--moss);
+  font-size: var(--type-body);
+  letter-spacing: var(--track-wide);
+}
+.foot-src {
+  flex: 1 1 100%;
+  margin: 0;
+  padding-top: var(--space-sm);
+  border-top: var(--border-hair) solid var(--dark-rule);
+  color: var(--moss);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-wide);
+  line-height: var(--leading-relaxed);
+  max-width: var(--col-head);
+  font-weight: 300;
+}
+

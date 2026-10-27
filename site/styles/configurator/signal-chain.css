@@ -1,0 +1,86 @@
+/* ============================================================
+   PARTIAL:  configurator/signal-chain.css
+   PURPOSE:  SVG .chain-node + .system-connection
+   SOURCE:   site/styles.css  L3500–L3575   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* SVG signal chain */
+.system-chain {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: var(--border-hair) solid var(--dark-rule);
+  background: radial-gradient(ellipse at top, rgba(184,134,11,0.05) 0%, transparent 60%), var(--forrest-deep);
+  padding: var(--space-sm);
+  min-height: 320px;
+}
+.chain-svg { width: 100%; height: auto; max-height: 520px; display: block; }
+
+.chain-svg .lane-label {
+  font-family: var(--font);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  fill: var(--taupe);
+  font-weight: 500;
+}
+.chain-svg .lane-num {
+  font-family: 'Monoton', var(--font);
+  font-size: var(--type-micro);
+  fill: var(--gold-soft);
+  letter-spacing: var(--track-normal);
+}
+
+/* Nodes */
+.chain-node .node-bg     { fill: rgba(20, 48, 30, 0.65); stroke: var(--dark-rule); stroke-width: 1; }
+.chain-node .node-frame  { fill: none; stroke: var(--gold-mute); stroke-width: 0.5; }
+.chain-node .node-pin    { fill: var(--moss); }
+.chain-node .node-name   { font-family: var(--font); font-size: var(--type-micro); font-weight: 500; fill: var(--moss); letter-spacing: var(--track-normal); }
+.chain-node.is-on .node-bg     { fill: rgba(184,134,11,0.18); stroke: var(--gold); }
+.chain-node.is-on .node-frame  { stroke: var(--gold-soft); stroke-width: 0.75; }
+.chain-node.is-on .node-pin    { fill: var(--gold-soft); }
+.chain-node.is-on .node-name   { fill: var(--taupe-2); }
+.chain-node.is-accessory .node-name { font-size: var(--type-micro); }
+.chain-node { transition: opacity 240ms; }
+.chain-node.is-off { opacity: 0.55; }
+
+/* Connections */
+.system-connection path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.4;
+  filter: drop-shadow(0 0 4px rgba(184,134,11,0.4));
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: traceDraw 700ms ease-out forwards;
+}
+.system-connection.is-wireless path {
+  stroke: var(--gold-soft);
+  stroke-dasharray: 4 4;
+  animation: traceDash 14s linear infinite;
+}
+@keyframes traceDraw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes traceDash {
+  to { stroke-dashoffset: -200; }
+}
+.system-connection .conn-tag-bg {
+  fill: var(--forrest-deep);
+  stroke: var(--gold-mute);
+  stroke-width: 0.5;
+}
+.system-connection .conn-tag {
+  font-family: var(--font);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  fill: var(--gold-soft);
+  font-weight: 600;
+}
+

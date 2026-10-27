@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "distribution",
+  "title": "AGF Distribution Section",
+  "description": "Channel partnership philosophy, partner-selection criteria, territories, and channel-type playbooks that define AGF's distribution strategy.",
+  "type": "object",
+  "required": ["section_title"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "philosophy": { "type": "string", "description": "Markdown-formatted distribution philosophy." },
+    "partner_criteria": {
+      "type": "array",
+      "description": "Weighted criteria used to evaluate prospective channel partners.",
+      "items": {
+        "type": "object",
+        "required": ["criterion"],
+        "properties": {
+          "criterion": { "type": "string", "description": "Name of the criterion." },
+          "description": { "type": "string", "description": "What the criterion evaluates." },
+          "weight": { "type": "number", "description": "Relative importance weight (0-1 or 0-100)." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "revenue_model": { "type": "string", "description": "Markdown-formatted description of channel revenue model and partner economics." },
+    "territories": {
+      "type": "array",
+      "description": "Geographic territories with associated strategy and priority.",
+      "items": {
+        "type": "object",
+        "required": ["region"],
+        "properties": {
+          "region": { "type": "string", "description": "Region or country name." },
+          "strategy": { "type": "string", "description": "Markdown-formatted regional strategy." },
+          "priority": {
+            "type": ["string", "integer"],
+            "description": "Priority tier or numeric rank for this territory."
+          },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "channel_types": {
+      "type": "array",
+      "description": "Classes of channel and how AGF approaches each.",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": { "type": "string", "description": "Channel type (e.g., 'Specialty Hi-Fi', 'D2C', 'Custom Install')." },
+          "description": { "type": "string", "description": "What this channel is and why it matters." },
+          "approach": { "type": "string", "description": "Markdown-formatted approach for engaging this channel." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

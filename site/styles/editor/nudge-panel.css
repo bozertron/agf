@@ -1,0 +1,109 @@
+/* ============================================================
+   PARTIAL:  editor/nudge-panel.css
+   PURPOSE:  px-scaler nudge position popover
+   SOURCE:   site/styles.css  L4300–L4398   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Nudge position panel ---------- */
+.nudge-panel {
+  position: fixed;
+  z-index: 9999;
+  width: 268px;
+  background: #fff;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 var(--space-xs) var(--space-md) rgba(0,0,0,0.18);
+  padding: var(--space-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  color: #1a2a1a;
+}
+.nudge-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--type-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  color: #6e665b;
+  margin-bottom: var(--space-2xs);
+}
+.nudge-path {
+  font-family: monospace;
+  font-size: var(--type-micro);
+  background: #faf9f7;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2xs) var(--space-xs);
+  margin-bottom: var(--space-sm);
+  word-break: break-all;
+}
+.nudge-snap {
+  width: 100%;
+  padding: var(--space-xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  background: #faf9f7;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  margin-bottom: var(--space-sm);
+}
+.nudge-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-sm);
+}
+.nudge-dir-btn {
+  padding: var(--space-xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  background: #faf9f7;
+  font-size: var(--type-body);
+  cursor: pointer;
+}
+.nudge-dir-btn:hover { background: #f0ede6; }
+.nudge-free {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xs);
+  margin-bottom: var(--space-sm);
+}
+.nudge-free input {
+  width: 100%;
+  padding: var(--space-2xs) var(--space-xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  background: #faf9f7;
+}
+.nudge-current {
+  font-family: monospace;
+  font-size: var(--type-micro);
+  color: #6e665b;
+  margin-bottom: var(--space-sm);
+  text-align: center;
+}
+.nudge-actions {
+  display: flex;
+  gap: var(--space-2xs);
+  justify-content: flex-end;
+}
+.nudge-clear,
+.nudge-apply {
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  cursor: pointer;
+}
+.nudge-clear { background: #faf9f7; }
+.nudge-clear:hover { background: #f0ede6; }
+.nudge-apply { background: var(--gold); color: #fff; border-color: var(--gold); }
+.nudge-apply:hover { filter: brightness(1.05); }
+

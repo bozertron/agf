@@ -1,0 +1,42 @@
+/* ============================================================
+   PARTIAL:  core/fonts.css
+   PURPOSE:  @font-face: Commissioner, Monoton, Poiret One
+   SOURCE:   site/styles.css  L28–L59   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Variable font ---------- */
+@font-face {
+  font-family: 'Commissioner';
+  src: url('../../assets/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Monoton (brand mark) ----------
+   Each letter is composed of stacked parallel lines — the same glyph
+   reads simultaneously as a PCB trace and an equalizer bar / musical
+   staff line. Single weight, all-caps. */
+@font-face {
+  font-family: 'Monoton';
+  src: url('../../assets/Monoton/Monoton-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---------- Poiret One (strapline) ----------
+   Hairline geometric display for the hero's bottom-aligned tagline
+   ("Even Rails → Smooth Tracks"). Sits well beneath the Monoton mark. */
+@font-face {
+  font-family: 'Poiret One';
+  src: url('../../assets/PoiretOne-Regular/PoiretOne-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+

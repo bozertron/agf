@@ -1,0 +1,132 @@
+/* ============================================================
+   PARTIAL:  editor/bg-settings-panel.css
+   PURPOSE:  Background settings popover
+   SOURCE:   site/styles.css  L4178–L4299   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Background settings panel ---------- */
+.bg-settings-panel {
+  position: fixed;
+  z-index: 9999;
+  width: 268px;
+  background: #fff;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 var(--space-xs) var(--space-md) rgba(0,0,0,0.18);
+  padding: var(--space-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  color: #1a2a1a;
+}
+.bg-settings-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--type-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  color: #6e665b;
+  margin-bottom: var(--space-2xs);
+}
+.bg-settings-field {
+  margin-bottom: var(--space-sm);
+}
+.bg-segment-group {
+  display: flex;
+  gap: var(--space-2xs);
+}
+.bg-segment-btn {
+  flex: 1;
+  padding: var(--space-xs) var(--space-2xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  background: #faf9f7;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-micro);
+  font-weight: 600;
+  color: #6e665b;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.bg-segment-btn:hover {
+  background: #f0ede6;
+}
+.bg-segment-btn.is-active {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.bg-opacity-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.bg-opacity-row input[type='range'] {
+  flex: 1;
+  accent-color: var(--gold);
+}
+.bg-opacity-val {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--type-body);
+  color: var(--green);
+  min-width: 36px;
+  text-align: right;
+}
+.bg-settings-actions {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+.bg-settings-actions button {
+  flex: 1;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.bg-settings-actions .bg-apply {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.bg-settings-actions .bg-apply:hover {
+  opacity: 0.9;
+}
+.bg-settings-actions .bg-reset {
+  background: #faf9f7;
+  color: #6e665b;
+}
+.bg-settings-actions .bg-reset:hover {
+  background: #f0ede6;
+}
+
+/* Remove Image button (destructive) in background settings panel */
+.bg-remove-image {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d44;
+  border-radius: var(--radius-sm);
+  background: #fff5f5;
+  color: #c00;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+}
+.bg-remove-image:hover {
+  background: #fee0e0;
+  color: #900;
+}
+

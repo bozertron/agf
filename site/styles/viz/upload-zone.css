@@ -1,0 +1,34 @@
+/* ============================================================
+   PARTIAL:  viz/upload-zone.css
+   PURPOSE:  .upload-zone image drop area
+   SOURCE:   site/styles.css  L2705–L2728   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ===== IMAGE UPLOAD STYLES ===== */
+.upload-zone {
+  border: var(--border-rule) dashed #b8860b;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+  position: relative;
+}
+.upload-zone:hover, .upload-zone.is-dragover {
+  background: rgba(184, 134, 11, 0.05);
+  border-color: #1a3a2a;
+}
+.upload-zone p { margin: 0.5rem 0 0; color: #666; font-size: 0.85rem; }
+.upload-browse { color: #b8860b; font-weight: 600; text-decoration: underline; }
+.upload-preview {
+  max-width: 200px;
+  max-height: 120px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+

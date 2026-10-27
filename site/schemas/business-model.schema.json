@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "business-model",
+  "title": "AGF Business Model Section",
+  "description": "Pricing philosophy, channel approach, runway economics, and the scaling timeline that operationalizes AGF's go-to-market.",
+  "type": "object",
+  "required": ["section_title"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "intro_text": { "type": "string", "description": "Markdown-formatted introductory narrative." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "pricing_strategy": {
+      "type": "object",
+      "description": "How AGF prices its products and the philosophy behind it.",
+      "properties": {
+        "philosophy": { "type": "string", "description": "Markdown-formatted pricing philosophy." },
+        "model_name": { "type": "string", "description": "Short label for the pricing model." },
+        "description": { "type": "string", "description": "Markdown-formatted description of the model." }
+      }
+    },
+    "channel_approach": {
+      "type": "object",
+      "description": "How AGF reaches customers through partners and direct channels.",
+      "properties": {
+        "philosophy": { "type": "string", "description": "Markdown-formatted channel philosophy." },
+        "partner_types": {
+          "type": "array",
+          "description": "Categories of channel partners.",
+          "items": { "type": "string" }
+        },
+        "target_partners": {
+          "type": ["string", "array"],
+          "description": "Specific named target partners or markdown narrative.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "runway_table": {
+      "type": "array",
+      "description": "Per-product runway economics table.",
+      "items": {
+        "type": "object",
+        "required": ["product"],
+        "properties": {
+          "product": { "type": "string", "description": "Product name or SKU." },
+          "ttm": { "type": "string", "description": "Time-to-market range or value (e.g., '6-9 mo')." },
+          "cogs_range": { "type": "string", "description": "Cost-of-goods range in USD." },
+          "asp_range": { "type": "string", "description": "Average-selling-price range in USD." },
+          "notes": { "type": "string", "description": "Free-form notes about this row." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "revenue_model": { "type": "string", "description": "Markdown-formatted description of revenue streams and unit economics." },
+    "scaling_timeline": { "type": "string", "description": "Markdown-formatted phased scaling plan." }
+  }
+}

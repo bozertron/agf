@@ -1,0 +1,67 @@
+/* ============================================================
+   PARTIAL:  sections/tenets.css
+   PURPOSE:  .tenets (.tenet-*)
+   SOURCE:   site/styles.css  L1060–L1116   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Tenets
+   ========================================================================== */
+.tenets {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: var(--border-hair) solid var(--forrest-sink);
+}
+.tenet {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+  border-bottom: var(--border-hair) solid var(--forrest-sink);
+}
+.tenet-num {
+  font-family: var(--font);
+  font-size: var(--type-mega);
+  font-weight: 200;
+  color: var(--gold);
+  line-height: var(--leading-tight);
+  font-feature-settings: "lnum";
+  letter-spacing: var(--track-tight);
+}
+.tenet-body h3 {
+  font-family: var(--font);
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: var(--leading-snug);
+  font-weight: 500;
+  margin: 0 0 var(--space-md);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.tenet-body h3 em { color: var(--gold-soft); font-style: italic; font-variation-settings: "slnt" -8; }
+.tenet-body-text {
+  margin-top: var(--space-sm);
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  font-weight: 300;
+}
+.tenet-anchor {
+  margin: var(--space-sm) 0 0;
+  font-family: var(--font);
+  font-style: italic;
+  font-variation-settings: "slnt" -8;
+  color: var(--gold);
+  font-size: var(--type-body);
+}
+.tenet-body em { color: var(--gold-soft); }
+
+@media (max-width: 768px) {
+  .tenet { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .tenet-num { font-size: var(--type-mega); }
+}
+

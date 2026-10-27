@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "timeline",
+  "title": "AGF Timeline / History Rhymes Section",
+  "description": "Comparative timeline contrasting two eras of audio industry evolution to surface recurring patterns.",
+  "type": "object",
+  "required": ["section_title", "eras"],
+  "properties": {
+    "section_title": {
+      "type": "string",
+      "description": "Display title for the section."
+    },
+    "intro_text": {
+      "type": "string",
+      "description": "Markdown-formatted introductory narrative."
+    },
+    "section_number": {
+      "type": ["string", "integer"],
+      "description": "Ordinal label or number for this section in the narrative sequence."
+    },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "flip_interval_seconds": {
+      "type": "number",
+      "description": "Auto-flip interval between 'then' and 'now' panes, in seconds. Set higher for a calmer pace.",
+      "default": 12
+    },
+    "eras": {
+      "type": "array",
+      "description": "Discrete eras being compared, typically two.",
+      "items": {
+        "type": "object",
+        "required": ["year_range", "label"],
+        "properties": {
+          "year_range": {
+            "type": "string",
+            "description": "Human-readable date range for the era (e.g., '1950-1985')."
+          },
+          "label": {
+            "type": "string",
+            "description": "Era name or thematic label."
+          },
+          "events": {
+            "type": "array",
+            "description": "Notable events that define the era.",
+            "items": {
+              "type": "object",
+              "required": ["year", "title"],
+              "properties": {
+                "year": { "type": ["string", "integer"], "description": "Year or year-range of the event." },
+                "title": { "type": "string", "description": "Short event title." },
+                "description": { "type": "string", "description": "Longer narrative description of the event." }
+              }
+            }
+          }
+        }
+      }
+    },
+    "comparison_points": {
+      "type": "array",
+      "description": "Side-by-side comparison rows highlighting how patterns rhyme between eras.",
+      "items": {
+        "type": "object",
+        "required": ["category"],
+        "properties": {
+          "category": { "type": "string", "description": "What dimension is being compared." },
+          "era_1_value": { "type": "string", "description": "Value/state for the first era." },
+          "era_2_value": { "type": "string", "description": "Value/state for the second era." },
+          "insight": { "type": "string", "description": "The takeaway or pattern revealed by the comparison." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

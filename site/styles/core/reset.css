@@ -1,0 +1,34 @@
+/* ============================================================
+   PARTIAL:  core/reset.css
+   PURPOSE:  Global reset & base element styles
+   SOURCE:   site/styles.css  L176–L199   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Reset
+   ========================================================================== */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  color: var(--obsidian);
+  background: var(--forrest);
+  font-feature-settings: "ss01", "kern";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img, svg { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+em { font-style: italic; font-variation-settings: "slnt" -8; }
+

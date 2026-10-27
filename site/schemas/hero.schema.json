@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "hero",
+  "title": "AGF Hero Section",
+  "description": "Landing section schema for the AGF brand experience, defining the giant Monoton mark, the Commissioner top tagline, the Poiret strapline, supporting subheadline, proof-point metrics, and immersive background treatments.",
+  "type": "object",
+  "required": ["mark", "headline", "subheadline"],
+  "properties": {
+    "mark": {
+      "type": "string",
+      "description": "The giant brand mark rendered in Monoton on the left of the hero stage (typically 'AGF'). Drives the height of the taglines column to its right."
+    },
+    "headline": {
+      "type": "string",
+      "description": "Top-aligned tagline in Commissioner at 25% the height of the mark. Sits to the right of the mark, flush with its top."
+    },
+    "strapline": {
+      "type": "string",
+      "description": "Bottom-aligned tagline in Poiret One at 15% the height of the mark. Sits to the right of the mark, flush with its bottom. The 'tagline underneath' beat."
+    },
+    "subheadline": {
+      "type": "string",
+      "description": "Supporting subheadline that contextualizes the headline."
+    },
+    "metrics": {
+      "type": "array",
+      "description": "Quantitative proof-points displayed beneath the headline.",
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "properties": {
+          "label": { "type": "string", "description": "Human-readable label for the metric." },
+          "value": {
+            "type": ["string", "number"],
+            "description": "Numeric or string value for the metric (string allows ranges, e.g., '4-6')."
+          },
+          "suffix": { "type": "string", "description": "Optional unit or qualifier appended to the value (e.g., 'B', '%', 'mo')." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "background_type": {
+      "type": "string",
+      "enum": ["orbits", "static", "video"],
+      "description": "Visual treatment behind the hero content."
+    },
+    "scroll_indicator": {
+      "type": "boolean",
+      "description": "Whether to show an animated scroll affordance."
+    },
+    "pcb_motif": {
+      "type": "boolean",
+      "description": "Whether to overlay the printed-circuit-board engraved motif."
+    }
+  }
+}

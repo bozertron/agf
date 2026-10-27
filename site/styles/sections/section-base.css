@@ -1,0 +1,116 @@
+/* ============================================================
+   PARTIAL:  sections/section-base.css
+   PURPOSE:  .section, .section-dark, .eyebrow, [data-reveal]
+   SOURCE:   site/styles.css  L655–L734   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Section base
+   ========================================================================== */
+.section {
+	position: relative;
+	padding: var(--space-5xl) var(--gutter);
+	max-width: var(--max);
+	margin: 0 auto;
+	z-index: 1;
+}
+.section-dark {
+	background:
+		linear-gradient(180deg, rgba(184, 134, 11, 0.04) 0%, transparent 120px),
+		var(--forrest-deep);
+	color: var(--taupe);
+	max-width: none;
+	padding: var(--space-5xl) 0;
+}
+.section-dark .section-head,
+.section-dark .eyebrow,
+.section-dark .section-title,
+.section-dark .section-deck {
+	color: var(--taupe-2);
+}
+.section-dark .eyebrow {
+	color: var(--gold-soft);
+}
+.section-dark .section-title em {
+	color: var(--gold-soft);
+}
+.section-dark > * {
+	max-width: var(--max);
+	margin-left: auto;
+	margin-right: auto;
+	padding-inline: var(--gutter);
+}
+.section-dark > .venue,
+.section-dark > .runway {
+	max-width: var(--max);
+}
+
+.section-head {
+	max-width: var(--col-head);
+	margin: 0 0 var(--space-3xl);
+}
+/* Margin-to-margin: remove width constraint so heading/title/deck fill
+   the full content column instead of the narrower --col-head/--col-deck.
+   The gutter is preserved by the parent .section / .section-dark > * so
+   text never touches the viewport edge. */
+.section[data-margin-to-margin] .section-head {
+	max-width: none;
+}
+.section[data-margin-to-margin] .section-deck {
+	max-width: none;
+}
+.eyebrow {
+	font-size: var(--type-body);
+	font-weight: 600;
+	letter-spacing: var(--track-widest);
+	text-transform: uppercase;
+	color: var(--gold);
+	margin: 0 0 var(--space-md);
+	display: inline-block;
+	border-left: var(--border-rule) solid var(--gold);
+	padding-left: var(--space-sm);
+}
+.section-title {
+	font-family: var(--font);
+	font-weight: 300;
+	font-size: clamp(40px, 5.4vw, 76px);
+	line-height: var(--leading-tight);
+	letter-spacing: var(--track-tight);
+	margin: 0 0 var(--space-lg);
+	color: var(--gold);
+}
+.section-title em {
+	font-style: normal;
+	font-variation-settings: "slnt" -8;
+	color: var(--gold-soft);
+	font-weight: 200;
+}
+.section-deck {
+	font-family: var(--font);
+	font-weight: 300;
+	font-size: clamp(18px, 1.6vw, 22px);
+	line-height: var(--leading-relaxed);
+	color: var(--taupe);
+	margin: 0;
+	max-width: var(--col-deck);
+}
+.section-dark .section-deck {
+	color: var(--taupe);
+}
+
+/* Reveal on scroll */
+[data-reveal] {
+	opacity: 0;
+	transform: translateY(24px);
+	transition:
+		opacity 0.8s var(--ease),
+		transform 0.8s var(--ease);
+}
+[data-reveal].is-in {
+	opacity: 1;
+	transform: translateY(0);
+}

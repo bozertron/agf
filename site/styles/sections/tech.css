@@ -1,0 +1,144 @@
+/* ============================================================
+   PARTIAL:  sections/tech.css
+   PURPOSE:  .tech-*, .codec-deep, .cd-*
+   SOURCE:   site/styles.css  L1243–L1376   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Technology grid
+   ========================================================================== */
+.tech-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-5xl);
+}
+.tech-card {
+  background: var(--forrest);
+  padding: var(--space-xl);
+  border: var(--border-hair) solid var(--forrest-sink);
+  transition: background .2s var(--ease);
+}
+.tech-card:hover { background: var(--forrest-lift); }
+.tech-kind {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-sm);
+}
+.tech-card h3 {
+  font-family: var(--font);
+  font-size: var(--type-display);
+  font-weight: 300;
+  margin: 0 0 var(--space-sm);
+  color: var(--taupe-2);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-tight);
+}
+.tech-tagline {
+  font-family: var(--font);
+  font-style: italic;
+  font-variation-settings: "slnt" -8;
+  font-size: var(--type-lede);
+  color: var(--gold);
+  margin: 0 0 var(--space-md);
+  font-weight: 400;
+}
+.tech-card p {
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  margin: 0 0 var(--space-sm);
+  font-weight: 300;
+}
+.tech-meta {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-hair) dashed var(--forrest-sink);
+  font-size: var(--type-body);
+  color: var(--moss);
+  line-height: var(--leading-relaxed);
+}
+
+/* Tech-grid is always single-column (full-width stacked panels).
+   No breakpoint needed — content-driven height, 16px gaps. */
+
+.codec-deep {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  padding-top: var(--space-3xl);
+}
+.cd-copy h3 {
+  font-family: var(--font);
+  font-size: clamp(28px, 3vw, 40px);
+  line-height: var(--leading-snug);
+  font-weight: 400;
+  margin: 0 0 var(--space-md);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.cd-copy h3 em { color: var(--gold); font-style: italic; font-variation-settings: "slnt" -8; }
+.cd-copy p {
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  margin: 0;
+  font-weight: 300;
+}
+
+.cd-diagram {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.cd-layer {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--space-md);
+  background: var(--forrest-lift);
+  border: var(--border-hair) solid var(--forrest-sink);
+  border-radius: var(--border-rule);
+  transition: transform .25s var(--ease), background .2s var(--ease);
+}
+.cd-layer:hover {
+  transform: translateX(6px);
+  background: var(--forrest);
+  border-color: var(--gold);
+}
+.cd-layer span {
+  font-family: var(--font);
+  font-size: var(--type-lede);
+  font-weight: 500;
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.cd-layer em {
+  font-style: normal;
+  font-size: var(--type-body);
+  color: var(--gold);
+  text-align: right;
+  font-weight: 400;
+}
+.cd-l5 {
+  background: var(--gold);
+  border-color: var(--gold);
+}
+.cd-l5 span, .cd-l5 em { color: var(--obsidian); }
+.cd-l5 em { color: var(--forrest-deep); font-weight: 600; }
+
+@media (max-width: 1024px) {
+  .codec-deep { grid-template-columns: 1fr; gap: var(--space-xl); }
+}
+

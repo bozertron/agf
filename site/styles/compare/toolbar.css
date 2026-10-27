@@ -1,0 +1,118 @@
+/* ============================================================
+   PARTIAL:  compare/toolbar.css
+   PURPOSE:  .products-toolbar, compare toggle/launch
+   SOURCE:   site/styles.css  L2729–L2836   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ============================================================
+   COMPARISON MODE
+   Schema-driven side-by-side product comparison overlay.
+   Aesthetic: instrument-panel — moss grid, brass curve, gold ledger.
+   ============================================================ */
+
+/* --- products toolbar (Compare toggle + launch button) --- */
+.products-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-sm);
+  margin: calc(var(--space-xs) * -1) 0 var(--space-md);
+  padding: 0 var(--space-2xs);
+  flex-wrap: wrap;
+}
+
+.compare-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md) var(--space-sm) var(--space-sm);
+  background: transparent;
+  color: var(--gold-soft);
+  border: var(--border-hair) solid var(--gold-mute);
+  border-radius: var(--radius-pill);
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .25s var(--ease), border-color .25s var(--ease), color .25s var(--ease);
+}
+.compare-toggle-btn:hover {
+  background: rgba(184, 134, 11, 0.08);
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.compare-toggle-btn.is-on {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--obsidian);
+  box-shadow: 0 0 0 var(--space-2xs) var(--gold-soft) inset;
+}
+.compare-toggle-btn .ctb-mark {
+  display: inline-block;
+  font-family: 'Monoton', var(--font);
+  font-size: var(--type-lede);
+  letter-spacing: var(--track-normal);
+  line-height: var(--leading-tight);
+  transform: translateY(-1px);
+}
+.compare-toggle-btn .ctb-label { letter-spacing: var(--track-widest); }
+.compare-toggle-btn .ctb-hint {
+  font-size: var(--type-micro);
+  font-weight: 500;
+  letter-spacing: var(--track-wider);
+  color: var(--moss);
+  padding-left: var(--space-sm);
+  border-left: var(--border-hair) solid var(--gold-mute);
+  text-transform: uppercase;
+}
+.compare-toggle-btn.is-on .ctb-hint {
+  color: rgba(14, 22, 18, 0.62);
+  border-left-color: rgba(14, 22, 18, 0.18);
+}
+
+.compare-launch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--gold);
+  color: var(--obsidian);
+  border: var(--border-hair) solid var(--gold);
+  border-radius: var(--radius-pill);
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 700;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .25s var(--ease), transform .25s var(--ease);
+  animation: cmpLaunchEnter .3s var(--ease) both;
+}
+.compare-launch-btn:hover { background: var(--gold-soft); transform: translateY(-1px); }
+.compare-launch-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.compare-launch-btn .ctb-launch-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 var(--space-xs);
+  background: var(--obsidian);
+  color: var(--gold);
+  border-radius: var(--radius-pill);
+  font-size: var(--type-micro);
+  font-weight: 700;
+  letter-spacing: var(--track-normal);
+}
+
+@keyframes cmpLaunchEnter {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0)   scale(1); }
+}
+

@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "pdf-config",
+  "title": "PDF Export Configuration",
+  "description": "Configuration for the press-kit PDF spec sheet exporter. Controls which template sections are emitted, layout, page format, brand palette, and footer copy.",
+  "type": "object",
+  "properties": {
+    "template_sections": {
+      "type": "array",
+      "description": "Ordered list of template sections. Sections render in array order; flip enabled to false to hide.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "enum": ["header", "hero_image", "overview", "audio_specs", "connectivity", "technologies", "form_factor", "business_metrics", "footer"]
+          },
+          "enabled": { "type": "boolean", "default": true },
+          "show_logo": { "type": "boolean" },
+          "background_color": { "type": "string" },
+          "columns": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "format": { "type": "string", "enum": ["badges", "list", "table"] },
+          "audience": { "type": "string", "enum": ["public", "investor", "partner"] },
+          "confidentiality_notice": { "type": "boolean" }
+        },
+        "required": ["key", "enabled"]
+      }
+    },
+    "page_format": {
+      "type": "string",
+      "enum": ["A4", "Letter", "A3"],
+      "default": "A4"
+    },
+    "margins": {
+      "type": "object",
+      "properties": {
+        "top":    { "type": "string", "default": "0.5in" },
+        "bottom": { "type": "string", "default": "0.5in" },
+        "left":   { "type": "string", "default": "0.75in" },
+        "right":  { "type": "string", "default": "0.75in" }
+      }
+    },
+    "brand_colors": {
+      "type": "object",
+      "properties": {
+        "primary": { "type": "string", "default": "#1F4A2D" },
+        "accent":  { "type": "string", "default": "#B8860B" },
+        "text":    { "type": "string", "default": "#1A1A1A" }
+      }
+    },
+    "font_family": { "type": "string", "default": "Commissioner" },
+    "footer_text": {
+      "type": "string",
+      "default": "AGF — All Grounds Floating | Foundational Brand Development | 2026"
+    }
+  }
+}

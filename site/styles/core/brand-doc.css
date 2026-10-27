@@ -1,0 +1,37 @@
+/* ============================================================
+   PARTIAL:  core/brand-doc.css
+   PURPOSE:  Brand / palette / typography documentation header
+   SOURCE:   site/styles.css  L1–L27   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   AGF · All Grounds Floating
+   Foundational Brand Development — interactive website
+
+   PALETTE — Forrest Green / Deep Gold / Obsidian
+   ─────────────────────────────────────────────────────────────
+   Forrest Green is the FR-4 soldermask substrate of every populated
+   PCB AND the canopy of every amphitheater where music is made.
+   Same color, two referents, fused. That is the brand.
+
+   Deep Gold is the copper trace, the antique binding, the action.
+   Obsidian is the type that earns your attention.
+   Warm Taupe is the quote-color, never too light.
+
+   TYPOGRAPHY
+   ─────────────────────────────────────────────────────────────
+   One family, Commissioner. Hierarchy is built from the weight axis
+   (100 → 900) and size, never italic-dependence. Display uses 200
+   for an extended-thin look; data uses 700 for the punch.
+
+   PCB-TRACE MOTIF
+   ─────────────────────────────────────────────────────────────
+   A subtle background pattern of gold hairlines (3-4% opacity)
+   suggesting a routing diagram. Toggle by removing `.is-pcb` from
+   <body> in index.html.
+   ========================================================================== */
+

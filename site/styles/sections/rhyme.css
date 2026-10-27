@@ -1,0 +1,109 @@
+/* ============================================================
+   PARTIAL:  sections/rhyme.css
+   PURPOSE:  Rhyme timeline (.rhyme-*)
+   SOURCE:   site/styles.css  L735–L833   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Opportunity / Rhyme timeline
+   ========================================================================== */
+.rhyme {
+  margin-bottom: var(--space-5xl);
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  border-bottom: var(--border-hair) solid var(--forrest-sink);
+}
+.rhyme-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: var(--border-hair) solid var(--forrest-sink);
+}
+.rhyme-tab {
+  position: relative;
+  padding: var(--space-xl) var(--space-md);
+  cursor: pointer;
+  text-align: center;
+  transition: background .25s var(--ease);
+}
+.rhyme-tab + .rhyme-tab { border-left: var(--border-hair) solid var(--forrest-sink); }
+.rhyme-tab:hover { background: var(--forrest-lift); }
+.rhyme-tab .tab-num {
+  display: block;
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 600;
+  color: var(--gold);
+  margin-bottom: var(--space-xs);
+  letter-spacing: var(--track-tight);
+}
+.rhyme-tab .tab-label {
+  display: block;
+  font-size: var(--type-micro);
+  font-weight: 500;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.rhyme-tab.is-active .tab-num { color: var(--gold-soft); }
+.rhyme-tab.is-active .tab-label { color: var(--taupe-2); }
+.rhyme-pill {
+  position: absolute;
+  bottom: calc(var(--space-2xs) * -1);
+  height: 2px;
+  width: 50%;
+  background: var(--gold);
+  transition: transform .35s var(--ease);
+}
+.rhyme-panes { position: relative; }
+.rhyme-pane {
+  display: none;
+  padding: var(--space-xl) var(--space-md);
+}
+.rhyme-pane.is-active { display: block; }
+.rhyme-row {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  gap: var(--space-lg);
+  padding: var(--space-md) 0;
+  border-bottom: var(--border-hair) dashed var(--forrest-sink);
+  align-items: center;
+}
+.rhyme-row:last-child { border-bottom: none; }
+.rhyme-row .rr-side {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+.rhyme-row .rr-mid {
+  font-family: var(--font);
+  font-size: var(--type-lede);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.rhyme-row.rhyme-highlight {
+  background: var(--forrest-lift);
+  margin: var(--space-xs) calc(var(--space-md) * -1);
+  padding: var(--space-lg) var(--space-md);
+  border-bottom: none;
+  border-radius: var(--radius-sm);
+  border-top: var(--border-hair) solid var(--gold-mute);
+  border-bottom: var(--border-hair) solid var(--gold-mute);
+}
+.rhyme-row.rhyme-highlight .rr-mid { color: var(--gold); font-weight: 600; }
+.rhyme-row em { font-style: italic; font-variation-settings: "slnt" -8; color: var(--gold-soft); }
+
+@media (max-width: 1024px) {
+  .rhyme-row { grid-template-columns: 1fr; gap: var(--space-xs); }
+  .rhyme-row .rr-side { font-size: var(--type-micro); }
+  .rhyme-row .rr-mid { font-size: var(--type-lede); }
+  .rhyme-row.rhyme-highlight { margin: var(--space-xs) 0; }
+}
+

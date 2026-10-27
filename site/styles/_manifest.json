@@ -1,0 +1,701 @@
+{
+  "generator": "A-styles.extract.py",
+  "source": "styles.css",
+  "source_lines": 4557,
+  "entry": "site/styles/index.css",
+  "note": "Every partial is a verbatim contiguous slice of the source. Concatenating all partials (minus generated header comments) reproduces the source byte-for-byte.",
+  "load_order": [
+    [
+      "core",
+      [
+        "brand-doc.css",
+        "tokens.css",
+        "fonts.css",
+        "reset.css"
+      ]
+    ],
+    [
+      "layout",
+      [
+        "pcb-motif.css",
+        "scroll-progress.css",
+        "nav.css"
+      ]
+    ],
+    [
+      "sections",
+      [
+        "hero.css",
+        "team-note.css",
+        "hero-secondary.css",
+        "hero-data.css",
+        "section-base.css",
+        "rhyme.css",
+        "opportunity-grid.css",
+        "opportunity-data.css",
+        "consolidation.css",
+        "independent-block.css",
+        "tenets.css",
+        "venue.css",
+        "tech.css",
+        "products.css",
+        "model.css",
+        "runway.css",
+        "founder.css",
+        "cta.css",
+        "footer.css",
+        "pdf-button.css",
+        "prelude.css",
+        "cut-sheet.css"
+      ]
+    ],
+    [
+      "util",
+      [
+        "bg-overlay.css",
+        "figures.css"
+      ]
+    ],
+    [
+      "feedback",
+      [
+        "drag-highlight.css",
+        "toast.css",
+        "confirm-dialog.css",
+        "loading.css"
+      ]
+    ],
+    [
+      "viz",
+      [
+        "positioning-chart.css",
+        "roadmap-chart.css",
+        "product-viz.css",
+        "connectivity.css",
+        "power-gauge.css",
+        "material-swatches.css",
+        "upload-zone.css"
+      ]
+    ],
+    [
+      "compare",
+      [
+        "toolbar.css",
+        "card-select.css",
+        "overlay.css",
+        "grid.css",
+        "highlight.css",
+        "charts.css"
+      ]
+    ],
+    [
+      "configurator",
+      [
+        "overlay.css",
+        "cards.css",
+        "signal-chain.css",
+        "footer.css"
+      ]
+    ],
+    [
+      "editor",
+      [
+        "edit-states.css",
+        "edit-menus.css",
+        "edit-forms.css",
+        "appendix.css",
+        "enhance-panel.css",
+        "enhance-controls.css",
+        "per-item-editor.css",
+        "inserted-text.css",
+        "fig-insert-panel.css",
+        "bg-settings-panel.css",
+        "nudge-panel.css"
+      ]
+    ],
+    [
+      "core",
+      [
+        "motion-safe.css"
+      ]
+    ]
+  ],
+  "partials": [
+    {
+      "group": "core",
+      "file": "brand-doc.css",
+      "source_start": 1,
+      "source_end": 27,
+      "lines": 27,
+      "purpose": "Brand / palette / typography documentation header",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "core",
+      "file": "fonts.css",
+      "source_start": 28,
+      "source_end": 59,
+      "lines": 32,
+      "purpose": "@font-face: Commissioner, Monoton, Poiret One",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "core",
+      "file": "tokens.css",
+      "source_start": 60,
+      "source_end": 175,
+      "lines": 116,
+      "purpose": ":root design tokens (colors, type, spacing, motion)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "core",
+      "file": "reset.css",
+      "source_start": 176,
+      "source_end": 199,
+      "lines": 24,
+      "purpose": "Global reset & base element styles",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "core",
+      "file": "motion-safe.css",
+      "source_start": 1717,
+      "source_end": 1753,
+      "lines": 37,
+      "purpose": "prefers-reduced-motion overrides (manifest: load LAST)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "layout",
+      "file": "pcb-motif.css",
+      "source_start": 200,
+      "source_end": 220,
+      "lines": 21,
+      "purpose": "body.is-pcb::before decorative PCB trace",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "layout",
+      "file": "scroll-progress.css",
+      "source_start": 221,
+      "source_end": 233,
+      "lines": 13,
+      "purpose": ".scroll-progress indicator",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "layout",
+      "file": "nav.css",
+      "source_start": 234,
+      "source_end": 303,
+      "lines": 70,
+      "purpose": ".nav + children + scrolled state",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "hero.css",
+      "source_start": 304,
+      "source_end": 460,
+      "lines": 157,
+      "purpose": "Hero: grain, orbits, inner, kicker, display, stage",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "team-note.css",
+      "source_start": 461,
+      "source_end": 502,
+      "lines": 42,
+      "purpose": "Team note prose (+ .team-note-rule tail)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "hero-secondary.css",
+      "source_start": 503,
+      "source_end": 601,
+      "lines": 99,
+      "purpose": ".lede, .hero-actions, .btn (SHARED), .hero-meta, scrollhint",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "hero-data.css",
+      "source_start": 602,
+      "source_end": 654,
+      "lines": 53,
+      "purpose": "Hero data strip (.hd-*)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "section-base.css",
+      "source_start": 655,
+      "source_end": 734,
+      "lines": 80,
+      "purpose": ".section, .section-dark, .eyebrow, [data-reveal]",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "rhyme.css",
+      "source_start": 735,
+      "source_end": 833,
+      "lines": 99,
+      "purpose": "Rhyme timeline (.rhyme-*)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "opportunity-grid.css",
+      "source_start": 834,
+      "source_end": 866,
+      "lines": 33,
+      "purpose": ".opportunity-grid, .og-card",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "opportunity-data.css",
+      "source_start": 867,
+      "source_end": 934,
+      "lines": 68,
+      "purpose": ".opportunity-data (.od-*)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "consolidation.css",
+      "source_start": 935,
+      "source_end": 1005,
+      "lines": 71,
+      "purpose": ".cons-table (.ct-*) (+ @media tail)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "independent-block.css",
+      "source_start": 1006,
+      "source_end": 1059,
+      "lines": 54,
+      "purpose": ".independent-block (.ib-*)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "tenets.css",
+      "source_start": 1060,
+      "source_end": 1116,
+      "lines": 57,
+      "purpose": ".tenets (.tenet-*)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "venue.css",
+      "source_start": 1117,
+      "source_end": 1242,
+      "lines": 126,
+      "purpose": ".venue-*, .floor-zone, .zone-*",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "tech.css",
+      "source_start": 1243,
+      "source_end": 1376,
+      "lines": 134,
+      "purpose": ".tech-*, .codec-deep, .cd-*",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "products.css",
+      "source_start": 1377,
+      "source_end": 1455,
+      "lines": 79,
+      "purpose": ".products, .product-card (.phead/.pnum/.ptag/.pspec)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "model.css",
+      "source_start": 1456,
+      "source_end": 1500,
+      "lines": 45,
+      "purpose": ".model-* business model cards",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "runway.css",
+      "source_start": 1501,
+      "source_end": 1551,
+      "lines": 51,
+      "purpose": ".runway table (.rr, .rhead)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "founder.css",
+      "source_start": 1552,
+      "source_end": 1623,
+      "lines": 72,
+      "purpose": ".founder-grid, .timeline, .mentor-callout",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "cta.css",
+      "source_start": 1624,
+      "source_end": 1660,
+      "lines": 37,
+      "purpose": ".cta call-to-action block",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "footer.css",
+      "source_start": 1661,
+      "source_end": 1716,
+      "lines": 56,
+      "purpose": ".foot-* site footer",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "pdf-button.css",
+      "source_start": 3661,
+      "source_end": 3768,
+      "lines": 108,
+      "purpose": ".pdf-download-btn + light-section variant",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "prelude.css",
+      "source_start": 4429,
+      "source_end": 4476,
+      "lines": 48,
+      "purpose": ".prelude-grid three-column intro",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "sections",
+      "file": "cut-sheet.css",
+      "source_start": 4477,
+      "source_end": 4557,
+      "lines": 81,
+      "purpose": ".cs-* product cut sheet (to EOF)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "edit-states.css",
+      "source_start": 1754,
+      "source_end": 1817,
+      "lines": 64,
+      "purpose": ".is-editing hide rules + nav-add button",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "edit-menus.css",
+      "source_start": 1818,
+      "source_end": 1865,
+      "lines": 48,
+      "purpose": ".section-context-menu + .schema-picker",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "edit-forms.css",
+      "source_start": 1866,
+      "source_end": 1983,
+      "lines": 118,
+      "purpose": ".edit-form-overlay, .form-field/group/array",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "appendix.css",
+      "source_start": 1984,
+      "source_end": 2065,
+      "lines": 82,
+      "purpose": ".appendix-field/ref/popup (merges 2 source chunks)",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "enhance-panel.css",
+      "source_start": 2095,
+      "source_end": 2221,
+      "lines": 127,
+      "purpose": ".enhance-panel text-enhancement popover",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "enhance-controls.css",
+      "source_start": 3881,
+      "source_end": 3933,
+      "lines": 53,
+      "purpose": ".enh-align-* paragraph alignment controls",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "per-item-editor.css",
+      "source_start": 3769,
+      "source_end": 3880,
+      "lines": 112,
+      "purpose": ".edit-form-overlay--item + collapsible appendix",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "inserted-text.css",
+      "source_start": 4018,
+      "source_end": 4074,
+      "lines": 57,
+      "purpose": ".inserted-text draggable text blocks",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "fig-insert-panel.css",
+      "source_start": 4075,
+      "source_end": 4177,
+      "lines": 103,
+      "purpose": "Figure insert popover",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "bg-settings-panel.css",
+      "source_start": 4178,
+      "source_end": 4299,
+      "lines": 122,
+      "purpose": "Background settings popover",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "editor",
+      "file": "nudge-panel.css",
+      "source_start": 4300,
+      "source_end": 4398,
+      "lines": 99,
+      "purpose": "px-scaler nudge position popover",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "positioning-chart.css",
+      "source_start": 2259,
+      "source_end": 2300,
+      "lines": 42,
+      "purpose": ".positioning-chart / .brand-dot / .pmap-*",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "roadmap-chart.css",
+      "source_start": 2301,
+      "source_end": 2364,
+      "lines": 64,
+      "purpose": ".roadmap-chart Gantt",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "product-viz.css",
+      "source_start": 2365,
+      "source_end": 2491,
+      "lines": 127,
+      "purpose": "freq response, driver, tech-flow + caption rail",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "connectivity.css",
+      "source_start": 2492,
+      "source_end": 2540,
+      "lines": 49,
+      "purpose": ".connectivity-badges",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "power-gauge.css",
+      "source_start": 2541,
+      "source_end": 2634,
+      "lines": 94,
+      "purpose": "arc + bar + meter variants",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "material-swatches.css",
+      "source_start": 2635,
+      "source_end": 2704,
+      "lines": 70,
+      "purpose": ".material-swatches + mobile tightening",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "viz",
+      "file": "upload-zone.css",
+      "source_start": 2705,
+      "source_end": 2728,
+      "lines": 24,
+      "purpose": ".upload-zone image drop area",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "toolbar.css",
+      "source_start": 2729,
+      "source_end": 2836,
+      "lines": 108,
+      "purpose": ".products-toolbar, compare toggle/launch",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "card-select.css",
+      "source_start": 2837,
+      "source_end": 2894,
+      "lines": 58,
+      "purpose": ".compare-mode .product-card selection",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "overlay.css",
+      "source_start": 2895,
+      "source_end": 2996,
+      "lines": 102,
+      "purpose": ".compare-overlay shell + header",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "grid.css",
+      "source_start": 2997,
+      "source_end": 3121,
+      "lines": 125,
+      "purpose": ".compare-grid rows/cols/cells",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "highlight.css",
+      "source_start": 3122,
+      "source_end": 3143,
+      "lines": 22,
+      "purpose": ".compare-highlight + section captions",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "compare",
+      "file": "charts.css",
+      "source_start": 3144,
+      "source_end": 3238,
+      "lines": 95,
+      "purpose": "freq overlay + price bar + responsive",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "configurator",
+      "file": "overlay.css",
+      "source_start": 3239,
+      "source_end": 3388,
+      "lines": 150,
+      "purpose": "banner + scroll-lock + frame + header",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "configurator",
+      "file": "cards.css",
+      "source_start": 3389,
+      "source_end": 3499,
+      "lines": 111,
+      "purpose": ".configurator-card selection + companion hint",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "configurator",
+      "file": "signal-chain.css",
+      "source_start": 3500,
+      "source_end": 3575,
+      "lines": 76,
+      "purpose": "SVG .chain-node + .system-connection",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "configurator",
+      "file": "footer.css",
+      "source_start": 3576,
+      "source_end": 3660,
+      "lines": 85,
+      "purpose": "synergy pills + price total + responsive",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "feedback",
+      "file": "drag-highlight.css",
+      "source_start": 2088,
+      "source_end": 2094,
+      "lines": 7,
+      "purpose": ".is-dragover highlight",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "feedback",
+      "file": "toast.css",
+      "source_start": 2236,
+      "source_end": 2258,
+      "lines": 23,
+      "purpose": "#toast-container + slideIn",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "feedback",
+      "file": "confirm-dialog.css",
+      "source_start": 2222,
+      "source_end": 2235,
+      "lines": 14,
+      "purpose": ".confirm-overlay / .confirm-dialog",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "feedback",
+      "file": "loading.css",
+      "source_start": 4399,
+      "source_end": 4428,
+      "lines": 30,
+      "purpose": ".app-loading spinner",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "util",
+      "file": "bg-overlay.css",
+      "source_start": 2066,
+      "source_end": 2087,
+      "lines": 22,
+      "purpose": "[data-bg-image] background image overlay",
+      "wired_in": "site/styles/index.css"
+    },
+    {
+      "group": "util",
+      "file": "figures.css",
+      "source_start": 3934,
+      "source_end": 4017,
+      "lines": 84,
+      "purpose": ".fig floated figures + clearfix + responsive",
+      "wired_in": "site/styles/index.css"
+    }
+  ]
+}

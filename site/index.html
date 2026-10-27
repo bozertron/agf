@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AGF — All Grounds Floating · Foundational Brand Development</title>
+  <meta name="description" content="A strategic move into the global audio & consumer technology markets. Audio is the tip of the spear; other premium segments become viable as the brand establishes itself." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/index.css?v=2026-06-27-cutover" />
+</head>
+<body class="is-pcb">
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner" data-section-id="" data-schema="header">
+      <!-- Populated by app.js from header section in DB -->
+    </div>
+  </header>
+
+  <!-- Schema-driven content: rendered by app.js + schema-renderer.js -->
+  <main id="app" aria-busy="true">
+    <!-- Loading indicator (site-011): replaced when app.js mounts content -->
+    <div class="app-loading" id="appLoading">
+      <div class="app-loading-spinner"></div>
+      <p class="app-loading-text">Loading brand content&hellip;</p>
+    </div>
+  </main>
+
+  <!-- Footer is structural; inner content populated by app.js from DB -->
+  <footer class="foot">
+    <div class="foot-inner" data-section-id="" data-schema="footer">
+      <!-- Populated by app.js from footer section in DB -->
+    </div>
+  </footer>
+
+  <!-- Edit-mode mount points -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- PCB motif toggle -->
+  <button id="pcbToggle" type="button" class="pcb-toggle" aria-pressed="true" title="Toggle PCB motif">PCB</button>
+
+  <!-- Components (must load before schema-renderer.js) -->
+  <script src="components/positioning-chart.js"></script>
+  <script src="components/roadmap-chart.js"></script>
+  <script src="components/freq-response.js"></script>
+  <script src="components/driver-diagram.js"></script>
+  <script src="components/tech-flow.js"></script>
+  <script src="components/connectivity-badges.js"></script>
+  <script src="components/power-gauge.js"></script>
+  <script src="components/material-swatches.js"></script>
+  <script src="components/product-compare.js"></script>
+  <script src="components/system-configurator.js"></script>
+
+  <!-- Scripts: schema-renderer first (defines window.SchemaRenderer), then app.js orchestrates fetch+render -->
+  <script src="schema-renderer.js" defer></script>
+  <script type="module" src="app/index.js"></script>
+  <script src="editor.js" defer></script>
+</body>
+</html>

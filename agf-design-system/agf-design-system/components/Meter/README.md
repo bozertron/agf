@@ -1,0 +1,3 @@
+# Meter
+
+A segmented level meter: thirty `radius-2` segments at a 2px pitch in a `surface-sunken` trough, lit in `signal-nominal` below -12 dBFS, `signal-hot` to 0, and `signal-clip` with `shadow-glow` above; a `border-rule` tick in `brass` marks 0 and the peak-hold segment is outlined in `brass-specular`. The dB scale beneath is set in `ink-faint` with tabular figures and is never omitted: colour alone does not carry the reading. The consumer provides the channel label and a level from 0 to 30 segments (or maps dBFS to it) and optionally a peak-hold value in `data-small`. The same three signal tokens are the only status colours in the system, on screen and on hardware LEDs.

@@ -1,0 +1,3 @@
+# Certificate
+
+The card that rests on top of the equipment in the box: a rigid `surface-deep` black-core card with gilded edges (a `border-rule` in `brass` with a hairline outline standing 4px off it), the mark top-left and the Floating Ground badge top-right, one Poiret One line in `brass-glow` ("Measured in silence." is the standing headline), then the unit's own measurements in the SpecTable with their conditions, the date, and the engineer's name set in `strapline-small`. Numbers are this unit's, not the datasheet's. The same layout is the printed spec sheet in Daylight and the NFC-launched digital certificate. The consumer provides the model, serial, three to six measurements, date and engineer.

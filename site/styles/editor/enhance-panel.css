@@ -1,0 +1,137 @@
+/* ============================================================
+   PARTIAL:  editor/enhance-panel.css
+   PURPOSE:  .enhance-panel text-enhancement popover
+   SOURCE:   site/styles.css  L2095–L2221   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Text enhance panel ---------- */
+.enhance-panel {
+  position: fixed;
+  z-index: 9999;
+  width: 690px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #fff;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 var(--space-xs) var(--space-md) rgba(0,0,0,0.18);
+  padding: var(--space-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  color: #1a2a1a;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0 var(--space-sm);
+}
+.enhance-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--type-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  color: #6e665b;
+  margin-bottom: var(--space-2xs);
+}
+.enhance-field {
+  margin-bottom: var(--space-sm);
+}
+.enh-input {
+  width: 100%;
+  padding: var(--space-xs) var(--space-xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  background: #faf9f7;
+}
+.enh-input:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.enhance-range {
+  width: 100%;
+  accent-color: var(--gold);
+  margin: var(--space-2xs) 0;
+}
+.enhance-range-val {
+  display: inline-block;
+  font-weight: 700;
+  font-size: var(--type-body);
+  color: var(--green);
+  margin-left: var(--space-2xs);
+}
+.enh-select {
+  width: 100%;
+  padding: var(--space-xs) var(--space-xs);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  background: #faf9f7;
+}
+.enh-select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.enhance-actions {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-sm);
+  grid-column: 1 / -1;
+}
+.enhance-btn {
+  flex: 1;
+  padding: var(--space-xs) var(--space-sm);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 600;
+  font-size: var(--type-body);
+  cursor: pointer;
+}
+.enhance-reset {
+  background: #f0ece4;
+  color: #6e665b;
+}
+.enhance-reset:hover {
+  background: #e4dfd6;
+}
+.enhance-apply {
+  background: var(--green);
+  color: #fff;
+}
+.enhance-apply:hover {
+  background: #1a3a2a;
+}
+
+/* Remove Text button (destructive) in enhance panel */
+.enh-color {
+  height: 36px;
+  padding: 2px;
+  cursor: pointer;
+}
+.enh-remove-text {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d44;
+  border-radius: var(--radius-sm);
+  background: #fff5f5;
+  color: #c00;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s;
+  grid-column: 1 / -1;
+}
+.enh-remove-text:hover {
+  background: #fee0e0;
+  color: #900;
+}
+

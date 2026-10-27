@@ -1,0 +1,147 @@
+:root, [data-theme="midnight"] {
+  --surface: #0e2317;
+  --surface-raised: #1f4a2d;
+  --surface-lifted: #2a5a3c;
+  --surface-sunken: #163822;
+  --surface-deep: #0e2317;
+  --scrim: rgba(14,22,18,0.6);
+  --glass: rgba(14,35,23,0.62);
+  --ink: #e9e2d4;
+  --ink-muted: #c0b098;
+  --ink-faint: #a5b2a8;
+  --ink-on-deep: #e9e2d4;
+  --ink-on-deep-muted: #c0b098;
+  --obsidian: #0e1612;
+  --forest: #1f4a2d;
+  --moss: #6b7a6f;
+  --brass: #b8860b;
+  --brass-text: #d4a234;
+  --brass-glow: #e6be5c;
+  --brass-specular: #f3d078;
+  --on-brass: #0e1612;
+  --brass-hairline: rgba(184,134,11,0.28);
+  --line-strong: #b8860b;
+  --focus-ring: #e6be5c;
+  --signal-nominal: #d4ebd8;
+  --signal-hot: #d4a234;
+  --signal-clip: #e0523a;
+  --on-signal: #0e1612;
+  --live: var(--signal-clip);
+  --shadow-panel: 0 24px 48px -24px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 24px rgba(212,162,52,0.28);
+}
+[data-theme="daylight"] {
+  --surface: #f3eee4;
+  --surface-raised: #fbf9f4;
+  --surface-lifted: #fffdf9;
+  --surface-sunken: #e6decc;
+  --surface-deep: #0e2317;
+  --scrim: rgba(14,22,18,0.6);
+  --glass: rgba(243,238,228,0.72);
+  --ink: #0e1612;
+  --ink-muted: #46534a;
+  --ink-faint: #55635a;
+  --ink-on-deep: #e9e2d4;
+  --ink-on-deep-muted: #c0b098;
+  --obsidian: #0e1612;
+  --forest: #1f4a2d;
+  --moss: #6b7a6f;
+  --brass: #b8860b;
+  --brass-text: #7a5906;
+  --brass-glow: #8a6508;
+  --brass-specular: #8a6508;
+  --on-brass: #0e1612;
+  --brass-hairline: rgba(184,134,11,0.45);
+  --line-strong: #8a6508;
+  --focus-ring: #7a5906;
+  --signal-nominal: #163822;
+  --signal-hot: #8a6508;
+  --signal-clip: #e0523a;
+  --on-signal: #0e1612;
+  --live: var(--signal-clip);
+  --shadow-panel: 0 16px 40px -24px rgba(14,22,18,0.35);
+  --shadow-glow: 0 0 16px rgba(184,134,11,0.22);
+}
+[data-theme="air"] {
+  --surface: #0e1612;
+  --surface-raised: #163822;
+  --surface-lifted: #1f4a2d;
+  --surface-sunken: #070b09;
+  --surface-deep: #0e2317;
+  --scrim: rgba(14,22,18,0.6);
+  --glass: rgba(14,22,18,0.7);
+  --ink: #e9e2d4;
+  --ink-muted: #c0b098;
+  --ink-faint: #a5b2a8;
+  --ink-on-deep: #e9e2d4;
+  --ink-on-deep-muted: #c0b098;
+  --obsidian: #0e1612;
+  --forest: #1f4a2d;
+  --moss: #6b7a6f;
+  --brass: #b8860b;
+  --brass-text: #d4a234;
+  --brass-glow: #e6be5c;
+  --brass-specular: #f3d078;
+  --on-brass: #0e1612;
+  --brass-hairline: rgba(184,134,11,0.28);
+  --line-strong: #b8860b;
+  --focus-ring: #e6be5c;
+  --signal-nominal: #d4ebd8;
+  --signal-hot: #d4a234;
+  --signal-clip: #e0523a;
+  --on-signal: #0e1612;
+  --live: var(--signal-clip);
+  --shadow-panel: 0 24px 48px -24px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 24px rgba(212,162,52,0.28);
+}
+:root {
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-96: 96px;
+  --space-120: 120px;
+  --radius-2: 2px;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-pill: 999px;
+  --border-hairline: 1px;
+  --border-rule: 2px;
+  --border-bold: 3px;
+  --blur-glass: 16px;
+  --opacity-grain: 0.06;
+  --opacity-trace: 0.28;
+  --opacity-disabled: 0.4;
+  --tracking-strapline: 0.32em;
+  --tracking-eyebrow: 0.18em;
+  --tracking-mark: 0.06em;
+  --font-sans: "Commissioner", "Helvetica Neue", Arial, sans-serif;
+  --font-mark: "Monoton", "Commissioner", sans-serif;
+  --font-strapline: "Poiret One", "Commissioner", sans-serif;
+}
+@font-face { font-family: "Commissioner"; src: url("fonts/Commissioner-Variable.woff2") format("woff2"); font-weight: 100 900; font-style: normal; }
+@font-face { font-family: "Monoton"; src: url("fonts/Monoton-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+@font-face { font-family: "Poiret One"; src: url("fonts/PoiretOne-Regular.woff2") format("woff2"); font-weight: 400; font-style: normal; }
+.mark-mega { font-family: var(--font-mark); font-size: 96px; line-height: 1; font-weight: 400; letter-spacing: 0.06em; }
+.mark { font-family: var(--font-mark); font-size: 48px; line-height: 1; font-weight: 400; letter-spacing: 0.06em; }
+.mark-small { font-family: var(--font-mark); font-size: 24px; line-height: 1; font-weight: 400; letter-spacing: 0.06em; }
+.strapline-hero { font-family: var(--font-strapline); font-size: 40px; line-height: 1.1; font-weight: 400; letter-spacing: 0.32em; }
+.strapline { font-family: var(--font-strapline); font-size: 24px; line-height: 1.15; font-weight: 400; letter-spacing: 0.3em; }
+.strapline-small { font-family: var(--font-strapline); font-size: 16px; line-height: 1.2; font-weight: 400; letter-spacing: 0.3em; }
+.mega { font-family: var(--font-sans); font-size: 96px; line-height: 1.05; font-weight: 200; letter-spacing: -0.01em; }
+.display { font-family: var(--font-sans); font-size: 48px; line-height: 1.05; font-weight: 300; letter-spacing: -0.005em; }
+.h3 { font-family: var(--font-sans); font-size: 32px; line-height: 1.15; font-weight: 500; letter-spacing: 0; }
+.lede { font-family: var(--font-sans); font-size: 24px; line-height: 1.4; font-weight: 300; letter-spacing: 0; }
+.body { font-family: var(--font-sans); font-size: 16px; line-height: 1.55; font-weight: 400; letter-spacing: 0; }
+.body-strong { font-family: var(--font-sans); font-size: 16px; line-height: 1.55; font-weight: 600; letter-spacing: 0; }
+.small { font-family: var(--font-sans); font-size: 14px; line-height: 1.45; font-weight: 400; letter-spacing: 0; }
+.caption { font-family: var(--font-sans); font-size: 13px; line-height: 1.4; font-weight: 500; letter-spacing: 0.01em; }
+.eyebrow { font-family: var(--font-sans); font-size: 12px; line-height: 1; font-weight: 600; letter-spacing: 0.18em; }
+.micro { font-family: var(--font-sans); font-size: 11px; line-height: 1.3; font-weight: 500; letter-spacing: 0.08em; }
+.data-mega { font-family: var(--font-sans); font-size: 96px; line-height: 1; font-weight: 200; letter-spacing: -0.02em; }
+.data { font-family: var(--font-sans); font-size: 48px; line-height: 1; font-weight: 300; letter-spacing: -0.01em; }
+.data-small { font-family: var(--font-sans); font-size: 24px; line-height: 1.1; font-weight: 400; letter-spacing: 0; }

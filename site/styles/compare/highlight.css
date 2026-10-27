@@ -1,0 +1,32 @@
+/* ============================================================
+   PARTIAL:  compare/highlight.css
+   PURPOSE:  .compare-highlight + section captions
+   SOURCE:   site/styles.css  L3122–L3143   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* --- section captions used inside the overlay --- */
+.cmp-section-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: var(--border-hair) dashed var(--gold-mute);
+}
+.cmp-section-mark {
+  font-family: 'Monoton', var(--font);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-mega);
+  color: var(--gold);
+}
+.cmp-section-title {
+  font-size: var(--type-body);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--dark-ink);
+}
+

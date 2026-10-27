@@ -1,0 +1,64 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "concept-explainer",
+  "title": "Concept Explainer",
+  "description": "A flexible explanatory section with typed, reorderable modules — reason lists, subsections, overview blocks, and text+image pairs.",
+  "type": "object",
+  "required": ["section_title"],
+  "properties": {
+    "section_label": { "type": "string", "description": "Eyebrow label", "default": "" },
+    "section_number": { "type": "string", "description": "Section number", "default": "" },
+    "section_title": { "type": "string", "description": "Main section title", "default": "How It Works" },
+    "intro_text": { "type": "string", "description": "Markdown intro narrative", "default": "" },
+    "layout": { "type": "string", "enum": ["grid", "rows", "alternating"], "description": "Visual layout for modules", "default": "grid" },
+    "modules": {
+      "type": "array",
+      "description": "Ordered, typed modules rendered within this section",
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "id": { "type": "string", "description": "Stable identifier", "default": "" },
+          "type": { "type": "string", "enum": ["reason_list", "subsection", "overview_block", "text_image"], "description": "Module type — determines render behaviour" },
+          "display_order": { "type": "integer", "description": "Sort order within modules array", "default": 0 },
+          "headline": { "type": "string", "description": "Module heading", "default": "" },
+          "subhead": { "type": "string", "description": "Sub-heading (subsection only)", "default": "" },
+          "body": { "type": "string", "description": "Markdown body text", "default": "" },
+          "hide_blurb": { "type": "boolean", "description": "Hide the body/blurb (reason_list only)", "default": false },
+          "text_position": { "type": "string", "enum": ["left", "right"], "description": "Text side when paired with image", "default": "left" },
+          "image_position": { "type": "string", "enum": ["left", "right"], "description": "Image placement (subsection only)", "default": "right" },
+          "image": { "type": "string", "description": "Image path/URL", "default": "" },
+          "items": {
+            "type": "array",
+            "description": "List items for reason_list, subsection, or overview_block",
+            "items": {
+              "type": "object",
+              "properties": {
+                "label": { "type": "string", "description": "Item label", "default": "" },
+                "description": { "type": "string", "description": "Item description", "default": "" },
+                "text": { "type": "string", "description": "Text content", "default": "" },
+                "icon": { "type": "string", "description": "Emoji or icon", "default": "" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "footnote": { "type": "string", "description": "Optional markdown footnote", "default": "" }
+  },
+  "additionalProperties": true,
+  "default_data": {
+    "section_label": "",
+    "section_number": "",
+    "section_title": "How It Works",
+    "intro_text": "",
+    "layout": "grid",
+    "modules": [
+      { "id": "", "type": "overview_block", "display_order": 0, "headline": "", "body": "", "items": [] },
+      { "id": "", "type": "reason_list", "display_order": 1, "headline": "", "body": "", "hide_blurb": false, "text_position": "left", "items": [], "image": "" },
+      { "id": "", "type": "subsection", "display_order": 2, "headline": "", "subhead": "", "body": "", "image": "", "image_position": "right", "items": [] },
+      { "id": "", "type": "text_image", "display_order": 3, "headline": "", "body": "", "text_position": "left", "image": "" }
+    ],
+    "footnote": ""
+  }
+}

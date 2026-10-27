@@ -1,0 +1,94 @@
+/* ============================================================
+   PARTIAL:  util/figures.css
+   PURPOSE:  .fig floated figures + clearfix + responsive
+   SOURCE:   site/styles.css  L3934–L4017   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Inline figures (_figures convention field — option B wave 1)
+   Figures map from section.data._figures to <figure> elements injected at
+   the top of a section. Left/Right float with text wrap; Center is a block.
+   Sizes: original (natural, clamped), full (100% of column), fit (floated
+   figures read as a ~40% text column; center figures span 100%).
+   ========================================================================== */
+.fig {
+  margin: 0;
+}
+.fig img {
+  display: block;
+}
+.fig-left {
+  float: left;
+  margin: 0 1.5em 1em 0;
+}
+.fig-right {
+  float: right;
+  margin: 0 0 1em 1.5em;
+}
+.fig-center {
+  display: block;
+  float: none;
+  margin: 1.5em auto;
+}
+
+/* Sizes */
+.fig-original img {
+  max-width: 100%;
+  height: auto;
+}
+.fig-full img {
+  width: 100%;
+  height: auto;
+}
+/* Fit: floated figures occupy a readable ~40% text column; center spans full.
+   The width sits on the floated figure so the float box has a definite size;
+   the img fills it. */
+.fig-left.fig-fit,
+.fig-right.fig-fit {
+  width: 40%;
+}
+.fig-left.fig-fit img,
+.fig-right.fig-fit img {
+  width: 100%;
+  height: auto;
+}
+.fig-center.fig-fit img {
+  width: 100%;
+  height: auto;
+}
+
+.fig figcaption {
+  font-size: var(--type-body);
+  color: var(--moss);
+  margin-top: 0.5em;
+  line-height: var(--leading-normal);
+  font-weight: 300;
+  overflow-wrap: break-word;
+}
+
+/* Clearfix: floated figures must not escape the section box. The existing
+   .section rule has no overflow:hidden, so this pseudo-element clears floats. */
+.section::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Responsive: floated figures collapse to full-width blocks on mobile. */
+@media (max-width: 768px) {
+  .fig-left,
+  .fig-right {
+    float: none;
+    width: 100%;
+    margin: 1em 0;
+  }
+  .fig-left.fig-fit img,
+  .fig-right.fig-fit img {
+    width: 100%;
+  }
+}
+

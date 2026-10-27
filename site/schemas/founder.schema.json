@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "founder",
+  "title": "AGF Founder Section",
+  "description": "Founder origin story, milestone timeline, formative companies, and the mentor lineage that shaped the brand's perspective.",
+  "type": "object",
+  "required": ["section_title", "name"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "intro_text": { "type": "string", "description": "Markdown-formatted introductory narrative." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "name": { "type": "string", "description": "Founder's full name." },
+    "title": { "type": "string", "description": "Founder's role or title (e.g., 'Founder & CEO')." },
+    "domain_depth_years": {
+      "type": "number",
+      "description": "Years of accumulated expertise in the relevant domains."
+    },
+    "milestones": {
+      "type": "array",
+      "description": "Key biographical and professional milestones.",
+      "items": {
+        "type": "object",
+        "required": ["year", "event"],
+        "properties": {
+          "year": { "type": ["string", "integer"], "description": "Year or year-range of the milestone." },
+          "event": { "type": "string", "description": "Short headline of the milestone." },
+          "company": { "type": "string", "description": "Associated company or institution." },
+          "description": { "type": "string", "description": "Markdown-formatted longer description." },
+          "significance": { "type": "string", "description": "Why this milestone matters to the AGF narrative." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "mentors": {
+      "type": "array",
+      "description": "Mentors who shaped the founder's perspective.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "description": "Mentor's name." },
+          "contribution": { "type": "string", "description": "What the mentor contributed to the founder's craft or thinking." },
+          "relationship": { "type": "string", "description": "Nature of the mentor-mentee relationship." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "key_companies": {
+      "type": "array",
+      "description": "Formative companies the founder worked at or built.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "description": "Company name." },
+          "role": { "type": "string", "description": "Founder's role at the company." },
+          "years": { "type": "string", "description": "Year range of involvement." },
+          "outcome": { "type": "string", "description": "Outcome or exit (e.g., 'Acquired by Sony, 2014')." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

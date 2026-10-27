@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "tenet",
+  "title": "AGF Operating Tenets Section",
+  "description": "The six guiding tenets that govern AGF's product, business, and cultural decisions.",
+  "type": "object",
+  "required": ["section_title", "tenets"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "intro_text": { "type": "string", "description": "Markdown-formatted introductory narrative." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "tenets": {
+      "type": "array",
+      "description": "Ordered list of operating tenets.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["number", "title", "anchor_phrase", "body"],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 6,
+            "description": "Tenet ordinal (1-6)."
+          },
+          "title": { "type": "string", "description": "Tenet title." },
+          "anchor_phrase": { "type": "string", "description": "Memorable short phrase that anchors the tenet." },
+          "body": { "type": "string", "description": "Markdown-formatted full body of the tenet." },
+          "example_title": { "type": "string", "description": "Title of a concrete example illustrating the tenet." },
+          "example_body": { "type": "string", "description": "Markdown-formatted example body." },
+          "key_insight": { "type": "string", "description": "Concise distilled insight or pull-quote." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

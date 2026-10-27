@@ -1,0 +1,3 @@
+# Nav
+
+A 72px bar with the small mark at the left, up to five links at the right in 14px `ink-muted`, and a `border-hairline` beneath. The active link is `brass-text` with a `border-rule` underline in `brass` sitting on the bar's bottom edge; hover brightens to `ink`. The three divisions are always named Hear, Field, Air in that order (consumer, professional capture, broadcast), and their codes in copy are `AGF // HEAR`, `AGF // FIELD`, `AGF // AIR`. On `surface-deep` the same bar uses the on-deep inks. The consumer provides the links and, optionally, one secondary button; the nav never carries a primary button or a search field.

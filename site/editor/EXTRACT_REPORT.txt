@@ -1,0 +1,32 @@
+EXTRACT_REPORT.txt — A-editor.extract.py
+Mode: WRITE
+Source: /home/bozertron/0.1-Audio-AGF-BP/site/editor.js
+IIFE close line: 4279
+Top-level functions detected: 98
+
+Per-module line accounting (source lines extracted):
+  core.js             126 src lines  (9 fns + 1 state ranges)  -> wrote
+  state.js              8 src lines  (0 fns + 1 state ranges)  -> wrote
+  schema.js            69 src lines  (6 fns + 0 state ranges)  -> wrote
+  confirm-dialog.js    30 src lines  (1 fns + 0 state ranges)  -> wrote
+  form.js             508 src lines  (10 fns + 0 state ranges)  -> wrote
+  item-editor.js      297 src lines  (2 fns + 1 state ranges)  -> wrote
+  click-to-edit.js     75 src lines  (3 fns + 0 state ranges)  -> wrote
+  context-menu.js     346 src lines  (5 fns + 1 state ranges)  -> wrote
+  section-ops.js      101 src lines  (4 fns + 0 state ranges)  -> wrote
+  section-form.js     313 src lines  (7 fns + 0 state ranges)  -> wrote
+  product-form.js     124 src lines  (2 fns + 0 state ranges)  -> wrote
+  figures.js          470 src lines  (10 fns + 0 state ranges)  -> wrote
+  bg-settings.js      308 src lines  (4 fns + 0 state ranges)  -> wrote
+  inserted-text.js    318 src lines  (18 fns + 0 state ranges)  -> wrote
+  nudge-panel.js      290 src lines  (2 fns + 0 state ranges)  -> wrote
+  enhance-panel.js    510 src lines  (4 fns + 1 state ranges)  -> wrote
+  style-overrides.js  166 src lines  (4 fns + 0 state ranges)  -> wrote
+  drag-drop.js        104 src lines  (4 fns + 1 state ranges)  -> wrote
+  boot.js              51 src lines  (3 fns + 0 state ranges)  -> wrote
+  + scaffold/wiring     0 src lines  (generated entry)
+  --------------------------------------
+  TOTAL              4214 src lines extracted of 4278 in source
+
+Note: every function body is VERBATIM. Header scaffolds (comments) and the
+LOAD_ORDER.md / this report are the only generated content.

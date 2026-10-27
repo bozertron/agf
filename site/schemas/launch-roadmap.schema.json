@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "launch-roadmap",
+  "title": "AGF Launch Roadmap Section",
+  "description": "Phased go-to-market sequencing for AGF's inaugural product line, including PR levers, venue pilots, and Year-1 volume targets.",
+  "type": "object",
+  "required": ["section_title", "phases"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "intro_text": {
+      "type": "string",
+      "description": "Markdown-formatted overview of the launch sequencing logic."
+    },
+    "phases": {
+      "type": "array",
+      "description": "Ordered launch phases with associated products, TTM, and rationale.",
+      "items": {
+        "type": "object",
+        "required": ["phase", "title"],
+        "properties": {
+          "phase": { "type": ["string", "integer"], "description": "Phase ordinal (e.g., 1, 2, 3)." },
+          "title": { "type": "string", "description": "Phase display title." },
+          "ttm": { "type": "string", "description": "Time-to-market range for this phase (e.g., '4-6 months')." },
+          "products": {
+            "type": "array",
+            "description": "Products shipping in this phase.",
+            "items": { "type": "string" }
+          },
+          "rationale": { "type": "string", "description": "Markdown-formatted reasoning for why this phase ships in this order." },
+          "milestones": {
+            "type": "array",
+            "description": "Key milestones or gates within this phase.",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "pr_stunts": {
+      "type": "array",
+      "description": "Public-relations or marketing levers timed to the launch sequence.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "description": "Short identifier for the stunt (e.g., 'Symphony Review-Tier Anchor')." },
+          "description": { "type": "string", "description": "Markdown-formatted description of the stunt and its mechanic." },
+          "timing": { "type": "string", "description": "When relative to the launch this stunt fires." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "venue_pilots": {
+      "type": "object",
+      "description": "Venue-pilot strategy for the launch period.",
+      "properties": {
+        "count": { "type": "integer", "description": "Number of pilot venues planned." },
+        "criteria": { "type": "string", "description": "Markdown-formatted selection criteria for pilot markets." },
+        "notes": { "type": "string", "description": "Additional pilot strategy notes." }
+      }
+    },
+    "year_one_targets": {
+      "type": "object",
+      "description": "Year-1 volume and revenue targets.",
+      "properties": {
+        "global_units_per_month": { "type": "integer", "description": "Global monthly unit-volume target." },
+        "anchor_reference": { "type": "string", "description": "Reference comp (e.g., Wasted Real-Estate vs Focal flagship benchmark)." },
+        "notes": { "type": "string", "description": "Markdown-formatted notes on how the target compounds over Y1." }
+      }
+    },
+    "_viz_config": {
+      "type": "object",
+      "description": "Gantt visualization configuration (editable via Edit UI).",
+      "properties": {
+        "chart_type": { "type": "string", "enum": ["gantt", "timeline", "table"], "default": "gantt" },
+        "time_unit": { "type": "string", "enum": ["months", "quarters", "weeks"], "default": "months" },
+        "total_slots": { "type": "integer", "default": 24 },
+        "label_column_width": { "type": "string", "default": "140px" },
+        "bar_gradient_start": { "type": "string", "default": "#1a3a2a" },
+        "bar_gradient_end": { "type": "string", "default": "#b8860b" },
+        "milestone_types": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": { "type": "string" },
+              "label": { "type": "string" },
+              "color": { "type": "string" }
+            }
+          },
+          "default": [
+            { "key": "pr", "label": "PR Stunt", "color": "#FFD700" },
+            { "key": "venue", "label": "Venue Pilot", "color": "#90EE90" },
+            { "key": "target", "label": "Volume Target", "color": "#87CEEB" }
+          ]
+        },
+        "show_today_marker": { "type": "boolean", "default": true },
+        "enable_hover": { "type": "boolean", "default": true }
+      }
+    }
+  }
+}

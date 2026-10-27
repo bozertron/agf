@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "consolidation",
+  "title": "AGF Consolidation Section",
+  "description": "Data-driven view of the audio industry's M&A consolidation, contrasted with surviving independent brands.",
+  "type": "object",
+  "required": ["section_title", "acquisitions"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "intro_text": { "type": "string", "description": "Markdown-formatted introductory narrative." },
+    "independent_heading": { "type": "string", "description": "Heading for the independent-brands block. Editable; empty string clears it so nothing renders (no hardcoded fallback)." },
+    "independent_intro": { "type": "string", "description": "Intro paragraph for the independent-brands block. Markdown-formatted; empty string clears it." },
+    "acquisitions": {
+      "type": "array",
+      "description": "Documented acquisition, merger, or investment events.",
+      "items": {
+        "type": "object",
+        "required": ["acquirer", "target"],
+        "properties": {
+          "acquirer": { "type": "string", "description": "Acquiring entity." },
+          "target": { "type": "string", "description": "Acquired entity." },
+          "value_usd": { "type": "number", "description": "Transaction value in USD; null if undisclosed." },
+          "date": { "type": "string", "description": "Date or year of the transaction (ISO 8601 preferred)." },
+          "type": {
+            "type": "string",
+            "enum": ["acquisition", "merger", "investment"],
+            "description": "Transaction type."
+          },
+          "source_url": { "type": "string", "format": "uri", "description": "Citation URL." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "independent_brands": {
+      "type": "array",
+      "description": "Brands that have remained independent despite consolidation pressure.",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": { "type": "string", "description": "Brand name." },
+          "specialty": { "type": "string", "description": "Audio specialty or category focus." },
+          "founded_year": { "type": "integer", "description": "Year founded." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    }
+  }
+}

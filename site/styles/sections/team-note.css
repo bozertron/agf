@@ -1,0 +1,66 @@
+/* ============================================================
+   PARTIAL:  sections/team-note.css
+   PURPOSE:  Team note prose (+ .team-note-rule tail)
+   SOURCE:   site/styles.css  L461–L502   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Team Note
+   A short prose interlude. Sits between major sections, closes with a
+   hairline rule below the message. The bottom of the prose falls a
+   tasteful amount (clamp 56-80px) above the rule.
+   ========================================================================== */
+.team-note {
+	position: relative;
+	padding: clamp(80px, 11vw, 140px) var(--gutter) clamp(60px, 8vw, 100px);
+	background: var(--forrest);
+	z-index: 1;
+}
+.team-note-inner {
+	margin: 0 auto;
+	text-align: center;
+}
+/* No column constraint on the team-note head — title/eyebrow span the full
+   content width (margin-to-margin), matching the consolidation section.
+   Overrides the global .section-head { max-width: var(--col-head) } so the
+   text-enhance Width control and nudges behave like every other section. */
+.team-note .section-head {
+	max-width: none;
+}
+/* Eyebrow label: promote to a full-width block so Text Enhance Placement
+   (Left/Center/Right) has room to position the label via auto margins.
+   Without this the inline-block eyebrow shrink-to-fits the label and
+   auto margins have nowhere to push. */
+.team-note .eyebrow {
+	display: block;
+}
+/* Team-note headline: grey Commissioner (weight 300, var(--taupe)) — matches
+   the hero subheadline (.lede / .hero-tagline-top) aesthetic, overriding the
+   default gold .section-title. */
+.team-note .section-title {
+	font-family: "Commissioner", sans-serif;
+	font-weight: 300;
+	color: var(--taupe);
+}
+.team-note-body {
+	font-family: "Commissioner", sans-serif;
+	font-weight: 300;
+	font-size: clamp(19px, 1.7vw, 25px);
+	line-height: var(--leading-relaxed);
+	color: var(--taupe);
+	letter-spacing: var(--track-tight);
+	margin: 0 auto clamp(56px, 6vw, 80px); /* tasteful breathing room above the rule */
+	text-wrap: balance;
+}
+.team-note-rule {
+	border: none;
+	height: 1px;
+	background: var(--gold-mute);
+	margin: 0 auto;
+	max-width: var(--col-rule);
+	opacity: 0.7;
+}

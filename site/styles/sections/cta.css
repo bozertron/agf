@@ -1,0 +1,47 @@
+/* ============================================================
+   PARTIAL:  sections/cta.css
+   PURPOSE:  .cta call-to-action block
+   SOURCE:   site/styles.css  L1624–L1660   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+
+.cta {
+  margin-top: var(--space-5xl);
+  text-align: center;
+  padding: var(--space-3xl) var(--space-md);
+  border-top: var(--border-hair) solid var(--dark-rule);
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+}
+.cta h3 {
+  font-family: var(--font);
+  font-size: clamp(36px, 4.6vw, 60px);
+  font-weight: 300;
+  line-height: var(--leading-tight);
+  margin: 0 0 var(--space-md);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.cta h3 em { color: var(--gold-soft); font-style: normal; font-variation-settings: "slnt" -8; font-weight: 200; }
+.cta p {
+  max-width: var(--col-narrow);
+  margin: 0 auto var(--space-xl);
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  font-weight: 300;
+}
+.cta-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.cta .btn.primary { background: var(--gold); color: var(--obsidian); }
+.cta .btn.primary:hover { background: var(--gold-soft); }
+.cta .btn.ghost { color: var(--gold); border-color: var(--gold); }
+.cta .btn.ghost:hover { background: var(--gold); color: var(--obsidian); }
+

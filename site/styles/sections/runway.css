@@ -1,0 +1,61 @@
+/* ============================================================
+   PARTIAL:  sections/runway.css
+   PURPOSE:  .runway table (.rr, .rhead)
+   SOURCE:   site/styles.css  L1501–L1551   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+.runway {
+  max-width: var(--max);
+  margin: 0 auto;
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  padding-top: var(--space-section-md);
+}
+.runway h3 {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 500;
+  margin: 0 0 var(--space-lg);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.runway-table {
+  border: var(--border-hair) solid var(--forrest-sink);
+}
+.rr {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.4fr 1.2fr 1.6fr;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: var(--border-hair) solid var(--forrest-sink);
+  align-items: center;
+  font-size: var(--type-body);
+  color: var(--taupe);
+  font-weight: 300;
+}
+.rr:last-child { border-bottom: none; }
+.rr > div:first-child {
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 500;
+  color: var(--taupe-2);
+}
+.rhead {
+  background: var(--forrest-lift);
+  font-weight: 600;
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.rhead > div:first-child { font-family: var(--font); font-size: var(--type-micro); }
+
+@media (max-width: 1024px) {
+  .rr { grid-template-columns: 1fr 1fr; gap: var(--space-xs); }
+  .rr > div:nth-child(n+3) { grid-column: span 1; font-size: var(--type-body); }
+  .rr > div:first-child { grid-column: 1 / -1; }
+}
+

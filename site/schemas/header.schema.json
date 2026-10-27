@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "header",
+  "title": "AGF Header / Navigation",
+  "description": "Schema for the top navigation bar: brand mark, nav links, and CTA button.",
+  "type": "object",
+  "properties": {
+    "brand_name": {
+      "type": "string",
+      "description": "Brand mark text rendered in Monoton type."
+    },
+    "nav_links": {
+      "type": "array",
+      "description": "Navigation link entries. Leave empty to auto-generate from sections.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string", "description": "Display text for the link." },
+          "href": { "type": "string", "description": "Anchor href (e.g. #opportunity)." },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "cta_text": {
+      "type": "string",
+      "description": "Call-to-action button label."
+    },
+    "cta_link": {
+      "type": "string",
+      "description": "Call-to-action button href."
+    }
+  }
+}

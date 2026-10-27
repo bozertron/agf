@@ -1,0 +1,3 @@
+# Knob
+
+A rotary control for software that mirrors the hardware: a `surface-sunken` cap edged in `brass`, a `brass` pointer, twenty-one `moss` ticks over a 270° sweep that light to `brass-glow` up to the current value, inside a `brass-hairline` ring. The label is `micro` uppercase in `ink-faint`, the value `small` in `brass-text` with tabular figures. Sizes 72 and 96px; the pointer starts at 7 o'clock. The consumer provides label, formatted value and a fraction 0-1; drag vertically to turn, double-click to reset, and expose the value to assistive tech as a slider. Physical knobs follow the same drawing: machined aluminium anodised to `forest`, a brass pointer line, legend screened in `micro`.

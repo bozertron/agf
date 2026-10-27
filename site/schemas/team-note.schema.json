@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "team-note",
+  "title": "AGF Team Note",
+  "description": "A short prose note from the AGF team. Sits between major sections as a quiet interlude; closes with a hairline rule below the text. Simple headline + body structure — same edit controls as every other section (per-item click-to-edit, right-click menu for background images / inline figures / enhance / reorder).",
+  "type": "object",
+  "required": ["body"],
+  "properties": {
+    "section_label": {
+      "type": "string",
+      "description": "Small eyebrow label above the headline (e.g., 'On the team'). Optional. Maps to the standard section eyebrow used by every section.",
+      "default": ""
+    },
+    "section_title": {
+      "type": "string",
+      "description": "The note's headline (h2). Optional — leave empty for a body-only interlude. Maps to the standard section title used by every section.",
+      "default": ""
+    },
+    "body": {
+      "type": "string",
+      "description": "The note's main prose. Markdown supported: **bold**, *italic*, blank lines for new paragraphs. Rendered in the grey Commissioner (var(--taupe), weight 300) — matching the hero subheadline.",
+      "default": ""
+    },
+    "appendix": {
+      "type": "string",
+      "description": "markdown — supporting notes for the appendix",
+      "default": ""
+    }
+  },
+  "additionalProperties": true,
+  "$comment": "default_data is a custom extension (not part of JSON Schema). It is consumed by server/seed.js and server/migrations/sync_schemas.js to populate the section_schemas table with initial content.",
+  "default_data": {
+    "section_label": "On the team",
+    "section_title": "",
+    "body": ""
+  }
+}

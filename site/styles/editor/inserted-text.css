@@ -1,0 +1,67 @@
+/* ============================================================
+   PARTIAL:  editor/inserted-text.css
+   PURPOSE:  .inserted-text draggable text blocks
+   SOURCE:   site/styles.css  L4018–L4074   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Inserted text blocks (_texts convention field) ---------- */
+.inserted-text {
+  position: absolute;
+  z-index: 5;
+  max-width: 40%;
+  font-family: 'Commissioner', sans-serif;
+  color: var(--moss);
+  font-weight: 400;
+  font-size: var(--type-body);
+  line-height: var(--leading-relaxed);
+  margin: 0;
+  padding: var(--space-2xs) var(--space-xs);
+  pointer-events: auto;
+  cursor: grab;
+  transform: translate(-50%, -50%);
+  height: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.inserted-text[contenteditable="true"] {
+  cursor: text;
+  outline: 2px solid var(--electric, #00e0ff);
+  outline-offset: 2px;
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+/* Resize handle for inserted text boxes */
+.it-resize-handle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  cursor: ew-resize;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: auto;
+  z-index: 10;
+}
+.it-resize-handle::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid var(--electric, #00e0ff);
+  border-bottom: 2px solid var(--electric, #00e0ff);
+}
+.inserted-text:hover .it-resize-handle {
+  opacity: 1;
+}
+.inserted-text[contenteditable="true"] .it-resize-handle {
+  display: none;
+}
+

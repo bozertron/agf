@@ -1,0 +1,59 @@
+/* ============================================================
+   PARTIAL:  viz/connectivity.css
+   PURPOSE:  .connectivity-badges
+   SOURCE:   site/styles.css  L2492–L2540   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ----- Connectivity badges ------------------------------------------------- */
+.connectivity-wrap {
+  /* No outer card so badges read as crisp chips against the spec sheet */
+}
+.connectivity-badges {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.65rem;
+  margin: 0;
+}
+.connectivity-badge {
+  position: relative;
+  border: var(--border-hair) solid rgba(184, 134, 11, 0.22);
+  border-left: var(--border-bold) solid currentColor; /* fallback; overridden inline */
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 0.85rem 0.75rem;
+  background: rgba(15, 42, 31, 0.45);
+  font-family: 'Commissioner', sans-serif;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+.connectivity-badge:hover {
+  transform: translateY(-1px);
+  background: rgba(15, 42, 31, 0.7);
+  border-color: rgba(184, 134, 11, 0.45);
+}
+.connectivity-badge .cb-kind {
+  display: inline-block;
+  font-size: 0.58rem;
+  letter-spacing: var(--track-mega);
+  color: #9aa899;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+.connectivity-badge strong {
+  display: block;
+  font-size: 0.92rem;
+  color: #f4ecd8;
+  margin: 0 0 0.25rem 0;
+  letter-spacing: var(--track-normal);
+}
+.connectivity-badge .codec-list {
+  display: block;
+  font-size: 0.72rem;
+  color: #9aa899;
+  letter-spacing: var(--track-wide);
+  line-height: var(--leading-normal);
+}
+

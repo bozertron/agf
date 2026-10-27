@@ -1,0 +1,24 @@
+/* ============================================================
+   PARTIAL:  editor/image-adjust-panel.css
+   PURPOSE:  Image adjust popover (fit / position / scale / rotation)
+             for prelude squares and cut-sheet images.
+   WIRED BY: site/styles/index.css
+   ------------------------------------------------------------ */
+
+/* The popover container. Sub-components (bg-settings-field,
+   bg-segment-group, bg-segment-btn, bg-opacity-row, bg-opacity-val,
+   bg-settings-actions, bg-reset, bg-apply) are reused from
+   editor/bg-settings-panel.css so the panel shares its look. */
+.image-adjust-panel {
+	position: fixed;
+	z-index: 9999;
+	width: 268px;
+	background: #fff;
+	border: var(--border-hair) solid #d0c8bc;
+	border-radius: var(--radius-lg);
+	box-shadow: 0 var(--space-xs) var(--space-md) rgba(0, 0, 0, 0.18);
+	padding: var(--space-sm);
+	font-family: "Commissioner", sans-serif;
+	font-size: var(--type-body);
+	color: #1a2a1a;
+}

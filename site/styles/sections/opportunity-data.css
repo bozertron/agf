@@ -1,0 +1,78 @@
+/* ============================================================
+   PARTIAL:  sections/opportunity-data.css
+   PURPOSE:  .opportunity-data (.od-*)
+   SOURCE:   site/styles.css  L867–L934   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Opportunity data strip ---------- */
+.opportunity-data {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: var(--border-hair) solid var(--forrest-sink);
+}
+.od-eyebrow {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-md);
+  display: inline-block;
+  border-left: var(--border-rule) solid var(--gold);
+  padding-left: var(--space-sm);
+}
+.od-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: var(--border-hair) solid var(--forrest-sink);
+}
+.od-grid > div {
+  padding: var(--space-lg) var(--space-md);
+  border-right: var(--border-hair) solid var(--forrest-sink);
+  background: var(--forrest);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.od-grid > div:last-child { border-right: none; }
+.od-grid > div:nth-child(2) { background: var(--forrest-lift); }
+.od-num {
+  font-family: var(--font);
+  font-size: var(--type-h3);
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0;
+  line-height: var(--leading-tight);
+  letter-spacing: var(--track-tight);
+}
+.od-cap {
+  font-size: var(--type-body);
+  color: var(--taupe);
+  margin: 0;
+  line-height: var(--leading-normal);
+  font-weight: 300;
+}
+.od-src {
+  display: block;
+  margin-top: var(--space-2xs);
+  color: var(--moss);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-wide);
+}
+
+@media (max-width: 1024px) {
+  .od-grid { grid-template-columns: 1fr 1fr; }
+  .od-grid > div:nth-child(2n) { border-right: none; }
+  .od-grid > div:nth-child(n+3) { border-top: var(--border-hair) solid var(--forrest-sink); }
+}
+@media (max-width: 768px) {
+  .od-grid { grid-template-columns: 1fr; }
+  .od-grid > div { border-right: none; border-bottom: var(--border-hair) solid var(--forrest-sink); }
+  .od-grid > div:last-child { border-bottom: none; }
+}
+

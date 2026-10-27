@@ -1,0 +1,43 @@
+/* ============================================================
+   PARTIAL:  sections/opportunity-grid.css
+   PURPOSE:  .opportunity-grid, .og-card
+   SOURCE:   site/styles.css  L834–L866   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2xs);
+  background: var(--forrest-sink);
+  border: var(--border-hair) solid var(--forrest-sink);
+}
+.og-card {
+  background: var(--forrest);
+  padding: var(--space-xl) var(--space-lg);
+}
+.og-card h3 {
+  font-family: var(--font);
+  font-size: var(--type-h4);
+  font-weight: 500;
+  line-height: var(--leading-snug);
+  margin: 0 0 var(--space-md);
+  color: var(--gold);
+  letter-spacing: var(--track-tight);
+}
+.og-card h3 em { color: var(--gold-soft); font-style: italic; font-variation-settings: "slnt" -8; }
+.og-card p {
+  margin: 0;
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .opportunity-grid { grid-template-columns: 1fr; }
+}
+

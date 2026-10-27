@@ -1,0 +1,24 @@
+/* ============================================================
+   PARTIAL:  feedback/confirm-dialog.css
+   PURPOSE:  .confirm-overlay / .confirm-dialog
+   SOURCE:   site/styles.css  L2222–L2235   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* Confirmation dialog */
+.confirm-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center; z-index: 10000;
+}
+.confirm-dialog {
+  background: #fff; border-radius: var(--radius-lg); padding: 2rem;
+  max-width: 400px; text-align: center;
+  font-family: 'Commissioner', sans-serif; color: #1a1a1a;
+  box-shadow: 0 var(--space-xs) var(--space-md) rgba(0,0,0,0.3);
+}
+.confirm-dialog h3 { margin: 0 0 0.75rem; color: #1a3a2a; }
+.confirm-dialog p { margin: 0 0 1rem; color: #555; font-size: 0.9rem; }
+

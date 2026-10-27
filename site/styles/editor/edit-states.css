@@ -1,0 +1,74 @@
+/* ============================================================
+   PARTIAL:  editor/edit-states.css
+   PURPOSE:  .is-editing hide rules + nav-add button
+   SOURCE:   site/styles.css  L1754–L1817   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   CLICK-TO-EDIT STYLES
+   ========================================================================== */
+
+/* In-place editing: hide section content, show form */
+[data-section-id].is-editing > :not(.edit-form-overlay) {
+  display: none !important;
+}
+[data-section-id].is-editing {
+  display: block;
+  padding: var(--space-section-lg) var(--gutter);
+  background: var(--forrest-lift);
+  border: var(--border-rule) solid var(--gold-mute);
+  border-radius: var(--radius-lg);
+  min-height: 200px;
+}
+
+/* Same for product cards */
+.product-card.is-editing > :not(.edit-form-overlay) {
+  display: none !important;
+}
+.product-card.is-editing {
+  display: block;
+  border: var(--border-rule) solid var(--gold-mute);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+/* Same for header and footer inner containers */
+.nav-inner.is-editing > :not(.edit-form-overlay) {
+  display: none !important;
+}
+.nav-inner.is-editing {
+  display: block;
+  border: var(--border-rule) solid var(--gold-mute);
+  border-radius: var(--radius-lg);
+  padding: var(--gutter);
+  background: var(--forrest-lift);
+}
+.foot-inner.is-editing > :not(.edit-form-overlay) {
+  display: none !important;
+}
+.foot-inner.is-editing {
+  display: block;
+  border: var(--border-rule) solid var(--gold-mute);
+  border-radius: var(--radius-lg);
+  padding: var(--gutter);
+  background: var(--forrest-lift);
+}
+
+/* Nav add-section button */
+.nav-add-btn {
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 600;
+  color: var(--gold);
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid var(--gold-mute);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background .2s var(--ease), color .2s var(--ease);
+}
+.nav-add-btn:hover { background: var(--gold); color: var(--obsidian); }
+

@@ -1,0 +1,118 @@
+/* ============================================================
+   PARTIAL:  sections/pdf-button.css
+   PURPOSE:  .pdf-download-btn + light-section variant
+   SOURCE:   site/styles.css  L3661–L3768   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Product card actions — Download PDF button
+   ──────────────────────────────────────────────────────────────────────────
+   Sits next to the existing "View Spec Sheet" expander on every product
+   card. Uses the AGF gold-on-forrest palette with a hairline rule on the
+   left edge that mirrors the brand's PCB-trace motif.
+   ========================================================================== */
+.product-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-sm) var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.product-actions .product-expand-btn {
+  flex: 1 1 auto;
+  min-width: 180px;
+}
+
+.pdf-download-btn {
+  --pdf-fg:      var(--dark-ink, #C0B098);
+  --pdf-fg-hi:   var(--gold-soft, #D4A234);
+  --pdf-rule:    var(--gold-mute, rgba(184,134,11,0.28));
+  --pdf-rule-hi: var(--gold, #B8860B);
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-sm) var(--space-sm) var(--space-md);
+  font: inherit;
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--pdf-fg);
+  background: transparent;
+  border: var(--border-hair) solid var(--pdf-rule);
+  border-left: var(--border-rule) solid var(--pdf-rule-hi);
+  border-radius: var(--border-hair);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.pdf-download-btn::before {
+  /* Tiny "PDF" marker — flag the artifact format without shouting. */
+  content: "PDF";
+  font-size: var(--type-micro);
+  font-weight: 700;
+  letter-spacing: var(--track-mega);
+  padding: var(--space-2xs) var(--space-xs) var(--space-2xs);
+  margin-right: var(--space-2xs);
+  color: var(--pdf-rule-hi);
+  background: rgba(184, 134, 11, 0.10);
+  border: var(--border-hair) solid var(--pdf-rule);
+  border-radius: var(--border-hair);
+  line-height: var(--leading-tight);
+}
+
+.pdf-download-btn .pdf-download-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  color: var(--pdf-rule-hi);
+  transition: transform 220ms ease, color 180ms ease;
+}
+
+.pdf-download-btn .pdf-download-label {
+  white-space: nowrap;
+}
+
+.pdf-download-btn:hover,
+.pdf-download-btn:focus-visible {
+  color: var(--pdf-fg-hi);
+  background: rgba(184, 134, 11, 0.08);
+  border-color: var(--pdf-rule-hi);
+  outline: none;
+}
+
+.pdf-download-btn:hover .pdf-download-icon,
+.pdf-download-btn:focus-visible .pdf-download-icon {
+  transform: translateY(2px);
+  color: var(--pdf-fg-hi);
+}
+
+.pdf-download-btn:active {
+  transform: translateY(1px);
+}
+
+/* On light section variants the dark-ink default would be invisible — so
+   recompute against obsidian when the card is rendered on a light surface. */
+.section:not(.section-dark) .pdf-download-btn {
+  --pdf-fg: var(--obsidian, #0E1612);
+}
+
+@media (max-width: 768px) {
+  .pdf-download-btn { width: 100%; justify-content: center; }
+  .product-actions .product-expand-btn { width: 100%; }
+}
+

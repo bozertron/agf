@@ -1,0 +1,33 @@
+/* ============================================================
+   PARTIAL:  feedback/toast.css
+   PURPOSE:  #toast-container + slideIn
+   SOURCE:   site/styles.css  L2236–L2258   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* Toast notifications */
+#toast-container {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 9999;
+  display: flex; flex-direction: column; gap: 0.5rem;
+  pointer-events: none;
+}
+#toast-container .toast { pointer-events: auto; }
+.toast {
+  padding: 0.75rem 1.25rem; border-radius: var(--radius-md);
+  font-family: 'Commissioner', sans-serif; font-size: 0.9rem;
+  animation: slideIn 0.3s ease;
+  box-shadow: 0 var(--space-2xs) var(--space-xs) rgba(0,0,0,0.15);
+  color: #fff;
+}
+.toast.toast-success, .toast.success { background: #1a3a2a; color: #fff; }
+.toast.toast-error,   .toast.error   { background: #c00; color: #fff; }
+.toast.toast-info,    .toast.info    { background: #333; color: #fff; }
+.toast.toast-out { opacity: 0; transform: translateX(40%); transition: opacity 0.4s ease, transform 0.4s ease; }
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+

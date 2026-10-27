@@ -1,0 +1,126 @@
+/* ============================================================
+   PARTIAL:  core/tokens.css
+   PURPOSE:  :root design tokens (colors, type, spacing, motion)
+   SOURCE:   site/styles.css  L60–L175   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Forrest Green family — the substrate */
+  --forrest:      #1F4A2D;   /* primary background */
+  --forrest-deep: #0E2317;   /* dark sections, footer, scrims */
+  --forrest-lift: #2A5A3C;   /* elevated cards */
+  --forrest-sink: #163822;   /* pressed, sunken, fine rules */
+
+  /* Deep Gold family — the trace */
+  --gold:         #B8860B;   /* primary accent */
+  --gold-soft:    #D4A234;   /* hover, light-on-dark accent */
+  --gold-mute:    rgba(184, 134, 11, 0.28);  /* hairline rules, dividers */
+
+  /* Obsidian — the ink */
+  --obsidian:     #0E1612;   /* body text, deepest contrast */
+  --obsidian-2:   #1A221D;   /* subtle variant for layering */
+
+  /* Warm Taupe — the quote color, never too light */
+  --taupe:        #A89880;   /* primary quote / body-on-dark */
+  --taupe-2:      #C0B098;   /* lighter for dark sections, ledes */
+
+  /* Moss Grey — engineering / technical */
+  --moss:         #6B7A6F;   /* captions, sources, eyebrows on dark */
+
+  /* Semantic */
+  --green:        var(--forrest);
+  --bg:           var(--forrest);
+  --bg-2:         var(--forrest-lift);
+  --bg-3:         var(--forrest-sink);
+  --ink:          var(--obsidian);
+  --ink-2:        var(--obsidian-2);
+  --muted:        var(--taupe);
+  --rule:         var(--forrest-sink);
+  --accent:       var(--gold);
+  --accent-soft:  var(--gold-soft);
+
+  --dark:         var(--forrest-deep);
+  --dark-2:       #08160E;
+  --dark-ink:     var(--taupe-2);
+  --dark-muted:   var(--moss);
+  --dark-rule:    #1A2E22;
+  --dark-accent:  var(--gold-soft);
+
+  /* Typography — one family, multiple weights */
+  --font:         'Commissioner', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Layout — canonical spatial system */
+  --max:          none;                             /* REMOVED cap — gutters (32px) define content width = 1856px @ 1920 */
+  --gutter:       clamp(24px, 4vw, 32px);          /* site-wide side margin (locked: 32px at 1920) */
+
+  /* Content-column tokens — fluid percentage of parent content box. */
+  --col-data:     clamp(600px, 69%, 1100px);       /* hero-data: data strips, 3-col grids */
+  --col-medium:   clamp(500px, 61%, 980px);        /* team-note-inner: centered container */
+  --col-head:     clamp(520px, 57%, 920px);        /* section-head, foot-src: headings */
+  --col-meta:     clamp(480px, 53%, 880px);        /* hero-meta, venue-caption: data/prose */
+  --col-prose:    clamp(440px, 47%, 760px);        /* lede, team-note-body: body text */
+  --col-deck:     clamp(400px, 45%, 720px);        /* section-deck, venue-flow: subtitles */
+  --col-narrow:   clamp(360px, 40%, 640px);        /* ib-intro, cta p: short intros */
+  --col-rule:     clamp(120px, 14%, 220px);        /* team-note-rule: decorative divider */
+  /* Typography system — locked to 1920×1080, weight+size two-axis */
+  --type-micro:   16px;
+  --type-body:    16px;
+  --type-bold:    16px;
+  --type-lede:    24px;
+  --type-h4:      24px;
+  --type-h3:      32px;
+  --type-display: 48px;
+  --type-mega:    96px;
+  --leading-tight:   1.05;
+  --leading-snug:    1.15;
+  --leading-normal:  1.45;
+  --leading-relaxed: 1.65;
+  --leading-loose:   1.75;
+  --track-tight:   -0.02em;
+  --track-normal:  0;
+  --track-wide:    0.08em;
+  --track-wider:   0.16em;
+  --track-widest:  0.24em;
+  --track-mega:    0.32em;
+
+
+  /* ─────────────────────────────────────────────────────────────────────
+     SPACING SYSTEM — locked to 1920×1080, rule-of-8s, content-wins (ceil up)
+     Applies to SPACING only (padding/margin/gap/border/radius/shadow/offset).
+     NEVER to component dimensions (width/height stay literal).
+     ───────────────────────────────────────────────────────────────────── */
+  --space-2xs:    4px;
+  --space-xs:     8px;
+  --space-sm:    16px;
+  --space-md:    24px;
+  --space-lg:    32px;
+  --space-xl:    48px;
+  --space-2xl:   64px;
+  --space-3xl:   80px;
+  --space-4xl:   96px;
+  --space-5xl:  120px;
+  --space-section-xl:  120px;
+  --space-section-lg:   80px;
+  --space-section-md:   64px;
+  --space-section-sm:   48px;
+  --border-hair:  1px;
+  --border-rule:  2px;
+  --border-bold:  3px;
+  --radius-xs:    2px;
+  --radius-sm:    4px;
+  --radius-md:    6px;
+  --radius-lg:    8px;
+  --radius-pill:  999px;
+  --bp-mobile:   768px;
+  --bp-tablet:  1024px;
+  --bp-desktop: 1280px;
+
+  /* Motion */
+  --ease:         cubic-bezier(.2,.7,.2,1);
+}
+

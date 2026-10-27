@@ -1,0 +1,58 @@
+/* ============================================================
+   PARTIAL:  editor/edit-menus.css
+   PURPOSE:  .section-context-menu + .schema-picker
+   SOURCE:   site/styles.css  L1818–L1865   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* Context menu (right-click on sections) */
+.section-context-menu {
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  border: var(--border-hair) solid #e0e0e0;
+  border-radius: var(--radius-md);
+  padding: var(--space-xs) 0;
+  box-shadow: 0 var(--space-2xs) var(--space-sm) rgba(0,0,0,0.15);
+  font-family: var(--font);
+  min-width: 180px;
+}
+.section-context-menu button {
+  display: block;
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--type-body);
+  color: #1a3a2a;
+  text-align: left;
+  font-family: var(--font);
+}
+.section-context-menu button:hover { background: #f5f5f5; }
+.section-context-menu button.danger { color: #c00; }
+.section-context-menu button.danger:hover { background: #fee; }
+
+/* Schema picker dropdown (reused from nav add button) */
+.schema-picker {
+  position: absolute; top: 100%; left: 0;
+  background: #fff; border: var(--border-hair) solid #e0e0e0; border-radius: var(--radius-lg);
+  padding: 0.5rem; box-shadow: 0 var(--space-2xs) var(--space-sm) rgba(0,0,0,0.15);
+  z-index: 200; min-width: 280px; max-height: 360px; overflow-y: auto;
+  text-align: left;
+}
+.schema-picker-item {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.6rem 0.75rem; border-radius: var(--radius-sm); cursor: pointer;
+  transition: background 0.15s;
+  color: #1a1a1a;
+}
+.schema-picker-item:hover { background: #f5f5f5; }
+.schema-picker-icon { font-size: 1.1rem; flex: 0 0 auto; }
+.schema-picker-meta { display: flex; flex-direction: column; gap: 0.15rem; }
+.schema-picker-meta strong { font-family: 'Commissioner', sans-serif; font-weight: 600; }
+.schema-picker-meta p { margin: 0; font-size: 0.78rem; color: #777; }
+

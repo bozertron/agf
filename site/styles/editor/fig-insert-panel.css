@@ -1,0 +1,113 @@
+/* ============================================================
+   PARTIAL:  editor/fig-insert-panel.css
+   PURPOSE:  Figure insert popover
+   SOURCE:   site/styles.css  L4075–L4177   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Figure insert popover (option B wave 2) ---------- */
+.fig-insert-panel {
+  position: fixed;
+  z-index: 9999;
+  width: 268px;
+  background: #fff;
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 var(--space-xs) var(--space-md) rgba(0,0,0,0.18);
+  padding: var(--space-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  color: #1a2a1a;
+}
+.fig-insert-panel label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--type-micro);
+  text-transform: uppercase;
+  letter-spacing: var(--track-wide);
+  color: #6e665b;
+  margin-bottom: var(--space-2xs);
+}
+.fig-insert-panel .enhance-field {
+  margin-bottom: var(--space-sm);
+}
+.fig-file-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+.fig-pick-btn {
+  flex-shrink: 0;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  background: #faf9f7;
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  font-weight: 600;
+  color: #6e665b;
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+.fig-pick-btn:hover {
+  background: #f0ede6;
+}
+.fig-file-name {
+  flex: 1;
+  font-size: var(--type-body);
+  color: #6e665b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fig-insert-panel .fig-caption-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Reuse .enh-align-group / .enh-align-btn for placement & size segmented
+   controls; widen their labels to fit text ("Full Section") comfortably. */
+.fig-insert-panel .enh-align-group .enh-align-btn {
+  flex: 1;
+  font-size: var(--type-micro);
+}
+.fig-insert-actions {
+  display: flex;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+.fig-insert-actions button {
+  flex: 1;
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid #d0c8bc;
+  border-radius: var(--radius-sm);
+  font-family: 'Commissioner', sans-serif;
+  font-size: var(--type-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.12s;
+}
+.fig-insert-actions .fig-apply {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #fff;
+}
+.fig-insert-actions .fig-apply:hover:not(:disabled) {
+  opacity: 0.9;
+}
+.fig-insert-actions .fig-apply:disabled {
+  background: #e6e0d6;
+  border-color: #e6e0d6;
+  color: #b4ab9d;
+  cursor: not-allowed;
+}
+.fig-insert-actions .fig-cancel {
+  background: #faf9f7;
+  color: #6e665b;
+}
+.fig-insert-actions .fig-cancel:hover {
+  background: #f0ede6;
+}
+

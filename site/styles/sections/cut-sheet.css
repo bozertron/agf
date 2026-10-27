@@ -1,0 +1,91 @@
+/* ============================================================
+   PARTIAL:  sections/cut-sheet.css
+   PURPOSE:  .cs-* product cut sheet (to EOF)
+   SOURCE:   site/styles.css  L4477–L4557   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Cut Sheet
+   ======================================================================== */
+.cs-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+.cs-image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--col-card, #1a1a1a);
+}
+.cs-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cs-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: var(--col-card, #1a1a1a);
+  border-radius: 8px;
+}
+.cs-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-lg);
+  background-color: var(--col-card, #1a1a1a);
+  border-radius: 8px;
+}
+.cs-title {
+  font-size: var(--type-h2, 2rem);
+  color: var(--col-head, #fff);
+  margin-bottom: var(--space-md);
+}
+.cs-description {
+  font-size: var(--type-body);
+  color: var(--col-body);
+  line-height: 1.6;
+}
+.cs-benefits-bar {
+  display: flex;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  background-color: var(--col-card, #1a1a1a);
+  border-radius: 8px;
+  flex-wrap: wrap;
+}
+.cs-benefit {
+  flex: 1;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cs-benefit-label {
+  color: var(--gold, #c9a84c);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cs-benefit-value {
+  color: var(--col-body);
+  font-size: var(--type-body);
+}
+.cut-sheet--right .cs-top {
+  direction: rtl;
+}
+.cut-sheet--right .cs-top > * {
+  direction: ltr;
+}
+@media (max-width: 768px) {
+  .cs-top { grid-template-columns: 1fr; }
+  .cut-sheet--right .cs-top { direction: ltr; }
+}
+

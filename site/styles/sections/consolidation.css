@@ -1,0 +1,106 @@
+/* ============================================================
+   PARTIAL:  sections/consolidation.css
+   PURPOSE:  .cons-table (.ct-*) (+ @media tail)
+   SOURCE:   site/styles.css  L935–L1005   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Consolidation (2024-26)
+   ========================================================================== */
+/* Consolidation section: remove width constraints from section-head so that
+   margin-to-margin (enhance text) can expand title/deck to full width. */
+#consolidation .section-head {
+	max-width: none;
+}
+#consolidation .section-deck {
+	max-width: none;
+}
+
+.cons-table {
+	display: flex;
+	flex-direction: column;
+	border: var(--border-hair) solid var(--forrest-sink);
+	margin-bottom: var(--space-5xl);
+	background: var(--forrest);
+}
+.ct-row {
+	display: grid;
+	grid-template-columns: var(
+			--ct-cols,
+			minmax(72px, 90px) minmax(140px, 220px) 1.5fr 1fr
+		);
+	gap: var(--space-md);
+	padding: var(--space-md) var(--space-md);
+	border-bottom: var(--border-hair) solid var(--forrest-sink);
+	align-items: start;
+	font-size: var(--type-body);
+	color: var(--taupe);
+	line-height: var(--leading-normal);
+}
+.ct-row:last-child {
+	border-bottom: none;
+}
+.ct-row:hover {
+	background: var(--forrest-lift);
+}
+.ct-row .ct-c-date {
+	font-family: var(--font);
+	font-size: var(--type-body);
+	color: var(--taupe-2);
+	font-weight: 500;
+}
+.cthead {
+	background: var(--forrest-lift);
+	font-size: var(--type-micro);
+	font-weight: 600;
+	letter-spacing: var(--track-widest);
+	text-transform: uppercase;
+	color: var(--gold);
+}
+.cthead .ct-c-date {
+	font-family: var(--font);
+	font-size: var(--type-micro);
+	font-weight: 600;
+}
+.ct-row strong {
+	color: var(--gold);
+	font-weight: 500;
+}
+.ct-row em {
+	color: var(--gold-soft);
+	font-style: italic;
+	font-variation-settings: "slnt" -8;
+}
+.ct-yr {
+	font-family: var(--font);
+	font-size: var(--type-body);
+	font-weight: 600;
+	color: var(--gold);
+	letter-spacing: var(--track-normal);
+}
+.ct-src {
+	display: block;
+	margin-top: var(--space-2xs);
+	color: var(--moss);
+	font-size: var(--type-micro);
+	letter-spacing: var(--track-wide);
+}
+
+@media (max-width: 1280px) {
+	.ct-row {
+		grid-template-columns: var(--ct-cols-mob, 80px 1fr);
+		gap: var(--space-sm);
+	}
+	/* When the Date column is present, stack the wider columns under it. */
+	.cons-table--has-date .ct-c-target,
+	.cons-table--has-date .ct-c-value {
+		grid-column: 2;
+	}
+	.cthead {
+		display: none;
+	}
+}

@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "cut-sheet",
+  "title": "Cut Sheet",
+  "description": "A product-style section with photo, description, and benefits highlights.",
+  "type": "object",
+  "required": ["title"],
+  "properties": {
+    "section_label": { "type": "string", "description": "Eyebrow label", "default": "" },
+    "section_number": { "type": "string", "description": "Section number", "default": "" },
+    "title": { "type": "string", "description": "Main title", "default": "" },
+    "description": { "type": "string", "description": "Paragraph describing the item", "default": "" },
+    "image": { "type": "string", "format": "uri", "description": "Square photo", "default": "" },
+    "image_position": { "type": "string", "description": "Photo placement (left or right)", "default": "left" },
+    "benefits": {
+      "type": "array",
+      "description": "Benefits highlights in the bottom bar",
+      "items": {
+        "type": "object",
+        "properties": {
+          "label": { "type": "string", "description": "Benefit title", "default": "" },
+          "value": { "type": "string", "description": "Benefit description", "default": "" }
+        }
+      }
+    }
+  },
+  "additionalProperties": true,
+  "default_data": {
+    "section_label": "",
+    "section_number": "",
+    "title": "",
+    "description": "",
+    "image": "",
+    "image_position": "left",
+    "benefits": [
+      { "label": "", "value": "" },
+      { "label": "", "value": "" },
+      { "label": "", "value": "" }
+    ]
+  }
+}

@@ -1,0 +1,3 @@
+# Button
+
+Three weights: **primary** is a solid `brass` fill with `on-brass` text, at most once per view; **secondary** is a `line-strong` hairline outline with `brass-text`; **quiet** is text alone. Labels are verb-first sentence case ("Reserve yours", never "RESERVE" and never "Click here"). Height 44px (`--lg` 56px for a hero), radius `radius-4`, padding `space-24`; hover lifts to `brass-glow` with `shadow-glow` on primary only. Focus is the `focus-ring` outline with a 2px gap. The consumer provides the label and, optionally, an icon from `assets/Icons/` at 16px before it. Never put a button on `surface-lifted` in Midnight: secondary and quiet lose contrast there.

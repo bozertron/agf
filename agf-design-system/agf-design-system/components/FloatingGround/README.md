@@ -1,0 +1,3 @@
+# FloatingGround
+
+The Floating Ground badge: the IEC 60417-5017 earth symbol (a stem over three shortening bars, `border-rule` weight in `brass`) inside an orbital ring broken in two places (`border-hairline` in `brass-glow`), meaning a ground that touches nothing. It is the brand's schematic signature and appears once on every piece of gear (beside the ground-lift switch), on every gift, in every web footer and on the calibration certificate. Sizes 24, 32, 48 and 96px; in print 6 mm minimum. Single ink below 48px (`brass-text` or `ink-faint`), two brasses above. Inline the SVG and set its two strokes, or use `assets/Logos/floating-ground.svg` as an image where it is already brass. It never replaces the mark and never sits inside the Seal.

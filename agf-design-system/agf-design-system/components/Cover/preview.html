@@ -1,0 +1,67 @@
+<!-- @dsCard height=288 -->
+<!doctype html>
+<html lang="en" data-theme="midnight">
+<head><link rel="stylesheet" href="../../agf.css">
+<meta charset="utf-8">
+<title>All Grounds Floating</title>
+<style>
+  html, body { margin:0; height:100%; }
+  body { background:var(--surface); color:var(--ink); font-family:var(--font-sans); overflow:hidden; }
+  .cover { position:relative; width:960px; height:288px; overflow:hidden; }
+  .art { position:absolute; top:0; left:480px; width:480px; height:288px; overflow:hidden; }
+  .art svg { display:block; width:480px; height:288px; }
+  .brass { fill:var(--brass); }
+  .forest { fill:var(--forest); }
+  .stone { fill:var(--ink-on-deep-muted); }
+  .clip { fill:var(--signal-clip); }
+  .blk { rx:var(--radius-4); }
+  .trace { fill:none; stroke:var(--brass); stroke-width:1; stroke-linejoin:round; }
+  .trace.cut { stroke:var(--surface); }
+  .via { fill:none; stroke:var(--brass); stroke-width:1; }
+  .via.cut { stroke:var(--surface); }
+  .words { position:absolute; left:var(--space-48); bottom:var(--space-48); max-width:440px; }
+  .name { margin:0; font-family:var(--font-strapline); font-weight:400; font-size:72px; line-height:.95; letter-spacing:.02em; color:var(--ink); }
+  .tag { margin:var(--space-8) 0 0 2px; font-size:14px; line-height:20px; color:var(--ink-muted); letter-spacing:.01em; }
+</style>
+</head>
+<body>
+<div class="cover">
+<div class="art" aria-hidden="true">
+<svg viewBox="0 0 480 288" width="480" height="288">
+<!--
+  blocks      brass 144×232 bled off the top (the conductor, largest) · forest 288 wide × 240 tall bleeding off the right and bottom (the substrate) · ink-on-deep-muted (pale stone, the silkscreen) 144×56 flush under the brass, bleeding off the bottom · signal-clip 48×16 once (it only ever means clip / on air) — ≈38% of 960×288
+  arrangement one tall brass slab with the forest field beside it, like a gold pad on green solder mask; gutters space-16; nothing left of x=512 (32px clear of the name zone)
+  pattern     stacked parallel traces, from "Monoton is stacked parallel lines that read as PCB traces and equalizer bars": groups of four hairlines at a space-8 pitch (Monoton's four strokes), bending once at 45° and ending in vias — brass over the forest, the ground cut out of the brass slab; 3 groups, 12 lines, 12 vias
+  scales      sides in space-8 and space-16 multiples; gutters space-16; trace pitch space-8; corners radius-4; via r=3 (half of 6px)
+-->
+<rect class="brass blk" x="32" y="-16" width="144" height="232" rx="4"/>
+<rect class="stone blk" x="32" y="232" width="144" height="72" rx="4"/>
+<rect class="forest blk" x="192" y="48" width="304" height="256" rx="4"/>
+<rect class="clip blk" x="192" y="16" width="48" height="16" rx="4"/>
+<!-- group A: four traces across the forest field, bending 45° down to vias -->
+<polyline class="trace" points="216,96 344,96 392,144 392,208"/>
+<polyline class="trace" points="216,104 340,104 384,148 384,208"/>
+<polyline class="trace" points="216,112 336,112 376,152 376,208"/>
+<polyline class="trace" points="216,120 332,120 368,156 368,208"/>
+<circle class="via" cx="392" cy="216" r="3"/><circle class="via" cx="384" cy="216" r="3"/><circle class="via" cx="376" cy="216" r="3"/><circle class="via" cx="368" cy="216" r="3"/>
+<!-- group B: four traces rising from the bottom edge of the forest field, bending 45° right -->
+<polyline class="trace" points="232,288 232,232 264,200 320,200"/>
+<polyline class="trace" points="240,288 240,236 268,208 320,208"/>
+<polyline class="trace" points="248,288 248,240 272,216 320,216"/>
+<polyline class="trace" points="256,288 256,244 276,224 320,224"/>
+<circle class="via" cx="328" cy="200" r="3"/><circle class="via" cx="328" cy="208" r="3"/><circle class="via" cx="328" cy="216" r="3"/><circle class="via" cx="328" cy="224" r="3"/>
+<!-- group C: the ground cut out of the brass slab -->
+<polyline class="trace cut" points="56,40 104,40 136,72 136,160"/>
+<polyline class="trace cut" points="56,48 100,48 128,76 128,160"/>
+<polyline class="trace cut" points="56,56 96,56 120,80 120,160"/>
+<polyline class="trace cut" points="56,64 92,64 112,84 112,160"/>
+<circle class="via cut" cx="136" cy="168" r="3"/><circle class="via cut" cx="128" cy="168" r="3"/><circle class="via cut" cx="120" cy="168" r="3"/><circle class="via cut" cx="112" cy="168" r="3"/>
+</svg>
+</div>
+<div class="words">
+  <h1 class="name">All Grounds<br>Floating</h1>
+  <p class="tag">Pure signal.</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Readout
+
+The "this is the moment" callout: one measured number in `data-mega` (Commissioner 200, tabular figures) with its unit in `data-small` `brass-text` on the baseline and an `eyebrow` label beneath, over concentric orbital rings in `brass-hairline` with one dashed `brass` ring turning slowly like a scope display. Rings respect `prefers-reduced-motion`. Numbers are real measurements with their conditions stated nearby in `caption`; a readout never shows a marketing figure without a method. The consumer provides value, unit and label; at most three readouts in a row, and the number is `ink`, never brass; brass is for the unit.

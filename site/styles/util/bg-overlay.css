@@ -1,0 +1,32 @@
+/* ============================================================
+   PARTIAL:  util/bg-overlay.css
+   PURPOSE:  [data-bg-image] background image overlay
+   SOURCE:   site/styles.css  L2066–L2087   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Background image overlay ---------- */
+[data-bg-image] {
+  position: relative;
+  overflow: hidden;
+}
+[data-bg-image]::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: inherit;
+  background-size: var(--bg-size, cover);
+  background-position: var(--bg-position, center);
+  background-repeat: no-repeat;
+  opacity: var(--bg-opacity, 0.15);
+  z-index: 0;
+  pointer-events: none;
+}
+[data-bg-image] > * {
+  position: relative;
+  z-index: 1;
+}
+

@@ -1,0 +1,63 @@
+/* ============================================================
+   PARTIAL:  sections/hero-data.css
+   PURPOSE:  Hero data strip (.hd-*)
+   SOURCE:   site/styles.css  L602–L654   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ---------- Hero data strip ---------- */
+.hero-data {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-xl);
+  border-top: var(--border-hair) solid var(--forrest-sink);
+  max-width: var(--col-data);
+}
+.hd-eyebrow {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold);
+  margin: 0 0 var(--space-md);
+}
+.hd-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+.hd-item { display: flex; flex-direction: column; gap: var(--space-xs); }
+.hd-num {
+  font-family: var(--font);
+  font-size: var(--type-display);
+  font-weight: 700;
+  color: var(--gold);
+  line-height: var(--leading-tight);
+  margin: 0;
+  letter-spacing: var(--track-tight);
+}
+.hd-x { color: var(--gold-soft); }
+.hd-lbl {
+  font-size: var(--type-body);
+  font-weight: 600;
+  letter-spacing: var(--track-wide);
+  color: var(--taupe);
+  margin: var(--space-xs) 0 0;
+  line-height: var(--leading-normal);
+}
+.hd-sub {
+  font-size: var(--type-body);
+  color: var(--taupe);
+  margin: var(--space-2xs) 0 0;
+  line-height: var(--leading-relaxed);
+  font-weight: 300;
+}
+.hd-sub strong { color: var(--taupe-2); font-weight: 500; }
+
+@media (max-width: 1024px) {
+  .hd-row { grid-template-columns: 1fr; gap: var(--space-lg); }
+  .hd-num { font-size: var(--type-display); }
+}
+

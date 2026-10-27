@@ -1,0 +1,68 @@
+/* ============================================================
+   PARTIAL:  compare/card-select.css
+   PURPOSE:  .compare-mode .product-card selection
+   SOURCE:   site/styles.css  L2837–L2894   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* --- product cards in compare mode --- */
+.compare-mode .product-card {
+  cursor: pointer;
+  position: relative;
+  transition: outline-color .2s var(--ease), transform .2s var(--ease);
+  outline: var(--space-2xs) dashed var(--gold-mute);
+  outline-offset: calc(var(--space-xs) * -1);
+}
+.compare-mode .product-card:hover { outline-color: var(--gold-soft); }
+.compare-mode .product-card.is-cmp-selected {
+  outline: 1.var(--space-xs) solid var(--gold);
+  outline-offset: calc(var(--space-xs) * -1);
+  background: linear-gradient(180deg, rgba(184, 134, 11, 0.06), transparent 60%), var(--dark);
+}
+
+.cmp-card-check {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  width: 30px;
+  height: 30px;
+  display: none;
+  cursor: pointer;
+  z-index: 5;
+}
+.compare-mode .cmp-card-check { display: inline-flex; }
+.cmp-card-check input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: pointer;
+}
+.cmp-card-check-box {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 22, 18, 0.85);
+  border: 1.var(--space-xs) solid var(--gold-mute);
+  border-radius: var(--radius-md);
+  color: transparent;
+  font-size: var(--type-body);
+  font-weight: 800;
+  transition: background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+}
+.cmp-card-check input:checked + .cmp-card-check-box {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--obsidian);
+}
+.cmp-card-check input:focus-visible + .cmp-card-check-box {
+  box-shadow: 0 0 0 var(--space-2xs) var(--gold-soft);
+}
+

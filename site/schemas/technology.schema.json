@@ -1,0 +1,83 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "technology",
+  "title": "AGF Technology Moat Section",
+  "description": "Catalog of AGF's proprietary technologies that establish its defensible competitive moat, including codec pipeline visualization.",
+  "type": "object",
+  "required": ["section_title", "technologies"],
+  "properties": {
+    "section_title": { "type": "string", "description": "Display title for the section." },
+    "intro_text": { "type": "string", "description": "Markdown-formatted introductory narrative." },
+    "section_number": { "type": ["string", "integer"], "description": "Section ordinal." },
+    "section_label": { "type": "string", "description": "Short label shown in the section eyebrow after the number (e.g. 'The Consolidation')." },
+    "technologies": {
+      "type": "array",
+      "description": "Proprietary technologies presented as moat cards.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name"],
+        "properties": {
+          "id": { "type": "string", "description": "Stable slug identifier." },
+          "name": { "type": "string", "description": "Short technology name (e.g., 'l'Art')." },
+          "full_name": { "type": "string", "description": "Expanded or formal name of the technology." },
+          "tagline": { "type": "string", "description": "Short evocative tagline." },
+          "description": { "type": "string", "description": "Markdown-formatted description of the technology." },
+          "patent_status": {
+            "type": "string",
+            "enum": ["patented", "trade_secret", "pending", "open"],
+            "description": "Intellectual-property posture for this technology."
+          },
+          "key_capabilities": {
+            "type": "array",
+            "description": "Bullet-list of standout capabilities.",
+            "items": { "type": "string" }
+          },
+          "codec_pipeline": {
+            "type": "array",
+            "description": "Stage-by-stage breakdown of the codec or signal pipeline.",
+            "items": {
+              "type": "object",
+              "required": ["stage"],
+              "properties": {
+                "stage": { "type": "string", "description": "Pipeline stage name." },
+                "description": { "type": "string", "description": "What happens at this stage." }
+              }
+            }
+          },
+          "competitive_advantage": {
+            "type": "string",
+            "description": "Markdown-formatted articulation of how this technology beats incumbents."
+          },
+          "appendix": { "type": "string", "description": "markdown — supporting notes for the appendix" }
+        }
+      }
+    },
+    "codec_diagram": {
+      "type": "object",
+      "description": "Top-level codec pipeline diagram shared across the technology section.",
+      "properties": {
+        "stages": {
+          "type": "array",
+          "description": "Ordered stages of the codec diagram.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "description": "Stage name." },
+              "description": { "type": "string", "description": "Description of the stage." },
+              "icon": { "type": "string", "description": "Optional icon identifier or path." }
+            }
+          }
+        }
+      }
+    },
+    "lart_stack": {
+      "type": "object",
+      "description": "Content for the l'Art stack diagram section within the technology section.",
+      "properties": {
+        "eyebrow": { "type": "string", "description": "Eyebrow label above the l'Art stack section", "default": "The l'Art stack, in one breath" },
+        "headline": { "type": "string", "description": "Main heading for the l'Art stack section", "default": "Flawless implementation of stereo. Everything else is gravy." },
+        "body": { "type": "string", "description": "Body text for the l'Art stack section", "default": "Quadrophonic failed. Surround-sound failed. Dolby Atmos is financially dominant in cinemas but a niche at home. Mono, mixed mono, and stereo have dominated from inception to current day. The opportunity has \"the fine art of good enough\" written all over it." }
+      }
+    }
+  }
+}

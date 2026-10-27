@@ -1,0 +1,143 @@
+{
+  "v": 3,
+  "layout": "files",
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-27T05:45:34Z"
+  },
+  "title": "All Grounds Floating",
+  "namespace": "AGF",
+  "libraries": [],
+  "sections": {},
+  "groups": [
+    "Logos",
+    "Icons"
+  ],
+  "assetGroups": {
+    "Logos": {
+      "name": "Logos",
+      "tile": "l",
+      "order": [
+        "agf-mark.svg",
+        "agf-lockup.svg",
+        "agf-seal.svg",
+        "floating-ground.svg"
+      ],
+      "files": {
+        "agf-mark.svg": {
+          "name": "agf-mark.svg",
+          "blob": "4e1fe8ad93bbe4997f602b7733687855",
+          "size": 5795,
+          "type": "image/svg+xml"
+        },
+        "agf-lockup.svg": {
+          "name": "agf-lockup.svg",
+          "blob": "b39eef06b1c310909d5fa53c4d644885",
+          "size": 17303,
+          "type": "image/svg+xml"
+        },
+        "agf-seal.svg": {
+          "name": "agf-seal.svg",
+          "blob": "a086ca4a2369a6166570a8906aa0dd4f",
+          "size": 10688,
+          "type": "image/svg+xml"
+        },
+        "floating-ground.svg": {
+          "name": "floating-ground.svg",
+          "blob": "a2cfa7738a7f8d76aefa3a760fbc6ccd",
+          "size": 507,
+          "type": "image/svg+xml"
+        }
+      }
+    },
+    "Icons": {
+      "name": "Icons",
+      "tile": "s",
+      "order": [
+        "mic.svg",
+        "headphones.svg",
+        "waveform.svg",
+        "broadcast.svg",
+        "record.svg",
+        "play.svg",
+        "gain.svg",
+        "ground.svg",
+        "phantom.svg",
+        "spark.svg"
+      ],
+      "files": {
+        "mic.svg": {
+          "name": "mic.svg",
+          "blob": "594a60f400d5e6bc84d8d3c04fffa0d3",
+          "size": 296,
+          "type": "image/svg+xml"
+        },
+        "headphones.svg": {
+          "name": "headphones.svg",
+          "blob": "c74c5034b307b645edc782027be24813",
+          "size": 352,
+          "type": "image/svg+xml"
+        },
+        "waveform.svg": {
+          "name": "waveform.svg",
+          "blob": "adbc25031170bfee53429eba35ff71eb",
+          "size": 243,
+          "type": "image/svg+xml"
+        },
+        "broadcast.svg": {
+          "name": "broadcast.svg",
+          "blob": "04a0ff61c22bc3c238b93b90edfb7fe5",
+          "size": 350,
+          "type": "image/svg+xml"
+        },
+        "record.svg": {
+          "name": "record.svg",
+          "blob": "3068777f4eff679732b1309c8bf2206a",
+          "size": 299,
+          "type": "image/svg+xml"
+        },
+        "play.svg": {
+          "name": "play.svg",
+          "blob": "c7494e86d59fd62b73a612cc09f4688c",
+          "size": 224,
+          "type": "image/svg+xml"
+        },
+        "gain.svg": {
+          "name": "gain.svg",
+          "blob": "c6f92a26039730de80ccfb1f0ce91f84",
+          "size": 276,
+          "type": "image/svg+xml"
+        },
+        "ground.svg": {
+          "name": "ground.svg",
+          "blob": "4fdda743b9c26a1219715776dfe83716",
+          "size": 242,
+          "type": "image/svg+xml"
+        },
+        "phantom.svg": {
+          "name": "phantom.svg",
+          "blob": "d52bd42b922f44559cba500a5a3784bd",
+          "size": 239,
+          "type": "image/svg+xml"
+        },
+        "spark.svg": {
+          "name": "spark.svg",
+          "blob": "0c81056c8e5df71ea141bdbce3de224f",
+          "size": 307,
+          "type": "image/svg+xml"
+        }
+      }
+    }
+  },
+  "blobs": {},
+  "docs": {
+    "readme": "project/README.md",
+    "sections": []
+  },
+  "lastChange": {
+    "by": "bwebster@epointl.com",
+    "at": "2026-10-27T05:45:34Z",
+    "via": "Claude",
+    "note": "Initial AGF system: 3 themes, 28 colours, 19 components, 4 marks, 10 icons"
+  }
+}

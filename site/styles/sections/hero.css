@@ -1,0 +1,237 @@
+/* ============================================================
+   PARTIAL:  sections/hero.css
+   PURPOSE:  Hero: grain, orbits, inner, kicker, display, stage
+   SOURCE:   site/styles.css  L304–L460   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.hero {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	padding: 176px var(--gutter) var(--space-section-lg);
+	overflow: hidden;
+	background:
+		radial-gradient(
+			ellipse at 80% 10%,
+			rgba(184, 134, 11, 0.1),
+			transparent 50%
+		),
+		radial-gradient(
+			ellipse at 10% 90%,
+			rgba(184, 134, 11, 0.06),
+			transparent 55%
+		),
+		var(--forrest);
+	z-index: 1;
+}
+.hero-grain {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	opacity: 0.04;
+	background-image:
+		repeating-linear-gradient(
+			0deg,
+			transparent 0 2px,
+			rgba(0, 0, 0, 0.4) 2px 3px
+		),
+		repeating-linear-gradient(
+			90deg,
+			transparent 0 2px,
+			rgba(0, 0, 0, 0.4) 2px 3px
+		);
+	mix-blend-mode: multiply;
+}
+.hero-orbits {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	animation: orbit-spin 90s linear infinite;
+}
+.hero-orbits .o {
+	position: absolute;
+	border: var(--border-hair) solid var(--gold);
+	border-radius: 50%;
+	opacity: 0.14;
+	animation: orbit-float 18s var(--ease) infinite;
+}
+.hero-orbits .o1 {
+	width: 540px;
+	height: 540px;
+	right: calc(var(--space-5xl) * -1);
+	top: calc(var(--space-3xl) * -1);
+}
+.hero-orbits .o2 {
+	width: 320px;
+	height: 320px;
+	right: var(--space-3xl);
+	top: var(--space-5xl);
+	animation-delay: -4s;
+	opacity: 0.1;
+}
+.hero-orbits .o3 {
+	width: 720px;
+	height: 720px;
+	right: calc(var(--space-5xl) * -1);
+	top: var(--space-2xl);
+	border-style: dashed;
+	animation-delay: -8s;
+	opacity: 0.08;
+}
+
+@keyframes orbit-float {
+	0%,
+	100% {
+		transform: rotate(0deg) translate(0, 0);
+	}
+	50% {
+		transform: rotate(180deg) translate(-12px, 8px);
+	}
+}
+@keyframes orbit-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.hero-inner {
+	position: relative;
+	max-width: var(--max);
+	margin: 0 auto;
+	width: 100%;
+}
+.hero .kicker {
+	margin-top: 0;
+	margin-bottom: 32px;
+}
+.kicker {
+	font-size: var(--type-body);
+	font-weight: 600;
+	letter-spacing: var(--track-widest);
+	text-transform: uppercase;
+	color: var(--gold);
+	margin: 0 0 var(--space-xl);
+	display: inline-block;
+	border-left: var(--border-rule) solid var(--gold);
+	padding-left: var(--space-sm);
+}
+.display {
+	font-family: "Commissioner", sans-serif;
+	font-weight: 200;
+	font-size: clamp(40px, 5.5vw, 80px);
+	line-height: var(--leading-tight);
+	letter-spacing: var(--track-tight);
+	margin: 0;
+	color: var(--gold);
+	text-shadow: 0 0 var(--space-md) rgba(184, 134, 11, 0.1);
+	white-space: nowrap;
+}
+
+/* Hero stage — the Monoton AGF mark with two stacked taglines to its right.
+   The mark drives the height of the right column; the top tagline aligns
+   to the top of the mark, the bottom tagline aligns to the bottom. */
+.hero-stage {
+	--mark-size: clamp(120px, 14vw, 240px);
+	--top-size: calc(
+		var(--mark-size) *
+		0.32
+	); /* Commissioner line height = 32% of mark */
+	--bot-size: calc(
+		var(--mark-size) *
+		0.15
+	); /* Poiret line height = 15% of mark */
+	display: flex;
+	align-items: stretch;
+	gap: clamp(16px, 3vw, 48px);
+	margin: 0 0 var(--space-xl);
+	max-width: 100%;
+	overflow: visible;
+}
+.hero-mark {
+	font-family: "Monoton", sans-serif;
+	font-weight: 400;
+	font-size: var(--mark-size);
+	line-height: var(--leading-tight);
+	letter-spacing: var(--track-normal);
+	color: var(--gold);
+	margin: 0;
+	text-shadow: 0 0 var(--space-md) rgba(184, 134, 11, 0.12);
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+.hero-mark--empty {
+	min-height: 1em;
+	min-width: 2em;
+	cursor: text;
+}
+.hero-taglines {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-width: 0;
+	padding: 0;
+	overflow: visible;
+}
+.hero-tagline-top {
+	font-family: "Commissioner", sans-serif;
+	font-weight: 300;
+	font-size: var(--top-size);
+	line-height: var(--leading-tight);
+	letter-spacing: var(--track-tight);
+	color: var(--gold-soft);
+	margin: 0;
+	text-shadow: 0 0 var(--space-md) rgba(184, 134, 11, 0.1);
+	white-space: nowrap;
+	overflow: visible;
+	text-align: right;
+	align-self: flex-end; /* override inherited stretch so margin-left nudges visibly */
+}
+.hero-tagline-bottom {
+	font-family: "Poiret One", sans-serif;
+	font-weight: 400;
+	font-size: var(--bot-size);
+	line-height: var(--leading-tight);
+	letter-spacing: var(--track-wide);
+	text-transform: uppercase;
+	color: #ffffff;
+	margin: 0;
+	white-space: nowrap;
+	overflow: visible;
+	text-align: right;
+	position: relative;
+}
+.hero-tagline-bottom--empty {
+	min-height: 0.5em;
+	min-width: 3em;
+	cursor: text;
+}
+
+/* On narrow screens the stage stacks: mark on top, taglines below it.
+   In stacked mode the top tagline aligns to the top of the column and the
+   bottom tagline sits at the bottom of the column, so vertical rhythm is
+   preserved. */
+@media (max-width: 1024px) {
+	.hero-stage {
+		flex-direction: column;
+		gap: var(--space-md);
+	}
+	.hero-taglines {
+		gap: var(--space-sm);
+	}
+	.hero-tagline-top,
+	.hero-tagline-bottom {
+		white-space: normal;
+	}
+}

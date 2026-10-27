@@ -1,0 +1,1992 @@
+/* ==========================================================================
+   AGF · schema-renderer.js
+   Maps schema_id → render function. Outputs HTML strings consumed by app.js.
+   Vanilla JS, single global namespace: window.SchemaRenderer.
+   ========================================================================== */
+((global) => {
+	// ---------- helpers -----------------------------------------------------
+	const esc = (v) => {
+		if (v === null || v === undefined) return "";
+		return String(v)
+			.replace(/&/g, "&amp;")
+			.replace(/</g, "&lt;")
+			.replace(/>/g, "&gt;")
+			.replace(/"/g, "&quot;")
+			.replace(/'/g, "&#39;");
+	};
+
+	// very-light markdown: **bold**, *italic*, line breaks
+	const md = (s) => {
+		if (!s) return "";
+		let out = esc(s);
+		out = out.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+		out = out.replace(/\*([^*]+)\*/g, "<em>$1</em>");
+		// Paragraph break (blank line(s)): emit <br><br> so the content stays
+		// INSIDE the caller's classed element. Using </p><p> here would produce
+		// bare unclassed <p> tags for the 2nd+ paragraph, losing the field's CSS
+		// (color, font, margins) and falling back to the body default.
+		out = out.replace(/\n\n+/g, "<br><br>");
+		out = out.replace(/\n/g, "<br>");
+		return out;
+	};
+
+	const ROMAN = [
+		"",
+		"I",
+		"II",
+		"III",
+		"IV",
+		"V",
+		"VI",
+		"VII",
+		"VIII",
+		"IX",
+		"X",
+		"XI",
+		"XII",
+	];
+	const toRoman = (n) => (n != null ? ROMAN[n] || String(n) : "");
+
+	// Module-level section ID set by renderSection() so that sub-component
+	// renderers can emit appendix-ref links keyed to the parent section.
+	let _currentSectionId = "";
+
+	// Helper: returns an appendix-ref link if the item has an appendix string.
+	function appendixRef(key) {
+		if (!key) return "";
+		return `<div class="appendix-ref" data-appendix-for="${esc(_currentSectionId)}" data-appendix-key="${esc(key)}"><em>*Learn more in Appendix*</em></div>`;
+	}
+
+	const fmtUSD = (n) => {
+		if (typeof n !== "number" || !isFinite(n)) return "";
+		if (n >= 1e9) return "$" + (n / 1e9).toFixed(n % 1e9 === 0 ? 0 : 1) + "B";
+		if (n >= 1e6) return "$" + Math.round(n / 1e6) + "M";
+		if (n >= 1e3) return "$" + Math.round(n / 1e3) + "K";
+		return "$" + n;
+	};
+
+	const fmtRange = (rng) => {
+		if (!rng) return "";
+		if (rng.min === rng.max || rng.max === undefined) return String(rng.min);
+		return rng.min + "–" + rng.max;
+	};
+
+	// Split headline into "first words" / "last word" for the existing 2-line
+	// .display layout. Falls back to a single line.
+	const splitHeadline = (s) => {
+		if (!s) return { a: "", b: "" };
+		const parts = s.trim().split(/\s+/);
+		if (parts.length < 2) return { a: parts[0] || "", b: "" };
+		const b = parts.pop();
+		return { a: parts.join(" "), b };
+	};
+
+	// Heuristic grouping for the "independent_brands" grid.
+	const groupIndependents = (brands) => {
+		const buckets = [
+			{ key: "Public", match: /public/i, items: [] },
+			{
+				key: "Speaker ateliers",
+				match: /atelier|electrostatic|planar-magnetic|time-aligned/i,
+				items: [],
+			},
+			{ key: "German engineering", match: /german/i, items: [] },
+			{ key: "UK engineering", match: /uk engineering/i, items: [] },
+			{ key: "Newer wave", match: /newer wave/i, items: [] },
+			{ key: "Other", match: /.*/, items: [] },
+		];
+		(brands || []).forEach((b, i) => {
+			b._origIdx = i; // preserve original array index for appendix key
+			// Skip fully-empty brands (erased in the form) so they don't render as ghost rows.
+			if (!(b.name || "").trim() && !(b.specialty || "").trim()) return;
+			const text = (b.specialty || "") + " " + (b.name || "");
+			const target = buckets.find((g) => g.match.test(text));
+			target.items.push(b);
+		});
+		return buckets.filter((g) => g.items.length > 0);
+	};
+
+	// ---------- renderers ---------------------------------------------------
+
+	function renderHero(data) {
+		const d = data || {};
+		const mark = d.mark != null ? d.mark : "";
+		const headline = d.headline || "";
+		const strapline = d.strapline != null ? d.strapline : "";
+		const subheadline = d.subheadline || "";
+		const metrics = Array.isArray(d.metrics) ? d.metrics : [];
+		const orbits = (d.background_type || "orbits") === "orbits";
+
+		const metricsHTML = metrics
+			.map((m, mi) => {
+				const v = m.value;
+				const isNum = typeof v === "number";
+				const suf = m.suffix || "";
+				const numAttr = isNum
+					? `data-count="${v}" data-suffix="${esc(suf)}"`
+					: "";
+				const initial = isNum ? "0" : esc(String(v || ""));
+				return `<div data-field="metrics.${mi}"><span class="num" data-field="metrics.${mi}.value" ${numAttr}>${initial}</span><span class="suf" data-field="metrics.${mi}.suffix">${esc(suf)}</span><span class="lbl" data-field="metrics.${mi}.label">${esc(m.label || "")}</span></div>${m.appendix ? appendixRef("metrics." + mi) : ""}`;
+			})
+			.join("");
+
+		return `
+      <section class="hero" id="hero" data-schema="hero">
+        <div class="hero-grain" aria-hidden="true"></div>
+        ${
+					orbits
+						? `<div class="hero-orbits" aria-hidden="true">
+          <span class="o o1"></span><span class="o o2"></span><span class="o o3"></span>
+        </div>`
+						: ""
+				}
+        <div class="hero-inner">
+          <p class="kicker" data-reveal>Foundational Brand Development · 2026</p>
+          <div class="hero-stage" data-reveal>
+            ${mark ? `<h1 class="hero-mark" data-field="mark">${esc(mark)}</h1>` : `<h1 class="hero-mark hero-mark--empty" data-field="mark"></h1>`}
+            <div class="hero-taglines">
+              <p class="hero-tagline-top" data-field="headline">${esc(headline)}</p>
+              ${strapline ? `<p class="hero-tagline-bottom" data-field="strapline">${esc(strapline)}</p>` : `<p class="hero-tagline-bottom hero-tagline-bottom--empty" data-field="strapline"></p>`}
+            </div>
+          </div>
+          ${subheadline ? `<p class="hero-subheadline lede" data-field="subheadline">${md(subheadline)}</p>` : ""}
+          <!-- hero buttons removed -->
+          ${metricsHTML ? `<div class="hero-meta" data-reveal>${metricsHTML}</div>` : ""}
+        </div>
+        ${
+					d.scroll_indicator !== false
+						? `
+          <div class="hero-scrollhint" aria-hidden="true">
+            <span>scroll</span>
+            <span class="bar"></span>
+          </div>`
+						: ""
+				}
+      </section>`;
+	}
+
+	// NOTE: The free-form team-note canvas (renderTNBlock, tnStyleString,
+	// drag/resize/toolbar) was removed when team-notes were simplified to a
+	// headline + body. Images now go in via right-click → Inline Figure or
+	// Background Image, same as every other section. See renderTeamNote.
+
+	function renderTeamNote(data) {
+		const d = data || {};
+		const label = d.section_label || "";
+		const title = d.section_title || "";
+		const body = d.body || "";
+		// Same structure as every other section: standard head() (eyebrow + h2,
+		// each with data-field paths so per-item click-to-edit works) + a body
+		// paragraph. The free-form drag/resize canvas is gone — images now go in
+		// via right-click → Inline Figure (or Background Image), text via the
+		// body field. Keeps team-notes simple and consistent with the rest.
+		const headHTML = head({
+			label: label,
+			labelPath: "section_label",
+			title: title,
+			titlePath: "section_title",
+		});
+		return `
+      <section class="team-note" data-schema="team-note">
+        <div class="team-note-inner">
+          ${headHTML}
+          ${body ? `<p class="team-note-body" data-reveal data-field="body">${md(body)}</p>` : ""}
+          <hr class="team-note-rule" aria-hidden="true">
+        </div>
+      </section>`;
+	}
+
+	// Section head used by every non-hero schema.
+	// opts: { num, numPath, label, labelPath, title, titlePath, deck, deckPath }
+	// num/label render as two independently-editable spans inside the eyebrow;
+	// a literal " · " separator sits between them. Paths are optional
+	// data-field dot-paths for per-item editing (omit for non-editable heads).
+	// Shared heading-title sanitizer: escapes text, honors paragraph breaks
+	// with <br><br>, and applies dot-emphasis for single-line titles that end
+	// in a clause. Never emits <p> inside a heading (invalid HTML) and never
+	// applies markdown <em>/<strong> from stray asterisks — headings use this
+	// consistently instead of the full md() formatter.
+	function sanitizeHeadingTitle(raw) {
+		const t = String(raw || "");
+		if (!t) return "";
+		if (t.includes("\n")) {
+			// Multi-line: honor paragraph breaks with <br>, skip dot-emphasis
+			// (avoid cross-newline misfire).
+			return esc(t).replace(/\n\n+/g, "<br><br>").replace(/\n/g, "<br>");
+		}
+		if (t.includes(".")) {
+			return esc(t).replace(/\.\s*([^.]+)\.?$/, ".<br/><em>$1.</em>");
+		}
+		return esc(t);
+	}
+
+	function head(opts) {
+		const { num, numPath, label, labelPath, title, titlePath, deck, deckPath } =
+			opts;
+		const titleHTML = sanitizeHeadingTitle(title);
+		const titleField = titlePath ? ` data-field="${esc(titlePath)}"` : "";
+		const deckField = deckPath ? ` data-field="${esc(deckPath)}"` : "";
+		const numField = numPath ? ` data-field="${esc(numPath)}"` : "";
+		const labelField = labelPath ? ` data-field="${esc(labelPath)}"` : "";
+		const eyebrow =
+			num || label
+				? `<p class="eyebrow" data-reveal>${num ? `<span${numField}>${esc(num)}</span>` : ""}${num && label ? " · " : ""}${label ? `<span${labelField}>${esc(label)}</span>` : ""}</p>`
+				: "";
+		return `
+      <div class="section-head">
+        ${eyebrow}
+        <h2 class="section-title" data-reveal${titleField}>${titleHTML}</h2>
+        ${deck ? `<p class="section-deck" data-reveal${deckField}>${md(deck)}</p>` : ""}
+      </div>`;
+	}
+
+	function renderTimeline(data) {
+		const d = data || {};
+		const eras = d.eras && d.eras.length >= 2 ? d.eras : [{}, {}];
+		const cps = Array.isArray(d.comparison_points) ? d.comparison_points : [];
+
+		const paneRows = (idx) =>
+			cps
+				.map((p, i) => {
+					const value = idx === 0 ? p.era_1_value : p.era_2_value;
+					const isLast = i === cps.length - 1;
+					return `<div class="rhyme-row${isLast ? " rhyme-highlight" : ""}" data-field="comparison_points.${i}">
+        <div class="rr-side">${esc(p.category || "")}</div>
+        <div class="rr-mid">${md(value || "")}</div>
+        <div class="rr-side">${md(p.insight || "")}</div>
+      </div>${p.appendix ? appendixRef("comparison_points." + i) : ""}`;
+				})
+				.join("");
+
+		return `
+      <section class="section" id="opportunity" data-schema="timeline">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text,
+					deckPath: "intro_text",
+				})}
+        <div class="rhyme" data-reveal data-flip-interval="${d.flip_interval_seconds != null && Number.isFinite(+d.flip_interval_seconds) ? esc(d.flip_interval_seconds) : ""}">
+          <div class="rhyme-rail">
+            <div class="rhyme-tab is-active" data-era="80s" data-field="eras.0">
+              <span class="tab-num" data-field="eras.0.year_range">${esc(eras[0].year_range || "")}</span>
+              <span class="tab-label" data-field="eras.0.label">${esc(eras[0].label || "")}</span>
+            </div>
+            <div class="rhyme-tab" data-era="now" data-field="eras.1">
+              <span class="tab-num" data-field="eras.1.year_range">${esc(eras[1].year_range || "")}</span>
+              <span class="tab-label" data-field="eras.1.label">${esc(eras[1].label || "")}</span>
+            </div>
+            <div class="rhyme-pill"></div>
+          </div>
+          <div class="rhyme-panes">
+            <div class="rhyme-pane is-active" data-pane="80s">${paneRows(0)}</div>
+            <div class="rhyme-pane" data-pane="now">${paneRows(1)}</div>
+          </div>
+        </div>
+      </section>`;
+	}
+
+	function renderConsolidation(data) {
+		const d = data || {};
+		const acquisitions = Array.isArray(d.acquisitions) ? d.acquisitions : [];
+		const indeps = groupIndependents(d.independent_brands);
+
+		// Acquisitions table: a column renders ONLY when at least one row
+		// populates it (erase all dates → the Date column disappears entirely).
+		const COLS = [
+			{
+				key: "date",
+				show: acquisitions.some((a) => a.date),
+				head: "Date",
+				cls: "ct-c-date",
+				desk: "minmax(72px, 90px)",
+				cell: (a) => `<div class="ct-c-date ct-yr">${esc(a.date || "")}</div>`,
+			},
+			{
+				key: "acquirer",
+				show: acquisitions.some((a) => a.acquirer),
+				head: "Buyer",
+				cls: "ct-c-acquirer",
+				desk: "minmax(140px, 220px)",
+				cell: (a) =>
+					`<div class="ct-c-acquirer">${esc(a.acquirer || "")}</div>`,
+			},
+			{
+				key: "target",
+				show: acquisitions.some((a) => a.target),
+				head: "Acquired / Owned Brands",
+				cls: "ct-c-target",
+				desk: "1.5fr",
+				cell: (a) => `<div class="ct-c-target">${md(a.target || "")}</div>`,
+			},
+			{
+				key: "value",
+				show: acquisitions.some((a) => a.value_usd || a.source_url),
+				head: "Value / Source",
+				cls: "ct-c-value",
+				desk: "1fr",
+				cell: (a) =>
+					`<div class="ct-c-value">${a.value_usd ? esc(fmtUSD(a.value_usd)) : ""}${a.source_url ? ` <span class="ct-src"><a href="${esc(a.source_url)}" target="_blank" rel="noopener">source</a></span>` : ""}</div>`,
+			},
+		];
+		const cols = COLS.filter((c) => c.show);
+		const hasDate = cols.some((c) => c.key === "date");
+		const deskCols = cols.map((c) => c.desk).join(" ") || "1fr";
+		const mobCols = hasDate ? "80px 1fr" : "1fr";
+		const consTableCls =
+			"cons-table" +
+			(hasDate ? " cons-table--has-date" : " cons-table--no-date");
+		const headRow = cols.length
+			? `<div class="ct-row cthead">${cols.map((c) => `<div class="${c.cls}">${c.head}</div>`).join("")}</div>`
+			: "";
+		const rows = acquisitions
+			.map(
+				(a, ai) =>
+					`<div class="ct-row" data-field="acquisitions.${ai}">${cols.map((c) => c.cell(a)).join("")}</div>${a.appendix ? appendixRef("acquisitions." + ai) : ""}`,
+			)
+			.join("");
+		const tableHTML =
+			acquisitions.length && cols.length
+				? `<div class="${consTableCls}" data-reveal style="--ct-cols:${deskCols};--ct-cols-mob:${mobCols};">${headRow}${rows}</div>`
+				: "";
+
+		const indepHTML = indeps
+			.map(
+				(g) => `
+      <div class="ib-group">
+        <p class="ib-h">${esc(g.key)}</p>
+        <ul>${g.items.map((b) => `<li data-field="independent_brands.${b._origIdx}"><strong>${esc(b.name)}</strong> <span>${esc(b.specialty || "")}</span></li>${b.appendix ? appendixRef("independent_brands." + b._origIdx) : ""}`).join("")}</ul>
+      </div>`,
+			)
+			.join("");
+
+		return `
+      <section class="section" id="consolidation" data-schema="consolidation">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text,
+					deckPath: "intro_text",
+				})}
+        ${tableHTML}
+        ${
+					indeps.length
+						? `
+          <div class="independent-block" data-reveal>
+            <h3 data-field="independent_heading">${esc(d.independent_heading || "")}</h3>
+            <p class="ib-intro" data-field="independent_intro">${md(d.independent_intro || "")}</p>
+            <div class="ib-grid">${indepHTML}</div>
+          </div>`
+						: ""
+				}
+      </section>`;
+	}
+
+	function renderTenet(data) {
+		const d = data || {};
+		const tenets = Array.isArray(d.tenets) ? d.tenets : [];
+
+		const items = tenets
+			.map((t, ti) => {
+				// Build each editable tenet paragraph as its own data-field element so
+				// click-to-edit resolves to JUST that field (not the whole card).
+				// IMPORTANT ordering: run md() on the RAW user text first (it escapes
+				// safely + applies markdown), THEN wrap in semantic HTML like <em>.
+				// Wrapping first and passing through md() re-escapes the wrapper
+				// (the <em> leak). See tenet.schema.json for property names.
+				const parts = [];
+				if (t.body)
+					parts.push(
+						`<p class="tenet-body-text" data-field="tenets.${ti}.body">${md(t.body)}</p>`,
+					);
+				if (t.example_title)
+					parts.push(
+						`<p class="tenet-example-title" data-field="tenets.${ti}.example_title">${md(t.example_title)}</p>`,
+					);
+				if (t.example_body)
+					parts.push(
+						`<p class="tenet-body-text" data-field="tenets.${ti}.example_body">${md(t.example_body)}</p>`,
+					);
+				if (t.key_insight)
+					parts.push(
+						`<p class="tenet-insight" data-field="tenets.${ti}.key_insight"><em>${md(t.key_insight)}</em></p>`,
+					);
+				const body = parts.join("");
+				return `
+        <article class="tenet" data-reveal data-tenet-num="${t.number || ""}" data-field="tenets.${ti}">
+          <div class="tenet-num">${esc(toRoman(t.number))}</div>
+          <div class="tenet-body">
+            <h3 data-field="tenets.${ti}.title">${sanitizeHeadingTitle(t.title || "")}</h3>
+            ${body}
+            ${t.anchor_phrase ? `<p class="tenet-anchor" data-field="tenets.${ti}.anchor_phrase">→ ${esc(t.anchor_phrase)}</p>` : ""}
+          </div>
+        </article>${t.appendix ? appendixRef("tenets." + ti) : ""}`;
+			})
+			.join("");
+
+		return `
+      <section class="section" id="tenets" data-schema="tenet">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck:
+						d.intro_text ||
+						"Twenty-five years of compounding, distilled. Each tenet is a constraint that creates leverage — and a load-bearing rule that protects the others.",
+					deckPath: "intro_text",
+				})}
+        <div class="tenets">${items}</div>
+      </section>`;
+	}
+
+	function renderVenue(data) {
+		const d = data || {};
+		const zones = Array.isArray(d.zones) ? d.zones : [];
+		const zoneClass = (z, i) => {
+			const idMap = {
+				"front-of-house": "foh",
+				balcony: "balcony",
+				"green-room": "green",
+			};
+			return idMap[z.id] || ["foh", "balcony", "green"][i] || "foh";
+		};
+		const letterFor = (z) => (z.name || "?").trim().charAt(0).toUpperCase();
+
+		const zonesHTML = zones
+			.map(
+				(z, zi) => `
+      <div class="floor-zone zone-${zoneClass(z, zi)}" data-reveal data-field="zones.${zi}">
+        <div class="zone-num">${letterFor(z)}</div>
+        <h3 data-field="zones.${zi}.name">${esc(z.name || "")}</h3>
+        ${z.tagline ? `<p class="zone-tag" data-field="zones.${zi}.tagline">${esc(z.tagline)}</p>` : ""}
+        <p class="zone-desc" data-field="zones.${zi}.description">${md(z.description || "")}</p>
+        ${z.atmosphere ? `<p class="zone-feel" data-field="zones.${zi}.atmosphere">${md(z.atmosphere)}</p>` : ""}
+        ${Array.isArray(z.features) && z.features.length ? `<ul class="zone-features">${z.features.map((f) => `<li>${esc(f)}</li>`).join("")}</ul>` : ""}
+        ${z.customer_journey_step != null ? `<p class="zone-step"><em>Journey step ${esc(z.customer_journey_step)}</em></p>` : ""}
+      </div>${z.appendix ? appendixRef("zones." + zi) : ""}`,
+			)
+			.join("");
+
+		const journey = Array.isArray(d.customer_journey) ? d.customer_journey : [];
+		const journeyHTML = journey
+			.map(
+				(j, ji) =>
+					`<li data-field="customer_journey.${ji}">${md(j.description || "")}</li>${j.appendix ? appendixRef("customer_journey." + ji) : ""}`,
+			)
+			.join("");
+
+		return `
+      <section class="section section-dark" id="venue" data-schema="venue">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.concept_description,
+					deckPath: "concept_description",
+				})}
+        <div class="venue">
+          <div class="venue-floor">${zonesHTML}</div>
+          ${d.target_customer_profile ? `<div class="venue-caption" data-reveal data-field="target_customer_profile"><p class="venue-caption-text">${md(d.target_customer_profile)}</p></div>` : ""}
+          ${
+						journeyHTML
+							? `
+            <div class="venue-flow" data-reveal>
+              <h3>How a customer meets AGF</h3>
+              <ol>${journeyHTML}</ol>
+            </div>`
+							: ""
+					}
+          ${
+						d.royalty_structure
+							? `
+            <div class="venue-economics" data-reveal data-field="royalty_structure">
+              <h3>Royalty Structure</h3>
+              <dl class="pspec">
+                ${d.royalty_structure.broadcast_split ? `<div><dt>Broadcast split</dt><dd>${md(d.royalty_structure.broadcast_split)}</dd></div>` : ""}
+                ${d.royalty_structure.stereo_ownership ? `<div><dt>Stereo ownership</dt><dd>${md(d.royalty_structure.stereo_ownership)}</dd></div>` : ""}
+                ${d.royalty_structure.artist_blocking_rights ? `<div><dt>Artist blocking rights</dt><dd>${md(d.royalty_structure.artist_blocking_rights)}</dd></div>` : ""}
+                ${d.royalty_structure.notes ? `<div><dt>Notes</dt><dd>${md(d.royalty_structure.notes)}</dd></div>` : ""}
+              </dl>
+            </div>`
+							: ""
+					}
+          ${
+						d.virtual_ticket
+							? `
+            <div class="venue-economics" data-reveal data-field="virtual_ticket">
+              <h3>Virtual Ticket</h3>
+              <dl class="pspec">
+                ${d.virtual_ticket.concept ? `<div><dt>Concept</dt><dd>${md(d.virtual_ticket.concept)}</dd></div>` : ""}
+                ${d.virtual_ticket.pricing_model ? `<div><dt>Pricing model</dt><dd>${md(d.virtual_ticket.pricing_model)}</dd></div>` : ""}
+                ${d.virtual_ticket.owner_perks ? `<div><dt>Owner perks</dt><dd>${md(d.virtual_ticket.owner_perks)}</dd></div>` : ""}
+              </dl>
+            </div>`
+							: ""
+					}
+          ${
+						d.financial_model
+							? `
+            <div class="venue-economics" data-reveal data-field="financial_model">
+              <h3>Financial Model</h3>
+              <dl class="pspec">
+                ${d.financial_model.philosophy ? `<div><dt>Philosophy</dt><dd>${md(d.financial_model.philosophy)}</dd></div>` : ""}
+                ${d.financial_model.qualification_rule ? `<div><dt>Qualification rule</dt><dd>${md(d.financial_model.qualification_rule)}</dd></div>` : ""}
+                ${Array.isArray(d.financial_model.revenue_streams) && d.financial_model.revenue_streams.length ? `<div><dt>Revenue streams</dt><dd>${d.financial_model.revenue_streams.map((s) => "• " + esc(s)).join("<br>")}</dd></div>` : ""}
+              </dl>
+            </div>`
+							: ""
+					}
+          ${
+						d.cultural_positioning
+							? `
+            <div class="venue-economics" data-reveal data-field="cultural_positioning">
+              <h3>Cultural Positioning</h3>
+              <dl class="pspec">
+                ${d.cultural_positioning.movement ? `<div><dt>Movement</dt><dd>${md(d.cultural_positioning.movement)}</dd></div>` : ""}
+                ${d.cultural_positioning.anti_pattern ? `<div><dt>Anti-pattern</dt><dd>${md(d.cultural_positioning.anti_pattern)}</dd></div>` : ""}
+                ${d.cultural_positioning.summary ? `<div><dt>Summary</dt><dd>${md(d.cultural_positioning.summary)}</dd></div>` : ""}
+              </dl>
+            </div>`
+							: ""
+					}
+        </div>
+      </section>`;
+	}
+
+	function renderTechnology(data) {
+		const d = data || {};
+		const techs = Array.isArray(d.technologies) ? d.technologies : [];
+
+		const cards = techs
+			.map((t, ti) => {
+				const kind =
+					t.full_name && t.full_name !== t.name
+						? t.full_name.replace(t.name, "").replace(/^[\s—–-]+/, "")
+						: t.patent_status || "";
+				const caps = (
+					Array.isArray(t.key_capabilities) ? t.key_capabilities : []
+				)
+					.slice(0, 4)
+					.map((c) => `<li>${md(c)}</li>`)
+					.join("");
+				return `
+        <article class="tech-card" data-reveal data-tech-id="${esc(t.id || "")}" data-field="technologies.${ti}">
+          <p class="tech-kind">${esc(kind)}</p>
+          <h3 data-field="technologies.${ti}.name">${esc(t.name || "")}</h3>
+          ${t.tagline ? `<p class="tech-tagline" data-field="technologies.${ti}.tagline">${esc(t.tagline)}</p>` : ""}
+          <p class="tech-desc" data-field="technologies.${ti}.description">${md(t.description || "")}</p>
+          ${caps ? `<ul class="tech-meta" style="list-style:none;padding:0;margin-top:var(--space-md)">${caps}</ul>` : ""}
+          ${t.competitive_advantage ? `<p class="tech-meta">${md(t.competitive_advantage)}</p>` : ""}
+        </article>${t.appendix ? appendixRef("technologies." + ti) : ""}`;
+			})
+			.join("");
+
+		const stages = (d.codec_diagram && d.codec_diagram.stages) || [];
+		const diagram = stages
+			.map(
+				(s, i) => `
+      <div class="cd-layer cd-l${i + 1}" data-field="codec_diagram.stages.${i}"><span data-field="codec_diagram.stages.${i}.name">${esc(s.name)}</span><em data-field="codec_diagram.stages.${i}.description">${esc(s.description)}</em></div>
+    `,
+			)
+			.join("");
+
+		return `
+      <section class="section" id="technology" data-schema="technology">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck:
+						d.intro_text ||
+						"Technologies presented as real product opportunities, and as announcements to potential third-party early adopters. Each layer compounds the others.",
+					deckPath: "intro_text",
+				})}
+        <div class="tech-grid">${cards}</div>
+        ${
+					stages.length
+						? `
+          <div class="codec-deep" data-reveal>
+            <div class="cd-copy">
+              <p class="eyebrow" data-field="lart_stack.eyebrow">${esc((d.lart_stack && d.lart_stack.eyebrow) || "")}</p>
+              <h3 data-field="lart_stack.headline">${md((d.lart_stack && d.lart_stack.headline) || "")}</h3>
+              <p class="tech-desc" data-field="lart_stack.body">${md((d.lart_stack && d.lart_stack.body) || "")}</p>
+            </div>
+            <div class="cd-diagram" aria-hidden="true">${diagram}</div>
+          </div>`
+						: ""
+				}
+      </section>`;
+	}
+
+	// ---------- product card ------------------------------------------------
+	function specGroup(label, rows) {
+		const filled = rows.filter(
+			(r) => r && r[1] !== undefined && r[1] !== null && r[1] !== "",
+		);
+		if (!filled.length) return "";
+		const dl = filled
+			.map((r) => {
+				const raw = r[2] === true;
+				const valHTML = raw ? String(r[1]) : md(String(r[1]));
+				return `<div><dt>${esc(r[0])}</dt><dd>${valHTML}</dd></div>`;
+			})
+			.join("");
+		return `
+      <div class="pspec-group" data-group="${esc(label)}">
+        <button type="button" class="pspec-group-head" aria-expanded="false">
+          <span>${esc(label)}</span>
+          <span class="pspec-toggle">+</span>
+        </button>
+        <dl class="pspec">${dl}</dl>
+      </div>`;
+	}
+
+	function renderProductCard(p) {
+		const d = (p && p.data) || {};
+		const name = d.name || p.name;
+		const tagline = d.tagline || "";
+		const cat = d.category || p.category || "";
+		const status = d.status || p.status || "concept";
+		const techs = (d.agf_technologies || [])
+			.map((t) => `<span class="agf-tech-pill">${esc(t)}</span>`)
+			.join("");
+
+		// Spec groups
+		const audioRows = [];
+		if (d.audio) {
+			const a = d.audio;
+			if (a.frequency_response)
+				audioRows.push([
+					"Frequency response",
+					`${a.frequency_response.low_hz || "?"}–${a.frequency_response.high_hz || "?"} Hz${a.frequency_response.tolerance_db ? " ±" + a.frequency_response.tolerance_db + "dB" : ""}`,
+				]);
+			if (a.sensitivity_db_spl)
+				audioRows.push(["Sensitivity", a.sensitivity_db_spl + " dB SPL"]);
+			if (a.impedance_ohms)
+				audioRows.push(["Impedance", a.impedance_ohms + " Ω"]);
+			if (a.thd_percent) audioRows.push(["THD", a.thd_percent + "%"]);
+			if (a.snr_db) audioRows.push(["SNR", a.snr_db + " dB"]);
+			if (a.max_spl_db) audioRows.push(["Max SPL", a.max_spl_db + " dB"]);
+			if (a.drivers && a.drivers.length) {
+				audioRows.push([
+					"Drivers",
+					a.drivers
+						.map(
+							(dr) =>
+								`${dr.quantity || 1}× ${dr.type || ""}${dr.size_mm ? " " + dr.size_mm + "mm" : ""}${dr.material ? " (" + dr.material + ")" : ""}`,
+						)
+						.join(" · "),
+				]);
+				// Per-driver appendix refs
+				a.drivers.forEach((dr, dri) => {
+					if (dr.appendix)
+						audioRows.push(["", appendixRef("audio.drivers." + dri), true]);
+				});
+			}
+			if (a.amplification)
+				audioRows.push([
+					"Amplification",
+					`Class ${a.amplification.class || ""}${a.amplification.watts_per_channel ? " · " + a.amplification.watts_per_channel + "W/ch" : ""}${a.amplification.channels ? " · " + a.amplification.channels + "ch" : ""}`,
+				]);
+			if (a.dac)
+				audioRows.push([
+					"DAC",
+					`${a.dac.architecture || ""}${a.dac.chipset ? " · " + a.dac.chipset : ""}${a.dac.bit_depth ? " · " + a.dac.bit_depth + "bit" : ""}`,
+				]);
+			if (a.enclosure) audioRows.push(["Enclosure", a.enclosure.type || ""]);
+			if (a.crossover)
+				audioRows.push([
+					"Crossover",
+					`${a.crossover.type || ""}${a.crossover.frequency_hz ? " · " + a.crossover.frequency_hz + " Hz" : ""}${a.crossover.slope_db_oct ? " · " + a.crossover.slope_db_oct + " dB/oct" : ""}`,
+				]);
+		}
+
+		const conRows = [];
+		if (d.connectivity) {
+			const c = d.connectivity;
+			if (c.wireless && c.wireless.length) {
+				conRows.push([
+					"Wireless",
+					c.wireless
+						.map(
+							(w) =>
+								`${w.protocol}${w.version ? " " + w.version : ""}${w.codecs ? " (" + w.codecs.join(", ") + ")" : ""}`,
+						)
+						.join(" · "),
+				]);
+			}
+			if (c.wired && c.wired.length) {
+				conRows.push([
+					"Wired",
+					c.wired
+						.map((w) => `${w.connector}${w.format ? " · " + w.format : ""}`)
+						.join(" · "),
+				]);
+			}
+			if (c.multi_room !== undefined)
+				conRows.push(["Multi-room", c.multi_room ? "Yes" : "No"]);
+			if (c.max_paired_devices)
+				conRows.push(["Max paired devices", c.max_paired_devices]);
+			if (c.streaming_protocols)
+				conRows.push(["Streaming", c.streaming_protocols.join(" · ")]);
+		}
+
+		const formRows = [];
+		if (d.form_factor) {
+			const f = d.form_factor;
+			if (f.dimensions) {
+				const dim = f.dimensions;
+				formRows.push([
+					"Dimensions",
+					`${dim.height_mm || "?"} × ${dim.width_mm || "?"} × ${dim.depth_mm || "?"} mm`,
+				]);
+			}
+			if (f.weight_g) formRows.push(["Weight", f.weight_g + " g"]);
+			if (f.finish) formRows.push(["Finish", f.finish]);
+			if (f.materials) formRows.push(["Materials", f.materials.join(" · ")]);
+			if (Array.isArray(f.color_options) && f.color_options.length)
+				formRows.push(["Colors", f.color_options.join(" · ")]);
+			if (f.variants)
+				formRows.push([
+					"Variants",
+					f.variants
+						.map(
+							(v) =>
+								`<strong>${esc(v.name)}</strong> — ${esc(v.differentiator || "")}`,
+						)
+						.join("<br>"),
+					true,
+				]);
+		}
+
+		const powRows = [];
+		if (d.power) {
+			if (d.power.battery_life_hours)
+				powRows.push(["Battery life", d.power.battery_life_hours + " hours"]);
+			if (d.power.charging_type)
+				powRows.push(["Charging", d.power.charging_type]);
+			if (d.power.charge_time_minutes)
+				powRows.push(["Charge time", d.power.charge_time_minutes + " min"]);
+			if (d.power.wall_power_watts)
+				powRows.push(["Wall power", d.power.wall_power_watts + " W"]);
+			if (d.power.standby_watts)
+				powRows.push(["Standby", d.power.standby_watts + " W"]);
+			if (d.power.power_supply)
+				powRows.push(["Power supply", d.power.power_supply]);
+		}
+
+		const bizRows = [];
+		if (d.business) {
+			const b = d.business;
+			if (b.ttm_months) bizRows.push(["TTM", fmtRange(b.ttm_months) + " mo"]);
+			if (b.cogs_usd) bizRows.push(["CoGS", "$" + fmtRange(b.cogs_usd)]);
+			if (b.asp_usd) bizRows.push(["ASP", "$" + fmtRange(b.asp_usd)]);
+			if (b.tooling_cost_usd)
+				bizRows.push(["Tooling", fmtUSD(b.tooling_cost_usd)]);
+			if (b.target_volume_monthly)
+				bizRows.push(["Target volume", b.target_volume_monthly + " pcs/mo"]);
+			if (b.gross_margin_target)
+				bizRows.push([
+					"Margin target",
+					Math.round(b.gross_margin_target * 100) + "%",
+				]);
+			if (b.certifications)
+				bizRows.push(["Certifications", b.certifications.join(" · ")]);
+			if (b.cert_cost_estimate_usd)
+				bizRows.push(["Cert cost estimate", fmtUSD(b.cert_cost_estimate_usd)]);
+			if (b.v2_refactor_months)
+				bizRows.push(["V2 refactor", b.v2_refactor_months + " mo"]);
+		}
+
+		const cmp = d.competitive_reference;
+
+		const bgAttr = d._background_image
+			? ` data-bg-image="${esc(d._background_image)}"`
+			: "";
+		const bgSet = d._background_settings || {};
+		const bgSetAttr = d._background_image
+			? ` data-bg-size="${esc(bgSet.size || "cover")}"` +
+				` data-bg-position="${esc(bgSet.position || "center")}"` +
+				` data-bg-opacity="${esc(String(bgSet.opacity != null ? bgSet.opacity : 0.15))}"`
+			: "";
+
+		return `
+      <article class="product-card" data-reveal data-product-slug="${esc(p.slug || "")}" data-status="${esc(status)}"${bgAttr}${bgSetAttr}>
+        <div class="phead">
+          <span class="pnum">${String(p.display_order || 0).padStart(2, "0")}</span>
+          <h3 data-field="name">${esc(name)}</h3>
+          <div class="pmeta-row">
+            <span class="pcat" data-field="category">${esc(cat)}</span>
+            <span class="pstatus pstatus-${esc(status)}" data-field="status">${esc(status)}</span>
+          </div>
+        </div>
+        <p class="ptag" data-field="tagline">${md(tagline)}</p>
+        ${d.description ? `<p class="ptag pdesc" data-field="description">${md(d.description)}</p>` : ""}
+        ${techs ? `<div class="agf-tech-pills">${techs}</div>` : ""}
+        <div class="product-actions">
+          <button type="button" class="product-expand-btn" aria-expanded="false">View Spec Sheet <span class="px-arrow">↓</span></button>
+          ${
+						p.slug
+							? `<a class="pdf-download-btn" href="/api/pdf/product/${esc(p.slug)}" target="_blank" rel="noopener" download="${esc(p.slug)}-spec-sheet.pdf" aria-label="Download ${esc(name)} spec sheet PDF">
+            <span class="pdf-download-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            </span>
+            <span class="pdf-download-label">Download PDF</span>
+          </a>`
+							: ""
+					}
+        </div>
+        <div class="product-spec-sheet">
+          ${specGroup("Audio", audioRows)}
+          ${specGroup("Connectivity", conRows)}
+          ${specGroup("Form Factor", formRows)}
+          ${specGroup("Power", powRows)}
+          ${specGroup("Business", bizRows)}
+          ${
+						cmp
+							? `
+            <div class="pspec-group">
+              <button type="button" class="pspec-group-head" aria-expanded="false"><span>Competitive Reference</span><span class="pspec-toggle">+</span></button>
+              <dl class="pspec">
+                ${cmp.price_positioning ? `<div><dt>Positioning</dt><dd>${md(cmp.price_positioning)}</dd></div>` : ""}
+                ${cmp.comparable_products ? `<div><dt>Comparables</dt><dd>${esc(cmp.comparable_products.join(" · "))}</dd></div>` : ""}
+                ${cmp.key_differentiators ? `<div><dt>Differentiators</dt><dd>${cmp.key_differentiators.map((k) => "• " + esc(k)).join("<br>")}</dd></div>` : ""}
+              </dl>
+            </div>`
+							: ""
+					}
+          ${
+						d.roadmap_notes
+							? `
+            <div class="pspec-group">
+              <button type="button" class="pspec-group-head" aria-expanded="false"><span>Roadmap Notes</span><span class="pspec-toggle">+</span></button>
+              <dl class="pspec"><div><dt>Notes</dt><dd>${md(d.roadmap_notes)}</dd></div></dl>
+            </div>`
+							: ""
+					}
+          <div class="product-visualizations" data-product-viz="${esc(p.slug || d.name || "")}"></div>
+        </div>
+      </article>`;
+	}
+
+	// Per-product data cache used by hydrateProductVisualizations() to wire up
+	// SVG/HTML visualization components into placeholders after innerHTML.
+	const _productCache = {};
+	function _cacheProduct(p) {
+		const d = (p && p.data) || {};
+		const key = p.slug || d.name || "";
+		if (key) _productCache[key] = d;
+	}
+
+	/**
+	 * hydrateProductVisualizations(root)
+	 * Walks [data-product-viz] placeholders and asks each registered viz
+	 * component to render itself. Components self-gate on _viz_config.show_*.
+	 */
+	function hydrateProductVisualizations(root) {
+		const scope = root || document;
+		const placeholders = scope.querySelectorAll("[data-product-viz]");
+		placeholders.forEach((ph) => {
+			// Avoid duplicate rendering on re-hydration
+			if (ph.dataset.vizHydrated === "1") return;
+			const key = ph.getAttribute("data-product-viz");
+			const data = _productCache[key];
+			if (!data) return;
+			ph.innerHTML = "";
+			try {
+				if (window.FreqResponse) window.FreqResponse.render(ph, data);
+				if (window.DriverDiagram) window.DriverDiagram.render(ph, data);
+				if (window.TechFlow) window.TechFlow.render(ph, data);
+				if (window.ConnectivityBadges)
+					window.ConnectivityBadges.render(ph, data);
+				if (window.PowerGauge) window.PowerGauge.render(ph, data);
+				if (window.MaterialSwatches) window.MaterialSwatches.render(ph, data);
+			} catch (e) {
+				// Components must fail soft — log but never break the page render.
+				if (window.console) console.warn("[product-viz] render error", e);
+			}
+			ph.dataset.vizHydrated = "1";
+		});
+	}
+
+	function _scheduleHydration() {
+		// Run after the consumer's innerHTML assignment has flushed to DOM.
+		if (typeof requestAnimationFrame === "function") {
+			requestAnimationFrame(() => hydrateProductVisualizations());
+		} else {
+			setTimeout(() => hydrateProductVisualizations(), 0);
+		}
+	}
+
+	// The product wrapper is rendered as a standalone .section.section-dark
+	// between technology and business-model.
+	function renderProductsBlock(products) {
+		(products || []).forEach(_cacheProduct);
+		const cards = (products || [])
+			.map((p) => {
+				_currentSectionId = "product:" + (p.slug || "");
+				return renderProductCard(p);
+			})
+			.join("");
+		_scheduleHydration();
+		_scheduleCompareInit();
+		// The "Build Your System" CTA is only rendered when at least one product
+		// ships with system_config data (relationships are 100% schema-driven).
+		const hasConfig = (products || []).some(
+			(p) => p && p.data && p.data.system_config,
+		);
+		if (hasConfig) _scheduleConfiguratorBinding(products);
+		const cta = hasConfig
+			? `
+      <div class="build-system-cta" data-reveal>
+        <button type="button" class="btn primary build-system-btn" data-build-system="1">
+          <span class="bs-glyph" aria-hidden="true">⌘</span>
+          Build Your System
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="build-system-hint">Combine products. See signal flow, shared technology, and total price.</p>
+      </div>`
+			: "";
+		return `
+      <section class="section section-dark" id="products" data-schema="product-collection">
+        ${head({ num: "06", label: "The Lineup", title: "Inaugural product line.", deck: "Optimized for time-to-market on a full line that stands up to scrutiny from channel interest. The lower price categories are filled with third-party partner product; we move upward and land our flagship just above Focal's consumer offering ($5K USD)." })}
+        <div class="products-toolbar" data-reveal>
+          <button type="button" class="compare-toggle-btn" data-compare-toggle aria-pressed="false">
+            <span class="ctb-mark" aria-hidden="true">⇌</span>
+            <span class="ctb-label">Compare</span>
+            <span class="ctb-hint" data-compare-hint>Select 2–3 products</span>
+          </button>
+          <button type="button" class="compare-launch-btn" data-compare-launch hidden>
+            <span class="ctb-launch-count" data-compare-count>0</span>
+            Compare Selected
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </button>
+        </div>
+        <div class="products">${cards}</div>
+        ${cta}
+      </section>`;
+	}
+
+	// Wire compare-mode toggle, per-card checkboxes, and launch button after mount.
+	// Fetches comparison-config from /api/sections (schema_id='comparison-config')
+	// and delegates to window.ProductCompare.init().
+	let _compareCfgPromise = null;
+	function _fetchCompareConfig() {
+		if (_compareCfgPromise) return _compareCfgPromise;
+		_compareCfgPromise = fetch("/api/sections?schema=comparison-config", {
+			headers: { Accept: "application/json" },
+		})
+			.then((r) => (r.ok ? r.json() : []))
+			.then((rows) => {
+				const row = Array.isArray(rows) && rows.length ? rows[0] : null;
+				return row && row.data ? row.data : null;
+			})
+			.catch(() => null);
+		return _compareCfgPromise;
+	}
+
+	function _scheduleCompareInit() {
+		const bind = () => {
+			const section = document.querySelector("#products");
+			if (!section || section.dataset.cmpBound === "1") return;
+			section.dataset.cmpBound = "1";
+
+			const toggle = section.querySelector("[data-compare-toggle]");
+			const launch = section.querySelector("[data-compare-launch]");
+			const counter = section.querySelector("[data-compare-count]");
+			const hint = section.querySelector("[data-compare-hint]");
+			if (!toggle || !launch) return;
+
+			const selected = new Set();
+			let cfgCache = null;
+			_fetchCompareConfig().then((cfg) => {
+				cfgCache = cfg;
+			});
+
+			const updateLaunch = () => {
+				counter.textContent = selected.size;
+				const max = (cfgCache && cfgCache.max_compare) || 3;
+				const ready = selected.size >= 2;
+				launch.hidden = !ready;
+				launch.disabled = !ready;
+				if (hint) {
+					hint.textContent = section.classList.contains("compare-mode")
+						? `${selected.size}/${max} selected`
+						: "Select 2–3 products";
+				}
+			};
+
+			const ensureCheckbox = (card) => {
+				if (card.querySelector(".cmp-card-check")) return;
+				const slug = card.getAttribute("data-product-slug") || "";
+				const wrap = document.createElement("label");
+				wrap.className = "cmp-card-check";
+				wrap.innerHTML = `
+          <input type="checkbox" data-cmp-pick="${slug}" aria-label="Select for comparison" />
+          <span class="cmp-card-check-box" aria-hidden="true">
+            <span class="cmp-card-check-tick">✓</span>
+          </span>`;
+				card.appendChild(wrap);
+				const input = wrap.querySelector("input");
+				input.addEventListener("click", (e) => e.stopPropagation());
+				input.addEventListener("change", () => {
+					const max = (cfgCache && cfgCache.max_compare) || 3;
+					if (input.checked) {
+						if (selected.size >= max) {
+							input.checked = false;
+							return;
+						}
+						selected.add(slug);
+						card.classList.add("is-cmp-selected");
+					} else {
+						selected.delete(slug);
+						card.classList.remove("is-cmp-selected");
+					}
+					updateLaunch();
+				});
+			};
+
+			toggle.addEventListener("click", () => {
+				const on = !section.classList.contains("compare-mode");
+				section.classList.toggle("compare-mode", on);
+				toggle.setAttribute("aria-pressed", on ? "true" : "false");
+				toggle.classList.toggle("is-on", on);
+				if (on) {
+					section.querySelectorAll(".product-card").forEach(ensureCheckbox);
+				} else {
+					// Clear selection state
+					selected.clear();
+					section.querySelectorAll(".product-card").forEach((c) => {
+						c.classList.remove("is-cmp-selected");
+						const cb = c.querySelector(".cmp-card-check input");
+						if (cb) cb.checked = false;
+					});
+				}
+				updateLaunch();
+			});
+
+			launch.addEventListener("click", async () => {
+				if (selected.size < 2) return;
+				const cfg = cfgCache || (await _fetchCompareConfig()) || {};
+				cfgCache = cfg;
+				const products = (
+					(window.AGF && window.AGF.state && window.AGF.state.products) ||
+					[]
+				).filter((p) => selected.has(p.slug));
+				if (!products.length) return;
+				if (
+					window.ProductCompare &&
+					typeof window.ProductCompare.init === "function"
+				) {
+					window.ProductCompare.init(document.body, products, cfg);
+				} else if (window.console) {
+					console.warn("[agf] ProductCompare component not loaded.");
+				}
+			});
+
+			updateLaunch();
+		};
+		if (typeof requestAnimationFrame === "function")
+			requestAnimationFrame(bind);
+		else setTimeout(bind, 0);
+	}
+
+	// Wire the CTA after the section is mounted into the DOM. Looks for
+	// window.SystemConfigurator (loaded by the integration task); fails soft.
+	function _scheduleConfiguratorBinding(products) {
+		const bind = () => {
+			document
+				.querySelectorAll('[data-build-system="1"]:not([data-bs-bound])')
+				.forEach((btn) => {
+					btn.setAttribute("data-bs-bound", "1");
+					btn.addEventListener("click", () => {
+						if (
+							window.SystemConfigurator &&
+							typeof window.SystemConfigurator.init === "function"
+						) {
+							window.SystemConfigurator.init(document.body, products);
+						} else if (window.console) {
+							console.warn("[agf] SystemConfigurator not loaded.");
+						}
+					});
+				});
+		};
+		if (typeof requestAnimationFrame === "function")
+			requestAnimationFrame(bind);
+		else setTimeout(bind, 0);
+	}
+
+	// Single-product schema (when seeded individually) — same renderer.
+	function renderProduct(data) {
+		const wrapper = {
+			data,
+			slug: data && data.slug,
+			status: data && data.status,
+		};
+		_cacheProduct(wrapper);
+		_scheduleHydration();
+		_currentSectionId = "product:" + (wrapper.slug || "");
+		return renderProductCard(wrapper);
+	}
+
+	function renderBusinessModel(data) {
+		const d = data || {};
+		const ps = d.pricing_strategy || {};
+		const ca = d.channel_approach || {};
+
+		const cards = `
+      <div class="model-card" data-reveal data-field="pricing_strategy">
+        <p class="m-kind">Pricing Strategy</p>
+        <h3 data-field="pricing_strategy.model_name">${esc(ps.model_name || "")}</h3>
+        <p class="card-desc" data-field="pricing_strategy.philosophy">${md(ps.philosophy || "")}</p>
+        ${ps.description ? `<p class="card-desc" data-field="pricing_strategy.description">${md(ps.description)}</p>` : ""}
+      </div>
+      <div class="model-card" data-reveal data-field="channel_approach">
+        <p class="m-kind">Channel Approach</p>
+        <h3>The Bose-Like Third-Party</h3>
+        <p class="card-desc" data-field="channel_approach.philosophy">${md(ca.philosophy || "")}</p>
+        ${ca.partner_types ? `<ul class="m-list">${(Array.isArray(ca.partner_types) ? ca.partner_types : [ca.partner_types]).map((t) => `<li>${esc(t)}</li>`).join("")}</ul>` : ""}
+        ${ca.target_partners ? `<p class="m-kind" style="margin-top:var(--space-md)">Target Partners</p><ul class="m-list">${(Array.isArray(ca.target_partners) ? ca.target_partners : [ca.target_partners]).map((t) => `<li>${md(t)}</li>`).join("")}</ul>` : ""}
+      </div>
+      <div class="model-card" data-reveal data-field="revenue_model">
+        <p class="m-kind">Revenue Model</p>
+        <h3>Hardware-led, codec/OS halo</h3>
+        <p class="card-desc">${md(d.revenue_model || "")}</p>
+      </div>`;
+
+		const runwayRows = (d.runway_table || [])
+			.map(
+				(r, ri) => `
+      <div class="rr" data-field="runway_table.${ri}">
+        <div>${esc(r.product || "")}</div>
+        <div>${esc(r.ttm || "")}</div>
+        <div>${esc(r.cogs_range || "")}</div>
+        <div>${esc(r.asp_range || "")}</div>
+        <div>${md(r.notes || "")}</div>
+      </div>${r.appendix ? appendixRef("runway_table." + ri) : ""}`,
+			)
+			.join("");
+
+		return `
+      <section class="section" id="model" data-schema="business-model">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title:
+						d.section_title ||
+						"Numbers, runway, and the way the money actually works.",
+					titlePath: "section_title",
+					deck:
+						d.intro_text ||
+						"Optimizing TTM on a full line; leveraging third-party partner product to fill the lower price categories while we land our flagship just above $5K USD.",
+					deckPath: "intro_text",
+				})}
+        <div class="model-grid">${cards}</div>
+        ${
+					runwayRows
+						? `
+          <div class="runway" data-reveal>
+            <h3>The Runway, at a glance</h3>
+            <div class="runway-table">
+              <div class="rr rhead"><div>Product</div><div>TTM</div><div>CoGS</div><div>ASP</div><div>Notes</div></div>
+              ${runwayRows}
+            </div>
+          </div>`
+						: ""
+				}
+        ${
+					d.scaling_timeline
+						? `
+          <div class="runway" data-reveal>
+            <h3>Phased rollout</h3>
+            <div class="model-card" data-field="scaling_timeline"><p class="card-desc">${md(d.scaling_timeline)}</p></div>
+          </div>`
+						: ""
+				}
+      </section>`;
+	}
+
+	function renderFounder(data) {
+		const d = data || {};
+		const milestones = (d.milestones || [])
+			.map(
+				(m, mi) => `
+      <div class="tl-item" data-field="milestones.${mi}">
+        <div class="tl-yr">${esc(m.year || "")}</div>
+        <p class="tl-desc">${m.event ? `<strong>${esc(m.event)}</strong>${m.company ? " — <em>" + esc(m.company) + "</em>" : ""}. ` : ""}${md(m.description || "")}${m.significance ? ` <em>${esc(m.significance)}</em>` : ""}</p>
+      </div>${m.appendix ? appendixRef("milestones." + mi) : ""}`,
+			)
+			.join("");
+
+		const mentors = (d.mentors || [])
+			.map(
+				(m, mi) => `
+      <li data-field="mentors.${mi}"><strong>${esc(m.name)}</strong>${m.relationship ? ` <span style="color:var(--moss);font-size:var(--space-sm)">(${esc(m.relationship)})</span>` : ""} — ${esc(m.contribution || "")}</li>${m.appendix ? appendixRef("mentors." + mi) : ""}
+    `,
+			)
+			.join("");
+
+		const companies = d.key_companies || [];
+		const companiesHTML = companies.length
+			? `
+      <div class="runway" data-reveal style="margin-top:var(--space-2xl)">
+        <h3>Key companies</h3>
+        <div class="runway-table">
+          <div class="rr rhead"><div>Company</div><div>Role</div><div>Years</div><div colspan="2">Outcome</div><div></div></div>
+          ${companies.map((c, ci) => `<div class="rr" data-field="key_companies.${ci}"><div>${esc(c.name)}</div><div>${esc(c.role)}</div><div>${esc(c.years)}</div><div>${md(c.outcome || "")}</div><div></div></div>${c.appendix ? appendixRef("key_companies." + ci) : ""}`).join("")}
+        </div>
+      </div>`
+			: "";
+
+		return `
+      <section class="section section-dark" id="founder" data-schema="founder">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || (d.name ? d.name + "." : ""),
+					titlePath: "section_title",
+					deck:
+						d.intro_text ||
+						"Twenty-five years in this market, longer if you count the garage sales.",
+					deckPath: "intro_text",
+				})}
+        <div class="founder-grid">
+          <div class="timeline" data-reveal>${milestones}</div>
+          <aside class="mentor-callout" data-reveal>
+            <h3>The mentors, in shorthand</h3>
+            <ul>${mentors}</ul>
+          </aside>
+        </div>
+        ${companiesHTML}
+        <div class="cta" data-reveal>
+          <h3>The plan is on the page. <em>Now what?</em></h3>
+          <p class="tl-desc">Channel introductions. Distribution relationships. Capital partner conversations. The first flagship venue. The first six Tenet-aligned hires. The first l'Art-recorded performance.</p>
+          <div class="cta-actions">
+            <a class="btn primary" href="mailto:hello@agf.brand">Request the deck
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn ghost" href="#hero">Back to top</a>
+          </div>
+        </div>
+      </section>`;
+	}
+
+	function renderDistribution(data) {
+		const d = data || {};
+		const criteria = (
+			Array.isArray(d.partner_criteria) ? d.partner_criteria : []
+		)
+			.map(
+				(c, ci) => `
+      <div class="rr" data-field="partner_criteria.${ci}">
+        <div data-field="partner_criteria.${ci}.criterion">${esc(c.criterion)}</div>
+        <div data-field="partner_criteria.${ci}.description">${md(c.description || "")}</div>
+        <div>${c.weight !== undefined ? `<span class="weight-bar"><span class="weight-fill" style="width:${Math.round(c.weight * 100)}%"></span></span> <span class="weight-pct">${Math.round(c.weight * 100)}%</span>` : ""}</div>
+      </div>${c.appendix ? appendixRef("partner_criteria." + ci) : ""}`,
+			)
+			.join("");
+
+		const territories = (Array.isArray(d.territories) ? d.territories : [])
+			.map(
+				(t, ti) => `
+      <div class="rr" data-field="territories.${ti}">
+        <div data-field="territories.${ti}.region">${esc(t.region)}</div>
+        <div data-field="territories.${ti}.strategy">${md(t.strategy || "")}</div>
+        <div><span class="prio-badge prio-${t.priority || ""}">P${t.priority || "—"}</span></div>
+      </div>${t.appendix ? appendixRef("territories." + ti) : ""}`,
+			)
+			.join("");
+
+		const channels = (Array.isArray(d.channel_types) ? d.channel_types : [])
+			.map(
+				(c, ci) => `
+      <div class="model-card" data-reveal data-field="channel_types.${ci}">
+        <p class="m-kind" data-field="channel_types.${ci}.type">${esc(c.type)}</p>
+        <h3 data-field="channel_types.${ci}.description">${esc(c.description || "")}</h3>
+        <p class="card-desc" data-field="channel_types.${ci}.approach">${md(c.approach || "")}</p>
+      </div>${c.appendix ? appendixRef("channel_types." + ci) : ""}`,
+			)
+			.join("");
+
+		return `
+      <section class="section" id="distribution" data-schema="distribution">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.philosophy,
+					deckPath: "philosophy",
+				})}
+        ${
+					criteria
+						? `
+          <div class="runway" data-reveal>
+            <h3>Partner Criteria (weighted)</h3>
+            <div class="runway-table dist-table">
+              <div class="rr rhead"><div>Criterion</div><div>Description</div><div>Weight</div></div>
+              ${criteria}
+            </div>
+          </div>`
+						: ""
+				}
+        ${
+					territories
+						? `
+          <div class="runway" data-reveal style="margin-top:var(--space-xl)">
+            <h3>Territories</h3>
+            <div class="runway-table dist-table">
+              <div class="rr rhead"><div>Region</div><div>Strategy</div><div>Priority</div></div>
+              ${territories}
+            </div>
+          </div>`
+						: ""
+				}
+        ${channels ? `<div class="model-grid" style="margin-top:var(--space-xl)">${channels}</div>` : ""}
+        ${d.revenue_model ? `<div class="model-card" data-reveal style="margin-top:var(--space-lg)" data-field="revenue_model"><p class="m-kind">Revenue Model</p><h3>The price floor and the price ceiling</h3><p class="card-desc">${md(d.revenue_model)}</p></div>` : ""}
+      </section>`;
+	}
+
+	function renderArtistRights(data) {
+		const d = data || {};
+		const tiers = (d.ownership_tiers || [])
+			.map(
+				(t, ti) => `
+      <div class="model-card tier-card" data-reveal data-field="ownership_tiers.${ti}">
+        <p class="m-kind">${esc(t.tier_name || "")}</p>
+        <div class="split-bar" aria-label="Artist ${t.artist_share_percent}% / AGF ${t.agf_share_percent}%">
+          <span class="split-artist" style="width:${t.artist_share_percent || 0}%"><em>Artist ${t.artist_share_percent || 0}%</em></span>
+          <span class="split-agf" style="width:${t.agf_share_percent || 0}%"><em>AGF ${t.agf_share_percent || 0}%</em></span>
+        </div>
+        <p class="card-desc">${md(t.description || "")}</p>
+        ${t.rights ? `<p class="m-kind" style="margin-top:var(--space-md)">Rights</p><ul class="m-list">${t.rights.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
+        ${t.restrictions ? `<p class="m-kind" style="margin-top:var(--space-sm)">Restrictions</p><ul class="m-list">${t.restrictions.map((r) => `<li>${esc(r)}</li>`).join("")}</ul>` : ""}
+      </div>${t.appendix ? appendixRef("ownership_tiers." + ti) : ""}`,
+			)
+			.join("");
+
+		const enf = d.enforcement || {};
+		const enfHTML = `
+      <div class="model-grid" style="margin-top:var(--space-xl)">
+        ${enf.device_lockout ? `<div class="model-card" data-field="enforcement.device_lockout"><p class="m-kind">Device Lockout</p><h3>Identified, blocked, recovered</h3><p class="card-desc">${md(enf.device_lockout)}</p></div>` : ""}
+        ${enf.legal_remedies ? `<div class="model-card" data-field="enforcement.legal_remedies"><p class="m-kind">Legal Remedies</p><ul class="m-list">${Array.isArray(enf.legal_remedies) ? enf.legal_remedies.map((l) => `<li>${esc(l)}</li>`).join("") : `<li>${md(enf.legal_remedies)}</li>`}</ul></div>` : ""}
+        ${enf.social_deterrent ? `<div class="model-card" data-field="enforcement.social_deterrent"><p class="m-kind">Social Deterrent</p><ul class="m-list">${Array.isArray(enf.social_deterrent) ? enf.social_deterrent.map((l) => `<li>${esc(l)}</li>`).join("") : `<li>${md(enf.social_deterrent)}</li>`}</ul></div>` : ""}
+      </div>`;
+
+		const rs = (d.revenue_streams || [])
+			.map(
+				(r, ri) => `
+      <div class="rr" data-field="revenue_streams.${ri}">
+        <div>${esc(r.stream)}</div>
+        <div>${md(r.description || "")}</div>
+        <div>${esc(r.split || "")}</div>
+      </div>${r.appendix ? appendixRef("revenue_streams." + ri) : ""}`,
+			)
+			.join("");
+
+		return `
+      <section class="section section-dark" id="artist-rights" data-schema="artist-rights">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title:
+						d.section_title ||
+						"Artist Rights — artists drive their own destiny.",
+					titlePath: "section_title",
+					deck: d.philosophy,
+					deckPath: "philosophy",
+				})}
+        <div class="model-grid">${tiers}</div>
+        ${enfHTML}
+        ${
+					rs
+						? `
+          <div class="runway" data-reveal style="margin-top:var(--space-xl)">
+            <h3>Revenue Streams</h3>
+            <div class="runway-table">
+              <div class="rr rhead"><div>Stream</div><div>Description</div><div>Split</div></div>
+              ${rs}
+            </div>
+          </div>`
+						: ""
+				}
+      </section>`;
+	}
+
+	// ---------- registry ----------------------------------------------------
+	// Cache for chart components (mounted post-render by app.js → bindCharts).
+	global.__agfChartData = global.__agfChartData || {};
+
+	function renderCompetitivePositioning(data) {
+		const d = data || {};
+		const key = "cp-" + Math.random().toString(36).slice(2, 9);
+		global.__agfChartData[key] = d;
+
+		// Static fallback rows — visible if the chart component fails to mount.
+		const fallbackRows = (Array.isArray(d.competitors) ? d.competitors : [])
+			.map(
+				(c, ci) => `
+      <div class="cp-row" data-field="competitors.${ci}">
+        <div class="cp-brand">${esc(c.brand || "")}</div>
+        <div class="cp-cat">${esc(c.category || "")}</div>
+        <div class="cp-status pstatus-${esc(c.status || "")}">${esc(c.status || "")}</div>
+        <div class="cp-pos">${md(c.agf_positioning || c.opening || "")}</div>
+      </div>${c.appendix ? appendixRef("competitors." + ci) : ""}`,
+			)
+			.join("");
+
+		return `
+      <section class="section" id="competitive-positioning" data-schema="competitive-positioning">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text,
+					deckPath: "intro_text",
+				})}
+        <div class="cp-chart-mount" data-chart="positioning" data-chart-key="${key}" data-reveal></div>
+        <noscript>
+          <div class="cp-fallback">${fallbackRows}</div>
+        </noscript>
+        ${d.summary ? `<div class="cp-summary" data-reveal data-field="summary"><p class="cp-summary-text">${md(d.summary)}</p></div>` : ""}
+      </section>`;
+	}
+
+	function renderLaunchRoadmap(data) {
+		const d = data || {};
+		const key = "lr-" + Math.random().toString(36).slice(2, 9);
+		global.__agfChartData[key] = d;
+
+		const stunts = (d.pr_stunts || [])
+			.map(
+				(s, si) => `
+      <div class="model-card" data-field="pr_stunts.${si}">
+        <p class="m-kind">PR Stunt</p>
+        <h3 data-field="pr_stunts.${si}.name">${esc(s.name || "")}</h3>
+        ${s.timing ? `<p class="m-meta"><em>${esc(s.timing)}</em></p>` : ""}
+        <p class="card-desc">${md(s.description || "")}</p>
+      </div>${s.appendix ? appendixRef("pr_stunts." + si) : ""}`,
+			)
+			.join("");
+
+		const yt = d.year_one_targets || {};
+		const targets = yt.global_units_per_month
+			? `
+      <div class="model-card" data-field="year_one_targets">
+        <p class="m-kind">Year-One Target</p>
+        <h3>${esc(yt.global_units_per_month)} pcs / month</h3>
+        ${yt.anchor_reference ? `<p class="card-desc">${md(yt.anchor_reference)}</p>` : ""}
+        ${yt.notes ? `<p class="card-desc">${md(yt.notes)}</p>` : ""}
+      </div>`
+			: "";
+
+		const venue =
+			d.venue_pilots && (d.venue_pilots.count || d.venue_pilots.criteria)
+				? `
+      <div class="model-card" data-field="venue_pilots">
+        <p class="m-kind">Venue Pilots</p>
+        <h3>${esc(d.venue_pilots.count || "—")} markets</h3>
+        ${d.venue_pilots.criteria ? `<p class="card-desc">${md(d.venue_pilots.criteria)}</p>` : ""}
+        ${d.venue_pilots.notes ? `<p class="card-desc">${md(d.venue_pilots.notes)}</p>` : ""}
+      </div>`
+				: "";
+
+		const grid =
+			stunts || venue || targets
+				? `
+      <div class="model-grid lr-supports" data-reveal>
+        ${stunts}
+        ${venue}
+        ${targets}
+      </div>`
+				: "";
+
+		return `
+      <section class="section section-dark" id="launch-roadmap" data-schema="launch-roadmap">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text,
+					deckPath: "intro_text",
+				})}
+        <div class="lr-chart-mount" data-chart="roadmap" data-chart-key="${key}" data-reveal></div>
+        ${grid}
+      </section>`;
+	}
+
+	function renderHeader(data) {
+		const d = data || {};
+		const brand = d.brand_name || "AGF";
+		const navLinks = Array.isArray(d.nav_links) ? d.nav_links : [];
+
+		const linksHTML = navLinks
+			.map(
+				(l, i) => `
+      <a class="nav-link" href="${esc(l.href || "#")}" data-field="nav_links.${i}.href">
+        <span data-field="nav_links.${i}.label">${esc(l.label || "")}</span>
+      </a>
+    `,
+			)
+			.join("");
+
+		const ctaHTML = d.cta_text
+			? `
+      <a class="nav-cta btn primary" href="${esc(d.cta_link || "#")}" data-field="cta_link">
+        <span data-field="cta_text">${esc(d.cta_text)}</span>
+      </a>
+    `
+			: "";
+
+		return `<div class="nav-left">
+        <a class="nav-mark" href="#" aria-label="AGF home">
+          <span class="mark-word" data-field="brand_name">${esc(brand)}</span>
+        </a>
+        <a class="nav-tagline" href="#technology">Even Rails \u2192 Smooth Tracks</a>
+      </div>
+      <div class="nav-right" id="navRight">
+        ${navLinks.length ? `<nav class="nav-links">${linksHTML}</nav>` : ""}
+        ${ctaHTML}
+      </div>`;
+	}
+
+	function renderFooter(data) {
+		const d = data || {};
+		const brand = d.brand_name || "AGF";
+		const tagline = d.tagline || "";
+		const meta = d.meta_text || "";
+		const sources = d.source_text || "";
+
+		return `<div class="foot-mark">
+        <span class="mark-word" data-field="brand_name">${esc(brand)}</span>
+        <span class="foot-mark-text" data-field="tagline">${esc(tagline)}</span>
+      </div>
+      <p class="foot-meta" data-field="meta_text">${esc(meta)}</p>
+      ${sources ? `<p class="foot-src" data-field="source_text">${md(sources)}</p>` : ""}`;
+	}
+
+	/**
+	 * imageSettingsDataAttrs(settings)
+	 * Emits the data-img-* attributes consumed by the editor's image-adjust
+	 * panel. Reads { fit, posX, posY, scale, rotation } with safe defaults
+	 * so a missing or partial settings object still yields valid attrs.
+	 */
+	function imageSettingsDataAttrs(settings) {
+		const s = settings || {};
+		const fit = s.fit || s.size || "cover";
+		const posX = s.posX != null ? s.posX : 50;
+		const posY = s.posY != null ? s.posY : 50;
+		const scale = s.scale != null ? s.scale : 100;
+		const rotation = s.rotation != null ? s.rotation : 0;
+		return `data-img-fit="${esc(fit)}" data-img-pos-x="${esc(String(posX))}" data-img-pos-y="${esc(String(posY))}" data-img-scale="${esc(String(scale))}" data-img-rotation="${esc(String(rotation))}"`;
+	}
+
+	function renderPrelude(data) {
+		const d = data || {};
+		const squares = (
+			Array.isArray(d.squares) && d.squares.length ? d.squares : [{}, {}, {}]
+		).slice(0, 3);
+
+		const squaresHTML = squares
+			.map((sq, i) => {
+				const settings = sq.image_settings || {};
+				const fit = settings.fit || settings.size || "cover";
+				const posX = settings.posX != null ? settings.posX : 50;
+				const posY = settings.posY != null ? settings.posY : 50;
+				const scale = settings.scale != null ? settings.scale : 100;
+				const rotation = settings.rotation != null ? settings.rotation : 0;
+				// Scale (≠100) wins as a zoom crop over fit; fill → 100% 100%.
+				const bgSize =
+					scale !== 100 ? `${scale}%` : fit === "fill" ? "100% 100%" : fit;
+				const bgPos = `${posX}% ${posY}%`;
+				const transform = rotation ? `transform:rotate(${rotation}deg);` : "";
+				const bgStyle = sq.image
+					? `background-image:url('${esc(sq.image)}'); background-size:${esc(bgSize)}; background-position:${esc(bgPos)}; ${transform}`
+					: "";
+				const imgAttrs = sq.image
+					? ` ${imageSettingsDataAttrs(settings)} data-image-path="squares.${i}.image"`
+					: "";
+				return `<div class="prelude-square" style="${bgStyle}" data-field="squares.${i}"${imgAttrs}>
+        <p class="prelude-square-text" data-field="squares.${i}.text">${md(sq.text || "")}</p>
+      </div>`;
+			})
+			.join("");
+
+		return `
+      <section class="section" data-schema="prelude">
+        ${head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label,
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text,
+					deckPath: "intro_text",
+				})}
+        <div class="prelude-grid">${squaresHTML}</div>
+        <div class="prelude-summary">
+          <p class="prelude-summary-text" data-field="summary">${md(d.summary || "")}</p>
+        </div>
+      </section>`;
+	}
+
+	function renderCutSheet(data) {
+		const d = data || {};
+		const pos = d.image_position === "right" ? "right" : "left";
+		const benefits = Array.isArray(d.benefits) ? d.benefits : [];
+
+		const csSettings = d.image_settings || {};
+		const csFit = csSettings.fit || csSettings.size || "cover";
+		const csPosX = csSettings.posX != null ? csSettings.posX : 50;
+		const csPosY = csSettings.posY != null ? csSettings.posY : 50;
+		const csScale = csSettings.scale != null ? csSettings.scale : 100;
+		const csRotation = csSettings.rotation != null ? csSettings.rotation : 0;
+		const csImgStyle = `object-fit:${esc(csFit === "fill" ? "fill" : csFit)}; object-position:${esc(csPosX + "% " + csPosY + "%")}; transform:scale(${esc(String(csScale))}%) rotate(${esc(String(csRotation))}deg);`;
+		const imageBlock = `<div class="cs-image">
+      ${d.image ? `<img src="${esc(d.image)}" alt="${esc(d.title || "")}" data-field="image" style="${csImgStyle}" ${imageSettingsDataAttrs(csSettings)} data-image-path="image">` : `<div class="cs-image-placeholder" data-field="image"></div>`}
+    </div>`;
+
+		const textBlock = `<div class="cs-text">
+      <h2 class="cs-title" data-field="title">${esc(d.title || "")}</h2>
+      <p class="cs-description" data-field="description">${md(d.description || "")}</p>
+    </div>`;
+
+		const benefitsHTML = benefits
+			.map(
+				(b, i) => `
+      <div class="cs-benefit">
+        <strong class="cs-benefit-label" data-field="benefits.${i}.label">${esc(b.label || "")}</strong>
+        <span class="cs-benefit-value" data-field="benefits.${i}.value">${esc(b.value || "")}</span>
+      </div>
+    `,
+			)
+			.join("");
+
+		const topRow =
+			pos === "left"
+				? `${imageBlock}${textBlock}`
+				: `${textBlock}${imageBlock}`;
+
+		const hasHead =
+			d.section_number != null ||
+			d.section_label ||
+			d.section_title ||
+			d.intro_text;
+		const headHTML = hasHead
+			? head({
+					num: d.section_number != null ? String(d.section_number) : "",
+					numPath: "section_number",
+					label: d.section_label || "",
+					labelPath: "section_label",
+					title: d.section_title || "",
+					titlePath: "section_title",
+					deck: d.intro_text || "",
+					deckPath: "intro_text",
+				})
+			: "";
+
+		return `
+      <section class="section cut-sheet cut-sheet--${pos}" data-schema="cut-sheet">
+        ${headHTML}
+        <div class="cs-top">${topRow}</div>
+        <div class="cs-benefits-bar">${benefitsHTML}</div>
+      </section>`;
+	}
+
+	const REGISTRY = {
+		header: renderHeader,
+		footer: renderFooter,
+		hero: renderHero,
+		"team-note": renderTeamNote,
+		timeline: renderTimeline,
+		consolidation: renderConsolidation,
+		tenet: renderTenet,
+		venue: renderVenue,
+		technology: renderTechnology,
+		product: renderProduct,
+		"business-model": renderBusinessModel,
+		founder: renderFounder,
+		distribution: renderDistribution,
+		"artist-rights": renderArtistRights,
+		"competitive-positioning": renderCompetitivePositioning,
+		"launch-roadmap": renderLaunchRoadmap,
+		prelude: renderPrelude,
+		"cut-sheet": renderCutSheet,
+	};
+
+	// Allowed placement/size values for the _figures convention field.
+	// Anything outside these sets falls back to the default so a bad data
+	// value can never inject an arbitrary class name.
+	const FIG_PLACEMENTS = { left: true, center: true, right: true };
+	const FIG_SIZES = { original: true, full: true, fit: true };
+
+	/**
+	 * figureHTML(f)
+	 * Renders a single figure object to a <figure> element with
+	 * `fig fig-<placement> fig-<size>` classes and a data-figure-id.
+	 * figcaption is emitted only when a caption is present.
+	 */
+	function figureHTML(f) {
+		if (!f || typeof f !== "object") return "";
+		const id = esc(f.id != null ? f.id : "");
+		const src = esc(f.src != null ? f.src : "");
+		const placement = FIG_PLACEMENTS[f.placement] ? f.placement : "center";
+		const size = FIG_SIZES[f.size] ? f.size : "original";
+		const caption = f.caption != null ? String(f.caption) : "";
+		const alt = esc(caption);
+		const figcaption = caption
+			? `<figcaption>${esc(caption)}</figcaption>`
+			: "";
+		return `<figure class="fig fig-${placement} fig-${size}" data-figure-id="${id}"><img src="${src}" alt="${alt}">${figcaption}</figure>`;
+	}
+
+	// Allowed position values for the optional per-figure `position` field
+	// (option B wave 4). 'top' (default) injects after the opening <section>
+	// tag — identical to Wave 1. 'after-head' injects after the .section-head
+	// block. 'bottom' injects before the closing </section>.
+	const FIG_POSITIONS = { top: true, "after-head": true, bottom: true };
+
+	/**
+	 * figuresByPosition(d)
+	 * Groups section.data._figures by their optional `position` field and
+	 * renders each group to HTML. Returns { top, afterHead, bottom }.
+	 * A figure with no position (or an unrecognized value) falls into the
+	 * `top` group, preserving Wave 1 byte-identical output for existing data.
+	 * All groups are '' when there are no figures.
+	 */
+	function figuresByPosition(d) {
+		var empty = { top: "", afterHead: "", bottom: "" };
+		const figs = d && Array.isArray(d._figures) ? d._figures : null;
+		if (!figs || !figs.length) return empty;
+		var groups = { top: [], afterHead: [], bottom: [] };
+		figs.forEach((f) => {
+			var pos = f && FIG_POSITIONS[f.position] ? f.position : "top";
+			if (pos === "after-head") groups.afterHead.push(f);
+			else if (pos === "bottom") groups.bottom.push(f);
+			else groups.top.push(f);
+		});
+		return {
+			top: groups.top.map(figureHTML).join(""),
+			afterHead: groups.afterHead.map(figureHTML).join(""),
+			bottom: groups.bottom.map(figureHTML).join(""),
+		};
+	}
+
+	/**
+	 * insertedTextsHTML(d)
+	 * Renders section.data._texts entries as <p class="inserted-text"> elements.
+	 * Each element is absolutely positioned at the coordinates where the user
+	 * right-clicked, so it overlays without disrupting flex/grid layouts.
+	 * Each element carries a data-field attribute so click-to-edit can target it.
+	 */
+	function insertedTextsHTML(d) {
+		var texts = d && Array.isArray(d._texts) ? d._texts : null;
+		if (!texts || !texts.length) return "";
+		return texts
+			.map((t, i) => {
+				if (!t || !t.content) return "";
+				var styles = [];
+				if (t.position && t.position.top != null && t.position.left != null) {
+					styles.push("top:" + t.position.top + "%");
+					styles.push("left:" + t.position.left + "%");
+				} else {
+					styles.push("top:" + (80 + i * 5) + "%");
+					styles.push("left:5%");
+				}
+				if (t.width) {
+					styles.push("width:" + t.width + "px");
+					styles.push("max-width:" + t.width + "px");
+				}
+				var posStyle = ' style="' + styles.join("; ") + ';"';
+				// Render content as HTML to preserve line breaks (trusted local tool)
+				return (
+					'<div class="inserted-text"' +
+					posStyle +
+					' data-field="_texts.' +
+					i +
+					'.content" data-text-id="' +
+					esc(t.id || "") +
+					'">' +
+					(t.content || "") +
+					'<span class="it-resize-handle" data-resize="1"></span></div>'
+				);
+			})
+			.join("\n        ");
+	}
+
+	/**
+	 * renderSection(section)
+	 * Routes by `section.schema_id` to the right renderer and wraps the output
+	 * in a [data-section-id] container for edit-mode targeting.
+	 */
+	function renderSection(section) {
+		if (!section || !section.schema_id) return "";
+		// Hidden utility schemas — config-only sections that drive feature behavior
+		// but never render on the main page.
+		if (section.schema_id === "comparison-config") return "";
+		if (section.schema_id === "pdf-config") return "";
+		// Header and footer render into structural containers, not #app.
+		if (section.schema_id === "header") return "";
+		if (section.schema_id === "footer") return "";
+		const fn = REGISTRY[section.schema_id];
+		if (!fn) {
+			return `<section class="section" data-section-id="${esc(section.id)}" data-schema="${esc(section.schema_id)}">
+        <div class="section-head"><p class="eyebrow">Unsupported schema</p><h2 class="section-title">${esc(section.schema_id)}</h2></div>
+      </section>`;
+		}
+		_currentSectionId = section.id;
+		const html = fn(section.data || {});
+		// Inline figures: grouped by optional `position` field (wave 4).
+		// `top` (default) injects after the opening <section> tag (wave 1
+		// behavior); `after-head` injects after the .section-head block;
+		// `bottom` injects before the closing </section>.
+		const figGroups = figuresByPosition(section.data || {});
+		// Append appendix link if the section has published appendix text
+		const appendix = section.data && section.data.appendix;
+		const appendixHTML = appendix
+			? `<div class="appendix-ref" data-appendix-for="${esc(section.id)}"><em>*Learn more in Appendix*</em></div>`
+			: "";
+		// Background image: if _background_image exists, add data-bg-image attribute
+		const bgImage = section.data && section.data._background_image;
+		const bgSettings =
+			(section.data && section.data._background_settings) || {};
+		const bgAttr = bgImage ? ` data-bg-image="${esc(bgImage)}"` : "";
+		// Emit background settings as data attributes so applyBackgroundFromAttr
+		// can apply them without a state lookup. Defaults are handled in app.js.
+		const bgSettingsAttrs = bgImage
+			? ` data-bg-size="${esc(bgSettings.size || "cover")}"` +
+				` data-bg-position="${esc(bgSettings.position || "center")}"` +
+				` data-bg-opacity="${esc(String(bgSettings.opacity != null ? bgSettings.opacity : 0.15))}"`
+			: "";
+		// Inject data-section-id on the outermost <section> tag so edit mode can find it.
+		// Also inject appendix-ref before the closing </section>.
+		let result = html.replace(/^(\s*)<section\b([^>]*)>/, (_, w, attrs) => {
+			const open = /data-section-id=/.test(attrs)
+				? `${w}<section${attrs}>`
+				: `${w}<section data-section-id="${esc(section.id)}"${bgAttr}${bgSettingsAttrs}${attrs}>`;
+			return figGroups.top ? open + "\n        " + figGroups.top : open;
+		});
+		// after-head figures: inject after the .section-head block's closing
+		// </div>. Sections without a .section-head (hero, team-note) are a
+		// safe no-op — the regex simply doesn't match.
+		if (figGroups.afterHead) {
+			result = result.replace(
+				/(<div class="section-head">[\s\S]*?<\/div>)/,
+				"$1\n        " + figGroups.afterHead,
+			);
+		}
+		// bottom figures: inject just before the closing </section>.
+		if (figGroups.bottom) {
+			result = result.replace(
+				/<\/section>\s*$/,
+				"\n        " + figGroups.bottom + "</section>",
+			);
+		}
+		// Inserted text blocks: inject just before closing </section>.
+		const textsHTML = insertedTextsHTML(section.data || {});
+		if (textsHTML) {
+			result = result.replace(
+				/<\/section>\s*$/,
+				"\n        " + textsHTML + "\n      </section>",
+			);
+		}
+		if (appendixHTML) {
+			result = result.replace(/<\/section>\s*$/, appendixHTML + "</section>");
+		}
+		return result;
+	}
+
+	// Public API
+	global.SchemaRenderer = {
+		renderSection,
+		renderProductsBlock,
+		hydrateProductVisualizations,
+		renderers: REGISTRY,
+		helpers: { esc, md, fmtUSD, fmtRange, splitHeadline, toRoman },
+		mountCharts,
+		renderHeader,
+		renderFooter,
+	};
+
+	// Self-mounting chart hosts: any [data-chart] element added to the DOM
+	// gets the matching component called against the cached section data.
+	function mountCharts(root) {
+		const scope = root || document;
+		if (!scope.querySelectorAll) return;
+		const hosts = scope.querySelectorAll(
+			"[data-chart]:not([data-chart-mounted])",
+		);
+		hosts.forEach((host) => {
+			const kind = host.getAttribute("data-chart");
+			const key = host.getAttribute("data-chart-key");
+			const data =
+				key && global.__agfChartData ? global.__agfChartData[key] : null;
+			if (!data) return;
+			try {
+				if (kind === "positioning" && global.PositioningChart) {
+					global.PositioningChart.render(host, data);
+					host.setAttribute("data-chart-mounted", "1");
+				} else if (kind === "roadmap" && global.RoadmapChart) {
+					global.RoadmapChart.render(host, data);
+					host.setAttribute("data-chart-mounted", "1");
+				}
+			} catch (e) {
+				console.error("[agf] chart mount failed:", kind, e);
+			}
+		});
+	}
+
+	// Watch for chart hosts inserted by app.js / refresh routines.
+	if (
+		typeof MutationObserver !== "undefined" &&
+		typeof document !== "undefined"
+	) {
+		const mo = new MutationObserver(() => {
+			mountCharts();
+		});
+		const start = () => {
+			mountCharts();
+			mo.observe(document.body || document.documentElement, {
+				childList: true,
+				subtree: true,
+			});
+		};
+		if (document.readyState === "loading") {
+			document.addEventListener("DOMContentLoaded", start);
+		} else {
+			start();
+		}
+	}
+})(window);

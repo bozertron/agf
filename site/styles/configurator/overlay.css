@@ -1,0 +1,160 @@
+/* ============================================================
+   PARTIAL:  configurator/overlay.css
+   PURPOSE:  banner + scroll-lock + frame + header
+   SOURCE:   site/styles.css  L3239–L3388   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ===== SYSTEM CONFIGURATOR ===================================================
+   "Build Your System" — full-screen overlay with a schematic / blueprint feel.
+   Forrest substrate, gold trace, monoton numerals, hairline grid.
+   ============================================================================ */
+
+/* CTA inside the products section */
+.build-system-cta {
+  margin: var(--space-2xl) auto 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.build-system-btn {
+  font-family: var(--font);
+  letter-spacing: var(--track-wide);
+  font-size: var(--type-body);
+  padding: var(--space-sm) var(--space-lg);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  position: relative;
+  isolation: isolate;
+}
+.build-system-btn .bs-glyph {
+  font-family: 'Monoton', var(--font);
+  font-size: var(--type-lede);
+  letter-spacing: var(--track-normal);
+  color: var(--gold-soft);
+}
+.build-system-btn::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border: var(--border-hair) solid var(--gold-mute);
+  pointer-events: none;
+}
+.build-system-hint {
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--moss);
+  margin: 0;
+}
+
+/* Lock background scroll while overlay is open */
+body.configurator-open { overflow: hidden; }
+
+.configurator-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 4000;
+  background: rgba(8, 22, 14, 0.78);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  padding: var(--space-lg);
+  opacity: 0;
+  transition: opacity 360ms cubic-bezier(.2,.7,.2,1);
+}
+.configurator-overlay.is-open { opacity: 1; }
+
+/* Subtle film-grain layer behind the frame; click-to-close */
+.configurator-grain {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(184,134,11,0.04) 0 1px, transparent 1px 80px),
+    repeating-linear-gradient(90deg, rgba(184,134,11,0.04) 0 1px, transparent 1px 80px);
+  pointer-events: auto;
+}
+
+.configurator-frame {
+  position: relative;
+  width: min(1280px, 100%);
+  max-height: 100%;
+  background: linear-gradient(180deg, var(--forrest-deep) 0%, #07140C 100%);
+  border: var(--border-hair) solid var(--gold-mute);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.55),
+    inset 0 0 120px rgba(184,134,11,0.04);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  overflow: hidden;
+  transform: translateY(12px);
+  transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+}
+.configurator-overlay.is-open .configurator-frame { transform: translateY(0); }
+/* Corner crosshairs — schematic detail */
+.configurator-frame::before,
+.configurator-frame::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border: var(--border-hair) solid var(--gold);
+  pointer-events: none;
+}
+.configurator-frame::before { top: var(--space-sm); left: var(--space-sm); border-right: 0; border-bottom: 0; }
+.configurator-frame::after  { bottom: var(--space-sm); right: var(--space-sm); border-left: 0; border-top: 0; }
+
+/* Header */
+.configurator-header {
+  padding: var(--space-md) var(--space-lg) var(--space-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+}
+.configurator-eyebrow {
+  margin: 0 0 var(--space-2xs);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold-soft);
+  font-weight: 500;
+}
+.configurator-title {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: clamp(28px, 3.4vw, 42px);
+  line-height: var(--leading-tight);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.configurator-title em {
+  font-style: italic;
+  color: var(--gold-soft);
+  font-weight: 300;
+}
+.configurator-close {
+  width: 44px; height: 44px;
+  border: var(--border-hair) solid var(--gold-mute);
+  background: transparent;
+  color: var(--taupe-2);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 200ms, color 200ms, border-color 200ms;
+}
+.configurator-close:hover {
+  background: var(--gold);
+  color: var(--obsidian);
+  border-color: var(--gold);
+}
+

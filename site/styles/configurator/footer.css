@@ -1,0 +1,95 @@
+/* ============================================================
+   PARTIAL:  configurator/footer.css
+   PURPOSE:  synergy pills + price total + responsive
+   SOURCE:   site/styles.css  L3576–L3660   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* Footer */
+.configurator-footer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-md);
+  padding: var(--space-md) var(--gutter);
+  border-top: var(--border-hair) solid var(--dark-rule);
+  background: rgba(8, 22, 14, 0.72);
+}
+.configurator-foot-col .foot-kind {
+  margin: 0 0 var(--space-xs);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--moss);
+  font-weight: 500;
+}
+.synergy-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+.synergy-pill {
+  padding: var(--space-xs) var(--space-sm);
+  border: var(--border-hair) solid var(--gold-mute);
+  background: rgba(184,134,11,0.10);
+  color: var(--gold-soft);
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-wider);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.synergy-empty {
+  font-size: var(--type-micro);
+  color: var(--moss);
+  font-style: italic;
+  letter-spacing: var(--track-wide);
+}
+.price-total {
+  text-align: right;
+  min-width: 180px;
+}
+.price-total .price-value {
+  margin: 0;
+  font-family: var(--font);
+  font-weight: 200;
+  font-size: var(--type-display);
+  line-height: var(--leading-tight);
+  color: var(--gold-soft);
+  letter-spacing: var(--track-tight);
+}
+.price-total .price-meta {
+  margin: var(--space-xs) 0 0;
+  font-size: var(--type-micro);
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--moss);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .configurator-overlay { padding: var(--space-sm); }
+  .configurator-header { padding: var(--space-sm) var(--space-md) var(--space-sm); }
+  .configurator-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .configurator-sidebar {
+    border-right: 0;
+    border-bottom: var(--border-hair) solid var(--dark-rule);
+    max-height: 32vh;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: var(--space-sm);
+  }
+  .configurator-card { min-width: 220px; flex: 0 0 220px; }
+  .configurator-stage { padding: var(--space-sm); }
+  .configurator-footer {
+    grid-template-columns: 1fr;
+    padding: var(--space-sm) var(--space-md);
+  }
+  .price-total { text-align: left; }
+}
+

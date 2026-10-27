@@ -1,0 +1,40 @@
+/* ============================================================
+   PARTIAL:  feedback/loading.css
+   PURPOSE:  .app-loading spinner
+   SOURCE:   site/styles.css  L4399–L4428   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ========================================================================
+   Loading indicator (site-011)
+   ======================================================================== */
+.app-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+}
+.app-loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(184, 134, 11, 0.15);
+  border-top-color: #B8860B;
+  border-radius: 50%;
+  animation: app-spin 0.8s linear infinite;
+}
+@keyframes app-spin {
+  to { transform: rotate(360deg); }
+}
+.app-loading-text {
+  font-family: 'Commissioner', sans-serif;
+  font-size: 0.9rem;
+  color: #6b7d6b;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+

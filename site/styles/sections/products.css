@@ -1,0 +1,89 @@
+/* ============================================================
+   PARTIAL:  sections/products.css
+   PURPOSE:  .products, .product-card (.phead/.pnum/.ptag/.pspec)
+   SOURCE:   site/styles.css  L1377–L1455   (verbatim slice)
+   WIRED BY: site/styles/index.css  (see _manifest.json)
+   ------------------------------------------------------------
+   Bytes below this block are copied verbatim from the source file.
+   Do not hand-edit unless you also update the source + manifest.
+   ============================================================ */
+
+/* ==========================================================================
+   Products
+   ========================================================================== */
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: var(--border-hair) solid var(--dark-rule);
+}
+.product-card {
+  display: grid;
+  grid-template-columns: minmax(0, 80px) 1fr 1.4fr;
+  gap: var(--space-xl);
+  padding: var(--space-2xl) 0;
+  border-bottom: var(--border-hair) solid var(--dark-rule);
+  transition: background .2s var(--ease);
+}
+.product-card:hover { background: var(--dark-2); box-shadow: inset var(--space-2xs) 0 0 var(--gold-mute); }
+.phead {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  grid-column: 2;
+}
+.pnum {
+  font-family: var(--font);
+  font-size: var(--type-body);
+  font-weight: 600;
+  color: var(--gold-soft);
+  letter-spacing: var(--track-wider);
+}
+.product-card h3 {
+  font-family: var(--font);
+  font-size: clamp(24px, 2.4vw, 32px);
+  font-weight: 500;
+  margin: 0;
+  line-height: var(--leading-snug);
+  color: var(--taupe-2);
+  letter-spacing: var(--track-tight);
+}
+.ptag {
+  grid-column: 3;
+  grid-row: 1;
+  color: var(--taupe);
+  font-size: var(--type-body);
+  line-height: var(--leading-loose);
+  margin: 0 0 var(--space-md);
+  font-weight: 300;
+}
+.pspec {
+  grid-column: 2 / span 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0 0;
+  padding-top: var(--space-md);
+  border-top: var(--border-hair) dashed var(--dark-rule);
+}
+.pspec > div { display: flex; flex-direction: column; gap: var(--space-2xs); }
+.pspec dt {
+  font-size: var(--type-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-widest);
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+.pspec dd {
+  margin: 0;
+  font-size: var(--type-body);
+  color: var(--taupe);
+  line-height: var(--leading-normal);
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .product-card { grid-template-columns: 1fr; gap: var(--space-md); }
+  .phead, .ptag, .pspec { grid-column: 1; }
+}
+
