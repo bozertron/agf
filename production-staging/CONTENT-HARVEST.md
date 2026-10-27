@@ -1,20 +1,20 @@
 # AGF content harvest
 
-> **Update, same day:** the old site's database (`agf.db`, pushed to `main`) has been recovered and exported. Everything section 7 below listed as missing is now in `content/`:
+> **Recovered:** the old site's database (`agf.db`, now at the repo root) has been recovered and exported. Everything section 7 below listed as missing is now in `production-staging/content/`:
 >
 > - `content/sections/<schema>.json` is the newest version of each section, with editor-only keys (style overrides, nudges, background settings) stripped. Where the database held more than one distinct version, the older ones are `<schema>.v2.json`, `.v3.json` and so on; the two tenet versions and the two technology versions differ in substance and both are kept.
 > - `content/products/<slug>.json` is each of the six products.
-> - `content/raw/` is the untouched export (every row, editor keys included) for reference.
+> - `content/raw/` is the untouched export (every exported row, editor keys included) for reference. The 37 "Test Duplicate" header rows in the database were not exported.
 >
-> Sections 1 to 6 below still describe what the repo held before the database arrived and remain accurate as an inventory of images and fixed names.
+> **Layout note:** this inventory was written before the repo was reorganised. Paths below have been updated to the current layout: the old `site/` is now `archive/legacy-site/`; the screenshots, section images and root brand boards are catalogued under `production-staging/assets/` (see `assets/ASSETS.md`); `product-renders/` is now `production-staging/assets/renders/` (see `assets/renders/RENDERS.md`). Sections 3 to 5 (recovered copy, fixed names, board copy) are unchanged and remain the record of what survived outside the database; sections 1, 2 and 6 describe the pre-recovery repo.
 
-What survived from the old site, what was lost, and what the new standalone pages can draw on. Compiled 2026-10-27 from `site/`, `product-renders/`, the root images and the design system in `agf-design-system/`.
+What survived from the old site, what was lost, and what the new standalone pages can draw on. Compiled 2026-10-27 from the old site (now `archive/legacy-site/`), the product renders (now `production-staging/assets/renders/`), the root images (now `production-staging/assets/brand-boards/`) and the design system in `agf-design-system/agf-design-system/`.
 
 ## 1. What the old site actually was
 
-- A schema-driven single page: `site/index.html` is an empty shell. Every section was rendered by `schema-renderer/` from rows in a server database (the comment in the HTML says "Populated by app.js from header section in DB"). The server, seed file and database are **not in this repo** (the extract reports point at `/home/bozertron/0.1-Audio-AGF-BP/server/`).
-- So the prose, numbers, tenets, competitor data, roadmap phases and product specs were in that database. The repo holds only the **structure** (22 JSON schemas), a handful of **hard-coded fallback strings**, and **screenshots and renders**.
-- If the old `server/` folder or its SQLite file still exists on your machine, exporting it recovers everything at once. Until then, this document is the harvest.
+- A schema-driven single page: `archive/legacy-site/index.html` is an empty shell. Every section was rendered by `archive/legacy-site/schema-renderer/` from rows in a server database (the comment in the HTML says "Populated by app.js from header section in DB"). When this inventory was written the server, seed file and database were **not in the repo** (the extract reports point at `/home/bozertron/0.1-Audio-AGF-BP/server/`); the database has since arrived as `agf.db` at the repo root (see the banner).
+- So the prose, numbers, tenets, competitor data, roadmap phases and product specs were in that database. At that point the repo held only the **structure** (22 JSON schemas, now in `archive/legacy-site/schemas/`), a handful of **hard-coded fallback strings**, and **screenshots and renders**.
+- Exporting the database recovered everything at once: see `production-staging/content/`. Sections 3 to 5 of this document remain the record of what survived without it.
 
 ## 2. Story skeleton (from the schemas)
 
@@ -76,23 +76,32 @@ Hard-coded fallbacks in the renderers. Short, but they are the only sentences of
 
 ## 6. Visual assets
 
-Renders in `product-renders/` (grey-box CAD and finished renders, all usable as "in development" imagery):
+Every image is now catalogued, with a descriptive file name, a description, the original path it came from and its pixel size. Two catalogues, each with a machine-readable twin:
 
-| Folder | What it shows |
+- **`production-staging/assets/ASSETS.md`** (and `assets/assets.json`) covers everything except product renders, and also holds the verbatim copy transcribed from the AI boards. It replaces the old `site/assets/screenshots/`, `site/assets/sections/` and the four root images.
+- **`production-staging/assets/renders/RENDERS.md`** (and `renders/renders.json`) covers the 96 renders that were in `product-renders/` (including the loose `untitled.*.jpg` files at the old root).
+
+Current folders (all under `production-staging/assets/`):
+
+| Folder | What it holds |
 |---|---|
-| `amp-no-bg/`, `amp-w-bg/`, `silver-amp-stereo-dt/`, `dt-amp-shortie/` | A desktop stereo amplifier, walnut cheeks, black or silver faceplate, brass hardware; rear panel with RCA in/out and IEC inlet |
-| `mic/` | Large-diaphragm microphone in a wire shock mount with the AGF triangle mark |
-| `gotham-broadcast/` | Desktop broadcast microphone on a weighted base with XLR and lamp |
-| `portable-daw/` | Keyboard-format control surface with 16 encoders, 16 faders and 8 knobs |
-| `broadcast-eb/` | Earbud case concept with knurled brass knob and OLED (the "Wasted Real-Estate" object) |
-| `oe-hf-studio/` | Over-ear headphones with copper accents on a head form |
-| `media-1/` | Mood boards: copper knob on marble, waveform sculpture |
-| root `untitled.*.jpg` | Floor-standing speaker tower in walnut, copper and forest-green finishes |
+| `brand-boards/` | The four AI brand boards and packaging shot from the repo root (`AGF.png`, `AGF1.png`, `pic.jpeg`, `pic1.jpeg`), now `agf-brand-board-landscape-design-system.png`, `agf-master-design-system-board-portrait.png`, `agf-brand-board-mark-palette-merch.jpeg` and `agf-packaging-measured-in-silence-card.jpeg` (certificate "Measured in Silence", brass cable, trace-field box) |
+| `concept-boards/` | The five boards that carry copy: the Wasted Real-Estate earbud case board, the stereOS "Live to Global Village" case ad, and three venue boards |
+| `prior-work/` | Earlier products: the Remora behind-the-TV speaker (12 racetrack drivers, 4 subwoofers, 4 passive radiators), the Dolby round earbud case, Mass Fidelity USB DAC renders; `prior-work/mass-fidelity/` holds 46 more Mass Fidelity renders (USB DAC and portable DAC) |
+| `concepts/` | Unbranded or AI concept imagery: in-wall "ANALOG" brass-and-green volume controls, a marble media console, a copper-wire waveform sculpture, two headphone concepts, a keyboard-format control surface in grey CAD; `concepts/material-moods/` has 14 walnut, copper, marble and glass mood images |
+| `section-backgrounds/` | The one surviving old-site section background (`venue-background.webp`) |
+| `renders/<product>/` | Renders by product: `over-ear-home-centric/`, `symphony-macro-system/` (the floor-standing walnut, copper and forest-green tower, formerly the root `untitled.*.jpg` files), `studio-microphone/`, `broadcast-microphone/`, `control-surface/` and `desktop-stereo-amp/` (walnut-cheeked stereo amplifier, black or silver faceplate, rear panel with RCA in/out and IEC inlet) |
 
-Screenshots in `site/assets/screenshots/`: the Remora behind-the-TV speaker (12 racetrack drivers, 4 subwoofers, 4 passive radiators), Mass Fidelity USB DAC renders, an in-wall "ANALOG" brass-and-green volume control, a marble media console, the venue concept boards, two headphone concepts, and three AI brand boards. `AGF.png`, `AGF1.png` and `pic.jpeg`, `pic1.jpeg` at the root are brand boards and a packaging shot (certificate "Measured in Silence", brass cable, trace-field box).
+Mapping from the old render folders, for reading the earlier text of this document: `mic/` is `studio-microphone/`; `gotham-broadcast/` is `broadcast-microphone/`; `portable-daw/` is `control-surface/`; `oe-hf-studio/` is `over-ear-home-centric/`; `silver-amp-stereo-dt/` and `dt-amp-shortie/` are `desktop-stereo-amp/`; `media-1/` is `concepts/material-moods/`. The old `amp-no-bg/`, `amp-w-bg/` and `broadcast-eb/` turned out, once catalogued, to hold massFIDELITY renders (USB DAC and portable DAC from the founder's earlier company), not AGF objects, and now live in `prior-work/mass-fidelity/`. The Wasted Real-Estate earbud case exists only as the concept board and the two Dolby-era CAD cases, not as a finished AGF render.
 
-Fonts are in `fonts/` with OFL licences. The design system's `agf.css` embeds them, so pages built on it work from `file://`.
+Fonts are in `fonts/` (repo root) with OFL licences in `fonts/licenses/`. The design system's `agf-design-system/agf-design-system/agf.css` embeds them, so pages built on it work from `file://`.
 
-## 7. Known gaps
+## 7. Known gaps (resolved)
 
-Everything in section 2 that is not in sections 3 to 5 is missing: the six tenets, founder milestones and mentors, the competitor table, acquisitions, the roadmap phases and dates, pricing and COGS, territories, the artist-rights tiers, the venue financial model, and every product's specification. Those are the questions to answer category by category.
+**Resolved.** When this inventory was written, everything in section 2 that is not in sections 3 to 5 was missing: the six tenets, founder milestones and mentors, the competitor table, acquisitions, the roadmap phases and dates, pricing and COGS, territories, the artist-rights tiers, the venue financial model, and every product's specification. The database was then recovered and exported, and all of it is now in `production-staging/content/`:
+
+- `content/sections/` has one JSON file per section (tenets, founder, timeline, consolidation, competitive positioning, technology, venue, artist rights, distribution, business model, launch roadmap and the rest), with older database versions kept as `.v2.json` and later.
+- `content/products/` has the six products with their specifications, pricing and COGS.
+- `content/raw/` is the untouched export.
+
+Some questions stay open inside that content itself (blank dates and links in the consolidation table, an unsourced market-size figure, internal numbers to vet before a public site). They are listed in `REPO-MAP.md` section 5, not here.

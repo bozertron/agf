@@ -8,6 +8,10 @@
     "updated_at": "2026-07-14 16:17:58",
     "is_newest": true
   },
+  "_edits": [
+    "2026-10-27: technology id=btn-tech: name and full_name respelled to \"BT'N-Tech\" (the export dropped the apostrophe; technology.v2.json, product files, overview and site copy all use BT'N-Tech).",
+    "2026-10-27: technology id=lart: rejoined key_capabilities strings 'Apple bought 1' + '000pc Relay runs ...' into 'Apple bought 1,000pc Relay runs ...' (the old editor split the value on its comma; intended text per technology.v2.json)."
+  ],
   "section_title": "A Technology stack that opens all the doors.",
   "section_number": "",
   "technologies": [
@@ -18,8 +22,7 @@
         "Broadcast-optimized capture pipeline",
         "Artist-owned stereo · AGF-owned l'Art · 50/50 broadcast mixed",
         "5-layer active filtering pipeline (proven on the Core)",
-        "Apple bought 1",
-        "000pc Relay runs at full wholesale multiple times — reason unknown / unconfirmed (the units never sold through)",
+        "Apple bought 1,000pc Relay runs at full wholesale multiple times — reason unknown / unconfirmed (the units never sold through)",
         "A Fraunhofer research scientist was the only outside party who ever grokked the broader concept; sold a rudimentary version to Sennheiser"
       ],
       "id": "lart",
@@ -80,8 +83,8 @@
         "**Well-known at industrial scale (Schneider Electric); virtually absent in consumer audio** — the entire seam"
       ],
       "id": "btn-tech",
-      "name": "BTN-Tech",
-      "full_name": "BTN-Tech — Bring Tha' Noise Technologies",
+      "name": "BT'N-Tech",
+      "full_name": "BT'N-Tech — Bring Tha' Noise Technologies",
       "tagline": "Bring Tha' Noise Technologies.",
       "description": "A class of technologies, liberally applied. From analog-based toroidal chokes to multi-stage waveform regeneration. The flagship is comprehensive home/facility power regeneration — well known at the industrial scale (Schneider), virtually absent in consumer/commercial audio. R&D on the high-power regeneration strategy is non-trivial but well-scoped; the hidden benefit propagates throughout every product and the entire strategy.",
       "patent_status": "pending",

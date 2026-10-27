@@ -1,8 +1,8 @@
-> Note (2026-10-27): the 22 font files under `assets/` that duplicated `/fonts/` were deleted after this map was written, so `styles/core/fonts.css` now points at missing files; the licensed fonts live in `/fonts/`. The move described below has been committed.
+> Note (2026-10-27): the move to `archive/legacy-site/` is committed. The font files under `assets/` that duplicated `/fonts/` were then deleted (commit `03a1e31`; 22 files, all but `assets/Commissioner/README.txt`), and `styles/core/fonts.css` was repointed at the licensed web fonts in `/fonts/web/`. Sections 1.1 and 1.2 below describe the state at move time and are annotated where it has since changed.
 
 # LEGACY-MAP: the retired AGF schema-driven brand site
 
-Location: `archive/legacy-site/` (moved with `git mv` from `site/`, 2026-10-27, nothing deleted at move time; committed 2026-10-27, duplicate fonts removed afterwards, see note above).
+Location: `archive/legacy-site/` (moved with `git mv` from `site/`, 2026-10-27, nothing deleted at move time; committed 2026-10-27; duplicate fonts removed and `fonts.css` repointed to `/fonts/web/` afterwards, see note above).
 Purpose: a map detailed enough to rebuild every behaviour of the old site **without the server or database**. The content itself now lives in `production-staging/content/` (`sections/*.json`, `products/*.json`, `raw/*.json`).
 
 Read this first, because four facts change how you read everything below:
@@ -38,13 +38,13 @@ Read this first, because four facts change how you read everything below:
 | `site/assets/Commissioner`, `site/assets/Monoton`, `site/assets/PoiretOne-Regular` | `archive/legacy-site/assets/<same>/` |
 | `site/assets/screenshots`, `site/assets/sections` | **not touched** (another agent's job) |
 
-236 files moved, all recorded by git as pure renames (`R100`), staged, not committed. `site/` is now empty apart from an empty `assets/`. The `@font-face` URLs in `styles/core/fonts.css` are relative (`../../assets/...`), so they still resolve inside the archive.
+236 files moved, all recorded by git as pure renames (`R100`), and the move is committed. `site/` no longer exists. After the move, 22 of the moved font and licence files were deleted as duplicates of `/fonts/` (see 1.2), so the archive now holds 215 tracked files (236 minus 22 deleted, plus `LEGACY-MAP.md`). The `@font-face` URLs in `styles/core/fonts.css` originally pointed at the archived copies (`../../assets/...`); after those copies were deleted they were repointed to the web builds in `/fonts/web/` (`../../../../fonts/web/*.woff2`, resolved from `styles/core/`), keeping the same family names, weights and `font-display`. The legacy `assets/Commissioner/`, `assets/Monoton/` and `assets/PoiretOne-Regular/` paths shown in the table above are the move-time layout; only `assets/Commissioner/README.txt` remains.
 
 ### 1.2 Fonts versus `/fonts/` (sha256)
 
-Every font file in the archive is **byte-identical** to a licensed source copy in `/home/user/agf/fonts/`. Nothing was deleted; this is a report for the lead.
+At move time every font file in the archive was **byte-identical** to a licensed source copy in `/home/user/agf/fonts/`. Because of that, the duplicates were later deleted (commit `03a1e31`); the table below records what they were, and the paths in its first column no longer exist on disk except `Commissioner/README.txt`.
 
-| Archive file (`archive/legacy-site/assets/...`) | sha256 (first 12) | Identical to |
+| Archive file at move time (`archive/legacy-site/assets/...`; deleted unless noted) | sha256 (first 12) | Identical to |
 |---|---|---|
 | `Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf` | dae2fae6fdd0 | `fonts/Commissioner/Commissioner-Variable.ttf` |
 | `Commissioner/Commissioner-Thin.ttf` (and `static/` copy) | 82b742a9b4a2 | `fonts/Commissioner/static/Commissioner-Thin.ttf` |
@@ -63,7 +63,7 @@ Every font file in the archive is **byte-identical** to a licensed source copy i
 
 Result: 21 of 21 `.ttf` files are exact duplicates (12 distinct fonts; the 9 Commissioner statics are stored twice inside the archive, once loose and once in `static/`, and the variable file is the only one the CSS actually loads, along with Monoton and Poiret One). `OFL.txt` is also a duplicate. Monoton and Poiret One had no licence file in the archive; their licences are in `fonts/licenses/OFL-Monoton.txt` and `OFL-PoiretOne.txt`.
 
-Delete candidates for the lead: the entire `archive/legacy-site/assets/` tree except `Commissioner/README.txt`. Caveat: `styles/core/fonts.css` points at these files by relative path, so deleting them leaves the archived CSS without fonts (acceptable if the archive is reference-only; otherwise repoint to `/fonts/`).
+Outcome: the entire `archive/legacy-site/assets/` tree was deleted except `Commissioner/README.txt` (the only non-duplicate). Since `styles/core/fonts.css` pointed at the deleted files, it was repointed to `/home/user/agf/fonts/web/` (`Commissioner-Variable.woff2`, `Monoton-Regular.woff2`, `PoiretOne-Regular.woff2`). Note these are the WOFF2 web builds, not the byte-identical TTFs listed above, so the archived CSS now loads the same families and weights from different file formats. The archive's CSS therefore depends on the `/fonts/web/` directory staying in place relative to `archive/legacy-site/`.
 
 ---
 
@@ -104,7 +104,7 @@ archive/legacy-site/
 ├── schemas/             22 *.schema.json
 ├── sections/ css/       PDF section renderers and CSS partials (NOT the site)
 ├── styles/              site CSS: index.css + _manifest.json + 11 groups of partials
-└── assets/              Commissioner/, Monoton/, PoiretOne-Regular/ (see 1.2)
+└── assets/              only Commissioner/README.txt remains; fonts live in /fonts/ (see 1.2)
 ```
 
 ### 2.4 Boot and data flow
@@ -1275,7 +1275,7 @@ Required top-level: `section_title`, `zones`. additionalProperties: (unset).
 |---|---|---|---|
 | 1 | `core/brand-doc.css` | 37 | Brand / palette / typography documentation header |
 | 2 | `core/tokens.css` | 126 | :root design tokens (colors, type, spacing, motion) |
-| 3 | `core/fonts.css` | 42 | @font-face: Commissioner, Monoton, Poiret One |
+| 3 | `core/fonts.css` | 43 | @font-face: Commissioner, Monoton, Poiret One |
 | 4 | `core/reset.css` | 34 | Global reset & base element styles |
 | 5 | `layout/pcb-motif.css` | 31 | body.is-pcb::before decorative PCB trace |
 | 6 | `layout/scroll-progress.css` | 23 | .scroll-progress indicator |
@@ -1375,7 +1375,7 @@ All tokens are on `:root`. Sources: `styles/core/tokens.css` (and `fonts.css` fo
 
 **Spacing** (rule of 8s): `--space-2xs 4`, `-xs 8`, `-sm 16`, `-md 24`, `-lg 32`, `-xl 48`, `-2xl 64`, `-3xl 80`, `-4xl 96`, `-5xl 120` px; `--space-section-xl 120`, `-lg 80`, `-md 64`, `-sm 48`. **Borders**: `--border-hair 1px`, `--border-rule 2px`, `--border-bold 3px`. **Radius**: `--radius-xs 2`, `-sm 4`, `-md 6`, `-lg 8`, `-pill 999`. **Breakpoints** (declared, but CSS custom properties cannot be used in media queries, so unused): `--bp-mobile 768`, `--bp-tablet 1024`, `--bp-desktop 1280`. **Motion**: `--ease: cubic-bezier(.2,.7,.2,1)` (the only motion token; durations are literals such as `.8s` reveal, `.35s` pill, `.2s` hovers).
 
-**Fonts** (`core/fonts.css`): Commissioner variable (`weight 100 900`, `font-display: swap`; `format('truetype-variations')`), Monoton 400, Poiret One 400, from the archive's TTFs. `index.html` also pulls Commissioner from Google Fonts (redundant).
+**Fonts** (`core/fonts.css`): Commissioner variable (`weight 100 900`, `font-display: swap`; originally `format('truetype-variations')`, now `format('woff2')`), Monoton 400, Poiret One 400, now loaded as WOFF2 from `/fonts/web/` via `../../../../fonts/web/` (originally the archive's TTFs under `assets/`, since deleted; see 1.1). `index.html` also pulls Commissioner from Google Fonts (redundant).
 
 ### 7.4 Comparison with `/home/user/agf/agf-design-system/agf-design-system/tokens.css`
 

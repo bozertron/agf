@@ -62,4 +62,4 @@ All four marks are delivered in brass; recolour by inlining the SVG and setting 
 
 ## Components
 
-Brand: Wordmark, Seal, FloatingGround. Actions: Button. Text: Heading. Layout: Rule. Surfaces: Panel, TraceField. Instruments: Meter, Knob, Readout. Status: Badge. Forms: Input. Navigation: Nav. Data: SpecTable. Applications: Faceplate, Sleeve, Certificate, Hero. Each component's README says what the consumer provides and what it must not do; the previews are the reference rendering in all three themes.
+Brand: Wordmark, Seal, FloatingGround. Actions: Button. Text: Heading. Layout: Rule. Surfaces: Panel, TraceField. Instruments: Meter, Knob, Readout. Status: Badge. Forms: Input. Navigation: Nav. Data: SpecTable. Applications: Faceplate, Sleeve, Certificate, Hero, Cover. Each component's README says what the consumer provides and what it must not do; the previews are the reference rendering in all three themes.

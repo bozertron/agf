@@ -1,3 +1,4 @@
+/* Repointed 2026-10-27: the archived assets/ font copies were deleted (duplicates of /fonts/), so these URLs now load /fonts/web/*.woff2. */
 /* ============================================================
    PARTIAL:  core/fonts.css
    PURPOSE:  @font-face: Commissioner, Monoton, Poiret One
@@ -11,7 +12,7 @@
 /* ---------- Variable font ---------- */
 @font-face {
   font-family: 'Commissioner';
-  src: url('../../assets/Commissioner/Commissioner-VariableFont_FLAR,VOLM,slnt,wght.ttf') format('truetype-variations');
+  src: url('../../../../fonts/web/Commissioner-Variable.woff2') format('woff2');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -23,7 +24,7 @@
    staff line. Single weight, all-caps. */
 @font-face {
   font-family: 'Monoton';
-  src: url('../../assets/Monoton/Monoton-Regular.ttf') format('truetype');
+  src: url('../../../../fonts/web/Monoton-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -34,7 +35,7 @@
    ("Even Rails → Smooth Tracks"). Sits well beneath the Monoton mark. */
 @font-face {
   font-family: 'Poiret One';
-  src: url('../../assets/PoiretOne-Regular/PoiretOne-Regular.ttf') format('truetype');
+  src: url('../../../../fonts/web/PoiretOne-Regular.woff2') format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

@@ -1,6 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   * {
     padding: 0;
@@ -19,17 +21,14 @@
 </head>
 <body>
 
-<img class="center fit" src="logo.jpg" >    
+<img class="center fit" src="globl-logo.jpg" >    
 
-<script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript" language="JavaScript">
   function set_body_height() { // set body height = window height
-    $('body').height($(window).height());
+    document.body.style.height = window.innerHeight + 'px';
   }
-  $(document).ready(function() {
-    $(window).bind('resize', set_body_height);
-    set_body_height();
-  });
+  window.addEventListener('resize', set_body_height);
+  set_body_height();
 </script>
 
 </body>
