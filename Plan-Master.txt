@@ -1,0 +1,38 @@
+ 1) Home Page 
+
+###Header: 
+
+1a) Top Left Corner - AGF in Monoton Font, click on it anytime to go to the Home Page. 
+
+1b) Centered in the header -  2/3 size of the AGF wordmark in PoiretOne Font "Even Rails. Smooth Tracks." ,
+If you click on - Even Rails. Smooth Tracks. -  In the header's open spaces, words fade in, in bold Commissioner font,  
+that yields the sentence "AGF  - acoustics-tech unlocks - Even Rails. Smooth Tracks.  -  globally, rise with us. [floating ground symbol]" 
+as the header's message fades in, the panels below transition into our Tech-Presentation page = Title: When you listen to any sound
+system, you're listening to a power-supply...
+
+1c) Far Right Header - AGF's floating ground symbol; it's top/bottom should be identical to the AGF wordmark.
+The floating ground symbol 
+
+
+###Below Header:   
+
+CRITICAL NOTE: 2/3 of remaining vertical space on page goes to [1d and 1e] : 
+
+1d) Top Left Panel - Globl Radio - If I remember correctly, you made a green panel + gold logo for GR? We're going to start with that, 
+but it'll fade out as a video fades in. We'll likely need to manipulate the white globl radio logo in .eps format to get rid of the background. 
+Then it'll go into the top left corner with 50%+ transparency, we'll figure out what looks best. 
+
+We're going to cycle between several live performance-types and create graphics for 'users watching', ads, etc...;  I might have to do that in 
+Davinci Resolve. I'm guessing it'll be a ten second or so loop. 
+
+1e) Top Right Panel - Sound Systems - I have a number of Sound Systems, we'll pick a few and make a short loop.   
+
+4 Panels below [bottom 1/3 page horizontally]:  
+
+Broadcast,  Software,  Business, Blog - © AGF. All grounds reserved  
+
+
+2)
+ 
+ 
+ 
